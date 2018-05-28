@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Life Insurance Details</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<!--<link type="text/css" rel="stylesheet" href="../css/temp_rohan_css.css" />-->
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script>
+$(document).ready(function(){
+  	$( ".wrapper" ).addClass("life_insurance_details");
+	 $('.common_in_content').slimScroll();
+     $( "#tabs" ).tabs();
+     $('.record_container').slimScroll();
+	 $('.life_insurance_details #tabs .ui-tabs-panel .value').perfectScrollbar();
+     $('body').on("click","#tabs .ui-widget-header .ui-state-default",function(){
+	 $('.life_insurance_details #tabs .ui-tabs-panel .value').perfectScrollbar("update");	 
+		});
+   });
+</script>
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">Life Insurance Details</span><span class="heading_icon"><span class="head_icon"></span></span>
+          <div class="desc_container"> <a href="#" class="edit"></a></div>
+        </h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+      <section class="in_content common_in_content"> 
+        <!-- Common_in_contnet starts-->
+        <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <section id="life_insurance_details" class="in_content common_in_content clearfix"> <a class="fr common_back_btn" href="risk-profile-subscribed.html">Back</a>
+          <div class="clr"></div>
+          <div id="tabs">
+            <ul>
+              <li><a href="#term">Term</a></li>
+              <li><a href="#endowment">Endowment</a></li>
+              <li><a href="#money_back">Money Back</a></li>
+              <li><a href="#ulip">ULIP</a></li>
+            </ul>
+            <div class="clr"></div>
+            <div id="term"> <a class="common_btn fr add_more" href="term-life-insurance-edit.html">Add More</a>
+              <div class="clr"></div>
+              <ul class="clearfix head_title reset">
+                <li class="title_one label fl">Family
+                  Member</li>
+                <li class="title_two label fl">Product</li>
+                <li class="title_three label fl">Sum
+                  Assured</li>
+                <li class="title_four label fl">Annual<br/>
+                  Premium</li>
+                <li class="title_five label fl">Start
+                  Year</li>
+                <li class="title_six label fl">Maturity
+                  Year</li>
+                <li class="title_seven label fl">Maturity<br/>
+                  Value</li>
+                <li class="title_eight label fl">Current
+                  Value</li>
+                <li class="title_ten label fl">Edit</li>
+                <li class="title_eleven label fl">Delete</li>
+              </ul>
+              <div class="record_container">
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="term-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="term-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="term-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="term-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="term-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="term-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="term-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="term-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="endowment"> <a class="common_btn fr add_more" href="endowment-life-insurance-edit.html">Add More</a>
+              <div class="clr"></div>
+              <ul class="clearfix head_title reset">
+                <li class="title_one label fl">Family
+                  Member</li>
+                <li class="title_two label fl">Product</li>
+                <li class="title_three label fl">Sum
+                  Assured</li>
+                <li class="title_four label fl">Annual<br/>
+                  Premium</li>
+                <li class="title_five label fl">Start
+                  Year</li>
+                <li class="title_six label fl">Maturity
+                  Year</li>
+                <li class="title_seven label fl">Maturity<br/>
+                  Value</li>
+                <li class="title_eight label fl">Current
+                  Value</li>
+                <li class="title_ten label fl">Edit</li>
+                <li class="title_eleven label fl">Delete</li>
+              </ul>
+              <div class="record_container">
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="endowment-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="endowment-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="endowment-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="endowment-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="endowment-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="endowment-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="endowment-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="endowment-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="money_back"> <a class="common_btn fr add_more" href="money-back-life-insurance-edit.html">Add More</a>
+              <div class="clr"></div>
+              <ul class="clearfix head_title reset">
+                <li class="title_one label fl">Family
+                  Member</li>
+                <li class="title_two label fl">Product</li>
+                <li class="title_three label fl">Sum
+                  Assured</li>
+                <li class="title_four label fl">Annual<br/>
+                  Premium</li>
+                <li class="title_five label fl">Start
+                  Year</li>
+                <li class="title_six label fl">Maturity
+                  Year</li>
+                <li class="title_seven label fl">Maturity<br/>
+                  Value</li>
+                <li class="title_eight label fl">Current
+                  Value</li>
+                <li class="title_ten label fl">Edit</li>
+                <li class="title_eleven label fl">Delete</li>
+              </ul>
+              <div class="record_container">
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="money-back-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="money-back-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="money-back-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="money-back-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="money-back-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="money-back-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="money-back-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="money-back-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="ulip"> <a class="common_btn fr add_more" href="ulip-life-insurance-edit.html">Add More</a>
+              <div class="clr"></div>
+              <ul class="clearfix head_title reset">
+                <li class="title_one label fl">Family
+                  Member</li>
+                <li class="title_two label fl">Product</li>
+                <li class="title_three label fl">Sum
+                  Assured</li>
+                <li class="title_four label fl">Annual<br/>
+                  Premium</li>
+                <li class="title_five label fl">Start
+                  Year</li>
+                <li class="title_six label fl">Maturity
+                  Year</li>
+                <li class="title_seven label fl">Maturity<br/>
+                  Value</li>
+                <li class="title_eight label fl">Current
+                  Value</li>
+                <li class="title_ten label fl">Edit</li>
+                <li class="title_eleven label fl">Delete</li>
+              </ul>
+              <div class="record_container">
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="ulip-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="ulip-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="ulip-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="ulip-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="ulip-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="ulip-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="ulip-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="record_row rel">
+                  <ul class="clearfix data_outputs reset">
+                    <li class="output_one label fl">
+                      <div class="value"> Mother , Father , Wife , Daughter , Son</div>
+                    </li>
+                    <li class="output_two label fl">
+                      <div class="value"> Max Life Term Insurance</div>
+                    </li>
+                    <li class="output_three label fl">
+                      <div class="value"> 75,00,000</div>
+                    </li>
+                    <li class="output_four label fl">
+                      <div class="value"> 35000</div>
+                    </li>
+                    <li class="output_five label fl">
+                      <div class="value"> 12-Jan-2010</div>
+                    </li>
+                    <li class="output_six label fl">
+                      <div class="value"> 12-Jan-2013</div>
+                    </li>
+                    <li class="output_seven label fl">
+                      <div class="value"> 95,00,000</div>
+                    </li>
+                    <li class="output_eight label fl">
+                      <div class="value"> 45,00,000</div>
+                    </li>
+                    <li class="output_ten label fl"> <a class="edit" href="ulip-life-insurance-edit.html"></a> </li>
+                    <li class="output_eleven label fl">
+                      <div class="delete"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Common_in_contnet ends-->
+        
+        <div class="overlay"></div>
+      </section>
+      <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <!--<li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>--> 
+            
+            <!--  <li class="fl list"><a href="#" class="anch save_new"><span class="txt">Save &amp; Add</span></a></li>
+            <li class="fl list"><a href="#" class="anch save_close"><span class="txt">Save &amp; Close</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>-->
+          </ul>
+        </div>
+        <!-- <a href="list-of-tasks.html" class="back navgation"><span class="txt">Back</span></a> <a href="list-of-tasks.html" class="next navgation"><span class="txt">Next</span></a>--> </section>
+      
+      <!-- Common footer ends --> 
+    </section>
+    <!-- Common_content Ends--> 
+    
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+</body>
+</html>

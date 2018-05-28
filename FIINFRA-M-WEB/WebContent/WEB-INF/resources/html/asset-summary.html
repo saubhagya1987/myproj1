@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<meta name="viewport" content="width=1024">
+<title>Assets Summary</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<!--link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" /-->
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<!--link type="text/css" rel="stylesheet" href="../css/selectboxlt.css"  />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" /-->
+
+<!--<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+-->
+
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/plugin/jquery.autosize.input.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/common_unit_selector.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+
+<script>
+$(document).ready(function(){
+  
+	
+	$(".Asset_Con_Btn").click(function(){
+    $(".overlay").fadeIn();
+	$("#Asset_Con").fadeIn();
+	});
+	
+	$("#Asset_Con .close").click(function(){
+    $(".overlay").fadeOut("slow");
+	$("#Asset_Con").fadeOut("slow");
+	 });
+
+	
+});
+</script>
+
+<!-- Custom Selectbox starts -->
+<!--script>
+$(document).ready(function(){
+  	$( "#tabs" ).tabs();
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+	 
+	  $( "#site_theme" ).one( "click", function() {
+    
+}); 
+});
+</script-->
+<!-- Custom Selectbox Ends -->
+<script>
+$(document).ready(function(){
+    $('.asset_summary_scroll').slimScroll();
+
+  $('.view1  .icon-bg').click(function(){
+ 	 if ( $('.view-options').css('visibility') == 'hidden' )
+    $('.view-options').css('visibility','visible');
+  else
+    $('.view-options').css('visibility','hidden');
+});
+});
+</script>
+
+
+
+
+<style>
+.goal_bx { /*border:1px solid green; height:352px;*/ width:205px; margin:0 10px 35px 10px; }
+.goal_bx .title{font: 12px/14px aller bold, sans-serif; color:#952754; text-align:center; margin-bottom:8px;}
+/*Top box*/
+.goal_bx .top { width:auto; position:relative /*height:71px; border: 1px solid #b3b3b3;*/ }
+
+.goal_bx .top .top_left{ width:92px; height:89px; border-top-left-radius: 20px; border-bottom-left-radius: 20px; background-color:#a8a8a8; box-shadow: 0px 1px 5px 0px #020202;}
+
+.goal_bx .top .top_left .top{ width: 80px; height: 46px; border-bottom: 1px dashed #000; margin: 0 auto; }
+
+.goal_bx .top .top_left .top .label{ padding-top: 3px; text-align: left; font: 10px/44px "aller bold", sans-serif; color: #3a3a3e; text-indent: 3px;}
+
+
+.goal_bx .top .top_left .bottom{ width: 80px;
+height: 36px;
+border: 0px;
+margin: 0 auto; }
+
+.goal_bx .top .top_left .bottom .label{ padding-top: 3px; text-align: left; font: 10px/30px "aller bold", sans-serif; color: #3a3a3e; text-indent: 3px;}
+
+
+
+
+.goal_bx .top .top_right{ width:92px; height:89px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; background-color:#952754; box-shadow: 0px 1px 5px 0px #020202;}
+
+.goal_bx .top .top_right .top{ width: 80px; height: 46px; border-bottom: 1px dashed #fff; margin: 0 auto; }
+
+.goal_bx .top .top_right .top .label{ padding-top: 3px; text-align: left; font: 18px/48px "aller bold", sans-serif; color: #fff; text-indent: 22px;}
+
+
+.goal_bx .top .top_right .bottom{ width: 80px; height: 36px; border: 0px; margin: 0 auto; }
+
+.goal_bx .top .top_right .bottom .label{font: 12px/28px aller bold, sans-serif; color:#fff; text-align:left; text-indent:18px;}
+
+
+
+
+
+
+.goal_bx .top .icon_bg .yr{font: 10px/12px "aller bold", sans-serif; color: #fff; text-align:center;}
+
+.goal_bx .top .icon_bg { width:55px; height:55px; background:#3a3a3e; position:absolute; top:10px; left:68px; border-radius: 40px; border: 4px solid #fff;}
+/*Goal Icon*/
+.goal_bx .top .icon_bg .car_g_icon { width:45px; height:38px; background:url(../images/a_to_g_sprite.png) no-repeat -144px -16px; }
+.goal_bx .top .icon_bg .edu_g_icon { width:45px; height:38px; background:url(../images/a_to_g_sprite.png) no-repeat -203px -18px; }
+.goal_bx .top .icon_bg .bis_g_icon { width:45px; height:38px; background:url(../images/a_to_g_sprite.png) no-repeat -259px -12px; }
+.goal_bx .top .icon_bg .tra_g_icon { width:45px; height:38px; background:url(../images/a_to_g_sprite.png) no-repeat -317px -16px; }
+.goal_bx .top .icon_bg .spe_g_icon { width:45px; height:38px; background:url(../images/a_to_g_sprite.png) no-repeat  -378px -19px; }
+.goal_bx .top .icon_bg .othe_g_icon { width:45px; height:38px; background:url(../images/a_to_g_sprite.png) no-repeat -437px -19px; }
+.goal_bx .top .icon_bg .wed_g_icon { width:45px; height:38px; background:url(../images/a_to_g_sprite.png) no-repeat -495px -15px; }
+.goal_bx .top .icon_bg .pro_g_icon { width:45px; height:38px; background:url(../images/a_to_g_sprite.png) no-repeat -556px -13px; }
+/*Goal Icon*/
+.goal_bx .top .icon_bg .icon_notification { width: 22px; height: 22px; border: 1px solid #952754; color: #952754; border-radius: 20px; background-color: #fff; text-align: center; font-family: aller bold; line-height: 20px; font-size: 14px; position:absolute; top: 0; right: 0; }
+.goal_bx .top .goal_title_bx { width:120px; height:70px; margin:8px auto 0 10px; }
+.goal_bx .top .goal_title_bx .goal_title { width:120px; margin:0 auto; font: 12px/14px "aller bold", sans-serif; color:#3a3a3e; border-bottom:1px solid #999; padding-bottom: 5px; }
+.goal_bx .top .goal_title_bx .label { font: 11px/18px "allerregular", sans-serif; color:#3a3a3e; }
+.goal_bx .top .goal_title_bx .yr { font: 12px/18px "aller bold", sans-serif; color:#a7334f; margin-right: 10px; }
+/*Top box*/
+
+
+.common_custom_modal_asset {
+    background: none repeat scroll 0 0 #FFFFFF;    bottom: 0;    display: none;    left: 0;    margin: auto;    position: absolute;
+    right: 0;    top: 170px;    z-index: 1000;}
+.common_custom_modal_asset .close {
+    background: none repeat scroll 0 0 #000000;    border-radius: 22px;    color: #FFFFFF;    cursor: pointer;    display: block;    font-family: Arial,Helvetica,sans-serif;    font-size: 17px;    font-weight: 100;    height: 36px;    line-height: 36px;    position: absolute;    right: -20px;    text-align: center;    top: -18px;    width: 36px;}
+#Asset_Con {overflow:visible; height: 390px; display:none; box-shadow: 0 0 15px 1px #757575; border:1px solid #8d203b; width:677px; height:290px; background-color:#fff; margin: 0 auto; padding:10px;}
+
+
+</style>
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="edit-profile-info-tab"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+  <section class="content common_content"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">ASSET SUMMARY</span><span class="heading_icon"><span class="head_icon"><img src="../images/asset-summary-icon.png" width="35" height="37" alt=""></span></span>
+         
+        </h1>
+      </div>
+    </header> <!-- Header Ends--> 
+                
+    <!--content Starts-->
+    <div class="contents">
+
+     <div class="asset_summary_scroll">
+    <div class="mutual-funds fl clearfix">
+        	<div class="header"><p>Mutual Funds</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><div class="icon"></div></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <a href="javascript:void(0)" class="goal-no fl Asset_Con_Btn"><p>3</p></a>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Current Asset Value</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div><!-- Mutual Funds Ends-->
+    	<div class="stocks fl clearfix">
+        	<div class="header"><p>Shares</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><div class="icon"></div></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <a href="javascript:void(0)" class="goal-no fl Asset_Con_Btn"><p>1</p></a>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Current Asset Value</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div><!-- Shares Ends--> 
+        <div class="bank-deposits fl clearfix">
+        	<div class="header"><p>Deposits</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><div class="icon"></div></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <a href="javascript:void(0)" class="goal-no fl Asset_Con_Btn"><p>5</p></a>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Current Asset Value</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+					    <div class="rupee-sign fl"></div>
+                        <div class="amount fl">30</div>
+                        <div class="unit fl">Lac</div>
+                     	<br>                       
+                        <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div><!-- bank-deposits Ends--> 
+        <div class="retirement-funds fl clearfix">
+        	<div class="header"><p>Retirement Funds</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><div class="icon"></div></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <a href="javascript:void(0)" class="goal-no fl Asset_Con_Btn"><p>2</p></a>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Current Asset Value</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                    
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div><!-- Retirement Funds Ends-->
+       
+        <div class="gold fl clearfix">
+        	<div class="header"><p>Gold</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><div class="icon"></div></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <a href="javascript:void(0)" class="goal-no fl Asset_Con_Btn"><p>4</p></a>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Current Asset Value</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div><!-- Gold Ends-->
+        <div class="property fl clearfix">
+        	<div class="header"><p>Property</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><div class="icon"></div></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <a href="javascript:void(0)" class="goal-no fl Asset_Con_Btn"><p>1</p></a>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Current Asset Value</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div><!-- Property Ends-->
+           
+           
+           <!-- bank-deposits Ends--> 
+        <div class="insurance-bx fl clearfix">
+        	<div class="header"><p>Insurance</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><div class="icon"></div></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <a href="javascript:void(0)" class="goal-no fl Asset_Con_Btn"><p>2</p></a>
+                </div><!-- linked-goals Ends-->
+                <a class="ins-lk" href="">Edit Insurance Details</a>
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Current Asset Value</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                    
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div><!-- Retirement Funds Ends-->
+       
+        <div class="a-s-others fl clearfix">
+        	<div class="header"><p>Others</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><div class="icon"></div></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <a href="javascript:void(0)" class="goal-no fl Asset_Con_Btn"><p>4</p></a>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Current Asset Value</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div><!-- Gold Ends-->
+        
+    </div><!-- content Ends--> 
+    
+    
+    <div id="Asset_Con" class="common_custom_modal_asset"> <span class="close">X</span>
+<div class="goal_bx fl"><div class="title">My Car Goal</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Allocated %</div>
+                    
+                      
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset Value</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">25%</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="car_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>              
+                </div>
+                
+                <div class="goal_bx fl"><div class="title">Education for Sonali</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Allocated %</div>
+                    
+                      
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset Value</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">25%</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="edu_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>              
+                </div>
+                
+                <div class="goal_bx fl"><div class="title">Hospitality Franchise</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Allocated %</div>
+                    
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset Value</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">25%</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="bis_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>              
+                </div>
+                
+                
+                <div class="goal_bx fl"><div class="title">Trip to Manali</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Allocated %</div>
+                    
+                      
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset Value</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">25%</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="tra_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>              
+                </div>
+        </div>
+        
+    	  </div>
+        
+    <div class="asset-summary-footer fl">
+    
+    	<a href="asset-details.html" class="asset-management fl">
+        	<div class="title">Asset Details</div>
+            <div class="icon-bg"><div class="icon fl"></div></div>  
+            <div class="icon-reflection"></div>       
+        </a><!-- asset-management Ends-->
+        
+        <a href="goal-to-asset-allocation.html" class="goal-allocation fl">
+        	<div class="title">Goal to Assets Allocation</div>
+            <div class="icon-bg"><div class="icon fl"></div></div>  
+            <div class="icon-reflection"></div>       
+        </a><!-- goal-allocation Ends-->
+
+        <div class="view1 fl">
+        	<div class="title">View</div>
+            <div class="icon-bg"><div class="icon fl"></div></div>  
+            <div class="icon-reflection"></div>       
+        </div><!-- view Ends-->
+        
+        <div class="view-options fl">
+        	<div class="view-bg">
+            	<ul>
+                	<li>Goals</li>
+                    <li>Unused Assets</li>
+                    <li>Future Cashflow</li>
+                </ul>
+            </div>
+        </div><!-- view-options Ends-->
+        
+        <div class="total fl">
+        	<div class="total-asset-value">
+            	<p>Total Asset Value</p>
+            	<div class="rupee-sign fl"></div>
+                <div class="amount fl">30</div>
+                <div class="unit fl">Lac</div>
+            </div>
+            <div class="total-allocated-value">
+            	<p>Total Allocated Value</p>
+            	<div class="rupee-sign fl"></div>
+                <div class="amount fl">30</div>
+                <div class="unit fl">Lac</div>
+                <div class="total_percentage fr">(<span class="total_percent_value">30</span>%)</div>
+            </div>
+        </div><!-- tota Ends-->
+        <div class="footer-platform"></div>
+          	
+    </div> <!-- asset-summary-footer Ends-->
+    
+    
+  </section>
+  <div class="overlay" style="display: none;"></div>
+  </section>
+
+  <!-- Main ends--> 
+  <!--pop up box-->
+         
+    </div>
+  <!--pop up box-->
+<!-- Wrapper ends-->
+
+</body>
+</html>

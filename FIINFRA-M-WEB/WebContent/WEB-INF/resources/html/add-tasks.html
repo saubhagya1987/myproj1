@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Add Tasks</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+
+<link type="text/css" rel="stylesheet" href="../css/jquery-filestyle.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/common_unit_selector.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+
+<!-- Datepicker --> 
+<script>
+$(function() {
+	  $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-M-yy",
+      showOn: "button",
+	  buttonText: '',
+	  changeMonth: true,
+      changeYear: true
+     });
+  });
+  
+  
+  </script>
+  <script>
+$(document).ready(function(){
+  
+ $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent'></div>" );
+ 
+});
+</script>
+<!-- Datepicker Ends --> 
+
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+  
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+	 createSlider('#target_type',1,3,1,'#target_count');
+ 
+});
+</script>
+
+<!-- Custom Selectbox Ends -->
+<!-- Placeholder for selectbox starts --> 
+ <script>
+$(document).ready(function(){
+  
+  $(".selectboxit-container").click(function(){
+	$(".selectboxit-option-first").remove();
+  
+});	
+});
+</script>
+<!-- Placeholder for selectbox Ends --> 
+<!-- custom scroll to "common_in_content" --> 
+<script>
+$(document).ready(function(){
+  
+    $('.common_in_content').slimScroll();
+	createSlider('#task_priority',1,3,1,'#preferred_input')
+	
+	$("#target_type .ui-slider-handle").css("margin-left", "2px");
+     $("#target_type .ui-slider-handle").text("Opportunity");
+	$( "#target_type" ).on("slide", function( event, ui ) {
+		
+		$("#target_type .ui-slider-handle").empty();
+            if (ui.value == 1) {
+                $("#target_type .ui-slider-handle").css("margin-left", "2px");
+
+               
+                 $("#target_type .ui-slider-handle").text("Opportunity");
+            } else if (ui.value == 2) {
+                $("#target_type .ui-slider-handle").css("margin-left", "-25px");
+               $("#target_type .ui-slider-handle").text("Client");
+               
+            } else if (ui.value == 3) {
+                $("#target_type .ui-slider-handle").css("margin-left", "-95px");
+               
+               $("#target_type .ui-slider-handle").text("Premium Client");
+            }
+		
+		
+		
+		
+		});
+       
+
+	});
+</script>
+<!-- custom scroll to "common_in_content" --> 
+<!-- Attachment starts -->
+<script>
+$(document).ready(function(){
+ /* $("#add_task #attach_file").click(function(){
+   
+    var filename = $("#first_file + .jquery-filestyle > input[type=text]").val().split('\\').pop();
+   // alert(filename);
+   if(!filename=="")
+   {
+	 $("#first_file_name .txt").text(filename);
+	 $("#first_file_name").show("slow");
+	  $(".jquery-filestyle").fadeOut("slow");
+   }
+     
+});	*/
+
+  $("#add_task #attach_file").click(function(){
+	  upload_file1();
+	  upload_file2();
+	  upload_file3();
+	  
+	  function  upload_file1()
+	  {
+		  var filename1 = $("#first_file + .jquery-filestyle > input[type=text]").val().split('\\').pop();
+   // alert(filename);
+   if(!filename1=="")
+   {
+	   if(($("#add_task #first_file + .jquery-filestyle").is(':visible')))
+	   {
+	 $("#first_file_name .txt").text(filename1);
+	 $("#first_file_name").show("slow");
+	 $("#add_task #first_file + .jquery-filestyle").fadeOut("slow");
+	  }
+   }
+    else
+	{   
+	  return;
+	} 
+		  
+	  }
+	  /*** function upload_file1 ends****/
+	  function  upload_file2()
+	  {
+		  var filename2 = $("#second_file + .jquery-filestyle > input[type=text]").val().split('\\').pop();
+   // alert(filename);
+   if(!filename2=="")
+   {
+	   if(($("#add_task #second_file + .jquery-filestyle").is(':visible')))
+	   {
+	 $("#second_file_name .txt").text(filename2);
+	 $("#second_file_name").show("slow");
+	 $("#add_task #second_file + .jquery-filestyle").fadeOut("slow");
+	  }
+   }
+    else
+	{   
+	  return;
+	} 
+		  
+	  }
+   /*** function upload_file2 ends****/
+   function  upload_file3()
+	  {
+		  var filename3 = $("#third_file + .jquery-filestyle > input[type=text]").val().split('\\').pop();
+   // alert(filename);
+   if(!filename3=="")
+   {
+	   if(($("#add_task #third_file + .jquery-filestyle").is(':visible')))
+	   {
+	 $("#third_file_name .txt").text(filename3);
+	 $("#third_file_name").show("slow");
+	 $("#add_task #third_file + .jquery-filestyle").fadeOut("slow");
+	  }
+   }
+    else
+	{   
+	  return;
+	} 
+		  
+	  }
+   /*** function upload_file3 ends****/
+   
+     
+});
+
+ $("#add_task .filename .reomve").click(function(){
+      remove_file($(this));
+	  function remove_file(thisObj)
+	  {
+	$(thisObj).parent(".filename").fadeOut("slow");
+    $(thisObj).parent(".filename").children(".txt").empty();
+	/*if($(thisObj).parent(".filename").hasAttr("id")=="first_file_name")
+	{
+	$("#add_task #first_file + .jquery-filestyle > input[type=text]").val("");
+	
+	}
+	else if($(thisObj).parent(".filename").hasAttr("id")=="second_file_name")
+	{
+	$("#add_task #second_file + .jquery-filestyle > input[type=text]").val("");
+
+	}
+	else if($(thisObj).parent(".filename").hasAttr("id")=="third_file_name")
+	{
+	$("#add_task #third_file + .jquery-filestyle > input[type=text]").val("");
+
+	}*/
+    
+	 }
+	
+});	
+
+ $("#add_task #add_new").click(function(){
+	
+   
+	 if(!($("#add_task #first_file + .jquery-filestyle").is(':visible'))&&(!$("#first_file_name").is(':visible')))
+	{
+		//$("#add_task #first_file + .jquery-filestyle > input[type=text]").val("");
+		$("#add_task #first_file + .jquery-filestyle").show("blind");
+	}
+   
+   
+   else if(!$("#add_task #second_file + .jquery-filestyle").is(':visible')&&(!$("#second_file_name").is(':visible')))
+	{
+		//$("#add_task #second_file + .jquery-filestyle > input[type=text]").val("");
+		$("#add_task #second_file + .jquery-filestyle").show("blind");
+	}
+	
+	else if(($("#add_task #second_file + .jquery-filestyle").is(':visible'))&&(!$("#add_task #third_file + .jquery-filestyle").is(':visible'))&&(!$("#third_file_name").is(':visible')))
+	{
+	  //  $("#add_task #third_file + .jquery-filestyle > input[type=text]").val("");
+		$("#add_task #third_file + .jquery-filestyle").show("blind");
+	}
+	/* Re-adding new */
+	else if(($("#first_file_name").is(':visible'))&&($("#second_file_name").is(':visible'))&&(!$("#third_file_name").is(':visible')))
+	{
+	  //  $("#add_task #third_file + .jquery-filestyle > input[type=text]").val("");
+		$("#add_task #third_file + .jquery-filestyle").show("blind");
+	}
+	else if(($("#first_file_name").is(':visible'))&&(!$("#second_file_name").is(':visible'))&&($("#third_file_name").is(':visible')))
+	{
+	  //  $("#add_task #third_file + .jquery-filestyle > input[type=text]").val("");
+		$("#add_task #second_file + .jquery-filestyle").show("blind");
+	}
+	else if((!$("#first_file_name").is(':visible'))&&($("#second_file_name").is(':visible'))&&($("#third_file_name").is(':visible')))
+	{
+	  //  $("#add_task #third_file + .jquery-filestyle > input[type=text]").val("");
+		$("#add_task #first_file + .jquery-filestyle").show("blind");
+	}
+	
+  
+	
+});	
+    
+	
+ 
+});
+</script>
+
+<!-- Attachment Ends -->
+
+ 
+
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="add_task_parent"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+                            <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">add tasks</span><span class="heading_icon"><span class="head_icon"></span></span>
+          <div class="desc_container"> <a href="#" class="edit"></a></div>
+        </h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+    <section class="in_content common_in_content">
+     <!-- Common_in_contnet starts-->
+      <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset">    <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+      <section id="add_task" class="in_content common_in_content clearfix">
+        <ul class="first_sec reset clearfix">
+          <li>
+            <label class="common_form_label">Assigned To</label>
+            <select id="assigned_to">
+              <option>Select</option>
+              <option>Self</option>
+              <option>Test</option>
+              <option>Test</option>
+              <option>Test</option>
+            </select>
+          </li>
+          <li>
+            <label class="common_form_label">Task Category</label>
+            <select id="task_cat">
+              <option>Select</option>
+              <option>Call</option>
+              <option>Test</option>
+              <option>Test</option>
+              <option>Test</option>
+            </select>
+          </li>
+          <li>
+            <label class="common_form_label">Task Status</label>
+            <select id="task_stat">
+              <option>Select</option>
+              <option>Scheduled</option>
+              <option>Test</option>
+              <option>Test</option>
+              <option>Test</option>
+            </select>
+          </li>
+          <li>
+            <label class="common_form_label">Priority</label>
+            <div class="range_parent">
+              <div class="scale clearfix">
+                <div class="scale_range"><span class="low extrem">Low</span><span class="medium extrem">Normal</span><span class="high extrem">High</span></div>
+                <div id="task_priority"></div>
+                
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="second_sec reset clearfix">
+          <li>
+            <label class="common_form_label">Target Type</label>
+             <div id="target_type" class="common_sliding_radio">
+          <span class="lbl_first lbl">Opportunity</span> <span class="lbl_second lbl">Client</span>  
+              <span class="lbl_third lbl">Premium Client</span>
+            
+ </div>
+   <input type="text" id="target_count" class="range_counter hide-elem"> 
+             
+          </li>
+          <li> <label class="common_form_label">&nbsp;</label>
+            <select id="task_category_select">
+              <option>Select</option>
+              <option>Test</option>
+              <option>Test</option>
+              <option>Test</option>
+              <option>Test</option>
+            </select>
+          </li>
+          <li class="clearfix">
+            <div class="completion_date">
+              <label class="common_form_label">Due Date</label>
+              <input type="text" id="due_date"  placeholder="dd-mmm-yyyy"   class="common_input datepicker" disabled/>
+            </div>
+            <div class="due_date">
+              <label class="common_form_label">Completion Date</label>
+               <input type="text" id="completion_date"  placeholder="dd-mmm-yyyy"   class="common_input datepicker" disabled/>
+            </div>
+          </li>
+        </ul>
+        <div class="clr"></div>
+        <ul class="third_sec reset clearfix">
+          <li>
+            <label class="common_form_label">Subject</label>
+            <input type="text" class="common_input" id="task_subject" >
+            
+          </li>
+          <li>
+            <label class="common_form_label">Description</label>
+            <div class="common_textarea" id="subject_desc"></div>
+          </li>
+          <!--<li>
+            <label class="common_form_label">Add Attachments</label>
+           
+          <ul class="reset clearfix attachment">
+          <li>
+           <p class="filename" id="first_file_name"><span class="txt"></span><span class="reomve"></span></p>
+           <div class="clr"></div>
+           <p class="filename" id="second_file_name"><span class="txt"></span><span class="reomve"></span></p>
+            <div class="clr"></div>
+            <p class="filename" id="third_file_name"><span class="txt"></span><span class="reomve"></span></p>
+            <div class="clr"></div>
+          
+          </li>
+<li>
+ <input type="file" class="jfilestyle" data-icon="false" data-buttonText="Browse"  id="first_file"/>
+ <input type="file" class="jfilestyle" data-icon="false" data-buttonText="Browse"  id="second_file"/>
+ <input type="file" class="jfilestyle" data-icon="false" data-buttonText="Browse"  id="third_file"/>
+           <div class="action">
+           <button class="common_btn" id="attach_file">Attach</button>
+           <button class="common_btn" id="add_new">Add New</button>
+           
+           </div></li>
+</ul>
+          </li>-->
+          
+        </ul>
+      </section>
+      <!-- Common_in_contnet ends--> 
+     
+      <div class="overlay"></div>
+    </section>
+     <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          
+          <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <li class="fl list"><a href="#" class="anch add_note"><span class="txt">Add Notes</span></a></li>
+              <li class="fl list"><a href="add-notes.html" class="anch add_doc"><span class="txt">Add Doc</span></a></li>
+            <li class="fl list"><a href="#" class="anch save_new"><span class="txt">Save &amp; New</span></a></li>
+           <li class="fl list"><a href="#" class="anch save_close"><span class="txt">Save &amp; Close</span></a></li>
+              <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+          </ul>
+          
+        </div>
+       <!-- <a href="list-of-tasks.html" class="back navgation"><span class="txt">Back</span></a> <a href="list-of-tasks.html" class="next navgation"><span class="txt">Next</span></a>--> </section>
+      
+      <!-- Common footer ends -->
+    </section>
+    <!-- Common_content Ends--> 
+    
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+<!-- For Common Custom File Input-->
+<script src="../js/plugin/jquery-filestyle.js"></script>
+<!-- For Common Custom File Input Ends-->
+</body>
+</html>

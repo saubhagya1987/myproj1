@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>My Income</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link rel="stylesheet" href="../css/main-style.css" type="text/css" />
+<link rel="stylesheet" href="../css/reset.css" type="text/css" />
+<link rel="stylesheet" href="../css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../css/jquery-ui.css" type="text/css" />
+<link rel="stylesheet" href="../css/selectboxit.css" type="text/css" />
+
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/selectboxit.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/jquery.ui.touch-punch.js"></script>
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+	
+  
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+	 
+	  // Preferred Product Count Intlalized	
+	var count=1;
+	
+	//Add Button Starts
+  $("body").on("click", ".add-income-btn", function() {
+	  count++;
+	 
+	   $(".my_income_li_bx:last").after("<div class='my_income_li_bx'><div class='my_income_li_bx_in'><ul class='clearfix'><li class='input_txt_one fl'><div class='salary_icon'></div></li><li class='input_txt_two fl'><select id='type'><option>Salary</option><option>Business</option><option>Dividend</option><option>Share of profit</option><option>Interest</option><option>Farm</option><option>Royalty</option><option>Gift</option><option>Bonus</option><option>Inheritance</option><option>Miscellaneous</option></select></li><li class='input_txt_three fl'><input class='grt_bx' name='' type='text'></li><li class='input_txt_four fl'><div class='range_parent'><div class='scale clearfix'><div class='scale_range'><span class='low extrem'>0</span><span class='high extrem'>500</span></div><div class='ui-slider-box-shadow'><div id='income_payment"+ count +"' class='effect2'></div></div><div class='counter_parent rupee'><input type='text' id='income_payment_counter"+ count +"' class='range_counter' /><span class='unit'>k</span></div></div></div></li><li class='input_txt_five fl'><select class='sel_wid' id='type' ><option>Monthly</option><option>Yearly</option></select></li><li class='input_txt_six fl'><div class='exp_grt_bx'><input type='text' class='exp_grt_txt' value='05' /><div class='exp_grt_per'>%</div></div></li> <li class='input_txt_seven fl'> <a href='#' class='save_row'></a></li><li class='input_txt_eight fl'> <a href='#' class='delete_row'></a></li><li class='input_txt_nine fl'> <a href='#' class='add_doc'> </a></li><li class='input_txt_ten fl'><a href='#' class='add_query'> </a></li></ul></div></div>");
+	 
+	   //Preferred Product Count Written
+	  $("select").selectBoxIt();
+	  createSlider("#income_payment"+count,0,500,1,"#income_payment_counter"+count);
+      // $('.EP_cnt').perfectScrollbar('update');
+	 });
+
+
+	$("body").on("click", ".delete_row", function() {
+		if(!($(this).closest(".my_income_li_bx").hasClass("first_row")))
+		{
+		$(this).closest(".my_income_li_bx").remove();	
+		}
+		
+	});
+	 
+ });
+</script>
+<!-- Custom Selectbox Ends -->
+
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+    //$('.common_in_content').slimScroll();
+	//Down Payment value Slider
+
+
+	  createSlider('#income_payment01',0,500,1,"#in_payment01")
+	  createSlider('#income_payment02',0,100,1,"#in_payment02")
+	  createSlider('#income_payment03',0,100,1,"#in_payment03")
+	  createSlider('#income_payment04',0,100,1,"#in_payment04")
+	  createSlider('#income_payment05',0,100,1,"#in_payment05")
+	  createSlider('#income_payment06',0,100,1,"#in_payment06")
+	  createSlider('#income_payment07',0,100,1,"#in_payment07")
+	  createSlider('#income_payment08',0,100,1,"#in_payment08")
+	  createSlider('#income_payment09',0,100,1,"#in_payment09")
+	  createSlider('#income_payment10',0,100,1,"#in_payment10")
+	  createSlider('#income_payment11',0,500,1,"#in_payment11")
+	  createSlider('#income_payment12',0,500,1,"#in_payment12")
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+
+</head>
+<body>
+<div id="wrapper" class="clearfix">
+  <div id="header"> <a class="logo" href="index.html"> <span id="logo"> <img src="../images/temp_logo.png" /></span><!-- end of "logo" id --> 
+    </a> 
+    <!-- <div id="advt1"> <img src="images/add1.png" /> </div>--> 
+    <!-- end of "advt1" id -->
+    
+    <div id="advt2"> <img src="../images/add2.png" /> </div>
+    <!-- end of "advt1" id -->
+    
+    <div id="ifa-image" class="clearfix fl"><img src="../images/photo.jpg"  class="clearfix fl"/><span class="ifa-name clearfix">Mr. A. B. Joshi</span> <span class="ifa-advisor clearfix">(Your Advisor)</span> </div>
+    <!-- end of "ifa-image" id -->
+    
+    <div id="log-out"> <img class="logout" src="../images/transparent.png"/>
+      <p>Logout</p>
+    </div>
+    <!-- end of "log-out" id --> 
+  </div>
+  <!-- end of "header" id -->
+  
+  <ul id="inner-nav-menu" class="clearfix ">
+    <li class="my-goals"><a href="my-goals.html"><img class="my-goals-ico" src="../images/transparent.png"/>
+      <p>My Goals <span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-plans"><a href="my-plan.html"><img class="my-plans-ico" src="../images/transparent.png"/>
+      <p>My Plans<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-portf"><a href="my-portfolio.html"><img class="my-portf-ico" src="../images/transparent.png"/>
+      <p>My Portfolio<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <!--li class="my-inc"><a href="#"><img class="my-inc-ico" src="images/transparent.png"/><p>My Income<span class="grad-border"><img src="images/transparent.png"/></span></p></a></li-->
+    <li class="my-cashflow"><a href="my-income.html"><img class="my-cashflow-ico" src="../images/transparent.png"/>
+      <p>My Cashflow<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-fin"><a href="#"><img class="my-fin-ico" src="../images/transparent.png"/>
+      <p>My Documents<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>    <li class="my-rep"><a href="my-reports.html"><img class="my-rep-ico" src="../images/transparent.png"/>
+      <p>My Reports<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+	<li class="my-acc"><a href="#"><img class="my-acc-ico" src="../images/transparent.png"/>
+      <p>My Account<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+  </ul>
+  <!-- end of "nav-menu" id -->
+  
+  <div id="trapezoid" class="clearfix fr">
+    <p>Welcome&nbsp;<span> Mr. Parag Takalkar</span></p>
+  </div>
+  <div id="header-strip" class="fl">
+    <h3 class="clearfix fl">MY CASHFLOW : <span class="title_it">MY INCOME</span></h3>
+    <img class="short-menu clearfix fr"  src="../images/transparent.png" /> 
+     <a href="#" class="add-income-btn clearfix fr"><img src="../images/transparent.png" />Add Income</a>
+     <a href="#" class="my-savings-btn clearfix fr"><img src="../images/transparent.png" />My Savings</a>
+     <a href="my-expenses.html" class="my-expenses-btn clearfix fr"><img src="../images/transparent.png" />My Expenses</a>
+      </div>
+  <!-- end of "header-strip" id -->
+  
+  <div id="inner-shadow-strip"></div>
+  <!-- end of "inner-shadow-strip" id -->
+  
+  <div id="contents">
+    <div id="data-graph-bx">
+      <div id="data-graph" class="common_sliding_radio data-graph-income"><span class="lbl_first lbl">Data</span><span class="lbl_second lbl">Graph</span></div>
+      <div class="clr"></div>
+      
+      <!--div id="data-graph-margin" style="position:relative; z-index:2;top: -22px;left: 7px; opacity:0.0;"><span class="lbl_first lbl"><a  href="#">Data</a></span><span class="lbl_second lbl"><a  href="my-income-graph.html">Graph</a></span></div-->
+      <div class="clr"></div>
+      
+      
+    </div>
+    <div id="inner_contents_my_income_data"> 
+     <div class="no_data_message">There is no Income Defined by you</div>
+      
+      
+    </div>
+    <!-- end of "inner-contents" id --> 
+  </div>
+  <!-- end of "contents" id -->
+  
+  <footer id="footer"> <img src="../images/finfra-logo.png" /> <span class="copyright">Copyright © 2014 </span> <span class="privacy">Privacy Policy </span> </footer>
+</div>
+<!-- End of "wrapper" id -->
+</body>
+</html>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqls>
+	<service name="sel_latest_news">
+		<sql>
+		<![CDATA[
+		Select _id as id,post_date ,message ,applicable_for from news where company_id = ${companyId}
+		{(to)?"	And post_date >= ${to} ":}
+		{(designation)?" And (applicable_for = ${designation} OR applicable_for is null) ":}
+		order by post_date desc limit 5
+		]]>
+		</sql>
+	</service>
+	
+	<service name="sel_contact">
+		<sql>
+		<![CDATA[
+		
+
+	select  
+		
+		
+		  party.PartyID as contactId,
+		party.FirstName as firstName,
+		party.LastName as lastName,
+		party.ContactEmail as emailId,
+		party.ContactMobile as mobileNo,
+		party.DOB as dob,
+		party.GenderID as genderId,
+		gender.codeValue as gender,
+		maritalStaus.codeValue as maritalStatus,
+		party.PartyId as partyId,
+		party.CreatedBy as createdBy,
+		party.LastModifiedDate as LastModifiedDate,
+		party.MaritalStatusId as martitalStatusId,
+		party.WorkProfession  as occupationID,
+		party.currentStageId as dcStatusId,
+		party.recordTypeID as recordTypeId,
+		(Select CodeValue from CFG_codeValue (nolock) where CodeValueID = party.currentStageId ) as  dcStatus,
+		(Select MAX(documentId) 
+		 From txn_document d 
+		  where documentRefTypeID = 111020 
+		  and d.documentRefRecordID = party.partyID
+		 ) as xrayDocumentId,
+		 
+		fpPlan.ClientActionPlanDocumentID as ClientActionPlanDocumentID,
+		fpPlan.Reserved2DocumentID as quickAnalysisPlanId,
+		fpPlan.Reserved3DocumentID as summaryPlanId,
+		fpPlan.Reserved4DocumentID as detailPlanId
+		
+		from txn_party (nolock) party 
+		left outer join CFG_codevalue gender ON(gender.codeValueId = party.GenderID)
+		left outer join CFG_codevalue maritalStaus ON(maritalStaus.codeValueId = party.MaritalStatusId)
+		left outer join TXN_FPPlan (nolock) fpPlan ON(fpPlan.partyID = party.partyID)
+		where party.isActive=1
+		And party.recordTypeID IN(14005,14006,14007)
+		and (party.createdDate >=  ${lastSyncTime} OR party.LastModifiedDate >= ${lastSyncTime}
+		 OR exists (
+		   	Select 1 From txn_document (nolock) d where documentRefTypeID = 111020 and d.documentRefRecordID = party.partyID
+			and d.partyID = party.partyID
+			and d.LastModifiedDate >= ${lastSyncTime}
+		 )
+		 OR exists (
+		 	Select 1 From TXN_FPPlan (nolock) fp where partyID = party.partyID
+			and fp.LastModifiedDate > ${lastSyncTime}
+		 )
+		)
+		And party.OwnerPartyId = ${ownerPartyId}
+		order by nullif(party.CreatedDate,party.LastModifiedDate) desc
+		
+		]]>
+		</sql>
+	</service>
+	
+	<service name="sel_questions">
+		<sql>
+		<![CDATA[
+		
+
+	Select  
+		qBank.QBankID 'QBankId',
+		qBank.Name 'QBankName',
+		qBank.Description 'QBankDesc',
+		qBank.QBTypeID 'QBankType',
+		qBank.MinScore 'MinScore',
+		qBank.MaxScore 'MaxScore',
+		qBank.MaxScore 'MaxScore',
+		qa.QuestionnaireID 'QuestionnaireID',
+		qa.StartDate 'StartDate',
+		qa.EndDate 'EndDate',
+		--Question
+		q.QuestionId 'QuestionId', 
+		q.SeqNo 'SeqNo', 
+		q.QuestionText 'Question', 
+		q.IsMandatory 'Mandatory' ,
+		q.AttributeCodeIdQuestion 'AttributeCodeIdQuestion',
+		isnull(q.SectionTypeID,0) 'SectionId',
+		q.QuestionTypeID 'QuestionTypeId',
+		q.ParentQuestionID 'ParentQuestionId',
+		q.ParentQuestionOptionID 'ParentQuestionOpId',
+		cvType.codeValue 'QuestionType',
+		--options
+		op.QuestionOptionId 'OptionId',
+		op.SeqNo 'OptionSeq',
+		op.OptionScore 'OptionScore',
+		op.OptionFeedbackText 'OptionFeedBack',
+		op.QuestionOptionText 'OptionText'
+		
+	From MST_Qbank qBank
+	inner join MST_Question q ON(q.QBankID=qBank.QbankId)
+	inner join MST_Questionnaire qa ON(qBank.QbankId= qa.QbankId)
+	inner join CFG_codevalue cvType ON(cvType.codeValueId = q.QuestionTypeID)
+	left outer join MST_QuestionOption op ON(op.QuestionId=q.QuestionId and op.IsACtive=1)
+	Where 
+	q.isActive = 1
+	And qa.QuestionnaireID = (Select top 1 QuestionnaireID From MST_Questionnaire q1
+	inner join MST_Qbank qBank1 ON(q1.qbankId=qbank1.qbankId) 
+	where q1.isActive=1 
+	And qbank1.QBTypeID =${sectionId}
+	and q1.SourceSystemid = ${sourceSystemId} and q1.BUPartyId =${buId} order by q1.startDate desc   )
+	And qBank.QBTypeId=${sectionId}
+	Order by q.SeqNo, op.SeqNo
+		]]>
+		</sql>
+	</service>
+	
+<service name="ins_user_token">
+<sql>
+  INSERT INTO TXN_UserToken (
+ 		
+		UserID,
+		SourceSystemID,
+		Token,
+		OTP,
+		IsOtpConfirmed,
+		Description,
+		IsActive,
+		CreatedBy,
+		CreatedDate,
+		LastModifiedBy,
+		LastModifiedDate
+			)  
+VALUES (
+ 		
+		${userId},
+		${sourceSystemId},
+		${token},
+		${otp},
+		${isOtpConfirmed},
+		${description},
+		1,
+		${createdBy},
+		CURRENT_TIMESTAMP,
+		${lastModifiedBy},
+		CURRENT_TIMESTAMP
+	
+ 		)
+</sql>
+</service>
+
+<service name="upd_user_token">
+<sql>
+  UPDATE TXN_UserToken SET
+ 		
+		Token=${token},
+		OTP =${otp},
+		IsOtpConfirmed =${isOtpConfirmed},
+		Description=${description},
+		LastModifiedBy=${lastModifiedBy},
+		LastModifiedDate=CURRENT_TIMESTAMP
+		where isActive = 1  
+		And UserID= ${userId}
+		
+			
+</sql>
+</service>
+
+
+<service name="sel_user_token">
+<sql>
+  select UserTokenID 'userTokenId', 
+UserID 'userId',
+SourceSystemID 'sourceSystemId',
+OTP 'otp',
+isOtpConfirmed 'isOtpConfirmed',
+Token 'token',
+Description 'description',
+CreatedBy 'createdBy'
+from TXN_UserToken
+where isActive = 1 
+And UserID = ${userId}
+And SourceSystemId = ${sourceSystemId}
+</sql>
+</service>
+
+<service name="sel_session_user_by_token">
+<sql>
+SELECT 
+	p.partyid partyId,
+	U.RoleID roleId,
+	U.UserID userId,
+	U.UserName as userName,
+	U.LastSuccessfulLoginDttm lastLoginDttm,
+	(ISNULL(LTRIM(RTRIM(P.FirstName) + ' '),'') + 
+	ISNULL(LTRIM(RTRIM(P.MiddleName) + ' '),'') + 
+	ISNULL(LTRIM(RTRIM(P.LastName) + ' '),'')) name,
+	P.BUPartyID buId,
+	P.RecordTypeID partyTypeId,
+	R.RoleName roles,
+	 case when p.BUPartyID=27829 then 92003 else  isnull(theme.AttributeValue,0) end themeId,
+	isnull(photo.FileStoragePathURI,'') photo,
+	isnull(logo.FileStoragePathURI,'') logo,
+	0 'successfulLoginCount'
+	,u.IsForceChangePasswordOnLogin isForceChangePasswordOnLogin
+	,p.RecordTypeID recordTypeID
+	,isnull(p.contactemail,'') contactemail 
+	,isnull(p.EmailCommunicationID,'') EmailCommunicationID 
+	,isnull(p.EmailCommunicationName,'') EmailCommunicationName 
+	,isnull(p.ContactMobile,'') ContactMobile 
+	,isnull(bulogo.FileStoragePathURI,'') buLogo
+	,isnull(disclaimer.notetext,'') 'disclaimerText'
+	,isnull(dnd.notetext,'') 'dndText'
+	,case when p.BUPartyID=27829 then 'Blue' else isnull(themecodes.codevalue,'Magento') end 'themeName'
+	,isnull(p.isHeadOfNode,0) 'headOfNode'
+	,isnull(p.currentNodeId,0) 'currentNodeId'
+	,isnull(node.[level],0) 'level'
+	,ISNULL(PS.ProductID,0)subcriptionType 
+	
+	FROM TXN_Party(nolock) P 
+	--inner join TXN_PartyUser_MAP pum
+	--on p.PartyID=pum.PartyID and pum.UserID is not null
+	inner join txn_user(nolock) u	on u.partyid=P.partyid
+	inner join txn_userToken(nolock) token	on u.userid=token.userId
+	inner join MST_Role(nolock) R	on u.roleid=r.RoleID
+	left join txn_partyattribute(nolock) theme
+	on theme.PartyId=p.PartyID and theme.AttributeCodeID=91041
+	left join txn_document(nolock) photo
+	on photo.DocumentID=cast((select top 1  isnull(AttributeValue,0) from TXN_PartyAttribute(nolock) where AttributeCodeID=91035 and PartyId=p.partyid) as int)
+	left join txn_document(nolock) logo
+	on logo.DocumentID=cast((select top 1 isnull(AttributeValue,0) from TXN_PartyAttribute(nolock) where AttributeCodeID=91036 and PartyId=p.partyid order by LastModifiedDate desc) as int)
+	left join txn_document(nolock) bulogo
+	on bulogo.DocumentID=cast((select top 1 isnull(AttributeValue,0) from TXN_PartyAttribute(nolock) where AttributeCodeID=91036 and PartyId=p.BUPartyID order by LastModifiedDate desc) as int)
+	left join txn_partyattribute(nolock) disclaimernote
+	on disclaimernote.PartyId=p.PartyID and disclaimernote.AttributeCodeID=91038
+	left join txn_note(nolock) disclaimer
+	on disclaimer.noteid=cast(disclaimernote.attributevalue as int)
+	left join txn_partyattribute(nolock) dndnote
+	on dndnote.PartyId=p.PartyID and dndnote.AttributeCodeID=91039
+	left join txn_note(nolock) dnd
+	on dnd.noteid=cast(dndnote.attributevalue as int)
+	left join cfg_codevalue themecodes
+	on themecodes.codevalueid=isnull(theme.attributevalue,0)
+	left join TXN_Node node
+	on node.NodeId = p.CurrentNodeId
+	 left join TXN_PartySubscription PS
+	on  U.PartyID =  PS.PartyID
+	WHERE u.IsActive=1
+	And token.sourceSystemId = ${sourceSystemId}
+	And token.token = ${token}
+		and U.UserName=${userName}
+</sql>
+</service>
+
+<service name="sel_party_by_partyId">
+<sql>
+  select  nullIF(party.firstName,'')+' '+nullIF(party.lastName,'') 'PartyName',
+  (select FileStoragePathURI From txn_document photo where photo.documentId =
+  (Select  MAX(CONVERT(INT,AttributeValue)) from TXN_PartyAttribute  t where t.partyid = party.PartyId and AttributeCodeID=91036))
+   as logo
+ from txn_party (nolock) party
+ Where party.partyID = ${partyId}
+</sql>
+</service>
+
+<service name="ins_batch_job_request_q">
+<sql>
+  insert into ZZ_BatchJob_RequestQ(BatchJobRequestQTypeID,Param1NameValue,Param2NameValue,BatchRequestStatusID,RequestedBy,RequestedDateTime)
+  values(${BatchJobRequestQTypeID},${partyId},${Param2NameValue},${BatchRequestStatusID},${lastModifiedBy},CURRENT_TIMESTAMP)
+
+</sql>
+</service>
+
+
+
+
+<service name="sel_partyId">
+<sql>
+  select partyId 'value' from txn_party where ownerPartyId=${ownerPartyId}
+  and (( FirstName =${fName}  and LastName =${lName})
+ {(emailId)?"	or (ContactEmail =${emailId}) ":} 
+ {(mobileNo)?"	or (ContactMobile =${mobileNo}) ":} 
+  )
+</sql>
+</service>
+
+	
+</sqls>

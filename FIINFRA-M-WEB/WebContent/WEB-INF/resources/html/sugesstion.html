@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<meta name="viewport" content="width=1024">
+<title>Suggestion</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<!-- intilazie custom checkbox starts-->
+<script>
+$(document).ready(function(){
+ $('#suggestion').slimScroll();
+ 
+ }) 
+</script>
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper"> 
+  <!-- Main starts--> 
+  <!--section class="main"--> 
+  <!-- Header Starts-->
+  <header class="common_header inner_header">
+    <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+      <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+      <section class="submenu">
+        <div class="menu_section">
+          <ul class="clearfix reset">
+            <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+            <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+            <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+              <section id="password_change">
+                <form method="post" action="" name="change_password">
+                  <ul class="reset">
+                    <li>
+                      <label>Existing Password (from email)</label>
+                      <input type="password" class="pass" id="exist_pass" autofocus required>
+                    </li>
+                    <li>
+                      <label>New Password</label>
+                      <input type="password" class="pass" name="new_pass" required>
+                    </li>
+                    <li>
+                      <label>Re-enter Password</label>
+                      <input type="password" class="pass re_pass" name="re_pass" required>
+                      <span class="error re_enter_error">Password did not match</span> </li>
+                    <li class="clearfix">
+                      <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                      <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                    </li>
+                  </ul>
+                </form>
+              </section>
+            </li>
+            <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+          </ul>
+        </div>
+        <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+      </section>
+      <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+      <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+    </section>
+    <div class="page_header">
+      <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt"></span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+    </div>
+  </header>
+  <!-- Header Ends--> 
+  
+  <!-- Common_content Starts-->
+  <section class="content common_content">
+    <div class="combined_submenu clearfix">
+      <div class="partner_dashboard_submenu">
+        <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+        <div class="menu_section">
+          <ul class="clearfix reset ">
+            <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+            <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+            <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+            <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+            <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+            <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+            <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+            <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="dc_dashboard_submenu">
+        <h4 class="heading"><a href="data-collection.html">Data Collection Dashboard</a></h4>
+        <ul class="clearfix reset first_col_menu">
+          <li class="menu emergency"><a href="emergency-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Emergency</span></a></li>
+          <li class="menu risk_cover"><a href="risk-cover.html" class="anch"><span class="thumb"></span><span class="txt">Risk Cover</span></a></li>
+          <li class="menu retirement"><a href="retirement-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Retirement</span></a></li>
+          <li class="menu succession"><a href="succession-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Succession</span></a></li>
+          <li class="menu financial"><a href="financial-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Financial</span></a></li>
+          <li class="menu cash_flow"><a href="cash-flow.html" class="anch"><span class="thumb"></span><span class="txt">Cash Flow</span></a></li>
+          <li class="menu loan_status"><a href="loan-status.html" class="anch"><span class="thumb"></span><span class="txt">Loan Status</span></a></li>
+          <li class="menu last clearfix"><a href="profile-info.html" class="anch personal_info"><span class="thumb"></span><span class="txt">Personal Info.</span></a> <a href="risk-profile.html" class="anch risk_profile"><span class="thumb"></span><span class="txt">Risk Profile</span></a> <a href="my-goals.html" class="anch my_goals"><span class="thumb"></span><span class="txt">My Goals</span></a></li>
+        </ul>
+        <ul class="clearfix reset sec_col_menu">
+          <li class="menu education"><a href="education-goal-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Education</span></a></li>
+          <li class="menu property"><a href="purchase-property-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Property</span></a></li>
+          <li class="menu wedding"><a href="wedding-goal.html" class="anch"><span class="thumb"></span><span class="txt">Wedding</span></a></li>
+          <li class="menu car"><a href="car-goal.html" class="anch"><span class="thumb"></span><span class="txt">Car</span></a></li>
+          <li class="menu travel"><a href="travel-n-vacaction-goal.html" class="anch"><span class="thumb"></span><span class="txt">Travel</span></a></li>
+          <li class="menu business"><a href="business-goal.html" class="anch"><span class="thumb"></span><span class="txt">Business</span></a></li>
+          <li class="menu special_goal"><a href="special-goal.html" class="anch"><span class="thumb"></span><span class="txt">Special Goal</span></a></li>
+          <li class="menu other"><a href="other-goal.html" class="anch"><span class="thumb"></span><span class="txt">Other Goal</span></a></li>
+        </ul>
+        <div class="clr"></div>
+      </div>
+      <div class="contact_configuration_submenu">
+        <h4 class="heading"><a>Contact Configuration</a></h4>
+        <div class="menu_section">
+          <ul class="clearfix reset ">
+            <li class="menu coantact_setting"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Contact Settings</span></a></li>
+            <li class="menu contact_rec"><a href="#" class="anch"><span class="thumb"></span><span class="txt"> Contact Recommendations</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Common_in_contnet starts-->
+    
+    <div class="clr"></div>
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content"> 
+      <!-- Common_in_contnet starts-->
+      <section class="in_content common_in_content clearfix" id="suggestion">
+        <div class="common_suggestion"> 
+          
+          <!-- Cash Flow Sugesstion Starts -->
+         <div id="cash_flow_suggestion" class="northspace1 hide">
+            <table class="cf_table">
+              <tr>
+                <th>Details</th>
+                <th>Amount in Rs. (per month)</th>
+              </tr>
+              <tr>
+                <td>Your Income </td>
+                <td class="centerAll theme_color">50000</td>
+              </tr>
+              <tr>
+                <td>Your Expenses </td>
+                <td class="centerAll theme_color">30000</td>
+              </tr>
+              <tr>
+                <td>Your Loan Repayment </td>
+                <td class="centerAll theme_color">5000</td>
+              </tr>
+              <tr>
+                <td>Your current investments </td>
+                <td class="centerAll theme_color">10000 </td>
+              </tr>
+            </table>
+            <br/>
+            <br/>
+            <div class="result_desc">
+              <p>NET SURPLUS AVAILABLE – Rs. <span  class="val theme_color">10000</span></p>
+              <p>TO MEET YOUR GOALS – ADDITIONAL INVESTMENT REQUIRED – Rs.<span  class="val theme_color">10000</span> </p>
+              <br/>
+              <br/>
+            </div>
+            <p><span class="theme_color strong">Our Suggestion</span> :
+              Do a detailed cash flow plan , Invest surplus in a planned manner</p>
+          </div> 
+          <!-- Cash Flow Sugesstion Ends --> 
+          
+          
+          
+          <!-- Retirement Planning Suggestion Starts -->
+      <div id="retirement_planning_suggestion" class="northspace1 hide">
+            <p><span class="strong theme_color">Suggestions: </span>You may fall short the amount you need for retirement by <span class="theme_color val">&lt;&lt;Amount of shortfall&gt;&gt;</span> Invest – Rs.<span class="theme_color val">28344</span>/- every month (or) Rs.<span class="theme_color val">31,41,906</span> one time</p>
+            <br/>
+            <p><span class="strong theme_color"> Consider : </span></p>
+            <ul>
+              <li>Reducing expenses after retirement</li>
+              <li> Liquidating some investments</li>
+              <li> Options like reverse mortgage / community living etc</li>
+            </ul>
+          </div> 
+          <!-- Retirement Planning Suggestion Ends --> 
+          
+          
+          
+          <!-- Loan Status Sugesstion Starts -->
+         <div id="loan_status_suggestion" class="northspace1 hide">
+            <p>Your loan situation seems within <span class="theme_color val">&lt;&lt;normal limits&gt;&gt;</span></p>
+            <br/>
+            <p>Get out of loans faster by :</p>
+            <ul>
+              <li>Take lower cost loans (secured) to pay of higher cost loans</li>
+              <li>To manage cashflows better, extend tenure of loans</li>
+              <li>Negotiate for a better deal with your lender</li>
+              <li>Follow debt repayment plans like debt snowballing etc</li>
+            </ul>
+          </div> 
+          <!-- Loan Status Sugesstion Ends --> 
+         
+         
+         
+          <!-- Succession Rediness Suggestion Starts-->
+          <div id="succession_rediness_suggestion" class="northspace1 hide">
+            <p><span class="strong theme_color">Our Sugesstion :</span> Succession Planning is good as Risk planning.Both plan for the wellbeing of your loved ones if things don't go too well.You can legally transfer assets through</p>
+            <ul>
+              <li>Appropriate nominations</li>
+              <li>Through property written will</li>
+              <li>By creating trusts</li>
+              <li>By giving away as Gifts</li>
+            </ul>
+            <p>Do it today.Do it for those you love.
+              Do it for peace-today and tomorrow.</p>
+          </div>
+          <!-- Succession Rediness Suggestion Ends --> 
+         
+         
+          
+         
+          
+         
+          <!-- Common Goal Sugesstion Starts -->
+          <div id="common_goal_suggestion" class="northspace1 hide">
+            <p>With current assets and investments you can achieve   (%) of your <span class="theme_color val">&lt;&lt;Goal&gt;&gt;</span> in the year
+              <span class="theme_color val">&lt;&lt;year&gt;&gt;</span></p>
+            <br/>
+            <p><span class="strong theme_color">Suggested action </span>:</p>
+            <ul>
+              <li>Align the investments to the goal and keep in separate investment accounts. </li>
+              <li>Reallocate assets to optimize risk and returns</li>
+              <li>Regularly rebalance portfolio</li>
+              <li>As goals get nearer, move assets to safer avenues like liquid funds / bank accounts</li>
+            </ul>
+          </div>
+          <!-- Common Goal Sugesstion Ends --> 
+          
+         
+         
+          <!-- Retirement Goal Sugesstion Starts -->
+          <div id="retirement_goal_sugesstion" class="northspace1 hide">
+            <p>With current assets and investments you can achieve   (%) of your <span class="theme_color val">&lt;&lt;</span><span class="theme_color val">Goal&gt;&gt;</span> in the year <span class="theme_color val">&lt;&lt;</span><span class="theme_color val">year&gt;&gt;</span> </p>
+            <br/>
+            <p><span class="strong theme_color">Suggested action </span>:</p>
+            <ul>
+              <li>Invest – Rs.<span class="theme_color val">28344</span>/- every month (or) Rs.<span class="theme_color val">31,41,906</span> one time</li>
+              <li>Also..</li>
+              <li>Align the investments to the goal and keep in separate investment accounts</li>
+              <li>Reallocate assets to optimize risk and returns</li>
+              <li>Regularly rebalance portfolio</li>
+              <li>As goals get nearer, move assets to safer avenues like liquid funds / bank accounts</li>
+            </ul>
+          </div>
+          <!-- Retirement Goal Sugesstion Ends --> 
+          
+         
+         
+         <!-- Genral Goal Sugesstion Starts -->
+          <!-- Goal Upto 80% Starts --> 
+          <div id="goal_upto_80" class="genral_goal_suggestion northspace1 hide">
+            
+          
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion"
+</span>:</p>
+<p>Your goal of  <span class="theme_color val">Goal name</span> in the year <span class="theme_color val"> Year of Goal</span> cannot be achieved with the assets you have and with the investments you are doing.</p> <p><strong>You can do the following to do better</strong> : - Invest an amount of <span class="theme_color val">PMT </span> regularly (or) Invest a lumpsum amount of <span class="theme_color val">PV</span>  one time - You can consider postponing the goal if possible - If the goal ils very important, you may have to borrow to meet the goal.
+</p>
+            
+          </div>
+          <!-- Goal Upto 80% Ends -->
+         
+         <!-- Goal Upto 100% Starts -->
+          <div id="goal_upto_100" class="genral_goal_suggestion northspace1 hide">
+            
+          
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion"
+</span>:</p>
+<p>
+"Your goal of <span class="theme_color val">Goal name</span> in the year <span class="theme_color val">Year of Goal</span> can be somewhat achieved with the assets you have and with the investments you are doing.</p>
+<p><strong> You can do the following to do better</strong> : - Invest an amount of <span class="theme_color val">PMT</span>regularly (or) Invest a lumpsum amount of <span class="theme_color val">PV </span>one time - Align the investments to the goal and keep in separate a/cs. For eg: Investments for children can be made in their name or in separate folio with the child as the nominee</p>
+<ul>
+<li>Reallocate assets to reduce risks and improve returns</li>
+<li>Regularly rebalance portfolio</li>
+<li>Improve chances of achieving goals by moving assets to safer and easily en-cashable investments as the goals get closer</li>
+</ul>
+
+</p>
+            
+          </div>
+          <!-- Goal Upto 100% Ends -->
+         
+          <!-- Goal above 100% Starts --> 
+          <div id="goal_above_100" class="genral_goal_suggestion northspace1 hide">
+            
+          
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion"
+</span>:</p>
+<p>Your goal of <span class="theme_color val">Goal name</span> in the year <span class="theme_color val">Year of Goal</span> can be somewhat achieved with the assets you have and with the investments you are doing.</p>
+<p><strong> You can do the following to do better</strong> : - Align the investments to the goal and keep in separate a/cs. For eg: Investments for children can be made in their name or in separate folio with the child as the nominee</p>
+<ul>
+<li>Reallocate assets to reduce risks and improve returns</li>
+<li>Regularly rebalance portfolio</li>
+<li>Improve chances of achieving goals by moving assets to safer and easily en-cashable investments as the goals get closer</li>
+</ul>
+
+</p>
+           
+            
+
+            
+          </div>
+          <!-- Goal above 100% Ends -->
+          
+          <!-- Genral Goal Sugesstion Ends --> 
+        
+         <!-- Travel and Vacation Goal Sugesstion Starts -->
+          <!-- Goal Upto 80% Starts --> 
+          <div id="tv_goal_upto_80" class="travel_vacation_goal northspace1 hide">
+            
+          
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion"
+</span>:</p>
+<p>Your goal of <span class="theme_color val">Goal name</span> in the year <span class="theme_color val">Year of Goal<span class="theme_color val"> cannot be achieved with the assets you have and with the investments you are doing.</p> <p><strong>You can do the following to do better</strong> : - We can plan your yearly vacation in following ways:
+</p>
+   <ol>
+   <li>Invest Rs.<span class="theme_color val">PMT</span>every month in a bank recurring deposit or liquid fund OR</li>
+   <li>Keep the annual bonus/profit in the bank and spend it when you go on vacation OR</li>
+   <li>A time share property can be bought.</li>
+   
+   </ol>
+   <p>This will ensure that lodging facilities when you go on holidays is taken care of and the costs are protected from inflation for the next <span class="theme_color val">25</span> years. The property are usually well maintained and in popular holiday destinations. The costs can be - down payment of approx. Rs.<span class="theme_color val">20,000</span> to Rs.<span class="theme_color val">40,000</span>, a <span class="theme_color val">48</span> month EMI of approx. Rs.<span class="theme_color val">5,000</span> to Rs.<span class="theme_color val">10,000</span>  (depending on size and timing of holidays) and annual maintenance cost of approx. Rs.<span class="theme_color val">10,000</span> to <span class="theme_color val">15,000</span>. There are interesting and economical options here which you can consider.</p>
+
+  
+
+
+
+
+
+            
+          </div>
+          <!-- Goal Upto 80% Ends -->
+         
+         <!-- Goal Upto 100% Starts -->
+          <div id="tv_goal_upto_100" class="travel_vacation_goal northspace1 hide">
+            
+          
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion"
+</span>:</p>
+<p>
+Your goal of <span class="theme_color val">Goal name</span> in the year <span class="theme_color val">Year of Goal</span> can be somewhat achieved with the assets you have and with the investments you are doing.</p>
+<p><strong> You can do the following to do better</strong> : - We can plan your yearly vacation in following ways:</p>
+<ul>
+<li>Invest Rs. <span class="theme_color val">PMT </span>every month in a bank recurring deposit or liquid fund OR</li>
+<li>Keep the annual bonus/profit in the bank and spend it when you go on vacation OR</li>
+<li>A time share property can be bought.</li>
+</ul>
+
+ <p>This will ensure that lodging facilities when you go on holidays is taken care of and the costs are protected from inflation for the next <span class="theme_color val">25</span> years. The property are usually well maintained and in popular holiday destinations. The costs can be - down payment of approx. Rs.<span class="theme_color val">20,000</span> to Rs.<span class="theme_color val">40,000</span>, a <span class="theme_color val">48</span> month EMI of approx. Rs.<span class="theme_color val">5,000</span> to Rs.<span class="theme_color val">10,000</span>  (depending on size and timing of holidays) and annual maintenance cost of approx. Rs.<span class="theme_color val">10,000</span> to <span class="theme_color val">15,000</span>. There are interesting and economical options here which you can consider.</p>
+            
+          </div>
+          <!-- Goal Upto 100% Ends -->
+         
+          <!-- Goal above 100% Starts --> 
+          <div id="goal_above_100" class="genral_goal_suggestion northspace1 hide">
+            
+          
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion"
+</span>:</p>
+<p>Your goal of <span class="theme_color val">Goal name</span> in the year <span class="theme_color val">Year of Goal</span> can be comfortably achieved with the assets you have and with the investments you are doing. </p>
+<p><strong> You can do the following to do better</strong> : - We can plan your yearly vacation in following ways:</p>
+<ul>
+<li>Invest Rs.<span class="theme_color val">PMT</span>every month in a bank recurring deposit or liquid fund OR</li>
+<li>Keep the annual bonus/profit in the bank and spend it when you go on vacation OR</li>
+<li>A time share property can be bought.</li>
+</ul>
+
+<p>  This will ensure that lodging facilities when you go on holidays is taken care of and the costs are protected from inflation for the next <span class="theme_color val">25</span> years. The property are usually well maintained and in popular holiday destinations. The costs can be - down payment of approx. Rs.<span class="theme_color val">20,000</span> to <span class="theme_color val">Rs.40,000</span>, a <span class="theme_color val">48</span> month EMI of approx. Rs.<span class="theme_color val">5,000</span> to Rs.<span class="theme_color val">10,000</span> (depending on size and timing of holidays) and annual maintenance cost of approx. Rs.<span class="theme_color val">10,000</span> to <span class="theme_color val">15,000</span>. There are interesting and economical options here which you can consider.</p>
+      
+            
+
+            
+          </div>
+          <!-- Goal above 100% Ends -->
+          
+          <!-- Travel and Vacation Goal Sugesstion Ends --> 
+         
+         <!-- Retirement Goal Sugesstion Starts -->
+          <!-- Goal Upto 80% Starts --> 
+          <div id="retirement_upto_80" class="retirement_goal northspace1 hide">
+            
+          
+            
+<p>You may fall short of the amount you need for retirement by <span class="theme_color val">Amount needed - FV of current assets and regular investments</span></p>
+   
+
+
+<p>You can bridge this gap by investing <span class="theme_color val">PMT</span> regularly (or) Invest a lumpsum amount of <span class="theme_color val">PV</span> one time in investments that earn 10 percent returns.</p>
+<p class="strong">You can consider :</p>
+<ul>
+<li>reducing your expenses after retirement</li>
+<li>liquidating some investments to provide cashflows</li>
+<li>options like reverse mortgage / community living etc</li>
+</ul>
+<p>Things to be taken care while investing your retirement corpus are
+safety, easy accessibility, smooth cashflows, operational ease and tax
+efficiency.</p>
+
+
+
+
+
+            
+          </div>
+          <!-- Goal Upto 80% Ends -->
+         
+         <!-- Goal Upto 100% Starts -->
+          <div id="retirement_upto_100" class="retirement_goal northspace1 hide">
+            
+         
+         
+         
+          <p>Your goal of Retirement in the year <span class="theme_color val">Year of Goal</span> can be somewhat achieved with the assets you have and with the investments you are doing.</p>
+           <p><strong>You can do the following to do better</strong> :</p>  
+<ul>
+<li>Invest an amount of <span class="theme_color val">PMT</span> regularly (or) Invest a lumpsum amount of<span class="theme_color val">PV</span> one time - Align the investments to the goal and keep in separate a/cs.</li> 
+<li>Reallocate assets to reduce risks and improve returns</li>
+<li>Regularly rebalance portfolio</li>
+<li>Improve chances of achieving goals by moving assets to safer and easily en-cashable investments as the goals get closer.</li>
+</ul>
+<p>Things to be taken care while investing your retirement corpus are
+safety, easy accessibility, smooth cashflows, operational ease and tax
+efficiency.</p>
+
+           
+           
+            
+          </div>
+          <!-- Goal Upto 100% Ends -->
+         
+          <!-- Goal above 100% Starts --> 
+          <div id="retirement_above_100" class="retirement_goal northspace1 hide">
+            
+          
+          <p>Your goal of Retirement in the year <span class="theme_color val">Year of Goal</span> can be achieved comfortably with the assets you have and with the investments you are doing.</p>  
+          <p><strong>You can do the following to do better</strong> : -</p>  
+<ul>
+<li>Reallocate assets to reduce risks and improve returns</li>
+<li>Regularly rebalance portfolio</li>
+<li>Improve chances of achieving goals by moving assets to safer and easily en-cashable investments as the goals get closer.</li>
+</ul>                             
+<p>Things to be taken care while investing your retirement corpus are
+safety, easy accessibility, smooth cashflows, operational ease and tax
+efficiency.</p>
+
+      
+            
+
+            
+          </div>
+          <!-- Goal above 100% Ends -->
+          
+          <!-- Retirement Goal Sugesstion Goal Sugesstion Ends --> 
+         
+         
+         
+          <!-- Risk Cover Sugesstion Starts --> 
+          <!--Life Insurance Starts -->
+          <div id="rc_life_insurance" class="northspace1 insurance_suggestion hide">
+            <p class="centerAll"><span class="strong theme_color"> Life Insurance</span></p>
+            <table class="insurance_table hide">
+              <tr>
+                <th></th>
+                <th>Required Insurance </th>
+                <th>Current Insurance </th>
+                <th>Additional Insurance Requirement / Adequate Insurance</th>
+              </tr>
+              <tr>
+                <td class="centerAll">Life Insurance</td>
+                <td class="centerAll"> 8,000,000 </td>
+                <td class="centerAll"> 50,000,000 </td>
+                <td class="centerAll negative_result">42,000</td>
+              </tr>
+            </table>
+            
+            <table class="insurance_table hide">
+              <tr>
+                <th></th>
+                <th>Required Insurance </th>
+                <th>Current Insurance </th>
+                <th>Additional Insurance Requirement / Adequate Insurance</th>
+              </tr>
+              <tr>
+                <td class="centerAll">Life Insurance</td>
+                <td class="centerAll"> 8,000,000 </td>
+                <td class="centerAll"> 3,000,000 </td>
+                <td class="centerAll positive_result">42,000</td>
+              </tr>
+            </table>
+          </div>
+           <!-- Life Insurance Ends -->
+           
+            <!--Health Insurance Starts -->
+          <div id="rc_health_insurance" class="northspace1 insurance_suggestion hide">
+            <p class="centerAll"><span class="strong theme_color"> Health Insurance</span></p>
+            <table class="insurance_table hide">
+              <tr>
+                <th></th>
+                <th>Required Insurance </th>
+                <th>Current Insurance </th>
+                <th>Additional Insurance Requirement / Adequate Insurance</th>
+              </tr>
+              <tr>
+                <td class="centerAll">Health Insurance</td>
+                <td class="centerAll"> 500,000 </td>
+                <td class="centerAll"> 1,000,000 </td>
+                <td class="centerAll negative_result"> 500,000</td>
+              </tr>
+            </table>
+            
+            <table class="insurance_table hide">
+              <tr>
+                <th></th>
+                <th>Required Insurance </th>
+                <th>Current Insurance </th>
+                <th>Additional Insurance Requirement / Adequate Insurance</th>
+              </tr>
+              <tr>
+                <td class="centerAll">Health Insurance</td>
+                <td class="centerAll">500,000</td>
+                <td class="centerAll">200,000 </td>
+                <td class="centerAll positive_result">300,000</td>
+              </tr>
+            </table>
+          </div>
+           <!-- Health Insurance Ends -->
+           
+            <!--Perosnal Accident Starts -->
+          <div id="rc_personal_accident" class="northspace1 insurance_suggestion hide">
+            <p class="centerAll"><span class="strong theme_color"> Personal Accident</span></p>
+            <table class="insurance_table hide">
+              <tr>
+                <th></th>
+                <th>Required Insurance </th>
+                <th>Current Insurance </th>
+                <th>Additional Insurance Requirement / Adequate Insurance</th>
+              </tr>
+              <tr>
+                <td class="centerAll">Personal Accident</td>
+                <td class="centerAll"> 1,000,000 </td>
+                <td class="centerAll"> 800,000 </td>
+                <td class="centerAll negative_result"> 200,000</td>
+              </tr>
+            </table>
+            
+            <table class="insurance_table hide">
+              <tr>
+                <th></th>
+                <th>Required Insurance </th>
+                <th>Current Insurance </th>
+                <th>Additional Insurance Requirement / Adequate Insurance</th>
+              </tr>
+              <tr>
+                <td class="centerAll">Personal Accident</td>
+                <td class="centerAll">1,000,000</td>
+                <td class="centerAll">1,500,000 </td>
+                <td class="centerAll positive_result">500,000</td>
+              </tr>
+            </table>
+          </div>
+           <!-- Perosnal Accident Ends -->
+           
+              <!--Critical illness Starts -->
+          <div id="rc_Critical_illness" class="northspace1 insurance_suggestion hide">
+            <p class="centerAll"><span class="strong theme_color">Critical illness</span></p>
+            <table class="insurance_table hide">
+              <tr>
+                <th></th>
+                <th>Required Insurance </th>
+                <th>Current Insurance </th>
+                <th>Additional Insurance Requirement / Adequate Insurance</th>
+              </tr>
+              <tr>
+                <td class="centerAll">Critical illness</td>
+                <td class="centerAll"> 2,000,000 </td>
+                <td class="centerAll"> 1,000,000 </td>
+                <td class="centerAll negative_result"> 1,000,000</td>
+              </tr>
+            </table>
+            
+            <table class="insurance_table hide">
+              <tr>
+                <th></th>
+                <th>Required Insurance </th>
+                <th>Current Insurance </th>
+                <th>Additional Insurance Requirement / Adequate Insurance</th>
+              </tr>
+              <tr>
+                <td class="centerAll">Critical illness</td>
+                <td class="centerAll">2,000,000</td>
+                <td class="centerAll">2,500,000 </td>
+                <td class="centerAll positive_result">500,000</td>
+              </tr>
+            </table>
+          </div>
+           <!-- Critical illness Ends -->
+            
+            <!--Genral Risk Cover Starts -->
+            <div id="risk_cover_sugesstion" class="northspace1 hide">
+            <p>With current assets and investments you can achieve   (%) of your <span class="strong theme_color">&lt;&lt;Goal&gt;&gt;</span> in the year <span class="strong theme_color">&lt;&lt;year&gt;&gt;</span> </p>
+            <br/>
+            <p><span class="strong theme_color">Our Suggestion </span>:</p>
+            <ul>
+              <li>
+                <p>Life Insurance required – Rs.<span class="strong theme_color">10000</span></p>
+                <p>Life Insurance available – Rs.<span class="strong theme_color">10000</span></p>
+                <p class="strong">ADDITIONAL LIFE INSURANCE NEEDED – Rs.<span class="strong theme_color">10000</span> </p>
+              </li>
+              <li>
+                <p>Health insurance required – <span class="strong theme_color">10000</span></p>
+                <p>Health insurance available –<span class="strong theme_color">10000</span></p>
+                <p class="strong">ADDITIONAL HEALTH INSURANCE NEEDED – Rs.<span class="strong theme_color">10000</span></p>
+              </li>
+              <li>
+                <p>Critical illness insurance required – <span class="strong theme_color">10000</span></p>
+                <p>Critical illness insurance available –<span class="strong theme_color">10000</span></p>
+                <p class="strong">ADDITIONAL CRITICAL ILLNESS INSURANCE NEEDED – Rs.<span class="strong theme_color">10000</span></p>
+              </li>
+              <li>
+                <p>Critical illness insurance required – <span class="strong theme_color">10000</span></p>
+                <p>Accident insurance available –<span class="strong theme_color">10000</span></p>
+                <p class="strong">ADDITIONAL ACCIDENT INSURANCE NEEDED – Rs.<span class="strong theme_color">10000</span></p>
+              </li>
+              <li>Asset insurance required – to cover value of assets owned </li>
+            </ul>
+          </div>
+            <!--Genral Risk Cover Ends -->
+            
+         <!-- Risk Cover Sugesstion Ends --> 
+          
+        
+           <!-- Loans Sugesstion Starts -->
+           
+           <!-- Loan Percentage > 50% Age < 35% Starts -->
+           <div id="lp_gt_50" class="loan_suggestion northspace1 hide">
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion" </span> :</p>
+            <p>Your loan commitments are higher than normally comfortable.</p> 
+            <p class="strong">You can :</p> 
+             <ul>
+<li>Consider consolidating your loans by taking a larger lower cost loan and repay the higher cost loans </li>
+            <li>Extend the tenure of loan for a short while, to handle cashflows better </li>
+             <li>Negotiate good deals and repay some loans if possible </li>
+             <li>Follow debt repayment plans like debt snowballing etc to get out of debt. Subscribe to our debt management services for customised help.</li>
+</ul>
+
+                        
+            
+          </div>
+           <!-- Loan Percentage > 50% Age < 35% Ends -->
+           
+           <!-- Loan Percentage < 50% Age < 35% Starts -->
+           <div id="lp_lt_50" class="loan_suggestion northspace1 hide">
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion" </span> :</p>
+            <p>Your loan commitments seem within normal limits. However getting out of loans sooner can release cashflows that can be used for other beneficial purposes.</p> 
+            <p class="strong">You can :</p> 
+             <ul>
+<li>Consider consolidating your loans by taking a larger lower cost loan and repay the higher cost loans</li>
+            <li>Extend the tenure of loan for a short while, to handle cashflows better</li>
+             <li>Negotiate good deals and repay some loans if possible</li>
+             <li>Follow debt repayment plans like debt snowballing etc to get out of debt. Subscribe to our debt management services for customised help</li>
+</ul>
+
+      
+      
+     
+
+      
+                        
+            
+          </div>
+           <!-- Loan Percentage < 50% Age < 35% Ends -->
+           
+            <!-- Loan Percentage < 35% Age > 35% Starts -->
+           <div id="lp_lt_35" class="loan_suggestion northspace1 hide">
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion" </span> :</p>
+            <p>Your loan commitments seem within normal limits. However getting out of loans sooner can release cashflows that can be used for other beneficial purposes.</p> 
+            <p class="strong">You can :</p> 
+             <ul>
+<li>Consider consolidating your loans by taking a larger lower cost loan and repay the higher cost loans</li>
+            <li>Extend the tenure of loan for a short while, to handle cashflows better</li>
+             <li>Negotiate good deals and repay some loans if possible</li>
+             <li>Follow debt repayment plans like debt snowballing etc to get out of debt. Subscribe to our debt management services for customised help.</li>
+</ul>
+
+      
+      
+     
+
+      
+     
+
+      
+                        
+            
+          </div>
+           <!-- Loan Percentage < 35% Age > 35% Ends -->
+       
+          <!-- Loan Percentage > 35% Age > 35% Starts -->
+           <div id="lp_gt_35" class="loan_suggestion northspace1 hide">
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion" </span> :</p>
+            <p>Your loan commitments are higher than normally comfortable.</p> 
+            <p class="strong">You can :</p> 
+             <ul>
+<li>Consider consolidating your loans by taking a larger lower cost loan and repay the higher cost loans</li>
+            <li>Extend the tenure of loan for a short while, to handle cashflows better</li>
+             <li>Negotiate good deals and repay some loans if possible</li>
+             <li>Follow debt repayment plans like debt snowballing etc to get out of debt. Subscribe to our debt management services for customised help.</li>
+</ul>
+
+      
+      
+     
+
+ 
+     
+
+      
+                        
+            
+          </div>
+           <!-- Loan Percentage > 35% Age > 35% Ends -->
+
+          <!-- Future Loan Yes Starts -->
+           <div id="f_loan_yes" class="loan_suggestion northspace1 hide">
+            
+
+      
+      <p>If you are looking at taking any loans in future, you should get your credit rating checked. A good credit score will ensure you get good deals on new loans. In the future, even post paid telephone connections will need good credit scores. Employers check credit scores before offering jobs to new employees.</p>
+
+     
+
+ 
+     
+
+      
+                        
+            
+          </div>
+           <!-- Future Loan Yes Ends -->
+         
+         <!-- No Existing And Future Loan Starts -->
+           <div id="no_cf_loan" class="loan_suggestion northspace1 hide">
+            
+
+      
+      <p>Even though you are not planning to take new loans, get your credit rating checked. A good credit score will ensure you get good deals on new loans.  In the future, even post paid telephone connections will need good credit scores. Employers check credit scores before offering jobs to new employees.
+</p>
+
+     
+
+ 
+     
+
+      
+                        
+            
+          </div>
+           <!-- No Existing And Future Loan Ends -->
+         <!-- Loans Sugesstion  Ends -->   
+         
+         <!-- Cash Flow Starts-->  
+         <div id="cash_flow_suggestion" class="northspace1 cash_flow_suggestion hide">
+            
+            <table class="cfs_table scene1 hide">
+              <tr>
+              <th>Particulars</th>
+                <th>Amount</th>
+              </tr>
+              <tr>
+               
+                <td>Income</td>
+                <td class="centerAll theme_color"><< Income >></td>
+              </tr>
+              
+              <tr>
+               
+                <td>Expense</td>
+                <td class="centerAll theme_color"><< Expense >></td>
+              </tr>
+              
+              <tr>
+               
+                <td>Loan EMI</td>
+                <td class="centerAll theme_color"><< EMI >></td>
+              </tr>
+              
+              <tr>
+               
+                <td>Cash Surplus/Deficit</td>
+                <td class="centerAll"></td>
+              </tr>
+            </table>
+            <p class="centerAll">By reducing expenses or increasing income your surplus will improve
+</p>
+          <p class="centerAll hide">Your Current Investment will help you achieve all your goals.
+</p>
+
+
+            <table class="cfs_table scene2 hide">
+              <tr>
+              <th>Particulars</th>
+                <th>Amount</th>
+              </tr>
+              <tr>
+               
+                <td>Income</td>
+                <td class="centerAll theme_color"><< Income >></td>
+              </tr>
+              
+              <tr>
+               
+                <td>Expense</td>
+                <td class="centerAll theme_color"><< Expense >></td>
+              </tr>
+              
+              <tr>
+               
+                <td>Loan EMI</td>
+                <td class="centerAll theme_color"><< EMI >></td>
+              </tr>
+              
+              <tr>
+               
+                <td>Cash Surplus/Deficit</td>
+                <td class="centerAll"></td>
+              </tr>
+            </table>
+            <p class="centerAll">By reducing expenses or increasing income your surplus will improve
+</p>
+             <p class="centerAll hide">If you invest your surplus in a planned manner your dreams and goals can become reality!</p>        
+                      </div>
+          
+          <!-- Cash Flow Ends -->  
+         
+          <!-- Emergency Readiness Sugesstion Starts --> 
+          <!-- upto 6 months starts-->
+          <div id="emergency_readiness_upto6" class="emergency_readiness_sugesstion northspace1 hide">
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion" </span>:</p>
+            <ul class="reset clearfix">
+              <li>Your current monthly expenses are about <span class="theme_color val">monthly expenses</span>.</li>
+              <li>You have mentioned that you can manage without an income for <span class="theme_color val">No. of months manage without income</span>months.</li>
+              <li>We suggest you to have a Contingency fund for <span class="theme_color val">6</span> months of your living expenses i.e 
+                <span class="theme_color val">Monthly expenses * 6</span></li>
+              <li>You can keep this money in following instruments:-
+                <ol>
+                  <li>Savings Bank Account.</li>
+                  <li>Fixed Deposits.</li>
+                  <li>Ultra Short Term Debt Fund.</li>
+                </ol>
+              </li>
+            </ul>
+            <p>And importantly hold the investments jointly with someone close and whom you can trust.</p>
+          </div>
+          <!-- upto 6 months ends--> 
+          <!-- above 6 months starts-->
+          <div id="emergency_readiness_above6" class="emergency_readiness_sugesstion northspace1 hide">
+            <p><span class="strong theme_color">Relevant advice on Analysis Report "Our Suggestion" </span>:</p>
+            <ul class="reset clearfix">
+              <li>Your current monthly expenses are about <span class="theme_color val">monthly expenses</span>.</li>
+              <li>You have mentioned that you can manage without an income for <span class="theme_color val">No. of months manage without income</span> months, which makes you adequately prepared for any emergency.</li>
+              <li>We suggest you to have a Contingency fund for  <span class="theme_color val">6</span> months of your living expenses i.e 
+                <span class="theme_color val">Monthly expenses * 6</span></li>
+              <li>You can keep this money in following instruments:-
+                <ol>
+                  <li>Savings Bank Account.</li>
+                  <li>Fixed Deposits.</li>
+                  <li>Ultra Short Term Debt Fund.</li>
+                </ol>
+              </li>
+            </ul>
+            <p>And importantly hold the investments jointly with someone close and whom you can trust.</p>
+          </div>
+          <!-- above 6 months ends--> 
+          <!-- Emergency Readiness Sugesstion Ends --> 
+        </div>
+      </section>
+      
+      <!-- Common_in_contnet ends --> 
+      <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup3">
+            <li class="fl list"><a href="data-collection.html" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="data-collection.html" class="anch cancel"><span class="txt">Cancel</span></a></li>
+            <li class="fl list"><a href="financial-readiness.html" class="anch skip"><span class="txt">Skip</span></a></li>
+          </ul>
+          <ul class="reset clearfix fr btn_grup2">
+            <li class="fl list"><a href="#" class="anch add_note"><span class="txt">Add Notes</span></a></li>
+            <li class="fl list"><a href="#" class="anch add_doc"><span class="txt">Add Doc</span></a></li>
+          </ul>
+          <ul class="reset clearfix fl btn_grup1">
+            <li class="fl list"><a href="#" class="anch analysis"><span class="txt">Analysis</span></a></li>
+            <li class="fl list"><a href="#" class="anch suggeset"><span class="txt">Suggestion</span></a></li>
+            <li class="fl list"><a href="#" class="anch action_plan"><span class="txt">Action Plan</span></a></li>
+          </ul>
+        </div>
+        <a href="emergency-readiness.html" class="back navgation"><span class="txt">Back</span></a> <a href="retirement-readiness.html" class="next navgation"><span class="txt">Next</span></a></section>
+      
+      <!-- Common footer ends -->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+</body>
+</html>

@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+        <meta name="viewport" content="width=1024">
+        <title>Asset Details</title>
+        <link rel="shortcut icon" href="../images/favicon.ico" />
+        <link type="text/css" rel="stylesheet" href="../css/basic.css" />
+        <link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+        <link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+        <link type="text/css" rel="stylesheet" href="../css/custom.css" />
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <link type="text/css" rel="stylesheet" href="../css/selectboxlt.css"  />
+        <link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+        <link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+        <link type="text/css" rel="stylesheet" href="../tree/js/jstree/themes/default/style.min.css">
+        <script src="../js/plugin/jquery-1.11.0.min.js"></script>
+        <script src="../js/plugin/jquery.mousewheel.js"></script>
+        <script src="../js/plugin/jquery-ui.js"></script>
+        <script src="../js/my_account_submenu.js"></script>
+        <script src="../js/plugin/selectboxit.js"></script>
+        <script src="../js/plugin/jquery.slimscroll.js"></script>
+        <script src="../js/plugin/perfect-scrollbar.js"></script>
+        <script src="../js/plugin/jquery.bxslider.js"></script>
+        <script src="../tree/js/jstree/jstree.min.js"></script>
+        <!-- Custom Selectbox starts -->
+        <script>
+$(document).ready(function(){
+  	$( "#tabs" ).tabs();
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+	 });
+</script>
+        <!-- Custom Selectbox Ends -->
+
+        <!-- custom scroll to "common_in_content" -->
+        <script>
+$(document).ready(function(){
+  
+    $('.asset_details_bx').slimScroll();
+$('#asset-details #tabs-1 .my_fd_li_bx_in .input_txt_one .txt,#asset-details #tabs-1 .my_fd_li_bx_in .input_txt_two .txt,#asset-details #tabs-1 .my_fd_li_bx_in .input_txt_three .txt,#asset-details #tabs-1 .my_fd_li_bx_in .input_txt_four .txt,#asset-details #tabs-1 .my_fd_li_bx_in .input_txt_five .txt,#asset-details #tabs-1 .my_fd_li_bx_in .input_txt_six .txt,#asset-details #tabs-1 .my_fd_li_bx_in .input_txt_seven .txt,#asset-details #tabs-1 .my_fd_li_bx_in .input_txt_eight .txt,#asset-details #tabs-1 .my_fd_li_bx_in .input_txt_nine_one .txt').perfectScrollbar();
+
+	$('#asset-details #tabs-1 .my_rd_li_bx_in .input_txt_one .txt,#asset-details #tabs-1 .my_rd_li_bx_in .input_txt_two .txt,#asset-details #tabs-1 .my_rd_li_bx_in .input_txt_three .txt,#asset-details #tabs-1 .my_rd_li_bx_in .input_txt_four .txt,#asset-details #tabs-1 .my_rd_li_bx_in .input_txt_five .txt,#asset-details #tabs-1 .my_rd_li_bx_in .input_txt_six .txt,#asset-details #tabs-1 .my_rd_li_bx_in .input_txt_seven .txt,#asset-details #tabs-1 .my_rd_li_bx_in .input_txt_eight .txt,#asset-details #tabs-1 .my_rd_li_bx_in .input_txt_nine_one .txt').perfectScrollbar();
+	
+	//$('#asset-details #tabs-3 .my_mf_li_bx_in .input_txt_one .txt').perfectScrollbar();
+
+	 $("#tabs #ui-id-3").click(function(){
+  // alert("The paragraph was clicked.");
+   $('#asset-details #tabs-3 .my_mf_li_bx_in .input_txt_one .txt,#asset-details #tabs-3 .my_mf_li_bx_in .input_txt_two .txt,#asset-details #tabs-3 .my_mf_li_bx_in .input_txt_three .txt').perfectScrollbar();
+  });
+
+	 $("#tabs #ui-id-6").click(function(){
+  // alert("The paragraph was clicked.");
+   $('#asset-details #tabs-6 .my_stock_li_bx_in .input_txt_one .txt,#asset-details #tabs-6 .my_stock_li_bx_in .input_txt_two .txt,#asset-details #tabs-6 .my_stock_li_bx_in .input_txt_three .txt').perfectScrollbar();
+  });
+	
+  });
+  
+</script>
+
+<!--Hierarchy Submenu Starts Here -->
+
+<script> $(document).ready(function(){
+
+$(".hierarchy-submenu-btn").click(function(){
+    $(".hierarchy-submenu-bx").fadeToggle("slow");
+});
+}) 
+$(document).ready(function (e) {
+
+    $(document).click(function () {
+		
+  if($(".hierarchy-submenu-bx").css("display") == "block") {
+          $(".hierarchy-submenu-bx").fadeOut("slow");
+		 
+        }
+    
+     });
+    $(".hierarchy-submenu-bx,.hierarchy-submenu-btn").click(function (e) {
+        e.stopPropagation();
+});
+});
+</script>
+
+<!--Hierarchy Submenu Ends Here -->
+
+
+<script>
+            function customMenu(node) {
+
+                var tree = $("#jstree").jstree(true);
+
+                if (node.type == 'root') {
+                    var items = {
+                        addLocationItem: {
+                            label: "Add Location",
+                            action: function(obj) {
+                                //alert("Edit User");
+                                //tree.delete_node(node);
+								$('#pnl-mhaddedit .mh-action').hide(function() {
+									$('#pnl-mhaddedit #mh-addlocation').show();
+								});
+								
+                            },
+                            icon: "fa fa-trash-o"
+
+                        },
+                        editItem: {
+                            label: "Edit Location",
+                            action: function(obj) {
+                                //alert("Edit");
+                                //tree.delete_node(node);
+								$('#pnl-mhaddedit .mh-action').hide(function() {
+									$('#pnl-mhaddedit #mh-editlocation').show();
+								});
+                            },
+                            icon: "fa fa-trash-o"
+
+                        },
+						
+                        addUserItem: {
+                            label: "Add User",
+                            action: function(obj) {
+                                //alert("Edit User");
+                                //tree.delete_node(node);
+								$('#pnl-mhaddedit .mh-action').hide(function() {
+									$('#pnl-mhaddedit #mh-adduser').show();
+								});
+                            },
+                            icon: "fa fa-trash-o"
+
+                        }
+						
+                    };
+                } else if (node.type == 'area') {
+                    var items = {
+						addLocationItem: {
+                            label: "Add Location",
+                            action: function(obj) {
+                             //  alert("Add Location");
+                                //tree.delete_node(node);
+								$('#pnl-mhaddedit .mh-action').hide(function() {
+									$('#pnl-mhaddedit #mh-sec-addlocation').show();
+								});
+                            },
+                            icon: "fa fa-trash-o"
+
+                        },
+
+                        editItem: {
+                            label: "Edit Location",
+                            action: function(obj) {
+                              //  alert("Edit Location");
+                                //tree.delete_node(node);
+								$('#pnl-mhaddedit .mh-action').hide(function() {
+									$('#pnl-mhaddedit #mh-sec-editlocation').show();
+								});
+                            },
+                            icon: "fa fa-trash-o"
+
+                        },
+                          deleteItem: {
+                            label: "Delete Location",
+                            action: function(obj) {
+                              //  alert("Add User");
+                                //tree.delete_node(node);
+								//$('#pnl-mhaddedit .mh-action').hide(function() {
+								//	$('#pnl-mhaddedit #mh-sec-deletelocation').show();
+							//	});
+						    },
+                            icon: "fa fa-trash-o"
+
+                        },
+                        addUserItem: {
+                            label: "Add User",
+                            action: function(obj) {
+                              //  alert("Add User");
+                                //tree.delete_node(node);
+								$('#pnl-mhaddedit .mh-action').hide(function() {
+									$('#pnl-mhaddedit #mh-sec-adduser').show();
+								});
+                            },
+                            icon: "fa fa-trash-o"
+
+                        }
+                    };
+                } else if (node.type == 'user') {
+                    var items = {
+                        editUserItem: {
+                            label: "Edit User",
+                            action: function(obj) {
+                             //   alert("Edit User");
+                                //tree.delete_node(node);
+								$('#pnl-mhaddedit .mh-action').hide(function() {
+									$('#pnl-mhaddedit #mh-advisor-edit-user').show();
+								});
+                            },
+                            icon: "fa fa-trash-o"
+
+                        },                        deleteItem: {
+                            label: "Delete User",
+                            action: function(obj) {
+                               // alert("Add User");
+                                //tree.delete_node(node);
+							//	$('#pnl-mhaddedit .mh-action').hide(function() {
+							//		$('#pnl-mhaddedit #mh-advisor-delete-user').show();
+							//	});
+                            },
+                            icon: "fa fa-trash-o"
+
+                        }
+
+                    };
+                }
+
+                return items;
+            }
+
+            $(document).ready(function() {
+				$('#pnl-mhaddedit .mh-action').hide();
+				$('#pnl-mh-advisor-addedit .mh-action').hide();
+
+				$('#pnl-mh-sec-addedit .mh-action').hide();
+
+                $('#jstree').jstree({
+                    "contextmenu": {
+                        "select_node": true,
+                        "show_at_node": false,
+                        "items": customMenu
+                    },
+                    "types": {
+                        "#": {"max_children": 1, "max_depth": 4, "valid_children": ["root"]},
+                        "root": {"icon": "", "valid_children": ["area"]},
+                        "default": {"valid_children": ["default", "file"]},
+                        "user": {"icon": "icn user", "valid_children": []},
+                        "area": {"icon": "icn area", "valid_children": []}
+                    },
+                    "plugins": ["contextmenu", "types"],
+                    'core': {
+                        'data': [
+                            {
+                                'text': 'AG-VISTA(ID)',
+                                'state': {
+                                    'opened': true,
+                                    'selected': true
+                                },
+                                'type': 'root',
+                                'children': [
+                                    {
+                                        'text': 'South Delhi',
+                                        "type": "area",
+                                        'children': [
+                                            {
+                                                'text': 'Advisor1',
+                                                "type": "user"
+                                            },
+                                            {
+                                                'text': '<span class="icn star"></span>Advisor2',
+                                                "type": "user",
+                                                'children': [
+                                                ]
+                                            },
+                                            {
+                                                'text': 'Advisor3',
+                                                "type": "user",
+                                                'children': [
+                                                ]
+                                            }
+
+                                        ]
+                                    },
+                                    {
+                                        'text': 'North Delhi',
+                                        "type": "area",
+                                        'children': [
+                                            {
+                                                'text': '<span class="icn star"></span>Advisor4',
+                                                "type": "user"
+                                            },
+                                            {
+                                                'text': 'Advisor5',
+                                                "type": "user"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+
+                });
+                $("#jstree").on('open_node.jstree', function(e, data) {
+                    $('li.jstree-open > ul li.jstree-open > ul').css({
+                        'width': ($(this).width() + 0) + 'px'
+                    });
+                });
+
+            });
+        </script>
+        </head>
+
+        <body>
+<div id="auto_plan_pop_box"><span class="close">X</span><span>Thank You</span><br/>
+          Auto Plan is generated for Opportunity
+          <form>
+    <input type="button" class="ap_btn" value="View">
+    <input type="button" class="ap_btn" value="Contact">
+  </form>
+        </div>
+
+<!-- Wrapper starts-->
+<div class="wrapper" id="asset-details"> 
+          <!-- Main starts-->
+          
+          <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+              <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+                  <div class="menu_section">
+            <ul class="clearfix reset">
+                      <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+                      <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+                      <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                          <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                              <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                              <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                              <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                              <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                            </ul>
+                  </form>
+                        </section>
+              </li>
+                      <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+                    </ul>
+          </div>
+                  <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+                </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+              <div class="page_header">
+        <h1 class="heading clearfix"> <a href="#" class="drop_menu"></a>
+                  <div class="hierarchy-submenu-main-bx"> <img class="hierarchy-submenu-btn" src="../tree/images/hie-dropdown.png" width="37" height="29" alt="">
+            <div class="hierarchy-submenu-bx" style="display:none;">
+                      <div class="hierarchy-submenu-bx-in">
+                <div id="jstree" > </div>
+              </div>
+                    </div>
+          </div>
+                  <span class="head_txt">Assets Details</span><span class="heading_icon"><span class="head_icon"><img src="../images/asset-detail.png" width="35" height="37" alt=""></span></span> </h1>
+      </div>
+            </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+              <div class="partner_dashboard_submenu">
+        <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+        <div class="menu_section">
+                  <ul class="clearfix reset">
+            <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+            <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+            <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+            <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+            <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+            <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+            <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+            <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+          </ul>
+                </div>
+      </div>
+              <!-- Common_in_contnet starts-->
+              <section class="common_in_content auto_plan_in clearfix" id="my_assets">
+        <div style="padding:10px 10px 0;">
+                  <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+            <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+                      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-3" aria-labelledby="ui-id-3" aria-selected="false"><a href="#tabs-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">Mutual Fund</a></li>
+                      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-6" aria-labelledby="ui-id-6" aria-selected="false"><a href="#tabs-6" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-6">Shares</a></li>
+                      <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">Deposits</a></li>
+                      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Retirement Funds</a></li>
+                      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-4" aria-labelledby="ui-id-4" aria-selected="false"><a href="#tabs-4" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-4">Gold</a></li>
+                      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-5" aria-labelledby="ui-id-5" aria-selected="false"><a href="#tabs-5" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-5">Property</a></li>
+                      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-5" aria-labelledby="ui-id-5" aria-selected="false"><a href="#tabs-7" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-5">Others</a></li>
+                    </ul>
+            <div id="tabs-1" class="tab_border ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-1" role="tabpanel" aria-expanded="true" aria-hidden="false">
+                      <div class="submit_btn fr">Add More</div>
+                      <div class="asset_details_bx"> 
+                <!--title starts-->
+                <div class="my_fd_title_main_title">Fixed Deposits</div>
+                <div class="my_fd_title_bx">
+                          <ul class="clearfix head_title">
+                    <li class="input_title_one fl">Owner</li>
+                    <li class="input_title_two fl">Asset Name</li>
+                    <li class="input_title_three fl">Bank Name</li>
+                    <li class="input_title_four fl">A/C No.</li>
+                    <li class="input_title_five fl">Commcemnt Date</li>
+                    <li class="input_title_six fl">Amount Deposited</li>
+                    <li class="input_title_eight_two fl">Maturity Date</li>
+                    <li class="input_title_nine fl">Maturity Value</li>
+                    <li class="input_title_ten fl">Interest Rate</li>
+                    <li class="input_title_eleven fl">Current Balance</li>
+                    <li class="input_title_eleven_one fl">No. of Goals</li>
+                    <li class="input_title_telwe fl">Edit</li>
+                    <li class="input_title_thirteen fl">Delete</li>
+                  </ul>
+                        </div>
+                <!--title ends--> 
+                <!--txt starts-->
+                <div class="my_fd_li_bx ">
+                          <div class="my_fd_li_bx_in">
+                    <ul>
+                              <li class="input_txt_one fl">
+                        <div class="txt">Akshay Sangawar</div>
+                      </li>
+                              <li class="input_txt_two fl">
+                        <div class="txt">Property</div>
+                      </li>
+                              <li class="input_txt_three fl">
+                        <div class="txt">Oriental Bank of Commerce</div>
+                      </li>
+                              <li class="input_txt_four fl">
+                        <div class="txt">20071310238</div>
+                      </li>
+                              <li class="input_txt_five fl">
+                        <div class="txt">12-Jan-2010</div>
+                      </li>
+                              <li class="input_txt_six fl">
+                        <div class="txt">30,000</div>
+                      </li>
+                              <li class="input_txt_seven fl">
+                        <div class="txt">29-Sep-2015</div>
+                      </li>
+                              <li class="input_txt_eight fl">
+                        <div class="txt">45,000</div>
+                      </li>
+                              <li class="input_txt_nine fl"><span class="value">12</span>%</li>
+                              <li class="input_txt_nine_one fl">
+                        <div class="txt">1,00,000</div>
+                      </li>
+                              <li class="input_txt_ten fl">5</li>
+                              <li class="input_txt_eleven fl"><a href="" class="my_asset_edit_row" > </a></li>
+                              <li class="input_txt_telwe fl"><a href="" class="my_asset_delete_row"> </a></li>
+                              <div class="clr"></div>
+                            </ul>
+                    <!-- txt ends--> 
+                    
+                  </div>
+                          <div class="my_fd_li_bx_in">
+                    <ul>
+                              <li class="input_txt_one fl">
+                        <div class="txt">Akshay Sangawar</div>
+                      </li>
+                              <li class="input_txt_two fl">
+                        <div class="txt">Gold</div>
+                      </li>
+                              <li class="input_txt_three fl">
+                        <div class="txt">Oriental Bank of Commerce</div>
+                      </li>
+                              <li class="input_txt_four fl">
+                        <div class="txt">20071310238</div>
+                      </li>
+                              <li class="input_txt_five fl">
+                        <div class="txt">12-Jan-2010</div>
+                      </li>
+                              <li class="input_txt_six fl">
+                        <div class="txt">30,000</div>
+                      </li>
+                              <li class="input_txt_seven fl">
+                        <div class="txt">29-Sep-2015</div>
+                      </li>
+                              <li class="input_txt_eight fl">
+                        <div class="txt">45,000</div>
+                      </li>
+                              <li class="input_txt_nine fl"><span class="value">12</span>%</li>
+                              <li class="input_txt_nine_one fl">
+                        <div class="txt">1,00,000</div>
+                      </li>
+                              <li class="input_txt_ten fl">5</li>
+                              <li class="input_txt_eleven fl"><a href="" class="my_asset_edit_row" > </a></li>
+                              <li class="input_txt_telwe fl"><a href="" class="my_asset_delete_row"> </a></li>
+                              <div class="clr"></div>
+                            </ul>
+                    <!-- txt ends--> 
+                    
+                  </div>
+                        </div>
+                
+                <!--*----------Recurring Deposits--------------*-->
+                <div class="my_fd_title_main_title">Recurring Deposits</div>
+                <!--title starts-->
+                <div class="my_rd_title_bx">
+                          <ul class="clearfix head_title">
+                    <li class="input_title_one fl">Owner</li>
+                    <li class="input_title_two fl">Asset Name</li>
+                    <li class="input_title_three fl">Bank Name</li>
+                    <li class="input_title_four fl">A/C No.</li>
+                    <li class="input_title_five fl">Commcemnt Date</li>
+                    <li class="input_title_six fl">Monthly Deposited</li>
+                    <li class="input_title_eight_two fl">Maturity Date</li>
+                    <li class="input_title_nine fl">Maturity Value</li>
+                    <li class="input_title_ten fl">Interest Rate</li>
+                    <li class="input_title_eleven fl">Current Balance</li>
+                    <li class="input_title_eleven_one fl">No. of Goals</li>
+                    <li class="input_title_telwe fl">Edit</li>
+                    <li class="input_title_thirteen fl">Delete</li>
+                  </ul>
+                        </div>
+                
+                <!--title ends--> 
+                <!--txt starts-->
+                <div class="my_rd_li_bx first_row">
+                          <div class="my_rd_li_bx_in">
+                    <ul>
+                              <li class="input_txt_one fl">
+                        <div class="txt">Akshay Sangawar</div>
+                      </li>
+                              <li class="input_txt_two fl">
+                        <div class="txt">Gold</div>
+                      </li>
+                              <li class="input_txt_three fl">
+                        <div class="txt">Oriental Bank of Commerce</div>
+                      </li>
+                              <li class="input_txt_four fl">
+                        <div class="txt">20071310238</div>
+                      </li>
+                              <li class="input_txt_five fl">
+                        <div class="txt">12-Jan-2010</div>
+                      </li>
+                              <li class="input_txt_six fl">
+                        <div class="txt">30,000</div>
+                      </li>
+                              <li class="input_txt_seven fl">
+                        <div class="txt">29-Sep-2015</div>
+                      </li>
+                              <li class="input_txt_eight fl">
+                        <div class="txt">45,000</div>
+                      </li>
+                              <li class="input_txt_nine fl"><span class="value">12</span>%</li>
+                              <li class="input_txt_nine_one fl">
+                        <div class="txt">1,00,000</div>
+                      </li>
+                              <li class="input_txt_ten fl">5</li>
+                              <li class="input_txt_eleven fl"><a href="" class="my_asset_edit_row" > </a></li>
+                              <li class="input_txt_telwe fl"><a href="" class="my_asset_delete_row"> </a></li>
+                              <div class="clr"></div>
+                            </ul>
+                    <!-- txt ends--> 
+                    
+                  </div>
+                        </div>
+                
+                <!-- txt ends--> 
+                
+                <!--*----------Savings Account--------------*-->
+                <div class="my_fd_title_main_title">Savings </div>
+                <!--title starts-->
+                <div class="my_savings_title_bx clearfix">
+                          <ul class="clearfix head_title">
+                    <li class="input_title_one fl">Owner</li>
+                    <li class="input_title_two fl">Asset Name</li>
+                    <li class="input_title_three fl">Bank Name</li>
+                    <li class="input_title_four fl">A/C No.</li>
+                    <li class="input_title_ten fl">Interest Rate</li>
+                    <li class="input_title_ten_one fl">Current Balance</li>
+                    <li class="input_title_eleven fl">No. of Goals</li>
+                    <li class="input_title_telwe fl">Edit</li>
+                    <li class="input_title_thirteen fl">Delete</li>
+                  </ul>
+                        </div>
+                <!--title ends--> 
+                <!--txt starts-->
+                <div class="my_savings_li_bx first_row">
+                          <div class="my_savings_li_bx_in">
+                    <ul>
+                              <li class="input_txt_one fl"><span class="name">Akshay Sangawar</span></li>
+                              <li class="input_txt_two fl">Property</li>
+                              <li class="input_txt_three fl">SBI</li>
+                              <li class="input_txt_four fl">20071310238</li>
+                              <li class="input_txt_nine fl"><span class="value">12</span>%</li>
+                              <li class="input_txt_ten fl">10,000</li>
+                              <li class="input_txt_ten_one fl">5</li>
+                              <li class="input_txt_eleven fl"><a href="" class="my_asset_edit_row"> </a></li>
+                              <li class="input_txt_telwe fl"><a href="" class="my_asset_delete_row"> </a></li>
+                              <div class="clr"></div>
+                            </ul>
+                    <!-- txt ends--> 
+                  </div>
+                          <div class="my_savings_li_bx_in">
+                    <ul>
+                              <li class="input_txt_one fl"><span class="name">Akshay Sangawar</span></li>
+                              <li class="input_txt_two fl">Property</li>
+                              <li class="input_txt_three fl">SBI</li>
+                              <li class="input_txt_four fl">20071310238</li>
+                              <li class="input_txt_nine fl"><span class="value">12</span>%</li>
+                              <li class="input_txt_ten fl">10,000</li>
+                              <li class="input_txt_ten_one fl">5</li>
+                              <li class="input_txt_eleven fl"><a href="" class="my_asset_edit_row"> </a></li>
+                              <li class="input_txt_telwe fl"><a href="" class="my_asset_delete_row"> </a></li>
+                              <div class="clr"></div>
+                            </ul>
+                    <!-- txt ends--> 
+                  </div>
+                        </div>
+                
+                <!-- txt ends-->
+                
+                <div class="clr"></div>
+              </div>
+                    </div>
+            <!-- Tabs 1 Ends--> 
+            
+            <!-- Tabs 2-->
+            <div id="tabs-2" class="tab_border ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-2" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                      <div class="submit_btn fr">Add More</div>
+                      <div class="asset_details_bx"> 
+                <!--title starts-->
+                <div class="my_ppf_title_main_title">Public Provident Fund (PPF)</div>
+                <div class="my_ppf_title_bx">
+                          <ul class="clearfix head_title">
+                    <li class="input_title_one fl">Owner</li>
+                    <li class="input_title_two fl">Asset Name</li>
+                    <li class="input_title_three fl">Maturity Date</li>
+                    <li class="input_title_four fl">Accumulated Amount</li>
+                    <li class="input_title_five fl">Annual contribution</li>
+                    <li class="input_title_six fl">Interest Rate</li>
+                    <li class="input_title_eight_two fl">Current Balance</li>
+                    <li class="input_title_ten fl">No. of Goals</li>
+                    <li class="input_title_telwe fl">Edit</li>
+                    <li class="input_title_thirteen fl">Delete</li>
+                  </ul>
+                        </div>
+                <!--title ends--> 
+                <!--txt starts-->
+                <div class="my_ppf_li_bx first_row">
+                          <div class="my_ppf_li_bx_in">
+                    <ul class="clearfix">
+                              <li class="input_txt_one fl"><span class="name">Akshay Sangawar</span></li>
+                              <li class="input_txt_two fl">Property</li>
+                              <li class="input_txt_three fl">12-Jan-2010</li>
+                              <li class="input_txt_four fl">30,000 </li>
+                              <li class="input_txt_five fl">30,000 </li>
+                              <li class="input_txt_six fl"><span>12</span>%</li>
+                              <li class="input_txt_seven fl">45,000</li>
+                              <li class="input_txt_nine fl">5</li>
+                              <li class="input_txt_ten fl"><a href="" class="my_asset_edit_row"> </a></li>
+                              <li class="input_txt_eleven fl"><a href="" class="my_asset_delete_row"> </a></li>
+                            </ul>
+                    <!-- txt ends--> 
+                    
+                  </div>
+                          <div class="my_ppf_li_bx_in">
+                    <ul class="clearfix">
+                              <li class="input_txt_one fl"><span class="name">Akshay Sangawar</span></li>
+                              <li class="input_txt_two fl">Property</li>
+                              <li class="input_txt_three fl">12-Jan-2010</li>
+                              <li class="input_txt_four fl">30,000 </li>
+                              <li class="input_txt_five fl">30,000 </li>
+                              <li class="input_txt_six fl"><span>12</span>%</li>
+                              <li class="input_txt_seven fl">45,000</li>
+                              <li class="input_txt_nine fl">5</li>
+                              <li class="input_txt_ten fl"><a href="" class="my_asset_edit_row"> </a></li>
+                              <li class="input_txt_eleven fl"><a href="" class="my_asset_delete_row"> </a></li>
+                            </ul>
+                    <!-- txt ends--> 
+                    
+                  </div>
+                        </div>
+                
+                <!--*----------Employees Provident Funds --------------*--> 
+                
+                <!--title starts--> 
+                
+                <!--title ends--> 
+                <!--txt starts--> 
+                
+                <!-- txt ends-->
+                
+                <div class="clr"></div>
+              </div>
+                    </div>
+            <!-- Tabs 2 Ends--> 
+            
+            <!-- Tabs 3-->
+            <div id="tabs-3" class="tab_border ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-3" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                      <div class="submit_btn fr">Add More</div>
+                      <!--title starts-->
+                      <div class="asset_details_bx">
+                <div class="my_mf_title_bx">
+                          <ul class="clearfix head_title">
+                    <li class="input_title_one fl">Fund Scheme</li>
+                    <li class="input_title_two fl">Asset Mgnt. Comp.</li>
+                    <li class="input_title_three fl">Folio Number</li>
+                    <li class="input_title_four fl">SIP Amount</li>
+                    <li class="input_title_five fl">Start Date</li>
+                    <li class="input_title_six fl">End Date</li>
+                    <li class="input_title_six_two fl">Frequency</li>
+                    <li class="input_title_seven fl">No. of Units</li>
+                    <li class="input_title_eight fl">Current Value</li>
+                    <li class="input_title_eight_one fl">No. of Goals</li>
+                    <li class="input_title_nine fl">Edit</li>
+                    <li class="input_title_ten fl">Delete</li>
+                    <div class="clr"></div>
+                  </ul>
+                        </div>
+                <!--title ends--> 
+                
+                <!--*----------Mutual Funds --------------*-->
+                
+                <div class="my_mf_li_bx"> 
+                          
+                          <!--txt starts-->
+                          
+                          <div class="my_mf_li_bx_in">
+                    <ul>
+                              <li class="input_txt_one fl">
+                        <div class="txt">IDFC Dynamic Equity Fund</div>
+                      </li>
+                              <li class="input_txt_two fl">
+                        <div class="txt">IDFC Mutual Fund</div>
+                      </li>
+                              <li class="input_txt_three fl">
+                        <div class="txt">30-4015-009-0020</div>
+                      </li>
+                              <li class="input_txt_four fl">21,000</li>
+                              <li class="input_txt_five fl">12-Jan-2010</li>
+                              <li class="input_txt_six fl">12-Jan-2011</li>
+                              <li class="input_txt_six_two fl">10</li>
+                              <li class="input_txt_seven fl">100</li>
+                              <li class="input_txt_eight fl">40,000</li>
+                              <li class="input_txt_eight_one fl">4</li>
+                              <li class="input_txt_nine fl"><a href="" class="my_asset_edit_row"> </a></li>
+                              <li class="input_txt_ten fl"><a href="" class="my_asset_delete_row"> </a></li>
+                            </ul>
+                    <div class="clr"></div>
+                  </div>
+                          
+                          <!--txt starts-->
+                          
+                          <div class="my_mf_li_bx_in">
+                    <ul>
+                              <li class="input_txt_one fl">
+                        <div class="txt">IDFC Dynamic Equity Fund</div>
+                      </li>
+                              <li class="input_txt_two fl">
+                        <div class="txt">IDFC Mutual Fund</div>
+                      </li>
+                              <li class="input_txt_three fl">
+                        <div class="txt">30-4015-009-0020</div>
+                      </li>
+                              <li class="input_txt_four fl">21,000</li>
+                              <li class="input_txt_five fl">12-Jan-2010</li>
+                              <li class="input_txt_six fl">12-Jan-2011</li>
+                              <li class="input_txt_six_two fl">10</li>
+                              <li class="input_txt_seven fl">100</li>
+                              <li class="input_txt_eight fl">40,000</li>
+                              <li class="input_txt_eight_one fl">4</li>
+                              <li class="input_txt_nine fl"><a href="" class="my_asset_edit_row"> </a></li>
+                              <li class="input_txt_ten fl"><a href="" class="my_asset_delete_row"> </a></li>
+                            </ul>
+                    <div class="clr"></div>
+                  </div>
+                        </div>
+                <div class="clr"></div>
+              </div>
+                    </div>
+            <!-- Tabs 3 Ends--> 
+            
+            <!-- Tabs 4--> 
+            <!--*----------Gold --------------*-->
+            <div id="tabs-4" class="tab_border ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-4" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                      <div class="submit_btn fr">Add More</div>
+                      <!--title starts-->
+                      <div class="asset_details_bx">
+                <div class="my_gold_title_bx">
+                          <ul>
+                    <li class="input_title_one fl">Owner</li>
+                    <li class="input_title_two fl">Item Description</li>
+                    <li class="input_title_three fl">Amount Investment</li>
+                    <li class="input_title_three_two fl">Current Value</li>
+                    <li class="input_title_four fl">No. of Goals</li>
+                    <li class="input_title_five fl">Edit</li>
+                    <li class="input_title_six fl">Delete</li>
+                    <div class="clr"></div>
+                  </ul>
+                        </div>
+                <!--title ends-->
+                
+                <div class="my_gold_li_bx first_row">
+                          <div class="white_bg"> 
+                    
+                    <!--txt starts-->
+                    
+                    <div class="my_gold_li_bx_in">
+                              <ul>
+                        <li class="input_txt_one fl">Akshay Sangawar </li>
+                        <li class="input_txt_two fl">Lorem ipsum dolor sit amet</li>
+                        <li class="input_txt_three fl">50,000</li>
+                        <li class="input_txt_three_two fl">60,000</li>
+                        <li class="input_txt_four fl">6</li>
+                        <li class="input_txt_five fl"><a href="" class="my_asset_edit_row"> </a> </li>
+                        <li class="input_txt_six fl"><a href="" class="my_asset_delete_row"> </a> </li>
+                      </ul>
+                              
+                              <!-- txt ends-->
+                              <div class="clr"></div>
+                            </div>
+                  </div>
+                        </div>
+                <div class="clr"></div>
+              </div>
+                    </div>
+            
+            <!--*----------Gold Ends --------------*--> 
+            <!-- Tabs 4 Ends--> 
+            
+            <!-- Tabs 5--> 
+            <!--*----------Property --------------*-->
+            <div id="tabs-5" class="tab_border ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-5" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                      <div class="submit_btn fr">Add More</div>
+                      <div class="clr"></div>
+                      <!--title starts-->
+                      
+                      <div class="my_property_title_bx">
+                <ul>
+                          <li class="input_title_one fl">Owner</li>
+                          <li class="input_title_two fl">Property Name</li>
+                          <li class="input_title_three fl">Year Brought In</li>
+                          <li class="input_title_four fl">Growth Rate</li>
+                          <li class="input_title_five fl">Property Value</li>
+                          <li class="input_title_six fl">No. of Goals</li>
+                          <li class="input_title_seven fl">Edit</li>
+                          <li class="input_title_eight fl">Delete</li>
+                          <div class="clr"></div>
+                        </ul>
+              </div>
+                      <!--title ends-->
+                      
+                      <div class="my_property_li_bx first_row">
+                <div class="white_bg"> 
+                          
+                          <!--txt starts-->
+                          
+                          <div class="my_property_li_bx_in">
+                    <ul>
+                              <li class="input_txt_one fl">Akshay Sangawar </li>
+                              <li class="input_txt_two fl">Bungalow</li>
+                              <li class="input_txt_three fl">12-Jan-2010</li>
+                              <li class="input_txt_four fl"><span>12</span>%</li>
+                              <li class="input_txt_five fl">12,00,00,000</li>
+                              <li class="input_txt_six fl">12</li>
+                              <li class="input_txt_seven fl"><a href="" class="my_asset_edit_row"> </a> </li>
+                              <li class="input_txt_eight fl"><a href="" class="my_asset_delete_row"> </a> </li>
+                            </ul>
+                    
+                    <!-- txt ends-->
+                    
+                    <div class="clr"></div>
+                  </div>
+                        </div>
+              </div>
+                      <div class="clr"></div>
+                    </div>
+            
+            <!--*----------Property Ends --------------*--> 
+            <!-- Tabs 5 Ends--> 
+            
+            <!-- Tabs 6--> 
+            <!--*----------Property --------------*-->
+            <div id="tabs-6" class="tab_border ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-6" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                      <div class="submit_btn fr">Add More</div>
+                      <div class="clr"></div>
+                      <!--title starts-->
+                      <div class="asset_details_bx">
+                <div class="my_stock_title_bx">
+                          <ul class="clearfix head_title">
+                    <li class="input_title_one fl">Owner</li>
+                    <li class="input_title_two fl">Stock Name</li>
+                    <li class="input_title_three fl">Institute Name</li>
+                    <li class="input_title_four fl">Investment Date</li>
+                    <li class="input_title_four_two fl">Investment Amount</li>
+                    <li class="input_title_five fl">Quantity</li>
+                    <li class="input_title_six fl">Current Value</li>
+                    <li class="input_title_seven fl">No. of Goals</li>
+                    <li class="input_title_eight fl">Edit</li>
+                    <li class="input_title_nine fl">Delete</li>
+                    <div class="clr"></div>
+                  </ul>
+                        </div>
+                <!--title ends-->
+                
+                <div class="my_stock_li_bx first_row">
+                          <div class="white_bg"> 
+                    <!--txt starts-->
+                    <div class="my_stock_li_bx_in">
+                              <ul>
+                        <li class="input_txt_one fl">
+                                  <div class="txt">Akshay Sangawar</div>
+                                </li>
+                        <li class="input_txt_two fl">
+                                  <div class="txt">Kotak Mahindra Bank Ltd</div>
+                                </li>
+                        <li class="input_txt_three fl">
+                                  <div class="txt">Kotak Mahindra Bank Ltd</div>
+                                </li>
+                        <li class="input_txt_four fl">12-Jan-2010</li>
+                        <li class="input_txt_four_two fl">10,000</li>
+                        <li class="input_txt_five fl">10</li>
+                        <li class="input_txt_six fl">12,0000</li>
+                        <li class="input_txt_seven fl">10</li>
+                        <li class="input_txt_nine fl"><a href="#" class="my_asset_edit_row"> </a> </li>
+                        <li class="input_txt_ten fl"><a href="#" class="my_asset_delete_row"> </a></li>
+                        <div class="clr"></div>
+                      </ul>
+                            </div>
+                    <!-- txt ends--> 
+                    
+                    <!--txt starts-->
+                    <div class="my_stock_li_bx_in">
+                              <ul>
+                        <li class="input_txt_one fl">
+                                  <div class="txt">Akshay Sangawar</div>
+                                </li>
+                        <li class="input_txt_two fl">
+                                  <div class="txt">Kotak Mahindra Bank Ltd</div>
+                                </li>
+                        <li class="input_txt_three fl">
+                                  <div class="txt">Kotak Mahindra Bank Ltd</div>
+                                </li>
+                        <li class="input_txt_four fl">12-Jan-2010</li>
+                        <li class="input_txt_four_two fl">10,000</li>
+                        <li class="input_txt_five fl">10</li>
+                        <li class="input_txt_six fl">12,0000</li>
+                        <li class="input_txt_seven fl">10</li>
+                        <li class="input_txt_nine fl"><a href="#" class="my_asset_edit_row"> </a> </li>
+                        <li class="input_txt_ten fl"><a href="#" class="my_asset_delete_row"> </a></li>
+                        <div class="clr"></div>
+                      </ul>
+                            </div>
+                    <!-- txt ends--> 
+                    
+                    <!--txt starts-->
+                    <div class="my_stock_li_bx_in">
+                              <ul>
+                        <li class="input_txt_one fl">
+                                  <div class="txt">Akshay Sangawar</div>
+                                </li>
+                        <li class="input_txt_two fl">
+                                  <div class="txt">Kotak Mahindra Bank Ltd</div>
+                                </li>
+                        <li class="input_txt_three fl">
+                                  <div class="txt">Kotak Mahindra Bank Ltd</div>
+                                </li>
+                        <li class="input_txt_four fl">12-Jan-2010</li>
+                        <li class="input_txt_four_two fl">10,000</li>
+                        <li class="input_txt_five fl">10</li>
+                        <li class="input_txt_six fl">12,0000</li>
+                        <li class="input_txt_seven fl">10</li>
+                        <li class="input_txt_nine fl"><a href="#" class="my_asset_edit_row"> </a> </li>
+                        <li class="input_txt_ten fl"><a href="#" class="my_asset_delete_row"> </a></li>
+                        <div class="clr"></div>
+                      </ul>
+                            </div>
+                    <!-- txt ends-->
+                    <div class="clr"></div>
+                  </div>
+                        </div>
+                <div class="clr"></div>
+              </div>
+                    </div>
+            
+            <!--*----------Stock Ends --------------*--> 
+            <!-- Tabs 6 Ends--> 
+            
+            <!-- Tabs 7--> 
+            <!--*----------Others --------------*-->
+            <div id="tabs-7" class="tab_border ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-6" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                      <div class="submit_btn fr">Add More</div>
+                      <div class="clr"></div>
+                      <!--title starts-->
+                      <div class="asset_details_bx">
+                <div class="others_title_bx">
+                          <ul class="clearfix head_title">
+                    <li class="input_title_one fl">Owner</li>
+                    <li class="input_title_two fl">Asset Type</li>
+                    <li class="input_title_three fl">Asset Name</li>
+                    <li class="input_title_four fl">Current Value</li>
+                    <li class="input_title_five fl">No. of Goals</li>
+                    <li class="input_title_six fl">Edit</li>
+                    <li class="input_title_seven fl">Delete</li>
+                    <div class="clr"></div>
+                  </ul>
+                        </div>
+                <!--title ends-->
+                
+                <div class="others_li_bx first_row">
+                          <div class="white_bg"> 
+                    <!--txt starts-->
+                    <div class="others_li_bx_in">
+                              <ul>
+                        <li class="input_txt_one fl">
+                                  <div class="txt">Akshay Sangawar</div>
+                                </li>
+                        <li class="input_txt_two fl">
+                                  <div class="txt">Sculpture</div>
+                                </li>
+                        <li class="input_txt_three fl">
+                                  <div class="txt">Bird Girl</div>
+                                </li>
+                        <li class="input_txt_four fl">1,00,000</li>
+                        <li class="input_txt_five fl">2</li>
+                        <li class="input_txt_six fl"><a href="#" class="my_asset_edit_row"> </a></li>
+                        <li class="input_txt_seven fl"><a href="#" class="my_asset_delete_row"> </a></li>
+                        <div class="clr"></div>
+                      </ul>
+                            </div>
+                    <!-- txt ends--> 
+                    
+                    <!--txt starts-->
+                    <div class="others_li_bx_in">
+                              <ul>
+                        <li class="input_txt_one fl">
+                                  <div class="txt">Akshay Sangawar</div>
+                                </li>
+                        <li class="input_txt_two fl">
+                                  <div class="txt">Sculpture</div>
+                                </li>
+                        <li class="input_txt_three fl">
+                                  <div class="txt">Bird Girl</div>
+                                </li>
+                        <li class="input_txt_four fl">1,00,000</li>
+                        <li class="input_txt_five fl">2</li>
+                        <li class="input_txt_six fl"><a href="#" class="my_asset_edit_row"> </a></li>
+                        <li class="input_txt_seven fl"><a href="#" class="my_asset_delete_row"> </a></li>
+                        <div class="clr"></div>
+                      </ul>
+                            </div>
+                    <!-- txt ends--> 
+                    
+                    <!--txt starts-->
+                    <div class="others_li_bx_in">
+                              <ul>
+                        <li class="input_txt_one fl">
+                                  <div class="txt">Akshay Sangawar</div>
+                                </li>
+                        <li class="input_txt_two fl">
+                                  <div class="txt">Sculpture</div>
+                                </li>
+                        <li class="input_txt_three fl">
+                                  <div class="txt">Bird Girl</div>
+                                </li>
+                        <li class="input_txt_four fl">1,00,000</li>
+                        <li class="input_txt_five fl">2</li>
+                        <li class="input_txt_six fl"><a href="#" class="my_asset_edit_row"> </a></li>
+                        <li class="input_txt_seven fl"><a href="#" class="my_asset_delete_row"> </a></li>
+                        <div class="clr"></div>
+                      </ul>
+                            </div>
+                    <!-- txt ends-->
+                    <div class="clr"></div>
+                  </div>
+                        </div>
+                <div class="clr"></div>
+              </div>
+                    </div>
+            
+            <!--*----------Others Ends --------------*--> 
+            <!-- Tabs 7 Ends--> 
+            
+          </div>
+                  <!-- end of "contents" id --> 
+                  
+                </div>
+        <!-- inside goal page class--> 
+        
+        <!--Assets Starts--> 
+        
+      </section>
+              <!-- Common_in_contnet ends-->
+              <div class="overlay"></div>
+            </section>
+    
+    <!-- Common_content Ends--> 
+    
+  </section>
+          <!-- Main ends--> 
+          <!--pop up box--> 
+        </div>
+<!--pop up box--> 
+<!-- Wrapper ends-->
+</body>
+</html>

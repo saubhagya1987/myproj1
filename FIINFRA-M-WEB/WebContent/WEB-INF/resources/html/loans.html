@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Loans</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<link href="../css/custom.css" rel="stylesheet" type="text/css">
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<!--<script src="resources/js/jquery.ddslick.js"></script>-->
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/plugin/jquery.autosize.input.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<script>
+  $(function() {
+    $( "#Emergency_Planning_Tab" ).accordion({ animate: 200 });
+  });
+  </script>
+
+
+
+<!-- Fuel type starts -->
+<script>
+$(document).ready(function(){
+  $(".thumb_select_ul a").click(function(){
+	
+    $(this).children(".categoery").toggleClass("not_applicable");
+
+  });
+});
+</script>
+<!-- Fuel type ends -->
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+  
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+	// Preferred Product Starts
+// Preferred Product Count Intlalized	
+	var pref_prod_count=4;
+	
+	//Add Button Starts
+  $(".EP_cnt ").on("click", ".add", function() {
+	   $(this).fadeOut("slow");
+	  pref_prod_count++;
+	 var row_count= $(this).parent().closest("ul").find(".count").text();   
+	 row_count++;
+	 
+	$(this).prev(".close").fadeIn("slow");
+	
+	$(this).parent().closest("ul").after("<ul class='reset clearfix dynamic_ul row'><li class='ep_one first'><div class='ep_left_label'><span class='count'></span>.</div></li><li class='ep_two second'><select class='ep'><option>Select</option><option>Savings</option><option>Fixed Deposits</option></select></li><li class='ep_three third'><div class='ep_slider_bx'><div class='EP'><div class='range_parent'><div class='scale clearfix'><div class='scale_range'><span class='low extrem'>0%</span><span class='high extrem'>100%</span></div><div id='alternative_slider"+ pref_prod_count +"'></div></div><div class='counter_parent'><input type='text' id='alternative_counter"+ pref_prod_count +"' class='range_counter'><span class='unit'>%</span></div></div></div><div class='clr'></div></div></li><li class='ep_four fourth'><select class='ep'><option>Select</option><option>Axis</option><option>ICICI</option></select></li><li class='ep_five fifth'><select class='ep'><option>Select</option><option>Axis</option><option>ICICI</option></select><div class='close'>x</div><div class='add'>+</div></li></ul>");
+	   //Preferred Product Count Written
+	  $(this).parent().closest("ul").next(".dynamic_ul").find(".count").text(row_count);
+	  $("select").selectBoxIt();
+	  createSlider("#alternative_slider"+pref_prod_count,0,100,1,"#alternative_counter"+pref_prod_count);
+	  $('#goal_asso_prod').perfectScrollbar('update');
+	 
+	  
+	});
+
+// Close Button 
+$(".EP_cnt ").on("click", ".close", function() {
+	
+	$(".EP_cnt ul:last-of-type").find(".add").fadeIn("slow");  
+	var count_section = $(this).parent().closest("section").find(".selectboxit").length;
+	// Adjusting Preferred Product Count 
+	$(this).parent().closest("ul").siblings("ul").removeClass("moved_down");
+	$(this).parent().closest("ul").prev("ul").addClass("moved_down");
+	// Adjusting Preferred product count 
+	// removing record
+	// pref_prod_count--;
+	$(this).parent().closest("ul").remove();
+	// removing record
+	// Adjusting Preferred product count 
+	 $(".EP_cnt ul:last-of-type").find(".add").fadeIn("slow");  
+	$(".moved_down").nextAll(".row").find(".count").each(function() {
+     $(this).text($(this).text()-1);
+	  
+  });
+   });
+// Adjusting Preferred product count 
+// Preferred Product Ends
+	
+});
+</script>
+ 
+<!-- Custom Selectbox Ends -->
+
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+    $('.common_in_content').slimScroll();
+    $('.EP_cnt').perfectScrollbar();
+	// Estimated Life Expectancy value Slider
+	  createSlider('#preferred',0,100,1,'#preferred_input')
+
+	  createSlider('#alternative',0,100,1,'#alternative_input')
+
+	  createSlider('#alternative_two',0,100,1,'#alternative_two_input')
+
+	  createSlider('#alternative_three',0,100,1,'#alternative_three_input')
+
+
+	  createSlider('#alternative_four',0,100,1,'#alternative_four_input')
+
+
+
+	  createSlider('#mf',0,100,1,'#mf_input')
+	  createSlider('#mf_two',0,100,1,'#mf_two_input')
+	  createSlider('#mf_three',0,100,1,'#mf_three_input')
+	  createSlider('#mf_four',0,100,1,'#mf_four_input')
+
+	  createSlider('#at_large',0,100,1,'#at_large_input')
+	  createSlider('#at_mid',0,100,1,'#at_mid_input')
+	  createSlider('#at_sml',0,100,1,'#at_sml_input')
+	  createSlider('#at_mlt',0,100,1,'#at_mlt_input')
+	  createSlider('#at_srs',0,100,1,'#at_srs_input')
+
+	  createSlider('#at_mf_large',0,100,1,'#at_mf_large_input')
+	  createSlider('#at_mf_mid',0,100,1,'#at_mf_mid_input')
+	  createSlider('#at_mf_sml',0,100,1,'#at_mf_sml_input')
+	  createSlider('#at_mf_mlt',0,100,1,'#at_mf_mlt_input')
+	  createSlider('#at_mf_srs',0,100,1,'#at_mf_srs_input')
+
+
+	  createSlider('#at_g_large',0,100,1,'#at_g_large_input')
+	  createSlider('#at_g_mid',0,100,1,'#at_g_mid_input')
+	  createSlider('#at_g_sml',0,100,1,'#at_g_sml_input')
+	  createSlider('#at_g_mlt',0,100,1,'#at_mlt_g_input')
+	  createSlider('#at_g_srs',0,100,1,'#at_g_srs_input')
+
+
+	  createSlider('#at_u_large',0,100,1,'#at_u_large_input')
+	  createSlider('#at_u_mid',0,100,1,'#at_u_mid_input')
+	  createSlider('#at_u_sml',0,100,1,'#at_u_sml_input')
+	  createSlider('#at_u_mlt',0,100,1,'#at_mlt_u_input')
+	  createSlider('#at_u_srs',0,100,1,'#at_u_srs_input')
+
+	  createSlider('#pl',0,100,1,'#pl_input')
+	  createSlider('#pl2',0,100,1,'#pl2_input')
+	  createSlider('#pl3',0,100,1,'#pl3_input')
+	  createSlider('#pl4',0,100,1,'#pl4_input')
+
+
+	  createSlider('#pf',0,100,1,'#pf_input')
+	  createSlider('#pf2',0,100,1,'#pf2_input')
+	  createSlider('#pf3',0,100,1,'#pf3_input')
+	  createSlider('#pf4',0,100,1,'#pf4_input')
+
+
+
+	  // Expected Returns on all existing Investment value Slider
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+
+<!-- Type of emergency faced select starts -->
+<script>
+$(document).ready(function(){
+  $(".icon a").click(function(){
+    $(this).children(".category").toggleClass("gp_applicable");
+//	$(this).find(".cross_circle").toggle();
+  });
+});
+</script>
+<!-- Type of emergency faced select ends -->
+
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="Emergency_Planning"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><a href="#" class="set_default"><span class="set_default_txt">Set Default </span> </a><a href="#" class="email"><span class="email_txt">E mail</span> </a>  <span class="head_txt">Loans</span><span class="heading_icon"><span class="head_icon"><img src="../images/loans_advice.png" alt="" vspace="7" class="rp-margin"/></span></span>  </h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts--><section class="content common_content">
+    <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset">    <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+     <section class="in_content clearfix loans_in_content" id="Emergency_Planning_in">
+      
+      <div style="margin:0 20px;">
+        <div id="Emergency_Planning_Tab">
+          <h3>Education Loan <span>(10 %)</span></h3>
+          <div class="EP_cnt">
+            <div class="EP_cnt_title">Preferred</div> <div class="AT_cnt_title">
+              
+            
+              <ul>
+             <li class="AR_two_two">Product Category</li><li class="AR_three_one">Range</li><li class="AR_four">% Shares</li><li class="AR_five">Company</li><li class="AR_six">Product</li></ul>
+              
+              
+              
+            </div>
+            <ul>
+              <li class="ep_one">
+                <div class="ep_left_label">1.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="preferred"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="preferred_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            <div class="EP_cnt_title">Alternative</div> <div class="AT_cnt_title">
+              
+            
+              <ul>
+             <li class="AR_two_two">Product Category</li><li class="AR_three_one">Range</li><li class="AR_four">% Shares</li><li class="AR_five">Company</li><li class="AR_six">Product</li></ul>
+              
+              
+              
+            </div>
+            <ul>
+              <li class="ep_one">
+                <div class="ep_left_label">2.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="alternative"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="alternative_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            <ul>
+              <li class="ep_one">
+                <div class="ep_left_label">3.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="alternative_two"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="alternative_two_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            <ul>
+              <li class="ep_one">
+                <div class="ep_left_label"><span class="count">4</span>.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="alternative_three"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="alternative_three_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                  
+               </select>
+               <div class="add">+</div>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            
+            <div class="clr"></div>
+          </div>
+          <h3>Car Loan <span>(10 %)</span></h3>
+         <div class="EP_cnt">
+          
+          
+            <div class="EP_cnt_title">Preferred</div> <div class="AT_cnt_title">
+              
+            
+              <ul>
+             <li class="AR_two_two">Product Category</li><li class="AR_three_one">Range</li><li class="AR_four">% Shares</li><li class="AR_five">Company</li><li class="AR_six">Product</li></ul>
+              
+              
+              
+            </div>
+            <ul>
+              <li class="ep_one">
+                <div class="ep_left_label">1.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="mf"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="mf_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+           <div class="EP_cnt_title">Alternatives</div> <div class="AT_cnt_title">
+              
+            
+              <ul>
+             <li class="AR_two_two">Product Category</li><li class="AR_three_one">Range</li><li class="AR_four">% Shares</li><li class="AR_five">Company</li><li class="AR_six">Product</li></ul>
+              
+              
+              
+            </div>
+            <ul class="clearfix">
+              <li class="ep_one">
+                <div class="ep_left_label">2.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="mf_two"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="mf_two_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            <ul class="clearfix">
+              <li class="ep_one">
+                <div class="ep_left_label">3.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="mf_three"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="mf_three_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            <ul class="clearfix">
+              <li class="ep_one">
+                <div class="ep_left_label"><span class="count">4</span></div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="mf_four"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="mf_four_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+                <div class="add">+</div>
+              </li>
+            </ul>
+            
+            
+            <div class="clr"></div>
+          </div>
+          
+           <h3>Property Loan <span>(10 %)</span></h3>
+         <div class="EP_cnt">
+          
+            <div class="EP_cnt_title">Preferred</div> <div class="AT_cnt_title">
+              
+            
+              <ul>
+             <li class="AR_two_two">Product Category</li><li class="AR_three_one">Range</li><li class="AR_four">% Shares</li><li class="AR_five">Company</li><li class="AR_six">Product</li></ul>
+              
+              
+              
+            </div>
+         
+          <ul>
+              <li class="ep_one">
+                <div class="ep_left_label">1.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="pl"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="pl_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+                    <div class="EP_cnt_title">Alternatives</div> <div class="AT_cnt_title">
+              
+            
+              <ul>
+             <li class="AR_two_two">Product Category</li><li class="AR_three_one">Range</li><li class="AR_four">% Shares</li><li class="AR_five">Company</li><li class="AR_six">Product</li></ul>
+              
+              
+              
+            </div>
+    
+            <ul class="clearfix">
+              <li class="ep_one">
+                <div class="ep_left_label">2.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="pl2"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="pl2_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            
+            
+            <ul class="clearfix">
+              <li class="ep_one"><div class="ep_left_label">3.</div> </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="pl3"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="pl3_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            
+            <ul class="clearfix">
+              <li class="ep_one">
+                <div class="ep_left_label"><span class="count">4</span></div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="pl4"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="pl4_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              <div class="add">+</div>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            
+            
+            
+            
+            
+          
+          
+            <div class="clr"></div>
+          </div>
+
+    <h3>Personal &amp; Other Loans <span>(10 %)</span></h3>
+         <div class="EP_cnt">
+          
+            <div class="EP_cnt_title">Preferred</div> <div class="AT_cnt_title">
+              
+            
+              <ul>
+             <li class="AR_two_two">Product Category</li><li class="AR_three_one">Range</li><li class="AR_four">% Shares</li><li class="AR_five">Company</li><li class="AR_six">Product</li></ul>
+              
+              
+              
+            </div>
+         
+          <ul>
+              <li class="ep_one">
+                <div class="ep_left_label">1.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="pf"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="pf_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+                   <div class="EP_cnt_title">Alternatives</div> <div class="AT_cnt_title">
+              
+            
+              <ul>
+             <li class="AR_two_two">Product Category</li><li class="AR_three_one">Range</li><li class="AR_four">% Shares</li><li class="AR_five">Company</li><li class="AR_six">Product</li></ul>
+              
+              
+              
+            </div>
+    
+            <ul class="clearfix">
+              <li class="ep_one">
+                <div class="ep_left_label">2.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="pf2"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="pf2_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            
+            
+            <ul class="clearfix">
+              <li class="ep_one"><div class="ep_left_label">3.</div> </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="pf3"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="pf3_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            
+            <ul class="clearfix">
+              <li class="ep_one">
+                <div class="ep_left_label"><span class="count">4</span>.</div>
+              </li>
+              <li class="ep_two">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Savings</option>
+                  <option>Fixed Deposits</option>
+                </select>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="pf4"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="pf4_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+              </li>
+              <li class="ep_five">
+                <select class="ep">
+                  <option>Select</option>
+                  <option>Axis</option>
+                  <option>ICICI</option>
+                </select>
+                <div class="add">+</div>
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            
+            
+            
+            
+            
+          
+          
+            <div class="clr"></div>
+          </div>
+
+    <!--   <h3>Property Insurance</h3>
+         <div class="EP_cnt">
+          
+            <div class="AT_cnt_title">
+            
+            <ul>
+              <li class="GP_one"><img src="../images/delete_icon_two.png" alt="" width="22" height="22" align="absbottom"></li><li class="GP_two">Product Type</li><li class="GP_three">Range</li><li class="GP_four">% Shares</li></ul>
+              
+              
+              
+              </div>
+         
+          <ul>
+            
+             <li class="ep_one">
+                <div class="ep_left_label"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/></div>
+              </li>
+              
+
+              <li class="ep_two">
+                <label class="form_label">Large Cap</label>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="at_u_large"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="at_u_large_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+               <div id="AssetType" class="icon_box">
+                <div class="icon clearfix"><a href="#">
+                  <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                  </a> </div>
+              </div>
+              </li>
+              <li class="ep_five">
+               <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            <ul>
+             <li class="ep_one">
+                <div class="ep_left_label"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/></div>
+              </li>
+              <li class="ep_two">
+                <label class="form_label">Mid Cap</label>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="at_u_mid"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="at_u_mid_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+               <div id="AssetType" class="icon_box">
+                <div class="icon clearfix"><a href="#">
+                  <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                  </a> </div>
+              </div>
+              </li>
+              <li class="ep_five">
+               <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            
+            
+            <ul>
+           <li class="ep_one">
+                <div class="ep_left_label"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/></div>
+              </li>
+
+              <li class="ep_two">
+                <label class="form_label">Small Cap</label>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="at_u_sml"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="at_u_sml_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+               <div id="AssetType" class="icon_box">
+                <div class="icon clearfix"><a href="#">
+                  <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                  </a> </div>
+              </div>
+              </li>
+              <li class="ep_five">
+               <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            
+            <ul>
+             <li class="ep_one">
+                <div class="ep_left_label"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/></div>
+              </li>
+              <li class="ep_two">
+                <label class="form_label">Multi Cap</label>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="at_u_mlt"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="at_u_mlt_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+               <div id="AssetType" class="icon_box">
+                <div class="icon clearfix"><a href="#">
+                  <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                  </a> </div>
+              </div>
+              </li>
+              <li class="ep_five">
+               <input name="input" type="text" disabled class="common_input at-comment" value="(2)">
+              </li>
+              <div class="clr"></div>
+            </ul>
+            
+            
+            <ul>
+             <li class="ep_one">
+                <div class="ep_left_label"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/></div>
+              </li>
+              <li class="ep_two">
+                <label class="form_label">Shares &amp; Stock</label>
+              </li>
+              <li class="ep_three">
+                <div class="ep_slider_bx">
+                  <div class="EP">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                        <div id="at_u_srs"></div>
+                      </div>
+                      <div class="counter_parent">
+                        <input type="text" id="at_u_srs_input" class="range_counter">
+                        <span class="unit">%</span> </div>
+                    </div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+              </li>
+              <li class="ep_four">
+               <div id="AssetType" class="icon_box">
+                <div class="icon clearfix"><a href="#">
+                  <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                  </a> </div>
+              </div>
+              </li>
+              <li class="ep_five">
+               <input name="input" type="text" disabled class="common_input at-comment" value="(2)">
+              </li>
+              
+              
+            </ul>
+            
+            
+            <div class="Asset_Types_Add_More">
+            <input class="add_more" type="submit" value="Add New Product Type">
+          </div>
+          
+          
+            <div class="clr"></div>
+          </div>
+-->
+        </div>
+      </div>
+      </section>
+      <!--Aditya Forget Password Pop Up ends here--> 
+      
+      <!-- Common_in_contnet starts--> 
+      
+      <!-- Common_in_contnet ends--> 
+      <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup3">
+            </li>
+            <li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+         <li class="fl list"><a href="goal-plan.html" class="anch skip"><span class="txt">Skip</span></a></li> </ul>
+        </div>
+        <a href="risk-cover-advice-recommendation.html" class="back navgation"><span class="txt">Back</span></a> <a href="goal-plan.html" class="next navgation"><span class="txt">Next</span></a> </section>
+      
+      <!-- Common footer ends -->
+      <div class="overlay"></div>
+    </section>
+    
+
+</section>
+    <!-- Common_content Ends--> 
+    
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends--> 
+
+<!-- Datepicker --> 
+<script>
+$(function() {
+    $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-M-yy",
+	  showOn: "button",
+	  buttonText: '',
+     });
+  });
+  
+  
+  </script> 
+<script>
+$(document).ready(function(){
+  
+ $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent'></div>" );
+ 
+});
+</script> 
+<!-- Datepicker Ends -->
+
+</body>
+</html>

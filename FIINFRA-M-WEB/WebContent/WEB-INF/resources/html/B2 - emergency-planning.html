@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Emergency Planning</title>
+<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+$(document).ready(function(){
+	
+	/*** Common Function For Progessbar Starts ***/
+
+function createProgressbar(ctrlName,val) {
+
+    $(ctrlName).progressbar({
+      value: val
+    });
+    
+}
+
+/*** Common Function For Progessbar Ends ***/
+   createProgressbar('#progressbar1',80);
+   createProgressbar('#progressbar2',50);
+   createProgressbar('#progressbar3',60);
+   createProgressbar('#progressbar4',40);
+	
+});
+</script>
+<style>
+/***Custom Fonts Strats***/
+@font-face {
+ font-family: 'open_sanslight';
+ src: url('fonts/opensans-light-webfont.eot');
+ src: url('fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-light-webfont.woff') format('woff'), url('fonts/opensans-light-webfont.ttf') format('truetype'), url('fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+font-family:"Aller Bold";
+src:url("fonts/Aller_Bd.eot?") format("eot"), url("fonts/Aller_Bd.woff") format("woff"), url("fonts/Aller_Bd.ttf") format("truetype"), url("fonts/Aller_Bd.svg#Aller-Bold") format("svg");
+font-weight:normal;
+font-style:normal;
+}
+ @font-face {
+ font-family: 'allerregular';
+ src: url('fonts/aller_rg-webfont.eot');
+ src: url('fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/aller_rg-webfont.woff') format('woff'), url('fonts/aller_rg-webfont.ttf') format('truetype'), url('fonts/aller_rg-webfont.svg#allerregular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: 'alleritalic';
+ src: url('fonts/aller_it-webfont.eot');
+ src: url('fonts/aller_it-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/aller_it-webfont.woff') format('woff'), url('fonts/aller_it-webfont.ttf') format('truetype'), url('fonts/aller_it-webfont.svg#alleritalic') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+ @font-face {
+ font-family: 'open_sansregular';
+ src: url('fonts/opensans-regular-webfont.eot');
+ src: url('fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-regular-webfont.woff') format('woff'), url('fonts/opensans-regular-webfont.ttf') format('truetype'), url('fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: 'open_sansbold';
+ src: url('fonts/opensans-bold-webfont.eot');
+ src: url('fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-bold-webfont.woff') format('woff'), url('fonts/opensans-bold-webfont.ttf') format('truetype'), url('fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+/***Custom Fonts Ends***/
+/***Common Css Starts***/
+/* Basic Css Strats*/
+/****************************************************************************************************
+
+* Filename: basic.css
+
+****************************************************************************************************/
+
+/* GLOBAL RESET 
+
+**********************************************************/
+
+body, h1, h2, h3, h4, h5, h6, p { margin:0; line-height:1 }
+input[type="radio"], input[type="checkbox"] { margin:0; vertical-align:-2px }
+a:link, a:active, a:visited { text-decoration:none }
+a:active, a:focus, textarea:focus, input:focus { outline: none }
+textarea { overflow:auto; resize:none }
+img { border:none }
+table { border-collapse:collapse; border-spacing:0; table-layout:fixed }
+/* INDIVIDUAL RESETs
+
+**********************************************************/
+
+.reset { list-style:none; padding:0; margin:0 }
+.nomargin { margin:0 }
+.nopadding { padding:0!important }
+/* ALIGN CENTER
+
+**********************************************************/
+
+.equalgap { margin:0 auto }
+/* FLOATS
+
+**********************************************************/
+
+.fl { float:left }
+.fr { float:right }
+.fn { float:none }
+/* CLEAR FLOAT
+
+**********************************************************/
+
+.clearfix:after { content:"\0020"; display:block; height:0; clear:both; visibility:hidden; overflow:hidden }
+.clr { clear:both; overflow:hidden; height:0 }
+/* WIDTH 100% 
+
+**********************************************************/
+
+.fullwid { width:100% }
+/* DISPLAYs, POSITIONs & OVERFLOWs 
+
+**********************************************************/
+
+.inline { display:inline }
+.ovfl-hidden { overflow:hidden }
+.rel { position:relative }
+.absolute { position:absolute }
+.absoluted > * { position:absolute }
+.inlineBlock { display:inline-block }
+.hide-elem { display:none !important }
+/* ALL TEXT CSS
+
+**********************************************************/
+
+/* font SIZES */
+
+.vsmlTxt { font-size:10px }
+.smlTxt { font-size:11px }
+.paraTxt { font-size:12px }
+.bigTxt { font-size:14px }
+/*font WEIGHTS */
+
+.strong { font-weight:bold }
+.normTxt { font-weight:normal }
+/* text TRANSFORMS */
+
+.allCaps { text-transform:capitalize }
+.upperCase { text-transform:uppercase }
+.underlined { text-decoration:underline }
+/* text ALIGN & content ALIGN for inline level ELEMENTS */
+
+.centerAll { text-align:center }
+.leftAlign { text-align:left }
+.rightAlign { text-align:right }
+.justified { text-align:justify }
+/* Basic Css Ends*/
+.wrapper { width:792px; margin:0 auto; height:1124px; color:#3a3a3a; font-family: 'allerregular'; }
+.header { height:65px; background:#1d87bd url(images/header_pattern.png) no-repeat center right }
+.desc_heading { background: #FFF; width: 366px; height: 50px; margin: 7px 0 0; border-radius: 0 30px 30px 0; -moz-border-radius: 0 30px 30px 0; -webkit-border-radius: 0 30px 30px 0; }
+.content { height:1041px }
+.footer { height:18px; background:#c0c0c0 }
+.page_heading { color: #FFF; font-size: 23px; font-family: "Aller Bold"; line-height: 63px; text-align: center; width: 393px; text-shadow: 1px 2px 1px #0B2B3C; }
+.footer { font-size:12px; font-family: "Aller Bold"; line-height: 19px; }
+.footer .footer_tagline { margin:0 0 0 22px; }
+.page_no { margin:0 26px 0 0; }
+.ifa_head_logo { height: 47px; margin: 1px; width:auto; overflow:hidden; display: inline-block }
+.ifa_head_logo img { max-height:100%; width:auto; }
+.head_txt2 { color: #1D87BD; font-size: 23px; font-family: "Aller Bold"; display: inline-block; margin: 0 0 0 14px; vertical-align: 12px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width:298px; text-align:center }
+.theme_color { color: #1D87BD; }
+/***Common Css Ends***/
+/***Emergency Planning Starts***/
+#emergency-planning .emergency_desc { width:255px; height:140px; background: #9CBC01; -moz-border-radius: 109px 0 0 109px; -webkit-border-radius:109px 0 0 109px; border-radius:109px 0 0 109px; -moz-box-shadow: -1px 2px 2px 0px #6C6C6C; -webkit-box-shadow: -1px 2px 2px 0px #6C6C6C; box-shadow: -1px 2px 2px 0px #6C6C6C; }
+#emergency-planning .emergency_action { width:255px; height:140px; background: #368EBC; -moz-border-radius: 0 109px 109px 0; -webkit-border-radius: 0 109px 109px 0; border-radius: 0 109px 109px 0; -moz-box-shadow: 1px 2px 2px 0px #6C6C6C; -webkit-box-shadow: 1px 2px 2px 0px #6C6C6C; box-shadow: 1px 2px 2px 0px #6C6C6C; }
+#emergency-planning .goal_logo_year { height:50px; width:50px; background: #3A3A3A; position: absolute; margin: 0; top:-23px; left:9px; -moz-border-radius: 41px; -webkit-border-radius: 41px; border-radius: 41px; -moz-box-shadow: 0px 0px 0px 4px #FFF; -webkit-box-shadow: 0px 0px 0px 4px #FFF; box-shadow: 0px 0px 0px 4px #FFF; }
+#emergency-planning .goal_logo_year.loss_of_job { background:#3A3A3A url(images/loss_of_job.png) no-repeat center center }
+#emergency-planning .goal_logo_year.early_death { background:#3A3A3A url(images/early_death.png)no-repeat center center }
+#emergency-planning .goal_logo_year.health_setback { background:#3A3A3A url(images/health_setback.png)no-repeat center center }
+#emergency-planning .goal_logo_year.disabilities { background:#3A3A3A url(images/disabilities.png)no-repeat center center }
+#emergency-planning .emergency_category { margin:0 auto 0; width:511px; }
+#emergency-planning .fixed {height: 238px; }
+#emergency-planning .fixed ul { padding: 55px 0 0 0; }
+#emergency-planning .emergency_category .category_name { position: absolute; top: -19px; width: 48%; right: 3px; font-size: 19px; font-family: "Aller Bold"; }
+#emergency-planning .emergency_category .emergency_desc .txt { color: #FFF; font-size: 12px; margin:37px 0 0; padding:0 7px 0 19px; line-height: 14px; height: 103px; border-radius: 34px 0 0 72px; overflow: hidden; text-align: left }
+#emergency-planning .emergency_category .fund_status { margin: 15px 0 0; font-size:13px; width:229px }
+#emergency-planning .emergency_category .fund_status .heading { height:18px }
+#emergency-planning .emergency_category .fund_status .value { color:#fff }
+#emergency-planning .emergency_category .fund_status .value .rs_symbol { background:url(images/white_ruppe.png) no-repeat center center; width:7px; height:11px; display:inline-block; vertical-align: -2px; margin: 0 2px 0 0; }
+#emergency-planning .emergency_category .fund_status .available { width:50%; text-align:center }
+#emergency-planning .emergency_category .fund_status .additional { width:50%; text-align:center }
+#emergency-planning .emergency_category .emergency_action .txt { color: #FFF; font-size: 12px; padding: 0 8px; line-height: 14px; text-align: left; height: 73px; border-radius: 0 11px 80px 0; overflow: hidden; }
+#emergency-planning .emergency_category .ui-progressbar { background:#056595; height:14px; border:none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; width: 197px; margin: 5px auto 3px; overflow: hidden; position:relative }
+#emergency-planning .emergency_category .ui-progressbar .ui-progressbar-value { background:#9cbc01; height: 8px; margin-top: 2px; margin-bottom: 2px; }
+#emergency-planning .emergency_category .ui-progressbar .segments { position:absolute; top:-3px }
+#emergency-planning .emergency_category .ui-progressbar .segments span { color: #056595; display:inline-block; width:1px; margin:0; position:absolute }
+#emergency-planning .emergency_category .ui-progressbar .segments .first { left: -3px; }
+#emergency-planning .emergency_category .ui-progressbar .segments .second { left:15px }
+#emergency-planning .emergency_category .ui-progressbar .segments .third { left:35px }
+#emergency-planning .emergency_category .ui-progressbar .segments .fourth { left: 55px; }
+#emergency-planning .emergency_category .ui-progressbar .segments .fifth { left: 75px; }
+#emergency-planning .emergency_category .ui-progressbar .segments .six { left: 95px; }
+#emergency-planning .emergency_category .ui-progressbar .segments .seven { left: 115px; }
+#emergency-planning .emergency_category .ui-progressbar .segments .eight { left: 135px; }
+#emergency-planning .emergency_category .ui-progressbar .segments .nine { left: 155px; }
+#emergency-planning .emergency_category .ui-progressbar .segments .ten { left: 175px; }
+#emergency-planning .emergency_category .ui-progressbar .segments .eleven { left: 192px; }
+#emergency-planning .variable {height:580px; }
+#emergency-planning .variable > ul li{margin: 34px 0 0;}
+#emergency-planning .variable .secondary_heading { background:#1D87BD url(images/header_pattern.png) no-repeat center right; height:34px; text-align:center; font-size: 23px; color: #FFF; font-family: "Aller Bold"; text-shadow: 1px 2px 1px #0B2B3C; line-height: 31px; text-indent: 348px; }
+#emergency-planning .report { height: 223px;}
+#emergency-planning .report .container { background: #F4F4F4; border: 2px solid #368EBC; min-height: 185px; width:256px; -moz-border-radius: 100px 100px 0 0; -webkitborder-radius: 100px 100px 0 0; border-radius: 100px 100px 0 0; padding: 10px; font-family: "Aller Bold"; font-size:12px }
+#emergency-planning .report > ul { margin: 0 auto; width: 575px; }
+#emergency-planning .report .first .txt { margin: 50px 0 0; line-height: 18px; text-align: justify; }
+#emergency-planning .report .second ul { width: 218px; margin:10px auto 0; text-align: center; }
+#emergency-planning .report .second ul li { margin: 0 0 8px 0; line-height: 14px; }
+#emergency-planning .report .rs_symbol { display: inline-block; background: url(images/theme_color_ruppe.png) no-repeat center center; width: 8px; height: 11px; margin: 0px 1px 0 3px; vertical-align: -2px; }
+/***Emergency Planning Ends***/
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="header clearfix">
+    <div class="desc_heading fl">
+      <div class="ifa_head_logo"><img src="images/ifa_head_logo.png"/></div>
+      <h2 class="head_txt2">Sachin R. Tendulkar</h2>
+    </div>
+    <h1 class="page_heading fr">Emergency Planning</h1>
+  </div>
+  <div class="content" id="emergency-planning">
+    <div class="box1 fixed">
+      <ul class="reset clearfix">
+        <li>
+          <div class="emergency_category rel clearfix">
+            <h3 class="category_name">Loss of Job</h3>
+            <div class="emergency_desc fl">
+              <p class="txt">Sudden health issues, loss of job can happen to anyone. Very important to be prepared.</p>
+            </div>
+            <div class="goal_logo_year loss_of_job"> </div>
+            <div class="emergency_action fr">
+              <div class="fund_status clearfix">
+                <div class="fl available">
+                  <h6 class="heading">Available</h6>
+                  <div class="value"><span class="rs_symbol"></span><span class="amount">75,000</span>/-</div>
+                </div>
+                <div class="fr additional">
+                  <h6 class="heading">Additional Requirement</h6>
+                  <div class="value"><span class="rs_symbol"></span><span class="amount">1,50,000</span>/-</div>
+                </div>
+              </div>
+              <div id="progressbar1">
+                <div class="segments"><span class="first">|</span> <span class="second">|</span> <span class="third">|</span> <span class="fourth">|</span> <span class="fifth">|</span><span class="six">|</span><span class="seven">|</span><span class="eight">|</span><span class="nine">|</span><span class="ten">|</span><span class="eleven">|</span> </div>
+              </div>
+              <p class="txt">Set aside 6 months worth of expenses.Build this corpus - keep them in bankaccounts or liquid mutual funds - joint holding with someone who you trust</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="box2 variable">
+      <h2 class="secondary_heading">Risk Planning</h2>
+      <ul class="reset clearfix">
+        <li>
+          <div class="emergency_category rel clearfix">
+            <h3 class="category_name">Early Death</h3>
+            <div class="emergency_desc fl">
+              <p class="txt">Unfortunate death of an earning
+                member can leave family's future
+                questionable. Financial backing can soften impact and ensure family's safety.</p>
+            </div>
+            <div class="goal_logo_year early_death"> </div>
+            <div class="emergency_action fr">
+              <div class="fund_status clearfix">
+                <div class="fl available">
+                  <h6 class="heading">Available</h6>
+                  <div class="value"><span class="rs_symbol"></span><span class="amount">75,000</span>/-</div>
+                </div>
+                <div class="fr additional">
+                  <h6 class="heading">Additional Requirement</h6>
+                  <div class="value"><span class="rs_symbol"></span><span class="amount">1,50,000</span>/-</div>
+                </div>
+              </div>
+              <div id="progressbar2">
+                <div class="segments"><span class="first">|</span> <span class="second">|</span> <span class="third">|</span> <span class="fourth">|</span> <span class="fifth">|</span><span class="six">|</span><span class="seven">|</span><span class="eight">|</span><span class="nine">|</span><span class="ten">|</span><span class="eleven">|</span> </div>
+              </div>
+              <p class="txt">Get yourself a term life insurance
+                policy for Rs. 2,00,00,000</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="emergency_category rel clearfix">
+            <h3 class="category_name">Health Setback</h3>
+            <div class="emergency_desc fl">
+              <p class="txt">Our hurried lifestyle makes us vulnerable to many illnesses. Many families' suffer financially due to hospitalization expenses.Insurance can afeguard your wealth and give peace of mind.</p>
+            </div>
+            <div class="goal_logo_year health_setback"> </div>
+            <div class="emergency_action fr">
+              <div class="fund_status clearfix">
+                <div class="fl available">
+                  <h6 class="heading">Available</h6>
+                  <div class="value"><span class="rs_symbol"></span><span class="amount">75,000</span>/-</div>
+                </div>
+                <div class="fr additional">
+                  <h6 class="heading">Additional Requirement</h6>
+                  <div class="value"><span class="rs_symbol"></span><span class="amount">1,50,000</span>/-</div>
+                </div>
+              </div>
+              <div id="progressbar3">
+                <div class="segments"><span class="first">|</span> <span class="second">|</span> <span class="third">|</span> <span class="fourth">|</span> <span class="fifth">|</span><span class="six">|</span><span class="seven">|</span><span class="eight">|</span><span class="nine">|</span><span class="ten">|</span><span class="eleven">|</span> </div>
+              </div>
+              <p class="txt">Get Basic health insurance of Rs.
+                5,00,000 for each person in the family &amp; Additional Top up health cover of Rs.10,00,000 for the family (floater)</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="emergency_category rel clearfix">
+            <h3 class="category_name">Disabilities</h3>
+            <div class="emergency_desc fl">
+              <p class="txt">Disability to an earning member will increase expenses and also affect income. Disability can happen because of critical illnesses or accidents.</p>
+            </div>
+            <div class="goal_logo_year disabilities"> </div>
+            <div class="emergency_action fr">
+              <div class="fund_status clearfix">
+                <div class="fl available">
+                  <h6 class="heading">Available</h6>
+                  <div class="value"><span class="rs_symbol"></span><span class="amount">75,000</span>/-</div>
+                </div>
+                <div class="fr additional">
+                  <h6 class="heading">Additional Requirement</h6>
+                  <div class="value"><span class="rs_symbol"></span><span class="amount">1,50,000</span>/-</div>
+                </div>
+              </div>
+              <div id="progressbar4">
+                <div class="segments"><span class="first">|</span> <span class="second">|</span> <span class="third">|</span> <span class="fourth">|</span> <span class="fifth">|</span><span class="six">|</span><span class="seven">|</span><span class="eight">|</span><span class="nine">|</span><span class="ten">|</span><span class="eleven">|</span> </div>
+              </div>
+              <p class="txt">Take Critical illness insurance for Rs. 10,00,000 (one year income) and Accidental Disability Insurance for Rs. 20,00,000 (two year income)</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="box3 report">
+      <ul class="clearfix reset">
+        <li class="fl first">
+          <div class="container">
+            <p class="txt">Though we wish they don't, Bad things may happen to anyone. It is important to be protected against setbacks like income loss, health loss etc to ensure your wealth is available for your Goals and Dreams.</p>
+          </div>
+        </li>
+        <li class="fr second">
+          <div class="container">
+            <ul class="reset clearfix">
+              <li> Protect yourself with</li>
+              <li>Life Insurance for <span class="rs_symbol"></span><span class="theme_color">1,00,000</span></li>
+              <li>Health insurance - Basic for each family member <span class="rs_symbol"></span><span class="theme_color">5,00,000</span></li>
+              <li>Health insurance - Top up - for the whole family <span class="rs_symbol"></span><span class="theme_color">10,00,000</span></li>
+              <li>Critical illness insurance <span class="rs_symbol"></span><span class="theme_color">10,00,000</span></li>
+              <li>Accidental Disability insurance <span class="rs_symbol"></span><span class="theme_color">20,00,000</span></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer clearfix">
+    <div class="fl footer_tagline">True Friends of New Investors</div>
+    <div class="fr page_no">(<span class="no">1</span>)</div>
+  </div>
+</div>
+</body>
+</html>

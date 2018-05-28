@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Login</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css"/>
+<!--<link type="text/css" rel="stylesheet" href="resources/css/slick.css"/>-->
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.bxslider.js"></script>
+<script src="../js/plugin/jquery.validate.js"></script>
+<script src="../js/plugin/additional-methods.js"></script>
+<!--<script src="resources/js/plugin/jquery_ui_popups"></script>-->
+<!-- Page loader -->
+<script>
+
+$(window).load(function(){
+
+  $('#page_loader').fadeOut("5000");
+  
+  
+  
+});
+
+</script>
+
+<!-- Page loader Ends -->
+<script>
+
+$(body).load(function(){
+
+  
+  $("select").selectBoxIt();
+});
+
+</script>
+
+<!-- Page loader Ends -->
+
+<!--For Custom checkbox starts-->
+
+<script>
+$(document).ready(function() {
+    $("#custom_check").click(function() {
+         check_toggle();
+	});     
+	    function check_toggle() {
+    if ($("#remember").is(":checked")) {
+       $("#remember").prop("checked", false);
+    } else {
+       $("#remember").prop("checked", true);
+    }
+   
+}            
+});
+
+</script>
+<script>
+$(document).ready(function(){
+  $("#custom_check").click(function(){
+    $("#custom_check").toggleClass("no_remember");
+  });
+});
+</script>
+<!--For Custom checkbox ends-->
+<!--News Slider Starts -->
+<script>
+$(document).ready(function(){
+  
+ //  $('.news_slider').slick();
+$('#news_dialog .news_li:odd .new_desc').css("border-right","none")
+});
+</script>
+<!--News Slider ends-->
+
+
+<!--Login Pop-up Box-->
+<script>
+$(document).ready(function(){
+    $( "#video_first_dialog .bxslider" ).addClass("clearfix");
+   $("#login #media .video").click(function(){
+	 $(".overlay").fadeIn();
+	 $("#video_first_dialog").animate("slow").css("visibility","visible");
+	$("#video_first_dialog iframe").animate("slow").css("display","block");
+	
+	
+	
+	 $("#video_first_dialog .close").click(function(){
+     $(".overlay").fadeOut("slow");
+	$ ("#video_first_dialog iframe").animate("slow").css("display","none");
+	$("#video_first_dialog").animate("slow").css("visibility","hidden");
+	
+	
+  });
+   });
+  
+  
+  $("#login #media .news").click(function(){
+    $(".overlay").fadeIn();
+	$("#news_dialog").css("visibility","visible");
+	$("#news_dialog").fadeIn();
+	
+	});
+	
+	$("#news_dialog .close").click(function(){
+    $(".overlay").fadeOut("slow");
+	$("#news_dialog").animate("fast").css("visibility","hidden");
+	//$("#news_dialog").fadeOut("slow");
+	 });
+	 
+	 	$('#login_form').validate({ // initialize the plugin
+        onfocusout: function (element) {
+        $(element).valid();
+    },
+	
+	
+	
+        rules: {
+            j_username: {
+                required: true,
+                minlength: 2,
+				maxlength: 50,
+				
+				
+				
+				 
+				
+				
+            },
+            j_password: {
+                required: true,
+                minlength: 8,
+				maxlength: 12,
+				nowhitespace: true,
+				
+            }
+			
+        }
+		
+    });
+	 
+ 
+ 
+
+});
+</script>
+<!--Login Pop-up Boxs -->
+<script>
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+  
+});
+</script>
+
+<!--Video slider Starts -->
+<script>
+$(document).ready(function(){
+  
+$("#video_first_dialog .video_parent").click(function(){
+  //  $("#video_dialog iframe").attr("src","");
+	 var x=$(this).find('iframe').attr("src");
+	 var y=x.replace("&controls=0&showinfo=0&modestbranding=1","");
+	// alert(x);
+	$("#video_dialog iframe").attr("src",y);
+	$("#video_dialog").show();
+	});
+	$("#video_dialog .close").click(function(){
+     $("#video_dialog").hide();
+	  $("#video_dialog iframe").attr("src","");
+	});
+	 $('#video_first_dialog').find('iframe').each(function(){
+        var url = $(this).attr("src");
+      $(this).attr("src",url+"?wmode=transparent&controls=0&showinfo=0&modestbranding=1");
+		$(this).attr("wmode","Opaque");
+    });
+   
+ });
+</script>
+<!--Video slider ends-->
+<link href="../css/custom.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="wrapper" id="login">
+  <section class="main">
+    <section class="in_content fr"> 
+      <!--Logo Strats-->
+      <header class="logo fr"><a><img src="../images/subh_logo.png" alt="Shubchintak"/></a></header>
+      <div class="clr"></div>
+      <!--Logo Ends--> 
+      <!--Login Form Strats-->
+      <form id="login_form" class="fr" method="post" action="">
+        <ul class="reset">
+          <li class="user_li">
+            <label class="label">USERNAME</label>
+            <input type="text" maxlength="50" class="fr" autofocus required/>
+            <div class="clr"></div>
+          </li>
+          <li class="pass_li">
+            <label class="label">PASSWORD</label>
+            <input type="password" maxlength="50" required/>
+            <div class="clr"></div>
+          </li>
+          <li class="clearfix login_li">
+            <div class="fl">
+              <input type="checkbox" class="remember" id="remember"  name="remember" checked/>
+              <span id="custom_check" class="custom_check"></span> <span class="remember_txt">Remember me</span> </div>
+            <div class="fr">
+              <!--<input type="submit" value="LOGIN" class="login_btn"/>-->
+            <a class="login_btn" href="dashboard.html">LOGIN</a>
+            </div>
+          </li>
+          <li class="clearfix"><a href="forgot-password.html" class="forgot fr">Forgot your password?</a></li>
+        </ul>
+      </form>
+      <div class="clr"></div>
+      <!--Login Form Ends--> 
+      <!--Media video and News Starts-->
+      <section id="media" class="clearfix"> <a class="fr news box" href="#"><img class="box_shadow" src="../images/box_shadow.png" height="10" width="150"/> <span class="category">News</span> <img class="thumb" src="../images/news.png" height="56" width="59" alt="News"/>
+        <p class="description">Read latest news &amp; current affairs </p>
+        </a> <a class="fr video box" href="#"><img class="box_shadow" src="../images/box_shadow.png" height="10" width="150"/> <span class="category">Videos</span> <img class="thumb" src="../images/video-icon.png" height="50" width="50" alt="videos"/>
+        <p class="description">Watch latest videos  &amp; events</p>
+        </a> </section>
+      <!--Media video and News Ends--> 
+    </section>
+    <div class="clr"></div>
+  </section>
+  <!--Footer video and News starts-->
+  <footer class="footer clearfix"><a href="#" class="fl ft_logo"><img src="../images/foot_logo.png" height="18" width="74" alt="finnfra"/></a>
+    <ul class="reset fr ft_text clearfix">
+      <li class="fl">Copyright &copy; 2014</li>
+      <li class="fl"><a href="#">Privacy Policy</a></li>
+    </ul>
+  </footer>
+  <!--Footer video and News ends--> 
+</div>
+<div id="page_loader"></div>
+<!--News pop-up--> 
+  
+<!--News pop-up ends--> 
+<!--Video pop-up--> 
+ 
+<!--Video pop-up ends--> 
+ 
+<!--Custom Video Modal first-->
+<div id="video_dialog" class="common_custom_modal"> <span class="close">X</span>
+  <div class="modal_content">
+    <iframe width="662" height="431" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<!--Custom Video Modal first Ends--> 
+<!--Custom Video Modal second-->
+<div id="video_first_dialog" class="common_custom_modal">
+  <h3 class="modal_heading">Videos<span class="close">X</span></h3>
+  <div class="modal_content">
+    <ul class="bxslider">
+   <li> <div class="thumb_slide clearfix">
+      <a href="#" class="video_parent">
+        <div class="video"><iframe width="197" height="98" src="//www.youtube.com/embed/eogk7bYdfG4" frameborder="0" ></iframe></div>
+        <div class="desc">Lorem Ipsum Text
+          Lorem Ipsum Text
+          Lorem Ipsum Text Lorem Ipsum Text
+          Lorem Ipsum Text
+          Lorem Ipsum Text</div>
+      </a>
+    
+      <a href="#" class="video_parent">
+        <div class="video"><iframe width="197" height="98" src="//www.youtube.com/embed/hiPKU6k0u0Q" frameborder="0" ></iframe></div>
+        <div class="desc">Lorem Ipsum Text
+          Lorem Ipsum Text
+          Lorem Ipsum Text Lorem Ipsum Text
+          Lorem Ipsum Text
+          Lorem Ipsum Text</div>
+      </a>
+     
+      <a href="#" class="video_parent">
+        <div class="video"><iframe width="197" height="98" src="//www.youtube.com/embed/J9nT9t7tXx8" frameborder="0" ></iframe></div>
+        <div class="desc">Lorem Ipsum Text
+          Lorem Ipsum Text
+          Lorem Ipsum Text Lorem Ipsum Text
+          Lorem Ipsum Text
+          Lorem Ipsum Text</div>
+      </a>
+      <div class="btm">
+        <div class="inner"> </div>
+      </div>
+    </div></li>
+   
+    
+    </ul>
+  </div>
+</div>
+<!--Custom Video Modal second Ends--> 
+<!--Custom News Modal-->
+<div id="news_dialog" class="common_custom_modal">
+  <h3 class="modal_heading">News<span class="close">X</span></h3>
+  <div class="modal_content"> 
+    <!-- <div class="news_slider clearfix">-->
+    <ul class="bxslider">
+      <li>
+        <div class="multiple">
+          <ul class="clearfix reset">
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="multiple">
+          <ul class="clearfix reset">
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="multiple">
+          <ul class="clearfix reset">
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+            <li class="news_li clearfix"><img src="../images/new_image.png" class="fl" height="72" width="134"/> <span class="new_desc">
+              <h2>Lorem Ipsum Text</h2>
+              <p>Lorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum TextLorem Ipsum Text Lorem Ipsum Text</p>
+              </span></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--Custom News Modal Ends--> 
+<!-- Force Password Change Starts -->
+<div id="force_pass_change">
+<ul class="clearfix reset">
+<li>
+<label>Existing Password (from email)</label><input type="password" class="common_input"/>
+</li>
+<li>
+<label>New Password</label><input type="password" class="common_input"/>
+</li>
+<li>
+<label>Re-enter Password</label><input type="password" class="common_input"/>
+</li>
+<li>
+<input type="submit" class="common_btn"/>
+</li>
+</ul>
+</div>
+<!-- Force Password Change Ends-->
+<div class="overlay"></div>
+<!--<script src="resources/js/slick.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>List Of Tasks</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<!---->
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/jquery.placeholder.js"></script>
+<!--<script src="../js/jquery.slimscroll.js"></script>-->
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<!-- Custom Selectbox starts --> 
+ <script>
+$(document).ready(function(){
+  
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+ 
+});
+</script>
+<!-- Custom Selectbox Ends --> 
+<!-- Placeholder for selectbox starts --> 
+ <script>
+$(document).ready(function(){
+  
+  $(".selectboxit-container").click(function(){
+	$(".selectboxit-option-first").remove();
+  
+});	
+});
+</script>
+<!-- Placeholder for selectbox Ends --> 
+<!-- Filter section toggle starts --> 
+<script>
+$(document).ready(function(){
+  $("#task_list #task_list_page .div_dragger").click(function(){
+    $("#task_filter").slideToggle("slow");
+	$(".div_dragger span").animate("slow").toggleClass("div_dragger_up","slow");
+	if($(".div_dragger span").hasClass("div_dragger_up"))
+	{
+	 $("#task_filter #StatusSelectBoxIt .selectboxit-text").text("Status");
+	 $("#task_filter #subject_categorySelectBoxIt .selectboxit-text").text("Subject Category");
+	 $("#task_filter #assgined_toSelectBoxIt .selectboxit-text").text("Assigned to");
+	 $("#task_filter #prioritySelectBoxIt .selectboxit-text").text("Priority");
+	$("#task_filter .common_input").val("");
+	}
+  });
+});
+</script>
+<!-- Filter section toggle ends --> 
+<!-- custom scroll to "common_in_content" --> 
+<script>
+$(document).ready(function(){
+  
+  // $('.common_in_content').slimScroll();
+     $('.common_in_content').slimScroll();
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" --> 
+<!-- Filter section toggle ends --> 
+<!-- Alrternate row color --> 
+<script>
+$(document).ready(function(){
+  
+ $(".records_ul:even").addClass("even_row");
+ $(".records_ul:odd").addClass("odd_row");
+  });
+
+</script>
+<!-- Alrternate row color --> 
+<!--Common Custom checkbox -->
+<script>
+$(document).ready(function(){
+  $(".common_custom_checkbox").click(function(){
+    $(this).toggleClass("common_custom_checkbox_checked");
+	
+	 if ($(this).next( ".default_checkbox" ).is(":checked")) {
+		
+       $(this).next( ".default_checkbox" ).prop("checked", false);
+    } else {
+       $(this).next( ".default_checkbox" ).prop("checked", true);
+	
+    }
+	
+  });
+});
+</script>
+<!--Common Custom checkbox ends-->
+
+
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="task_list"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a> <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a>
+  <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div> <section class="submenu">
+            <div class="menu_section">
+              <ul class="clearfix reset">
+                <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+                              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+                <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                  <section id="password_change"> 
+                    <form method="post" action="" name="change_password">
+                      <ul class="reset">
+                        <li>
+                          <label>Existing Password (from email)</label>
+                          <input type="password" class="pass" id="exist_pass" autofocus required>
+                        </li>
+                        <li>
+                          <label>New Password</label>
+                          <input type="password" class="pass" name="new_pass" required>
+                        </li>
+                        <li>
+                          <label>Re-enter Password</label>
+                          <input type="password" class="pass re_pass" name="re_pass" required>
+                          <span class="error re_enter_error">Password did not match</span>
+                        </li>
+                        <li class="clearfix">
+                          <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                          <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                        </li>
+                      </ul>
+                    </form>
+                  </section>
+                </li>
+                <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+              </ul>
+            </div>
+            <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+          </section><a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">list of tasks</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts--><section class="content common_content">
+    <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset">    <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+     <!-- Common_in_contnet starts-->
+      <section id="task_list_page" class="in_content common_in_content clearfix">
+      <div id="task_filter">
+      <ul class="reset clearfix parameters">
+      <li><input type="text" class="common_input" placeholder="Subject"/></li>
+      <li><select id="Status">
+      <option>Status</option>
+      <option>1</option>
+      <option>2</option>
+      </select></li>
+      <li><select id="subject_category">
+      <option>Subject Category</option>
+      <option>1</option>
+      <option>2</option>
+      </select></li>
+      <li><select id="assgined_to">
+      <option>Assigned to</option>
+      <option>1</option>
+      <option>2</option>
+      </select></li>
+      <li><select id="priority">
+      <option>Priority</option>
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+      </select></li>
+      </ul> 
+      <ul class="reset clearfix action">
+      <li><input type="reset" class="common_btn"/></li>
+      <li><input type="submit" value="Search"  class="common_btn"/></li>
+      
+      </ul>
+      <div class="clr"></div>
+     
+      </div>
+      <div class="div_dragger"><span></span></div>   
+        <section id="task_records">
+     <div class="actions clearfix">
+        <div class="message"><span class="count">16 </span>items found, displaying all items.</div>
+        <div class="export clearfix"><ul class="reset clearfix fr"><li><a href="#" class="xml"></a></li><li><a href="#" class="cvs"></a></li><li><a href="#" class="xls"></a></li></ul>
+        <div class="txt fl">Export to:</div></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="query_data">
+        <ul class="heading_ul clearfix reset tabular">
+        <li class="first">action</li>
+        <li class="second">task owner</li>
+        <li class="third">subject category</li>
+        <li class="fourth">task for</li>
+        <li class="fifth">subject</li>
+        <li class="sixth">date</li>
+        <li class="seventh">priority</li>
+        <li class="eight">status</li>
+        </ul>
+        
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Vinod Mane</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb client"></span>Client</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">22-Apr-2014</li>
+        <li class="seventh">High</li>
+        <li class="eight"><span class="new status">Scheduled</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Keshav Lohar</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">21-Apr-2014</li>
+        <li class="seventh">High</li>
+        <li class="eight"><span class="responded status">On Hold</span></li>
+        </ul>
+     <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Kishor Dhanu</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">20-Apr-2014</li>
+        <li class="seventh">High</li>
+        <li class="eight"><span class="progress status">Work in Progress</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Arwind Gawli</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">19-Apr-2014</li>
+        <li class="seventh">High</li>
+        <li class="eight"><span class="new status">Scheduled</span></li>
+        </ul>
+     <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Sachin Khedekar</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb pclient"></span>PClient</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">18-Apr-2014</li>
+        <li class="seventh">High</li>
+        <li class="eight"><span class="completed status">Completed</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Dhananjay Keskar</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">17-Apr-2014</li>
+        <li class="seventh">Medium</li>
+        <li class="eight"><span class="responded status">On Hold</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Manoj Joshi</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">16-Apr-2014</li>
+        <li class="seventh">Medium</li>
+        <li class="eight"><span class="completed status">Completed</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Kishor Dhanu</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">15-Apr-2014</li>
+        <li class="seventh">Medium</li>
+        <li class="eight"><span class="responded status">On Hold</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Vishal Kawatkar</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">14-Apr-2014</li>
+        <li class="seventh">Medium</li>
+        <li class="eight"><span class="cancel status">Cancelled</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Madura Pansare</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">13-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="completed status">Completed</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Keshav Lohar</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">12-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="responded status">On Hold</span></li>
+        </ul>
+        
+        
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Sachin Khedekar</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">11-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="completed status">Completed</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Dhananjay Keskar</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">10-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="responded status">On Hold</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Manoj Joshi</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">09-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="completed status">Completed</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Kishor Dhanu</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">08-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="responded status">On Hold</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Vishal Kawatkar</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">07-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="cancel status">Cancelled</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Madura Pansare</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">06-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="completed status">Completed</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Keshav Lohar</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">05-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="responded status">On Hold</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Sachin Khedekar</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">04-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="completed status">Completed</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Dhananjay Keskar</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">03-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="responded status">On Hold</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Manoj Joshi</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">02-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="completed status">Completed</span></li>
+        </ul>
+        <ul class="records_ul clearfix reset tabular">
+        <li class="first"><span class="common_custom_checkbox"></span><input type="checkbox" class="default_checkbox"/> <a href="edit-tasks.html"  class="pencil_edit"></a></li>
+        <li class="second">Kishor Dhanu</li>
+        <li class="third">Email</li>
+        <li class="fourth clearfix"><span class="task_thumb opportunity"></span>Opportunity</li>
+        <li class="fifth">Why do you need a plan?</li>
+        <li class="sixth">01-Apr-2014</li>
+        <li class="seventh">Low</li>
+        <li class="eight"><span class="responded status">On Hold</span></li>
+        </ul>
+        </div>
+        
+        </section>
+        
+      </section>
+      <!-- Common_in_contnet ends--> 
+      <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+         <!-- <ul class="reset clearfix fr btn_grup3">
+            </li>
+            <li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+            <li class="fl list"><a href="#" class="anch skip"><span class="txt">Skip</span></a></li>
+          </ul>-->
+         <!-- <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <li class="fl list"><a href="#" class="anch add_note"><span class="txt">Add Notes</span></a></li>
+            <li class="fl list"><a href="#" class="anch add_doc"><span class="txt">Add Doc</span></a></li>
+          </ul>-->
+          <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <li class="fl list"><a href="add-tasks.html" class="anch new_query"><span class="txt">Add Task</span></a></li>
+            <li class="fl list"><a href="#" class="anch delete_query"><span class="txt">Delete Task</span></a></li>
+          </ul>
+         <!-- <ul class="reset clearfix fl btn_grup1">
+            </li>
+            <li class="fl list"><a href="#" class="anch analysis"><span class="txt">Analysis</span></a></li>
+            <li class="fl list"><a href="#" class="anch suggeset"><span class="txt">Suggestion</span></a></li>
+            <li class="fl list"><a href="#" class="anch action_plan"><span class="txt">Action Plan</span></a></li>
+          </ul>-->
+        </div>
+        <a href="dashboard.html" class="back navgation"><span class="txt">Back</span></a> <a href="dashboard.html" class="next navgation"><span class="txt">Next</span></a> </section>
+      
+      <!-- Common footer ends --> 
+    <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends-->
+     
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends--> 
+
+
+
+</body>
+</html>

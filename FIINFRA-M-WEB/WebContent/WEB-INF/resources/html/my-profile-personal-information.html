@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>My Profile - Personal Info</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script>
+$(document).ready(function(){
+// my profile active link
+ if ( $("#my_pro_per_info").is(":visible") ) {
+    $(".my_profile_links li.first").addClass("active");
+} 	
+	//Datepicker Satrs
+	$(function() {
+	   $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-M-yy",
+      showOn: "button",
+	  buttonText: '',
+	  changeMonth: true,
+      changeYear: true
+     });
+   $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent'></div>" );
+  });
+  
+	//Datepicker Ends
+	//	custom scroll to "common_in_content" 
+$('#personal_info').slimScroll();
+   // Calls the selectBoxIt method on your HTML select box	
+ $("select").selectBoxIt();
+ // Calls the selectBoxIt method on your HTML select box	
+// my_profile_links starts
+$(".my_profile_links .arrow").click(function(){
+
+ slide();
+});
+	
+function slide()
+  {
+  if($(".my_profile_links .arrow").hasClass("push_in"))
+  {
+  $(".my_profile_links").animate({left:'-123px'});
+  $(".my_profile_links .arrow").animate("slow").removeClass("push_in");	  
+  }
+  else
+  {
+  $(".my_profile_links").animate({left:'0'});
+  $(".my_profile_links .arrow").animate("slow").addClass("push_in");
+  }
+  }
+// my_profile_links ends
+// image uplaod starts
+ $("#my_pro_per_info #photo_upload").click(function(){
+
+ $("#my_pro_per_info #upload").click();
+ 
+     function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+			$("#my_pro_per_info .photo_frame p").animate("slow").css("display","none");
+                $('#preview').attr('src', e.target.result);
+				$("#my_pro_per_info .photo_frame img").animate("slow").css("display","block");
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#upload").change(function(){
+        readURL(this);
+    });
+});
+// image uplaod ends
+
+});
+
+</script>
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="my_pro_per_info_parent"> 
+  <!-- Main starts-->
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+                            <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">my profile</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    <!-- Common_content Starts--><section class="content common_content">
+    <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset">    <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+     <!-- Common_in_contnet starts-->
+      <section class="in_content common_in_content clearfix my_profile_parent" id="my_pro_per_info">
+        <div class="header_strip">Personal Info</div>
+        <section id="personal_info" class="clearfix">
+          <div class="my_profile_links">
+            <div class="arrow"></div>
+            <ul class="reset clearfix">
+              <li class="first"><a href="my-profile-personal-information.html">Personal Info</a></li>
+              <li class="second"><a href="my-profile-address.html">Address</a></li>
+              <li class="third"><a href="my-profile-bank-details.html">Bank Details</a></li>
+              <li class="fourth"><a href="my-profile-service.html">Services</a></li>
+              <li class="fifth"><a href="my-profile-financial-products.html">My Financial Product</a></li>
+              <li class="sixth"><a href="my-profile-my-user-account.html">My User Account</a></li>
+              <li class="seventh"><a href="my-profile-my-assigned-service-team.html">My Team</a></li>
+            </ul>
+          </div>
+          <div class="first_col fl">
+            <div class="photo_frame">
+              <p>Your Photo Here</p>
+              <img id="preview" src="#" alt="" /> </div>
+            <div class="upload_btn">
+              <form>
+                <input type="file" accept="image/*" id="upload"/>
+              </form>
+              <button id="photo_upload" class="common_btn">Browse</button>
+            </div>
+          </div>
+          <div class="second_col fl">
+            <ul class="reset clearfix info">
+              <li class="clearfix">
+                <label class="form_label">Salutation</label>
+                <select id="salutation">
+                  <option>Select</option>
+                  <option>Mr.</option>
+                  <option>Mrs.</option>
+                </select>
+              </li>
+              <li class="clearfix first_name">
+                <label class="form_label">First Name</label>
+                <input class="common_input"/>
+              </li>
+              <li class="clearfix last_name">
+                <label class="form_label">Last Name</label>
+                <input class="common_input"/>
+              </li>
+              <li class="clearfix company">
+                <label class="form_label">Company</label>
+                <input class="common_input"/>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">PAN No.</label>
+                <input class="common_input"/>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Birth Date</label>
+                <input class="common_input datepicker" disabled/>
+              </li>
+              <li class="clearfix">
+              <ul class="contact reset clearfix">
+                
+                <li class="clearfix">
+                  <label class="form_label">Ph. No.</label>
+                  <input class="common_input" />
+                </li>
+                <li class="clearfix mobile">
+                  <label class="form_label">Mobile</label>
+                  <input class="common_input" />
+                </li>
+                
+              </ul>
+              
+              </li>
+              <li class="clearfix">
+              <ul class="web reset clearfix">
+              
+                <li class="clearfix">
+                  <label class="form_label">Email</label>
+                  <input class="common_input" type="email"/>
+                </li>
+                <li class="clearfix website">
+                  <label class="form_label">Website</label>
+                  <input class="common_input"/>
+                </li>
+               
+              </ul>
+              
+              </li>
+              
+              <li class="clearfix">
+                <label class="form_label">ARN Code</label>
+                  <input class="common_input"/>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <!-- Common_in_contnet ends --> 
+      <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup3">
+            <li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+         <!--   <li class="fl list"><a href="#" class="anch skip"><span class="txt">Skip</span></a></li>-->
+          </ul>
+          <!--<ul class="reset clearfix fr btn_grup2">
+            <li class="fl list"><a href="#" class="anch add_note"><span class="txt">Add Notes</span></a></li>
+            <li class="fl list"><a href="#" class="anch add_doc"><span class="txt">Add Doc</span></a></li>
+          </ul>
+          <ul class="reset clearfix fl btn_grup1">
+            <li class="fl list"><a href="#" class="anch analysis"><span class="txt">Analysis</span></a></li>
+            <li class="fl list"><a href="#" class="anch suggeset"><span class="txt">Suggestion</span></a></li>
+            <li class="fl list"><a href="#" class="anch action_plan"><span class="txt">Action Plan</span></a></li>
+          </ul>-->
+        </div>
+        <a href="dashboard.html" class="back navgation"><span class="txt">Back</span></a> <a href="my-profile-address.html" class="next navgation"><span class="txt">Next</span></a></section>
+      
+      <!-- Common footer ends -->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Risk Cover</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/listbox.css"/>
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/common_unit_selector.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<script src="../js/plugin/listbox.js"></script>
+<!-- intilazie custom checkbox starts-->
+<script>
+$(document).ready(function(){
+
+$('#health_insurance').listbox();
+
+	
+$('.toggle').toggles();
+//Add More Selectbox For Family Memebers
+   var member_count=1;
+     
+ $("#risk_cover #bg-box").on("click",".add_more",function(){
+    member_count++;
+	$(this).before('<div class="select_parent"><select id="memeber'+member_count+'"><option>Select</option><option>Test</option><option>Test</option></select></div>');
+      $("select").selectBoxIt();
+  });
+ 
+}) ;
+</script>
+<script>
+$(document).ready(function(){
+  $(".thumb_select_ul a").click(function(){
+    $(this).children(".categoery").toggleClass("not_applicable");
+//	$(this).find(".cross_circle").toggle();
+  });
+});
+</script>
+<!-- Type of emergency faced select ends -->
+
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+   // Calls the selectBoxIt method on your HTML select box
+    //$("select").selectBoxIt();
+	//safe & comfortable family value Slider
+	  createSlider('#emergency_confidence',1,5,1,"#emer_conf")
+	  //cover value Slider
+	  createSlider('.loan_amount',1,100,1,"#l_amount")
+	  //cover value Slider
+	  createSlider('#loan_amount2',1,100,1,"#l_amount2")
+	  //cover value Slider
+	  createSlider('#loan_amount3',1,100,1,"#l_amount3")
+	  //cover value Slider
+	  createSlider('#loan_amount4',1,100,1,"#l_amount4")
+	  
+	  //assumption pop
+	  createSlider('#advice_rs_assump_ee',70,100,1,"#advice_rs_assump_ee_payment")
+	  createSlider('#advice_rs_assump',0,20,1,"#advice_rs_assump_payment")
+	  createSlider('#advice_rs_assump_ci',6,60,1,"#advice_rs_assump_ci_payment")
+	  createSlider('#advice_rs_assump_ad',6,60,1,"#advice_rs_assump_ad_payment")
+
+ 
+});
+</script>
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<script src="../js/plugin/selectboxit.js"></script>
+
+<!-- Custom Selectbox Ends -->
+<!-- custom scroll to "common_in_content" --> 
+<script>
+$(document).ready(function(){
+  
+    $('.common_in_content').slimScroll();
+	$('.lbjs-list').perfectScrollbar();
+    $('.Advice_Assump_Menu_In').perfectScrollbar();
+
+	/* Health Insurance Toggle section*/
+	
+	$(".borrow_sell").on('toggle', function (e, active) {
+    if (active) {
+      $("#borrow_sell_li + #bg-box").fadeIn("slow");
+	
+	   
+    } else {
+    
+	   $("#borrow_sell_li + #bg-box").fadeOut("slow");
+	
+    }
+	
+});
+$(".toggle.illness_cover").on('toggle', function (e, active) {
+    if (active) {
+      $("#critical_illness .third,#critical_illness .fourth").fadeIn("slow");
+	
+	   
+    } else {
+    
+	   $("#critical_illness .third,#critical_illness .fourth").fadeOut("slow");
+	
+    }
+	
+});
+$(".toggle.accident_cover").on('toggle', function (e, active) {
+    if (active) {
+      $("#accident_covere .third,#accident_covere .fourth").fadeIn("slow");
+	
+	   
+    } else {
+    
+	   $("#accident_covere .third,#accident_covere .fourth").fadeOut("slow");
+	
+    }
+	
+});
+$(".toggle.house_cover").on('toggle', function (e, active) {
+    if (active) {
+      $("#house_covere .third,#house_covere .fourth").fadeIn("slow");
+	
+	   
+    } else {
+    
+	   $("#house_covere .third,#house_covere .fourth").fadeOut("slow");
+	
+    }
+	
+});
+
+$(".toggle.emergency_faced").on('toggle', function (e, active) {
+    if (active) {
+      $(".thumb_select_ul").fadeIn("slow");
+	
+	   
+    } else {
+    
+	   $(".thumb_select_ul").fadeOut("slow");
+	
+    }
+	
+});
+});
+
+</script>
+
+<!-- intilazie custom checkbox starts-->
+<script>
+$(document).ready(function(){
+$('.toggle').toggles({
+	
+	text: {
+      on: 'YES', 
+      off: 'NO' 
+    },
+	
+	});
+}) 
+</script>
+<!-- intilazie custom checkbox ends-->
+
+
+
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="risk_cover"> 
+  <!-- Main starts-->
+  <!--section class="main"--> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+                            <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">RISK COVER</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+     <!-- Common_content Starts--><section class="content common_content">
+    <div class="combined_submenu clearfix"><div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset ">
+              <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dc_dashboard_submenu">
+        <h4 class="heading"><a href="data-collection.html">Data Collection Dashboard</a></h4>
+        <ul class="clearfix reset first_col_menu">
+              <li class="menu emergency"><a href="emergency-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Emergency</span></a></li>
+              <li class="menu risk_cover"><a href="risk-cover.html" class="anch"><span class="thumb"></span><span class="txt">Risk Cover</span></a></li>
+              <li class="menu retirement"><a href="retirement-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Retirement</span></a></li>
+              <li class="menu succession"><a href="succession-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Succession</span></a></li>
+              <li class="menu financial"><a href="financial-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Financial</span></a></li>
+              <li class="menu cash_flow"><a href="cash-flow.html" class="anch"><span class="thumb"></span><span class="txt">Cash Flow</span></a></li>
+              <li class="menu loan_status"><a href="loan-status.html" class="anch"><span class="thumb"></span><span class="txt">Loan Status</span></a></li>
+              <li class="menu last clearfix"><a href="profile-info.html" class="anch personal_info"><span class="thumb"></span><span class="txt">Personal Info.</span></a> <a href="risk-profile.html" class="anch risk_profile"><span class="thumb"></span><span class="txt">Risk Profile</span></a> <a href="my-goals.html" class="anch my_goals"><span class="thumb"></span><span class="txt">My Goals</span></a></li> 
+            </ul>
+            
+            <ul class="clearfix reset sec_col_menu">
+              <li class="menu education"><a href="education-goal-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Education</span></a></li>
+               <li class="menu property"><a href="purchase-property-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Property</span></a></li>
+                   <li class="menu wedding"><a href="wedding-goal.html" class="anch"><span class="thumb"></span><span class="txt">Wedding</span></a></li>
+                    <li class="menu car"><a href="car-goal.html" class="anch"><span class="thumb"></span><span class="txt">Car</span></a></li>
+  <li class="menu travel"><a href="travel-n-vacaction-goal.html" class="anch"><span class="thumb"></span><span class="txt">Travel</span></a></li>
+              <li class="menu business"><a href="business-goal.html" class="anch"><span class="thumb"></span><span class="txt">Business</span></a></li>
+              <li class="menu special_goal"><a href="special-goal.html" class="anch"><span class="thumb"></span><span class="txt">Special Goal</span></a></li>
+              <li class="menu other"><a href="other-goal.html" class="anch"><span class="thumb"></span><span class="txt">Other Goal</span></a></li>
+            </ul>
+        <div class="clr"></div>
+        
+        </div>
+        <div class="contact_configuration_submenu">
+          <h4 class="heading"><a>Contact Configuration</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset ">
+              <li class="menu coantact_setting"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Contact Settings</span></a></li>
+              <li class="menu contact_rec"><a href="#" class="anch"><span class="thumb"></span><span class="txt"> Contact Recommendations</span></a></li>
+          
+            </ul>
+          </div>
+        </div>
+        </div> <!-- Common_in_contnet starts-->
+      <section class="common_unit_selector"><ul class="clearfix reset"><li class="k"><span class="unit">K</span></li><li class="lacs unit_selected"><span class="unit">Lac</span></li><li class="cr"><span class="unit">Cr</span></li></ul><p>All figures are in :</p></section>
+         <!-- advive adssumption starts--> 
+    <a href="#">
+    <div class="common_ad_ass_selector selector_noline">
+      <ul class="clearfix reset selector">
+        <li class="select">
+          <p>Advice Assumptions</p>
+        </li>
+      </ul>
+      
+      <div class="Advice_Assump_Menu">
+  <ul class="clearfix reset Advice_Assump_Menu_In" >
+  <li class="clearfix">
+              <label class="form_label">Estimated Life Expectancy</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">70</span><span class="high extrem">100</span></div>
+                  <div id="advice_rs_assump_ee"></div>
+                  <div class="counter_parent_new">
+                    <input type="text" id="advice_rs_assump_ee_payment" class="range_counter" />
+                    <span class="unit">yrs</span> </div>
+                </div>
+              </div>
+            </li>
+    <li class="clearfix">
+      <label class="form_label">Health Insurance cover amount</label>
+      <div class="range_parent">
+        <div class="scale clearfix">
+          <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">20</span></div>
+          <div id="advice_rs_assump"></div>
+          <div class="counter_parent_new rupee">
+            <input type="text" id="advice_rs_assump_payment" class="range_counter" />
+            <span class="unit dynamic">lacs</span></div>
+        </div>
+      </div>
+    </li>
+    <li class="clearfix">
+      <label class="form_label">Critical Illness Insurance cover amount (XX times monthly income)</label>
+      <div class="range_parent">
+        <div class="scale clearfix">
+          <div class="scale_range"><span class="low extrem">6</span><span class="high extrem">60</span></div>
+          <div id="advice_rs_assump_ci"></div>
+          <div class="counter_parent_new">
+            <input type="text" id="advice_rs_assump_ci_payment" class="range_counter" />
+            <span class="unit">months</span> </div>
+        </div>
+      </div>
+    </li>
+    <li class="clearfix">
+      <label class="form_label">Accident Disability Insurance cover amount (XX times monthly income)</label>
+      <div class="range_parent">
+        <div class="scale clearfix">
+          <div class="scale_range"><span class="low extrem">6</span><span class="high extrem">60</span></div>
+          <div id="advice_rs_assump_ad"></div>
+          <div class="counter_parent_new">
+            <input type="text" id="advice_rs_assump_ad_payment" class="range_counter" />
+            <span class="unit">months</span> </div>
+        </div>
+      </div>
+    </li>
+    <li class="clearfix"> <a class="cancel">CANCEL</a><a class="save">SAVE</a></li>
+  </ul>
+</div>
+    </div>
+    </a>
+    <div class="clr"></div>
+    
+    
+    
+    <!-- advive adssumption ends--> 
+
+    
+    
+    <!-- Common_content Starts-->
+    <section class="content common_in_content"> 
+      <!-- Common_in_contnet starts-->
+      <section class="in_content common_in_content clearfix">
+        <ul class="reset clearfix" id="emergency_readiness_ul">
+          <li id="confidence_scale" class="clearfix">
+            <div class="ques_txt4">
+              <p>In the event of death or disability of the key earning member in your household, how sure are you that your family will be safe & comfortable?</p>
+            </div>
+                  
+              <div class="range_parent emer_confidence">
+                <div class="fl scale clearfix margin-left">
+                  <div class="scale_range"> <span class="low extrem">1</span> <span class="high extrem">5</span>
+                    <div class="mark"><br/><!--<span class="line"></span><span class="line"></span><span class="line"></span><span class="line"></span><span class="line"></span></div>-->
+                    <div id="emergency_confidence"></div>
+                  </div>
+                  
+                </div>
+                <div class="counter_parent">
+                    <input type="text" id="emer_conf" class="range_counter">
+                  </div>
+              </div>
+              <div class="clr"></div>
+            </div>
+          </li>
+          <li id="emergency_details" class="clearfix">
+            <div class="ques_txt2">
+              <p>Do you have a life insurance?</p>
+            </div>
+            <div class="ques_action2 clearfix">
+              <div id="emergency_situation">
+                <div class="toggle emergency_faced"></div>
+                <input type="checkbox" name="emergency_situation" value="checked" class="emergency_faced orignal_checkbox"/>
+              </div>
+              <ul class="reset clearfix thumb_select_ul emergency_categoery_ul">
+                <li class="fl"><a href="#">
+                  <div class="categoery job">
+                    <div class="thumb"><img src="../images/cross_circle.png" class="cross_circle" height="48" width="48" alt=""/></div>
+                  </div>
+                  <label class="label">Term</label>
+                  </a></li>
+                <li class="fl"><a href="#">
+                  <div class="categoery accident">
+                    <div class="thumb"></div>
+                  </div>
+                  <label class="label">Endowment</label>
+                  </a></li>
+                <li class="fl"><a href="#">
+                  <div class="categoery health_issues">
+                    <div class="thumb"></div>
+                  </div>
+                  <label class="label">Unit Linked</label>
+                  </a></li>
+                <li class="fl"><a href="#">
+                  <div class="categoery natural_clamity">
+                    <div class="thumb"></div>
+                  </div>
+                  <label class="label">Money Back</label>
+                  </a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li id="borrow_sell_li" class="clearfix">
+            <div class="ques_txt2">
+              <p>Do you have health insurance?</p>
+            </div>
+            <div class="ques_action2">
+              <div class="toggle borrow_sell"></div>
+              <input type="checkbox" name="borrow_sell" value="checked" class="borrow_sell orignal_checkbox"/>
+            </div>
+            <div class="clr"></div>
+          </li>
+          
+          <div id="bg-box" class="clearfix">
+	          <ul class="reset clearfix bottom_question" id="critical_illness">
+	          <li id="without_income" class="clearfix">
+	            <div class="ques_txt">
+	              <p>How much cover do you have?</p>
+	            </div>
+	            
+	            <div class="ques_action">
+	              <div class="range_parent without_income_slider">              
+	              			<div class="range_parent">
+	                            <div class="scale clearfix">
+	                              <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">100</span></div>
+	                              <div class="loan_amount"></div>
+	                              <div class="counter_parent rupee">
+	                                <input type="text" id="l_amount" class="range_counter"/>
+	                                <span class="unit dynamic">lacs</span> </div>
+	                            </div>
+	                          </div>
+	              </div>
+	              <div class="clr"></div>
+	            </div>
+	          </li>	
+          </ul>
+          
+          
+          <div class="ques_txt"><span>Who all in the family are covered under this health insurance? Please name them</span></div>
+              	<div class="select_members">
+	              	<select id="health_insurance" multiple>
+		              <option>Wife</option>
+		              <option>Father</option>
+		              <option>Mother</option>
+		              <option>Son</option>
+		              <option>Wife</option>
+		              <option>Father</option>
+		              <option>Mother</option>
+		              <option>Son</option>
+	            	</select>   
+           		</div>
+          </div> <!-- End of "bg-box" -->
+          
+          <div class="clr"></div>
+            <ul class="reset clearfix bottom_question" id="critical_illness">
+            <li class="first"><p>Are you covered for a possible critical illness?</p></li><li class="second"><div class="toggle illness_cover" id="borrow_sell"></div>
+                  <input type="checkbox" name="borrow_sell" value="checked" class="borrow_sell orignal_checkbox"/></li><li class="third"><p>How much cover do you have?</p></li><li class="fourth"><div class="range_parent">
+                                    <div class="scale clearfix">
+                                      <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">100</span></div>
+                                      <div id="loan_amount2"></div>
+                                      <div class="counter_parent rupee">
+                                        <input type="text" id="l_amount2" class="range_counter"/>
+                                        <span class="unit dynamic">lacs</span> </div>
+                                    </div>
+                                  </div></li>
+           
+            </ul>
+            <ul class="reset clearfix bottom_question" id="accident_covere">
+            <li class="first"><p>Are you covered for a possible accident?</p></li><li class="second"><div class="toggle accident_cover" id="borrow_sell"></div></li><li class="third"><p>How much cover do you have?</p></li><li class="fourth"><div class="range_parent without_income_slider">              
+                                <div class="range_parent">
+                                    <div class="scale clearfix">
+                                      <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">100</span></div>
+                                      <div id="loan_amount3"></div>
+                                      <div class="counter_parent rupee">
+                                        <input type="text" id="l_amount3" class="range_counter"/>
+                                        <span class="unit dynamic">lacs</span> </div>
+                                    </div>
+                                  </div>
+                      </div></li>
+           
+            </ul>
+            <ul class="reset clearfix bottom_question" id="house_covere">
+            <li class="first"><p>Are your assets like house and contents covered?</p></li><li class="second"><div class="toggle house_cover" id="borrow_sell"></div>
+                  <input type="checkbox" name="borrow_sell" value="checked" class="borrow_sell orignal_checkbox"/></li><li class="third"><p>How much cover do you have?</p></li><li class="fourth"><div class="range_parent">
+                                    <div class="scale clearfix">
+                                      <div class="range_parent">
+                                    <div class="scale clearfix">
+                                      <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">100</span></div>
+                                      <div id="loan_amount4"></div>
+                                      <div class="counter_parent rupee">
+                                        <input type="text" id="l_amount4" class="range_counter"/>
+                                        <span class="unit dynamic">lacs</span> </div>
+                                    </div>
+                                  </div>
+                                      <div id="loan_amount2"></div>
+                                      
+                                    </div>
+                                  </div></li>
+           
+            </ul>
+           <!-- <div id="risk-cover-bottom-right">
+              <ul class="clearfix reset">
+             	<li id="without_income" class="clearfix illness_cover_slider">
+                   <div class="illness"> <div class="ques_txt2">
+                      <p>How much cover do you have?</p>
+                    </div>
+                    
+                    <div class="ques_action2">
+                      <div class="range_parent without_income_slider">              
+                                <div class="range_parent">
+                                    <div class="scale clearfix">
+                                      <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">100</span></div>
+                                      <div id="loan_amount2"></div>
+                                      <div class="counter_parent rupee">
+                                        <input type="text" id="l_amount2" class="range_counter"/>
+                                        <span class="unit dynamic">lacs</span> </div>
+                                    </div>
+                                  </div>
+                      </div>
+        
+                      
+                      <div class="clr"></div>
+                    </div></div>
+          </li>
+          
+          <li id="without_income" class="clearfix margin accident_cover_slider" >
+                  <div class="accident">  <div class="ques_txt2">
+                      <p>How much cover do you have?</p>
+                    </div>
+                    
+                    <div class="ques_action2">
+                      <div class="range_parent without_income_slider">              
+                                <div class="range_parent">
+                                    <div class="scale clearfix">
+                                      <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">100</span></div>
+                                      <div id="loan_amount3"></div>
+                                      <div class="counter_parent rupee">
+                                        <input type="text" id="l_amount3" class="range_counter"/>
+                                        <span class="unit dynamic">lacs</span> </div>
+                                    </div>
+                                  </div>
+                      </div>
+        
+                      
+                      <div class="clr"></div>
+                    </div></div>
+          </li>
+          
+          
+          <li id="without_income" class="clearfix margin asset_cover_slider">
+                    <div class="asset"><div class="ques_txt2">
+                      <p>How much cover do you have?</p>
+                    </div>
+                    
+                    <div class="ques_action2">
+                      <div class="range_parent without_income_slider">              
+                                <div class="range_parent">
+                                    <div class="scale clearfix">
+                                      <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">100</span></div>
+                                      <div id="loan_amount4"></div>
+                                      <div class="counter_parent rupee">
+                                        <input type="text" id="l_amount4" class="range_counter"/>
+                                        <span class="unit dynamic">lacs</span> </div>
+                                    </div>
+                                  </div>
+                      </div>
+        
+                      
+                      <div class="clr"></div>
+                    </div>
+</div>          </li>
+          </ul>
+        	</div>--><!-- End of "risk-cover-bottom-right" -->  
+        </ul>
+      </section>
+      <!-- Common_in_contnet ends --> 
+      <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup3">
+            <li class="fl list"><a href="data-collection.html" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="data-collection.html" class="anch cancel"><span class="txt">Cancel</span></a></li>
+            <li class="fl list"><a href="financial-readiness.html" class="anch skip"><span class="txt">Skip</span></a></li>
+          </ul>
+          <ul class="reset clearfix fr btn_grup2">
+            <li class="fl list"><a href="#" class="anch add_note"><span class="txt">Add Notes</span></a></li>
+            <li class="fl list"><a href="#" class="anch add_doc"><span class="txt">Add Doc</span></a></li>
+          </ul>
+          <ul class="reset clearfix fl btn_grup1">
+            <li class="fl list"><a href="#" class="anch analysis"><span class="txt">Analysis</span></a></li>
+            <li class="fl list"><a href="#" class="anch suggeset"><span class="txt">Suggestion</span></a></li>
+            <li class="fl list"><a href="risk-cover-action-plan.html" class="anch action_plan"><span class="txt">Action Plan</span></a></li>
+          </ul>
+        </div>
+        <a href="emergency-readiness.html" class="back navgation"><span class="txt">Back</span></a> <a href="retirement-readiness.html" class="next navgation"><span class="txt">Next</span></a></section>
+      
+      <!-- Common footer ends -->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+
+<!-- Emergency Confidence range value calculator starts --> 
+<script>
+  $("input[name='confidence_input']")
+    .each(function () {
+      var input = $(this);
+      $("<span>")
+        .addClass("output hide-elem")
+		.attr('id', 'confidence_input')
+        .insertAfter($(this));
+    })
+    .bind("slider:ready slider:changed", function (event, data) {
+      $(this)
+        .nextAll(".output:first")
+          .html(data.value.toFixed(0));
+    });
+  </script> 
+<!-- Emergency Confidence range value calculator ends --> 
+<!-- without income range value calculator strats --> 
+<script>
+  $("input[name='W_income_input']")
+    .each(function () {
+      var input = $(this);
+      $("<span>")
+        .addClass("output1 hide-elem")
+		.attr('id', 'W_income_input')
+        .insertAfter($(this));
+    })
+    .bind("slider:ready slider:changed", function (event, data) {
+      $(this)
+        .nextAll(".output1:first")
+          .html(data.value.toFixed(0));
+    });
+  </script> 
+<!-- without income range value calculator strats -->
+
+</body>
+</html>

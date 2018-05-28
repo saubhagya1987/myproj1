@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>EMI Calculator</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link rel="stylesheet" href="../css/main-style.css" type="text/css" />
+<link rel="stylesheet" href="../css/reset.css" type="text/css" />
+<link rel="stylesheet" href="../css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../css/jquery-ui.css" type="text/css" />
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/selectboxit.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/jquery.ui.touch-punch.js"></script>
+
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+    //$('.common_in_content').slimScroll();
+	//Down Payment value Slider
+	  createSlider('#emi_la',0,100,1,"#emi_la_value")
+	  createSlider('#emi_roi',5,30,0.11,"#emi_roi_value")
+	  createSlider('#emi_noy',5,30,1,"#emi_noy_value")
+
+	//Auto Loan Calculator
+	  createSlider('#al_01',0,100,1,"#al_01_value")
+	  createSlider('#al_02',5,100,1,"#al_02_value")
+	  createSlider('#al_03',1,30,0.11,"#al_03_value")
+	  createSlider('#al_04',1,84,1,"#al_04_value")
+
+	//Retirement Calculator
+	  createSlider('#rc_01',0,100,1,"#rc_01_value")
+	  createSlider('#rc_02',5,100,1,"#rc_02_value")
+	  createSlider('#rc_03',1,30,1,"#rc_03_value")
+	  createSlider('#rc_04',1,84,1,"#rc_04_value")
+	  createSlider('#rc_05',1,30,1,"#rc_05_value")
+	  createSlider('#rc_06',1,84,0.11,"#rc_06_value")
+	  createSlider('#rc_07',1,30,0.11,"#rc_07_value")
+
+
+	//SIP Calculator
+	  createSlider('#sip_01',1,100,1,"#sip_01_value")
+	  createSlider('#sip_02',5,30,1,"#sip_02_value")
+	  createSlider('#sip_03',1,30,0.11,"#sip_03_value")
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function () {
+    /* Equity*/
+    $('.btn_bx_in').on('click', function() {
+        var pnlid = $(this).attr('id');
+        pnlid = pnlid.replace('_div_dragger', '');
+        $(".list_bx").not('#pnl-'+pnlid).hide();
+        $('#pnl-'+pnlid).fadeIn();
+        $('.btn_bx_in').removeClass('active');
+        $(this).addClass('active');
+    }).eq(0).trigger('click');
+    
+    /*$("#emi_div_dragger").click(function () {
+      //  $(".equity_list_bx").FadeIn("slow");
+      
+		 $.when($(".list_bx").not(".Emi_Calculator").fadeOut("slow")).done(function() {
+          $(".Emi_Calculator").fadeToggle("slow");
+		  });
+       });
+
+    $("#financial_div_dragger").click(function () {
+      //  $(".travel_goals_list_bx").slideToggle("slow");
+	   $.when($(".list_bx").not(".Financial_Calculator").fadeOut("slow")).done(function() {
+          $(".Financial_Calculator").fadeToggle("slow");
+		  });
+    });
+
+    $("#retirement_div_dragger").click(function () {
+      //  $(".travel_goals_list_bx").slideToggle("slow");
+	   $.when($(".list_bx").not(".Retirement_Calculator").fadeOut("slow")).done(function() {
+          $(".Retirement_Calculator").fadeToggle("slow");
+		  });
+    });
+
+    $("#sip_div_dragger").click(function () {
+      //  $(".travel_goals_list_bx").slideToggle("slow");
+	   $.when($(".list_bx").not(".SIP_Calculator").fadeOut("slow")).done(function() {
+          $(".SIP_Calculator").fadeToggle("slow");
+		  });
+    });*/
+
+});
+</script>
+</head>
+<body>
+<div id="wrapper" class="clearfix">
+  <div id="header"> <a class="logo" href="index.html"> <span id="logo"> <img src="../images/temp_logo.png" /></span><!-- end of "logo" id --> 
+    </a> 
+    <!-- <div id="advt1"> <img src="images/add1.png" /> </div>--> 
+    <!-- end of "advt1" id -->
+    
+    <div id="advt2"> <img src="../images/add2.png" /> </div>
+    <!-- end of "advt1" id -->
+    
+    <div id="ifa-image" class="clearfix fl"> <img src="../images/photo.jpg"  class="clearfix fl"/> <span class="ifa-name clearfix">Mr. A. B. Joshi</span> <span class="ifa-advisor clearfix">(Your Advisor)</span> </div>
+    <!-- end of "ifa-image" id -->
+    
+    <div id="log-out"> <img class="logout" src="../images/transparent.png"/>
+      <p>Logout</p>
+    </div>
+    <!-- end of "log-out" id --> 
+  </div>
+  <!-- end of "header" id -->
+  
+  <ul id="inner-nav-menu" class="clearfix ">
+    <li class="my-goals"><a href="my-goals.html"><img class="my-goals-ico" src="../images/transparent.png"/>
+      <p>My Goals <span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-plans"><a href="my-plan.html"><img class="my-plans-ico" src="../images/transparent.png"/>
+      <p>My Plans<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-portf"><a href="my-portfolio.html"><img class="my-portf-ico" src="../images/transparent.png"/>
+      <p>My Portfolio<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <!--li class="my-inc"><a href="#"><img class="my-inc-ico" src="images/transparent.png"/><p>My Income<span class="grad-border"><img src="images/transparent.png"/></span></p></a></li-->
+    <li class="my-cashflow"><a href="my-income.html"><img class="my-cashflow-ico" src="../images/transparent.png"/>
+      <p>My Cashflow<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-fin"><a href="#"><img class="my-fin-ico" src="../images/transparent.png"/>
+      <p>My Documents<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>    <li class="my-rep"><a href="my-reports.html"><img class="my-rep-ico" src="../images/transparent.png"/>
+      <p>My Reports<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+	<li class="my-acc"><a href="#"><img class="my-acc-ico" src="../images/transparent.png"/>
+      <p>My Account<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+  </ul>
+  <!-- end of "nav-menu" id -->
+  
+  <div id="trapezoid" class="clearfix fr">
+    <p>Welcome&nbsp;<span> Mr. Parag Takalkar</span></p>
+  </div>
+  <div id="header-strip" class="fl">
+    <h3 class="clearfix fl">CALCULATOR</h3>
+    <img class="short-menu clearfix fr"  src="../images/transparent.png" /></div>
+  <!-- end of "header-strip" id -->
+  
+  <div id="inner-shadow-strip"></div>
+  <!-- end of "inner-shadow-strip" id -->
+  
+  <div id="contents"> 
+    <!--<div id="data-graph-bx">
+      <div id="data-graph" class="common_sliding_radio"> <span class="lbl_first lbl">Data</span> <span class="lbl_second lbl">Graph</span> </div>
+      <div class="clr"></div>
+    </div>-->
+    
+    <section class="in_content clearfix" id="calculator">
+      <div class="left_bx fl">
+        <div id="pnl-emi" class="Emi_Calculator list_bx">
+          <label>EMI Calculator</label>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Loan Amount</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="emi_la" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent rupee">
+                    <input type="text" id="emi_la_value" class="range_counter" />
+                    <span class="unit">lac</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Rate of Interest</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">5</span><span class="high extrem">30</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="emi_roi" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent emi_roi02">
+                    <input type="text" id="emi_roi_value" class="range_counter" />
+                    <span class="unit">%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>No. of Years</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">30</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="emi_noy" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent">
+                    <input type="text" id="emi_noy_value" class="range_counter" />
+                    <span class="unit">yrs</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ipm">
+            <div class="total-value">INSTALLMENT PER MONTH/-</div>
+            <div class="total-asset-value"> <span>2170/-</span> </div>
+          </div>
+        </div>
+        
+        
+        <div id="pnl-financial" class="Financial_Calculator list_bx">
+          <label>Auto Loan Calculator</label>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Amount(Vehical Price)</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="al_01" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent rupee">
+                    <input type="text" id="al_01_value" class="range_counter" />
+                    <span class="unit">lac</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Down Payment</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">5</span><span class="high extrem">100</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="al_02" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent emi_roi02">
+                    <input type="text" id="al_02_value" class="range_counter" />
+                    <span class="unit">%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Annual Interest Rate</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">30</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="al_03" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent emi_roi02">
+                    <input type="text" id="al_03_value" class="range_counter" />
+                    <span class="unit">%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Term/Period</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">84</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="al_04" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent">
+                    <input type="text" id="al_04_value" class="range_counter" />
+                    <span class="unit">mths</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div>          
+          <div class="ipm fl">
+            <div class="total-value">MONTHLY PAYMENT</div>
+            <div class="total-asset-value"> <span>2170/-</span> </div>
+          </div> 
+          
+          <div class="ipm fl">
+            <div class="total-value">TOTAL INTEREST PAYMENT</div>
+            <div class="total-asset-value"> <span>2170/-</span> </div>
+          </div>
+          
+          <div class="ipm fl">
+            <div class="total-value">TOTAL AMOUNT TO PAY</div>
+            <div class="total-asset-value"> <span>2170/-</span> </div>
+          </div>
+          
+          </div>
+        </div>
+        
+        
+        
+      <div id="pnl-retirement" class="Retirement_Calculator list_bx">
+          <label>Retirement Calculator</label>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Your Age</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="rc_01" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent">
+                    <input type="text" id="rc_01_value" class="range_counter" />
+                    <span class="unit">yrs</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Age your plan to retire</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">5</span><span class="high extrem">60</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="rc_02" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent">
+                    <input type="text" id="rc_02_value" class="range_counter" />
+                    <span class="unit">yrs</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Amount you want to retire with (at today's prices)</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">30</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="rc_03" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent rupee">
+                    <input type="text" id="rc_03_value" class="range_counter" />
+                    <span class="unit">lacs</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Your current savings</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">500</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="rc_04" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent rupee">
+                    <input type="text" id="rc_04_value" class="range_counter" />
+                    <span class="unit">lacs</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Your monthly savings</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">500</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="rc_05" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent rupee">
+                    <input type="text" id="rc_05_value" class="range_counter" />
+                    <span class="unit">lacs</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Return you earn on your savings % (p.a.)</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">84</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="rc_06" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent">
+                    <input type="text" id="rc_06_value" class="range_counter" />
+                    <span class="unit">%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Expected Inflation Rate % (p.a.)</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">84</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="rc_07" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent">
+                    <input type="text" id="rc_07_value" class="range_counter" />
+                    <span class="unit">%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+     
+          <div>
+          <div class="ipm fl">
+            <div class="total-value">YOU NEED TO SAVE<br>
+			(Per Month)</div>
+            <div class="total-asset-value"> <span>2170/-</span> </div>
+          </div> 
+          
+          <div class="ipm fl">
+            <div class="total-value">AT RETIREMENT YOU WOULD REQUIRE</div>
+            <div class="total-asset-value"> <span>2170/-</span> </div>
+          </div>
+          
+          <div class="ipm fl">
+            <div class="total-value">WITH YOUR CURRENT SAVINGS YOU SHOULD BE ABLE TO SAVE</div>
+            <div class="total-asset-value"> <span>2170/-</span> </div>
+          </div>
+          </div>
+       
+        </div>
+        
+        
+        
+        <div id="pnl-sip" class="SIP_Calculator list_bx">
+          <label>SIP Calculator</label>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Expected Amount</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">100</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="sip_01" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent rupee">
+                    <input type="text" id="sip_01_value" class="range_counter" />
+                    <span class="unit">lac</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>No. Of Years</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">30</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="sip_02" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent">
+                    <input type="text" id="sip_02_value" class="range_counter" />
+                    <span class="unit">yrs</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calcy_li_bx">
+            <div class="calcy_li_bx_in">
+              <label>Expected Return (p.a.)</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">30</span></div>
+                  <div class="ui-slider-box-shadow">
+                    <div id="sip_03" class="effect2"></div>
+                  </div>
+                  <div class="counter_parent emi_roi02">
+                    <input type="text" id="sip_03_value" class="range_counter emi_roi" />
+                    <span class="unit">%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="ipm">
+            <div class="total-value">SIP NEEDED (Per Month)</div>
+            <div class="total-asset-value"><span>2170/-</span></div>
+          </div>
+        </div>
+        
+        
+      </div>
+      <div class="right_bx">
+        <label>List of Calculator</label>
+        <div class="cnt">
+          <div class="btn_bx"><a class="btn_bx_in" id="emi_div_dragger" href="#">EMI Calculator</a></div>
+     
+          <div class="btn_bx"><a class="btn_bx_in" id="financial_div_dragger" href="#">Auto Loan Calculator</a></div>
+       
+          <div class="btn_bx"><a class="btn_bx_in" id="retirement_div_dragger" href="#">Retirement Calculator</a></div>
+       
+          <div class="btn_bx"><a class="btn_bx_in" id="sip_div_dragger" href="#">SIP Calculator</a></div>
+        </div>
+      </div>
+      
+      <!-- DC submenu Ends--> 
+      
+    </section>
+    <div class="clr"></div>
+    
+    <!-- end of "inner-contents" id --> 
+  </div>
+  <!-- end of "contents" id -->
+  
+  <footer id="footer"> <img src="../images/finfra-logo.png" /> <span class="copyright">Copyright © 2014 </span> <span class="privacy">Privacy Policy </span> </footer>
+</div>
+<!-- End of "wrapper" id -->
+</body>
+</html>

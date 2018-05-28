@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<!-- 	<bean id="transactionManager" -->
+<!-- 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> -->
+<!-- 		<property name="dataSource" ref="dataSource"></property> -->
+<!-- 	</bean> -->
+
+	<!--datasource used for database connection and takes values from jdbc.prpperties -->
+	<bean id="SC_dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="url" value="${sc_jdbc.url}" />
+		<property name="driverClassName" value="${sc_jdbc.driverClassName}" />
+		<property name="username" value="${sc_jdbc.username}" />
+		<property name="password" value="${sc_jdbc.password}" />
+		<property name="removeAbandoned" value="true" />
+		<property name="initialSize" value="50" />
+		<property name="maxActive" value="100" />
+		<property name="defaultAutoCommit" value="true" />
+	</bean>
+	
+	<!--jdbc template user for executing query of sql and we inject data source 
+		to it. -->
+	<bean id="SC_jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="SC_dataSource" />
+	</bean>
+	
+	<bean id="FF_dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="url" value="${ff_jdbc.url}" />
+		<property name="driverClassName" value="${ff_jdbc.driverClassName}" />
+		<property name="username" value="${ff_jdbc.username}" />
+		<property name="password" value="${ff_jdbc.password}" />
+		<property name="removeAbandoned" value="true" />
+		<property name="initialSize" value="20" />
+		<property name="maxActive" value="30" />
+		<property name="defaultAutoCommit" value="true" />
+	</bean>
+	<bean id="FF_jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="FF_dataSource" />
+	</bean>
+	<bean id="dataSourceProvider" class="in.fiinfra.util.DataSourceProvider">
+	</bean>
+	<bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.Md5PasswordEncoder">
+	</bean>
+	<!--  <bean id="SC_transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="SC_dataSource" />
+	</bean>
+
+	<bean id="FF_transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="FF_dataSource" />
+	</bean>-->
+
+</beans>

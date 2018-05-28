@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns:security="http://www.springframework.org/schema/security" 
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+ 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+ 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+ 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+ 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	
+	<security:http pattern="/app/images/**" security="none" />
+	<security:http pattern="/sync/register" security="none" />
+	<security:http pattern="/sync/activate" security="none" />
+	<security:http pattern="/sync/resend" security="none" />
+
+<security:http pattern="/sync/confirmToken" security="none" />
+
+	<security:http pattern="/**" use-expressions="true"
+		auto-config="false" entry-point-ref="restServicesEntryPoint"
+		create-session="stateless">
+		<security:intercept-url pattern="/**"
+			access="hasAnyRole('Admin','Partner','Member','RNA','PST','Client','Lead')" />
+
+		<security:custom-filter ref="restServicesFilter"
+			position="FORM_LOGIN_FILTER" />
+	</security:http>
+
+	
+   <beans:bean id="restServicesEntryPoint"
+		class="in.fiinfra.login.RestAuthenticationEntryPoint" />
+
+	<!-- Filter for REST services. -->
+	<beans:bean id="restServicesFilter" class="in.fiinfra.login.WSAuthenticationFilter">
+		<beans:property name="authenticationManager" ref="authenticationManager" />
+	</beans:bean>
+	
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider ref="customDaoAuthenticationProvider"></security:authentication-provider>						
+	</security:authentication-manager>
+	
+	
+		<beans:bean id="customDaoAuthenticationProvider" class="in.fiinfra.login.UserAuthenticationProvider">
+        <beans:property name="preAuthenticatedUserDetailsService">
+            <beans:bean id="userDetailsServiceWrapper"  class="org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper">
+                <beans:property name="userDetailsService" ref="userService"/>
+            </beans:bean>
+        </beans:property>
+    </beans:bean>
+    
+	<beans:bean class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" id="passwordEncoder" lazy-init="true"/>	
+</beans:beans>

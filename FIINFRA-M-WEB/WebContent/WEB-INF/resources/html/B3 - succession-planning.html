@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Succession Planning</title>
+<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+$(document).ready(function(){
+
+/*** Common Function For Value Slider Starts ***/
+
+
+
+/*** Common Function For Value Slider Ends ***/
+});
+</script>
+<style>
+/***Custom Fonts Strats***/
+@font-face {
+ font-family: 'open_sanslight';
+ src: url('fonts/opensans-light-webfont.eot');
+ src: url('fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-light-webfont.woff') format('woff'), url('fonts/opensans-light-webfont.ttf') format('truetype'), url('fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+font-family:"Aller Bold";
+src:url("fonts/Aller_Bd.eot?") format("eot"), url("fonts/Aller_Bd.woff") format("woff"), url("fonts/Aller_Bd.ttf") format("truetype"), url("fonts/Aller_Bd.svg#Aller-Bold") format("svg");
+font-weight:normal;
+font-style:normal;
+}
+ @font-face {
+ font-family: 'allerregular';
+ src: url('fonts/aller_rg-webfont.eot');
+ src: url('fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/aller_rg-webfont.woff') format('woff'), url('fonts/aller_rg-webfont.ttf') format('truetype'), url('fonts/aller_rg-webfont.svg#allerregular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: 'alleritalic';
+ src: url('fonts/aller_it-webfont.eot');
+ src: url('fonts/aller_it-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/aller_it-webfont.woff') format('woff'), url('fonts/aller_it-webfont.ttf') format('truetype'), url('fonts/aller_it-webfont.svg#alleritalic') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+ @font-face {
+ font-family: 'open_sansregular';
+ src: url('fonts/opensans-regular-webfont.eot');
+ src: url('fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-regular-webfont.woff') format('woff'), url('fonts/opensans-regular-webfont.ttf') format('truetype'), url('fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: 'open_sansbold';
+ src: url('fonts/opensans-bold-webfont.eot');
+ src: url('fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-bold-webfont.woff') format('woff'), url('fonts/opensans-bold-webfont.ttf') format('truetype'), url('fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+/***Custom Fonts Ends***/
+/***Common Css Starts***/
+/* Basic Css Strats*/
+/****************************************************************************************************
+
+* Filename: basic.css
+
+****************************************************************************************************/
+
+/* GLOBAL RESET 
+
+**********************************************************/
+
+body, h1, h2, h3, h4, h5, h6, p { margin:0; line-height:1 }
+input[type="radio"], input[type="checkbox"] { margin:0; vertical-align:-2px }
+a:link, a:active, a:visited { text-decoration:none }
+a:active, a:focus, textarea:focus, input:focus { outline: none }
+textarea { overflow:auto; resize:none }
+img { border:none }
+table { border-collapse:collapse; border-spacing:0; table-layout:fixed }
+/* INDIVIDUAL RESETs
+
+**********************************************************/
+
+.reset { list-style:none; padding:0; margin:0 }
+.nomargin { margin:0 }
+.nopadding { padding:0!important }
+/* ALIGN CENTER
+
+**********************************************************/
+
+.equalgap { margin:0 auto }
+/* FLOATS
+
+**********************************************************/
+
+.fl { float:left }
+.fr { float:right }
+.fn { float:none }
+/* CLEAR FLOAT
+
+**********************************************************/
+
+.clearfix:after { content:"\0020"; display:block; height:0; clear:both; visibility:hidden; overflow:hidden }
+.clr { clear:both; overflow:hidden; height:0 }
+/* WIDTH 100% 
+
+**********************************************************/
+
+.fullwid { width:100% }
+/* DISPLAYs, POSITIONs & OVERFLOWs 
+
+**********************************************************/
+
+.inline { display:inline }
+.ovfl-hidden { overflow:hidden }
+.rel { position:relative }
+.absolute { position:absolute }
+.absoluted > * { position:absolute }
+.inlineBlock { display:inline-block }
+.hide-elem { display:none !important }
+/* ALL TEXT CSS
+
+**********************************************************/
+
+/* font SIZES */
+
+.vsmlTxt { font-size:10px }
+.smlTxt { font-size:11px }
+.paraTxt { font-size:12px }
+.bigTxt { font-size:14px }
+/*font WEIGHTS */
+
+.strong { font-weight:bold }
+.normTxt { font-weight:normal }
+/* text TRANSFORMS */
+
+.allCaps { text-transform:capitalize }
+.upperCase { text-transform:uppercase }
+.underlined { text-decoration:underline }
+/* text ALIGN & content ALIGN for inline level ELEMENTS */
+
+.centerAll { text-align:center }
+.leftAlign { text-align:left }
+.rightAlign { text-align:right }
+.justified { text-align:justify }
+/* Basic Css Ends*/
+.wrapper { width:792px; margin:0 auto; height:1124px; color:#3a3a3a; font-family: 'allerregular'; }
+.header { height:65px; background:#1d87bd url(images/header_pattern.png) no-repeat center right }
+.desc_heading { background: #FFF; width: 366px; height: 50px; margin: 7px 0 0; border-radius: 0 30px 30px 0; -moz-border-radius: 0 30px 30px 0; -webkit-border-radius: 0 30px 30px 0; }
+.content { height:1041px }
+.footer { height:18px; background:#c0c0c0 }
+.page_heading { color: #FFF; font-size: 23px; font-family: "Aller Bold"; line-height: 63px; text-align: center; width: 393px; text-shadow: 1px 2px 1px #0B2B3C; }
+.footer { font-size:12px; font-family: "Aller Bold"; line-height: 19px; }
+.footer .footer_tagline { margin:0 0 0 22px; }
+.page_no { margin:0 26px 0 0; }
+.ifa_head_logo { height: 47px; margin: 1px; width:auto; overflow:hidden; display: inline-block }
+.ifa_head_logo img { max-height:100%; width:auto; }
+.head_txt2 { color: #1D87BD; font-size: 23px; font-family: "Aller Bold"; display: inline-block; margin: 0 0 0 14px; vertical-align: 12px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width:298px; text-align:center }
+.theme_color { color: #1D87BD; }
+/***Common Css Ends***/
+/***Goals My Dreams Starts***/
+#succession_planning .container { position: relative; width: 92%; margin: 0 auto; height: 313px; }
+#succession_planning .question { width:210px; height:210px; border:2px solid #1D87BD; -moz-border-radius: 125px; -webkit-border-radius: 125px; border-radius: 125px; -moz-box-shadow: 0px 9px 18px -4px #828282; -webkit-box-shadow: 0px 9px 18px -4px #828282; box-shadow: 0px 9px 18px -4px #828282; background:url(images/question_bg.png) no-repeat 41px 64px; position: absolute; left:0; top: 52px; z-index:150 }
+#succession_planning .action { height:294px; width:294px; border:2px solid #1D87BD; -moz-border-radius: 172px; -webkit-border-radius: 172px; border-radius: 172px; -moz-box-shadow: 0px 9px 18px -4px #828282, -37px 0 0 163px #FFF inset; -webkit-box-shadow: 0px 9px 18px -4px #828282, -37px 0 0 163px #FFF inset; box-shadow: 0px 9px 18px -4px #828282, -37px 0 0 163px #FFF inset; position: absolute; left:165px; z-index:100 }
+#succession_planning .importance { width:305px; height: 200px; background: #9CBC01; -moz-border-radius: 0 109px 109px 0; -webkit-border-radius: 0 109px 109px 0; border-radius: 0 109px 109px 0; -moz-box-shadow: 1px 2px 2px 0px #6C6C6C; -webkit-box-shadow: 1px 2px 2px 0px #6C6C6C; box-shadow: 1px 2px 2px 0px #6C6C6C; position: absolute; right:0; top: 48px; z-index:50; color:#fff; font-family: "Aller Bold"; }
+#succession_planning .importance .imp_head { font-size:19px; margin: 16px 0 12px 28px; width: 230px; }
+#succession_planning .importance .txt { font-size: 13px; margin: 0 0 0 43px; width: 242px; height: 149px; line-height: 17px; -moz-border-radius: 0 0 63px 0; -webkit-border-radius: 0 0 63px 0; border-radius: 0 0 63px 0; }
+#succession_planning .action .action_head { font-family: "Aller Bold"; font-size: 23px; margin: 65px 0 0 54px; width: 234px; }
+#succession_planning .action .txt { font-family: "Aller Bold"; font-size: 15px; margin: 11px 0 0 54px; width: 234px; height: 202px; border-radius: 0 0 115px 71px; color: #1D87BD; line-height:23px;padding: 0 0 0 5px; }
+#succession_planning .question .txt { font-family: "Aller Bold"; font-size: 15px; margin: 53px 0 0 20px; width: 137px; height: 149px; -moz-border-radius: 0 0 0 76px; -webkit-border-radius: 0 0 0 76px; border-radius: 0 0 0 76px; color: #1D87BD; line-height: 23px; }
+#succession_planning .question .icon { height:74px; width:74px; -moz-border-radius:76px; -webkit-border-radius: 76px; border-radius:76px; border: 2px solid #1D87BD; -moz-box-shadow: 0px 9px 18px -4px #828282; -webkit-box-shadow: 0px 9px 18px -4px #828282; box-shadow: 0px 9px 18px -4px #828282; position: absolute; top: -35px; left:70px; background: #FFF url(images/investment_icon.png) no-repeat center center; }
+#succession_planning .question .yes_no_answer { position: absolute; top: 62px; right: 8px; height: 94px; width: 33px; text-align: center; font-size: 13px; font-family: "Aller Bold"; }
+#succession_planning .question .yes_no_answer .custom_radio { height:11px; width:11px; border:1px solid #1D87BD; -moz-border-radius: 18px; -webkit-border-radius: 18px; border-radius: 18px; margin:3px auto 0 }
+#succession_planning .question .yes_no_answer li { margin: 3px 0 19px; }
+#succession_planning .question .yes_no_answer .custom_radio.selected { background:url(images/custom_selected.png) no-repeat center center }
+#succession_planning .container_ul li { margin:37px 0 0}
+/***Goals My Dreams Ends***/
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="header clearfix">
+    <div class="desc_heading fl">
+      <div class="ifa_head_logo"><img src="images/ifa_head_logo.png"/></div>
+      <h2 class="head_txt2">Sachin R. Tendulkar</h2>
+    </div>
+    <h1 class="page_heading fr">Succession Planning</h1>
+  </div>
+  <div class="content" id="succession_planning">
+    <ul class="reset clearfix container_ul">
+      <li>
+        <div class="container clearfix">
+          <div class="question fl">
+            <p class="txt">Are all your 
+              investment jointly
+              held?</p>
+            <div class="icon"></div>
+            <ul class="reset clearfix yes_no_answer">
+              <li>
+                <p class="yes_no">YES</p>
+                <div class="custom_radio"></div>
+              </li>
+              <li>
+                <p class="yes_no">NO</p>
+                <div class="custom_radio selected"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="action fl">
+            <h4 class="action_head">What to Do?</h4>
+            <p class="txt">Nobody knows where your hard earned money is invested.</p>
+          </div>
+          <div class="importance fr">
+            <h4 class="imp_head">Why it is Important ?</h4>
+            <p class="txt"> Truth is lakhs of crores of money lies
+              unclaimed in insurance companies' and banks' coffers. A man works hard and builds assets and purchases insurance policies to protect his family. But does not inform his wife about it. A widowed mother struggles with her children to make ends meet. </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="container clearfix">
+          <div class="question fl">
+            <p class="txt">Is your closest family aware of what all your investment you have ?</p>
+            <div class="icon"></div>
+            <ul class="reset clearfix yes_no_answer">
+              <li>
+                <p class="yes_no">YES</p>
+                <div class="custom_radio"></div>
+              </li>
+              <li>
+                <p class="yes_no">NO</p>
+                <div class="custom_radio selected"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="action fl">
+            <h4 class="action_head">What to Do?</h4>
+            <p class="txt">Your loved one do not have access to the money you painstakingly accumulated for them.</p>
+          </div>
+          <div class="importance fr">
+            <h4 class="imp_head">Why it is Important ?</h4>
+            <p class="txt">Imagine a person falling sick and getting admitted in a hospital. The family knows there are investments but has no way to access it. A family member is nominated, but in this circumstance nomination doesn't help.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="container clearfix">
+          <div class="question fl">
+            <p class="txt">Have you prepared a will?</p>
+            <div class="icon"></div>
+            <ul class="reset clearfix yes_no_answer">
+              <li>
+                <p class="yes_no">YES</p>
+                <div class="custom_radio"></div>
+              </li>
+              <li>
+                <p class="yes_no">NO</p>
+                <div class="custom_radio selected"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="action fl">
+            <h4 class="action_head">What to Do?</h4>
+            <p class="txt">You haven't written a will to make it easy for them after your time.</p>
+          </div>
+          <div class="importance fr">
+            <h4 class="imp_head">Why it is Important ?</h4>
+            <p class="txt">Imagine a widowed woman getting a huge sum from insurance policies. With so much to handle, and so many people around will she be able to make the best of this money to safeguard her / childrens' future? The man's dependent parents are not aware of their rights on their son's wealth.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="footer clearfix">
+    <div class="fl footer_tagline">True Friends of New Investors</div>
+    <div class="fr page_no">(<span class="no">1</span>)</div>
+  </div>
+</div>
+</body>
+</html>

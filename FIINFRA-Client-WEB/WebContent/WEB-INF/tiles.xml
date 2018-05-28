@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+	<!-- Theme one -->
+	<definition name="mainLayout" template="/WEB-INF/resources/pages/mainLayout.jsp" >
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/resources/pages/header.jsp" />
+		<put-attribute name="navigation_bar" value="/WEB-INF/resources/pages/navigation.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="slide" value="" />
+		<put-attribute name="footer" value="/WEB-INF/resources/pages/footer.jsp" />
+	</definition>
+	<definition name="common/gupshup" extends="mainLayout">
+		<put-attribute name="title" value="Gupshup" />
+		<put-attribute name="currentPage" value="gupshup" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/gupshup_preview.jsp" />
+	</definition>
+	<definition name="common/testimonials" extends="mainLayout">
+		<put-attribute name="title" value="Testimonial" />
+		<put-attribute name="currentPage" value="testimonials" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/testimonial_preview.jsp" />
+	</definition>
+	<definition name="common/add/testimonial" extends="mainLayout">
+		<put-attribute name="title" value="Add Testimonial" />
+		<put-attribute name="currentPage" value="testimonials" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/widget/add-testimonial.jsp" />
+	</definition>
+	
+	<definition name="document/ajaxPreview" template="/WEB-INF/resources/pages/document/document_ajax.jsp"></definition>
+	
+	<definition name="widget/earning_expenses" template="/WEB-INF/resources/pages/widget/earning_expenses.jsp"></definition>
+	<definition name="widget/gupsup_ajax" template="/WEB-INF/resources/pages/gupshup_append.jsp"></definition>
+	
+	<definition name="widget/testimonial_ajax" template="/WEB-INF/resources/pages/testimonial_append.jsp"></definition>
+	
+	<definition name="widget/networth" template="/WEB-INF/resources/pages/widget/networth.jsp"></definition>
+	
+	<definition name="widget/goals" template="/WEB-INF/resources/pages/widget/dashboard_goals.jsp"></definition>
+	
+	<definition name="widget/achivement" template="/WEB-INF/resources/pages/widget/dashboard_achivement.jsp"></definition>
+	
+	<definition name="widget/videos" template="/WEB-INF/resources/pages/widget/videos.jsp"></definition>
+	
+	<definition name="widget/gupshup" template="/WEB-INF/resources/pages/widget/gupshup.jsp"></definition>
+	
+	<definition name="widget/achievementScale" template="/WEB-INF/resources/pages/widget/achievement_scale.jsp"></definition>
+	
+	<definition name="widget/testimonial" template="/WEB-INF/resources/pages/widget/testimonial.jsp"></definition>
+	
+	<definition name="widget/myFinancial" template="/WEB-INF/resources/pages/dashboard/my-financials.jsp"></definition>
+	
+	<definition name="report/xray" template="/WEB-INF/resources/pages/report/X-rayReport.jsp"></definition>
+	
+	<definition name="cp/dashboard" extends="mainLayout" >
+	    <put-attribute name="title" value="Dashboard" />
+	    <put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/dashboard.jsp" />
+		<put-attribute name="slide" value="/WEB-INF/resources/pages/slide.jsp" />
+	</definition>
+	
+	
+	
+	<!--  -->
+<!-- 	<definition name="login" template="/WEB-INF/resources/pages/login/login.jsp">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/login/login.jsp" />
+	</definition>
+	
+	<definition name="forgotpassword" template="/WEB-INF/resources/pages/forgotpassword/forgotpassword.jsp">
+		<put-attribute name="title" value="Dashboard" />
+	</definition>
+ -->	
+	<definition name="cp/myincome" extends="mainLayout">
+		<put-attribute name="title" value="My Income" />
+		<put-attribute name="currentPage" value="cashflow" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-income.jsp" />
+	</definition>
+	<definition name="cp/myexpenses" extends="mainLayout">
+		<put-attribute name="title" value="My Expenses" />
+		<put-attribute name="currentPage" value="cashflow" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-expenses.jsp" />
+	</definition>
+					<definition name="partner/chat" extends="mainLayout">
+		<put-attribute name="title" value="Chat" />
+		<put-attribute name="currentPage" value="chat" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/chat/chat_main_screen.jsp" />
+	</definition>
+	<definition name="cp/mygoals" extends="mainLayout">
+		<put-attribute name="title" value="My Goals" />
+		<put-attribute name="currentPage" value="Goals" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-goals.jsp" />
+	</definition>
+	<definition name="cp/query/list" extends="mainLayout">
+		<put-attribute name="title" value="Query" />
+		<!-- <put-attribute name="currentPage" value="Query" /> -->
+		<put-attribute name="body" value="/WEB-INF/resources/pages/query/query.jsp" />
+	</definition>
+	<definition name="cp/query/message" extends="mainLayout">
+		<put-attribute name="title" value="Query" />
+		<!-- <put-attribute name="currentPage" value="Query" /> -->
+		<put-attribute name="body" value="/WEB-INF/resources/pages/query/query-messages.jsp" />
+	</definition>
+		<definition name="cp/note" extends="mainLayout">
+		<put-attribute name="title" value="Notes" />
+		<!-- <put-attribute name="currentPage" value="note" /> -->
+		<put-attribute name="body" value="/WEB-INF/resources/pages/notes/note.jsp" />
+			</definition>
+	<definition name="document/add-doc-upload-file" extends="mainLayout">
+		<put-attribute name="currentPage" value="document" />
+		<put-attribute name="title" value="Add Document" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/document/add-doc-upload-file.jsp" />
+	</definition>
+
+	
+	<definition name="document/add-document-preview" extends="mainLayout">
+		<put-attribute name="title" value="Document" />
+		<put-attribute name="currentPage" value="document" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/document/add-document-preview.jsp" />
+	</definition>
+	
+	<definition name="document/add-document-preview-full" extends="mainLayout">
+		<put-attribute name="title" value="Document Preview" />
+		<put-attribute name="currentPage" value="document" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/document/add-document-preview-full.jsp" />
+	</definition>
+	
+	<definition name="document/add-doc-take-photo" extends="mainLayout">
+		<put-attribute name="title" value="Document" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/document/add-doc-take-photo.jsp" />
+	</definition>
+
+	<definition name="cp/myIncome/add" extends="mainLayout" >
+		
+<put-attribute name="currentPage" value="cashflow" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/add-income.jsp" />
+	</definition>
+	<definition name="cp/savings" extends="mainLayout" >
+		<put-attribute name="title" value="My Savings Graph" />
+		<put-attribute name="currentPage" value="cashflow" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-savings-graph.jsp" />
+	</definition>
+	<definition name="prof/image"  template="/WEB-INF/resources/pages/prof-image.jsp">
+		
+	</definition>	
+		<definition name="cp/account/add" extends="mainLayout" >
+		<put-attribute name="title" value="Add Account" />
+		<put-attribute name="currentPage" value="Portfolio" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/add-account.jsp" />
+	</definition>	
+	
+	<definition name="cp/myExpense/add" extends="mainLayout" >
+		
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/add-expense.jsp" />
+	</definition>
+	
+	<definition name="cp/FAQs" extends="mainLayout" >
+	    <put-attribute name="title" value="FAQs" />
+		<put-attribute name="currentPage" value="faqs" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/faqs.jsp" />
+	</definition>
+    <definition name="cp/alerts" extends="mainLayout" >
+       <put-attribute name="title" value="My Alerts" />
+		<put-attribute name="currentPage" value="alerts" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/alerts.jsp" />
+	</definition>
+    <definition name="cp/announcement" extends="mainLayout" >
+        <put-attribute name="title" value="Announcements" />
+		<put-attribute name="currentPage" value="announcement" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/announcement.jsp" />
+	</definition>
+	<definition name="cp/polls" extends="mainLayout" >
+	<put-attribute name="title" value="My Polls" />
+		<put-attribute name="currentPage" value="polls" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/polls.jsp" />
+	</definition>
+	<!-- <definition name="cp/enjoymentScale" extends="mainLayout" >
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/enjoyment_scale.jsp" />
+	</definition> -->
+	<definition name="cp/quickHelp" extends="mainLayout" >
+	<put-attribute name="title" value="Quick Help" />
+		<put-attribute name="currentPage" value="quickHelp" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/quick_help.jsp" />
+	</definition>
+	<definition name="cp/softAdvice" extends="mainLayout" >
+	 <put-attribute name="title" value="Chat" />
+		<put-attribute name="currentPage" value="softAdvice" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/soft_advice.jsp" />
+	</definition>
+	<definition name="cp/myPlans" extends="mainLayout" >
+	  <put-attribute name="title" value="My Plans" />
+		<put-attribute name="currentPage" value="plan" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-plans.jsp" />
+	</definition>
+	<definition name="cp/myPortfolio" extends="mainLayout" >
+	   <put-attribute name="title" value="My Portfolio" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-portfolio.jsp" />
+	</definition>
+	<definition name="cp/myFinanicals" extends="mainLayout" >
+	 <put-attribute name="title" value="My Finanicals" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-finanicals.jsp" />
+	</definition>
+	<definition name="cp/myReports" extends="mainLayout" >
+	  <put-attribute name="title" value="My Reports" />
+		<put-attribute name="currentPage" value="report" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-reports.jsp" />
+	</definition>
+	<definition name="report/trx" extends="mainLayout" >
+	  <put-attribute name="title" value="My Reports" />
+		<put-attribute name="currentPage" value="report" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/transaction-report.jsp" />
+	</definition>
+	<definition name="cp/myAssets" extends="mainLayout" >
+	 <put-attribute name="title" value="My Assets" />
+		<put-attribute name="currentPage" value="portfolio" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-assets.jsp" />
+	</definition>
+	<definition name="cp/bankDeposits" extends="mainLayout" >
+	<put-attribute name="title" value="Add Asset" />
+		<put-attribute name="currentPage" value="portfolio" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/bank-deposits.jsp" />
+	</definition>
+	<definition name="cp/retirement" extends="mainLayout" >
+	<put-attribute name="title" value="Add Asset" />
+		<put-attribute name="currentPage" value="portfolio" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/add-asset-retirement.jsp" />
+	</definition>
+	<definition name="cp/mutualFund" extends="mainLayout" >
+	 <put-attribute name="title" value="Add Asset" />
+		<put-attribute name="currentPage" value="portfolio" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/add-asset-mutual-fund.jsp" />
+	</definition>
+	<definition name="cp/gold" extends="mainLayout" >
+	  <put-attribute name="title" value="Add Asset" />
+		<put-attribute name="currentPage" value="portfolio" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/add-asset-gold.jsp" />
+	</definition>
+	<definition name="cp/property" extends="mainLayout" >
+	<put-attribute name="title" value="Add Asset" />
+		<put-attribute name="currentPage" value="portfolio" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/add-asset-property.jsp" />
+	</definition>
+	<definition name="cp/stock" extends="mainLayout" >
+	<put-attribute name="title" value="Add Asset" />
+		<put-attribute name="currentPage" value="portfolio" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/add-asset-stock.jsp" />
+	</definition>
+	<definition name="cp/myAccount" extends="mainLayout" >
+	<put-attribute name="title" value="My Account" />
+	<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-account.jsp" />
+	</definition>
+	<definition name="cp/dcTool" extends="mainLayout" >
+	<put-attribute name="title" value="Financial Plan Tool" />
+		<put-attribute name="currentPage" value="dctools" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/dc_tool.jsp" />
+	</definition>
+	<definition name="cp/calculator" extends="mainLayout" >
+	<put-attribute name="title" value="Calculator" />
+		<put-attribute name="currentPage" value="calculator" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/calculator.jsp" />
+	</definition>
+	<definition name="cp/RiskProfileTool" extends="mainLayout" >
+	<put-attribute name="title" value="Risk Profile Tool" />
+		<put-attribute name="currentPage" value="riskprofile" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/risk-profile-tool.jsp" />
+	</definition>
+	<definition name="cp/calender" extends="mainLayout" >
+	<put-attribute name="title" value="Calendar" />
+		<put-attribute name="currentPage" value="calender" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/calender.jsp" />
+	</definition>
+    <definition name="cp/xRayTool" extends="mainLayout" >
+    <put-attribute name="title" value="X-Ray" />
+		<put-attribute name="currentPage" value="xray" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/x-ray.jsp" />
+	</definition>
+	
+	<definition name="cp/savings" extends="mainLayout" >
+	<put-attribute name="title" value="My Savings graph" />
+		<put-attribute name="currentPage" value="cashflow" />
+	<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-savings-graph.jsp" />
+	</definition>
+	
+	<definition name="cp/myQuestions" extends="mainLayout">
+	 <put-attribute name="title" value="Financial X-Ray" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/questions.jsp" />
+	</definition>
+	<definition name="xray/finalReport" extends="mainLayout">
+	  <put-attribute name="title" value="Financial X-Ray" />
+		<put-attribute name="currentPage" value="xray" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/x-RayThankYou.jsp" />
+	</definition>
+	
+	<definition name="feedback/finalReport" extends="mainLayout" >
+	 <put-attribute name="title" value="FeedBack" />
+		<put-attribute name="currentPage" value="feedback" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/feedbackThankYou.jsp" />
+	</definition>
+	<definition name="cp/feedback" extends="mainLayout" >
+	 <put-attribute name="title" value="FeedBack" />
+		<put-attribute name="currentPage" value="feedback" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/feedback.jsp" />
+	</definition>
+	<definition name="feedback/report" extends="mainLayout" >
+	  <put-attribute name="title" value="FeedBack" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/feedbackReport.jsp" />
+	</definition>
+	<definition name="cp/query/add" extends="mainLayout" >
+	 <put-attribute name="title" value="Add new query" />
+		<!-- <put-attribute name="currentPage" value="query" /> -->
+		<put-attribute name="body" value="/WEB-INF/resources/pages/query/add-new-query.jsp" />
+	</definition>
+	
+	<definition name="cp/myLoan" extends="mainLayout" >
+	 <put-attribute name="title" value="My Loan" />
+		<put-attribute name="currentPage" value="Portfolio" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-loan.jsp" />
+	</definition>
+	<definition name="cp/loan/add" extends="mainLayout" >
+	 <put-attribute name="title" value="My Loan" />
+		<put-attribute name="currentPage" value="Portfolio" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/add-loan.jsp" />
+	</definition>
+	
+	<definition name="cp/profile" extends="mainLayout" >
+	<put-attribute name="title" value="My Profile" />
+		<put-attribute name="currentPage" value="account" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/dashboard/my-profile.jsp" />
+	</definition>
+	
+	<definition name="cp/password" extends="mainLayout" >
+	<put-attribute name="title" value="Password" />
+		<put-attribute name="currentPage" value="account" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/profile/password.jsp" />
+	</definition>
+	<definition name="cp/document" extends="mainLayout" >
+	<put-attribute name="title" value="My Document" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/profile/my-document.jsp" />
+	</definition>
+	
+		<definition name="riskProfile/risk-profile" extends="mainLayout">
+		<put-attribute name="title" value="Risk Profile" />
+		<put-attribute name="pageHeader" value="Risk Profile" />
+		<put-attribute name="headerImage" value="risk_profile.png"></put-attribute>
+		<put-attribute name="currentPage" value="riskprofile" />
+		<!-- <put-attribute name="header" value="/WEB-INF/resources/pages/layout/header.jsp" /> -->
+		<put-attribute name="body" value="/WEB-INF/resources/pages/riskprofile/risk-profile.jsp" />
+	</definition>
+	
+	<definition name="riskProfile/riskProfileAnalysis" extends="mainLayout">
+		<put-attribute name="title" value="Risk Profile Analysis" />
+		<put-attribute name="currentPage" value="riskprofile" />
+		<!-- <put-attribute name="header" value="/WEB-INF/resources/pages/layout/header.jsp" /> -->
+		<put-attribute name="body" value="/WEB-INF/resources/pages/riskprofile/riskProfileAnalysis.jsp" />
+	</definition>
+<!-- data collection starts -->
+
+	<definition name="goalLayout" template="/WEB-INF/resources/pages/datacollection/goalLayout.jsp" >
+		<put-attribute name="title" value="" />
+		<put-attribute name="pageHeader" value="" />
+		<put-attribute name="headerImage" value="profile_info_icon.png"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/resources/pages/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/resources/pages/footer.jsp" />
+	</definition>	
+
+	<definition name="dcmainLayout" template="/WEB-INF/resources/pages/layout/DcLayout.jsp" >
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/resources/pages/layout/dc_header.jsp" />
+		<put-attribute name="navigation_bar" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="slide" value="" />
+		<put-attribute name="footer" value="/WEB-INF/resources/pages/footer.jsp" />
+	</definition>
+
+
+<definition name="partner/datacollection" extends="dcmainLayout">
+		<put-attribute name="title" value="Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="FINANCIAL PLAN" />		
+	    <put-attribute name="headerImage" value="dc_head_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/data_collection.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/emergency-readiness" extends="dcmainLayout">
+		<put-attribute name="title" value="Emergency Readiness - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Emergency READINESS" />
+		<put-attribute name="headerImage" value="emergency_advice.png"></put-attribute> 
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/dc_emergency_readiness.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/old-emergency-readiness" extends="dcmainLayout">
+		<put-attribute name="title" value="Emergency Readiness - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Emergency READINESS" />
+		<!-- <put-attribute name="headerImage" value="helicopter.png"></put-attribute> -->
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/emergency_readiness.jsp" />
+	</definition>
+		
+	<definition name="partner/datacollection/risk-cover" extends="dcmainLayout">
+		<put-attribute name="title" value="Risk Cover - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="RISK COVER" />
+		 <put-attribute name="headerImage" value="risk-cover-icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/dc_risk_cover.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/financial-readiness" extends="dcmainLayout">
+		<put-attribute name="title" value="Financial Readiness - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Financial Readiness" />
+		 <put-attribute name="headerImage" value="financial_readiness.png"></put-attribute> 
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/dc_fin_readiness.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/retirement-planning" extends="dcmainLayout">
+		<put-attribute name="title" value="Retirement Planning - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Retirement Planning" />
+		<put-attribute name="headerImage" value="retirement_planning_icon.png"></put-attribute> 
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/dc_retirement_planning.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/cash-flow" extends="dcmainLayout">
+		<put-attribute name="title" value="Cash Flow - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Cash Flow" />
+		 <put-attribute name="headerImage" value="cash-flow-header-icon.png"></put-attribute> 
+		 <put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/dc_cash_flow.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/loan-status" extends="dcmainLayout">
+		<put-attribute name="title" value="Loan Status - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Loan Status" />
+		<put-attribute name="headerImage" value="loan_status_icon.png"></put-attribute> 
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/dc_loan_status.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/succession-readiness" extends="dcmainLayout">
+		<put-attribute name="title" value="Succession Readiness - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Succession READINESS" />
+		<put-attribute name="headerImage" value="succession_planning_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/dc_succession_readiness.jsp" />
+	</definition>
+		
+	<!-- Tiles for DC Goal Pages -->
+	<definition name="partner/datacollection/business-goal" extends="goalLayout">
+		<put-attribute name="title" value="Business Goal - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Business" />
+		<put-attribute name="headerImage" value="business_icon.png"></put-attribute> 
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/goal_business.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/car-goal" extends="goalLayout">
+		<put-attribute name="title" value="Purchase a Car - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Purchase a Car" />
+		<put-attribute name="headerImage" value="car_thumb.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/goal_car.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/educational-goal" extends="goalLayout">
+		<put-attribute name="title" value="Education - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Education" />		
+		<put-attribute name="headerImage" value="education-goal-icon.png"></put-attribute> 
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/goal_educational.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/other-goal" extends="goalLayout">
+		<put-attribute name="title" value="Other - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Other Goal" />
+	    <put-attribute name="headerImage" value="other_goal_icon.png"></put-attribute> 
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/goal_other.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/property-goal" extends="goalLayout">
+		<put-attribute name="title" value="Purchase a Property - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Purchase a Property" />
+		<put-attribute name="headerImage" value="property_goal.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/goal_property.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/special-goal" extends="goalLayout">
+		<put-attribute name="title" value="Parental Goal - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Parental Goal" />
+		<put-attribute name="headerImage" value="special_goals_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/goal_special.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/target-corpus-goal" extends="goalLayout">
+		<put-attribute name="title" value="Target Corpus Goal - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Target Corpus" />
+		<put-attribute name="headerImage" value="business_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/goal_target_corpus.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/travel-vacation-goal" extends="goalLayout">
+		<put-attribute name="title" value="Travel and Vacations - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Travel and Vacations" />
+		<put-attribute name="headerImage" value="travel_n_vacation_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/goal_travel_vacation.jsp" />
+	</definition>
+	
+	<definition name="partner/datacollection/wedding-goal" extends="goalLayout">
+		<put-attribute name="title" value="Wedding Goal - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Wedding Goal" />
+		<put-attribute name="headerImage" value="wedding_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/goal_wedding.jsp" />
+	</definition>
+	<!-- data collection ends -->	
+	<!-- edit goals starts -->
+	<definition name="edit/educational-goal" extends="goalLayout">
+		<put-attribute name="title" value="Education - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Education" />		
+		<put-attribute name="headerImage" value="education-goal-icon.png"></put-attribute> 
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/edit_educational_goal.jsp" />
+	</definition>
+
+	<definition name="edit/property-goal" extends="goalLayout">
+		<put-attribute name="title" value="Purchase a Property - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Purchase a Property" />
+		<put-attribute name="headerImage" value="property_goal.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/edit_property_goal.jsp" />
+	</definition>
+	
+	<definition name="edit/wedding-goal" extends="goalLayout">
+		<put-attribute name="title" value="Wedding Goal - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Wedding Goal" />
+		<put-attribute name="headerImage" value="wedding_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/edit_wedding_goal.jsp" />
+	</definition>
+	
+	<definition name="edit/travel-vacation-goal" extends="goalLayout">
+		<put-attribute name="title" value="Travel and Vacations - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Travel and Vacations" />
+		<put-attribute name="headerImage" value="travel_n_vacation_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/edit_travel_vacation_goal.jsp" />
+	</definition>
+	
+	<definition name="edit/car-goal" extends="goalLayout">
+		<put-attribute name="title" value="Purchase a Car - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Purchase a Car" />
+		<put-attribute name="headerImage" value="car_thumb.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/edit_car_goal.jsp" />
+	</definition>
+
+	<definition name="edit/special-goal" extends="goalLayout">
+		<put-attribute name="title" value="Parental Goal - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Parental Goal" />
+		<put-attribute name="headerImage" value="special_goals_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/edit_special_goal.jsp" />
+	</definition>
+
+	<definition name="edit/target-corpus-goal" extends="goalLayout">
+		<put-attribute name="title" value="Target Corpus Goal - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Target Corpus" />
+		<put-attribute name="headerImage" value="business_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/edit_target_corpus.jsp" />
+	</definition>
+	
+	<definition name="edit/business-goal" extends="goalLayout">
+		<put-attribute name="title" value="Business Goal - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Business" />
+		<put-attribute name="headerImage" value="business_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/edit_business_goal.jsp" />
+	</definition>
+	
+	<definition name="edit/other-goal" extends="goalLayout">
+		<put-attribute name="title" value="Other - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Other Goal" />
+		<put-attribute name="headerImage" value="other_goal_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/edit_other_goal.jsp" />
+	</definition>
+	<!-- edit goals ends -->
+	<definition name="my-goals" extends="dcmainLayout">
+		<put-attribute name="title" value="My Goals" />
+		<put-attribute name="headerImage" value="my_goals_head_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/my_goals.jsp" />
+	</definition>
+	
+
+<!-- MIS Reports -->
+		
+		
+	<definition name="report/view" extends="mainLayout">
+		<put-attribute name="title" value="My Report" />
+		<put-attribute name="currentPage" value="report" />
+		<put-attribute name="body" value="/WEB-INF/resources/pages/report/report_view.jsp" />
+	</definition>
+		
+		
+	<definition name="report/mis-report" extends="mainLayout">
+		<put-attribute name="title" value="MIS Reports" />
+		<put-attribute name="pageHeader" value="MIS REPORTS" />
+		<put-attribute name="headerImage" value="mis_report_heading_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/report/mis-report.jsp" />
+	</definition>
+	
+	<definition name="report/clientholding" extends="mainLayout">
+		<put-attribute name="title" value="MIS Reports : Client Holding Report" />
+		<put-attribute name="pageHeader" value="MIS REPORTS : Client Holding Report" />
+		<put-attribute name="headerImage" value="client_holding_report_heading_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/report/mis-client-holding-report.jsp" />
+	</definition>
+	
+	<definition name="report/clientsipdue" extends="mainLayout">
+		<put-attribute name="title" value="MIS Reports : Client SIP Due Report" />
+		<put-attribute name="pageHeader" value="MIS REPORTS : Client SIP Due Report" />
+		<put-attribute name="headerImage" value="client_SIP_due_report_heading_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/report/mis-client-sip-due-report.jsp" />
+	</definition>
+	
+	<definition name="report/clientportfoliodetailedstatement" extends="mainLayout">
+		<put-attribute name="title" value="MIS Reports : Client Portfolio Report" />
+		<put-attribute name="pageHeader" value="MIS REPORTS : Client Portfolio Detailed Statement" />
+		<put-attribute name="headerImage" value="client_portfolio_detailed_statement_head_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/report/mis-client-portfolio-detailed-statement.jsp" />
+	</definition>
+	
+	<definition name="report/clienttransactionhistory" extends="mainLayout">
+		<put-attribute name="title" value="MIS Reports : Client Transaction History" />
+		<put-attribute name="pageHeader" value="MIS REPORTS : Client Transaction History" />
+		<put-attribute name="headerImage" value="client_transaction_history_heading_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/report/mis-client-transaction-history.jsp" />
+	</definition>
+	
+	<definition name="report/clientmissingnomination" extends="mainLayout">
+		<put-attribute name="title" value="MIS Reports : Client Missing Nomination" />
+		<put-attribute name="pageHeader" value="MIS REPORTS : Client Missing Nomination" />
+		<put-attribute name="headerImage" value="client_missing_nomination_heading_icon.png"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/resources/pages/report/mis-client-missing-nomination.jsp" />
+	</definition>
+	
+	
+	<!-- MIS Reports -->
+	
+	<definition name="cp/terms" template="/WEB-INF/resources/pages/terms.jsp"></definition>
+	
+	<!-- MIS Reports end -->
+	
+	<!--  Asset allocation  -->
+	<definition name="partner/assetAllocation" extends="dcmainLayout">
+		<put-attribute name="title" value="Financial Readiness - Profile Financial Plan" />
+		<put-attribute name="pageHeader" value="Asset Allocation" />
+		<put-attribute name="headerImage" value="financial_readiness.png"></put-attribute> 
+		<put-attribute name="body" value="/WEB-INF/resources/pages/datacollection/assetAllocation.jsp" />
+	</definition>
+	
+	<!--  Asset allocation end -->
+
+</tiles-definitions>

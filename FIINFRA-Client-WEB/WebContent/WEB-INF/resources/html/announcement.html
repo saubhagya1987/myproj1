@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>My Income</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link rel="stylesheet" href="../css/main-style.css" type="text/css" />
+<link rel="stylesheet" href="../css/reset.css" type="text/css" />
+<link rel="stylesheet" href="../css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../css/jquery-ui.css" type="text/css" />
+<link rel="stylesheet" href="../css/selectboxit.css" type="text/css" />
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/selectboxit.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/jquery.ui.touch-punch.js"></script>
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+	
+  
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+    });
+</script>
+<!-- Custom Selectbox Ends -->
+
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+    //$('.common_in_content').slimScroll();
+	//Down Payment value Slider
+
+
+	  createSlider('#income_payment01',0,100,1,"#in_payment01")
+	  createSlider('#income_payment02',0,100,1,"#in_payment02")
+	  createSlider('#income_payment03',0,100,1,"#in_payment03")
+	  createSlider('#income_payment04',0,100,1,"#in_payment04")
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+
+</head>
+<body>
+<div id="wrapper" class="clearfix">
+  <div id="header"> <a class="logo" href="index.html"> <span id="logo"> <img src="../images/temp_logo.png" /></span><!-- end of "logo" id --> 
+    </a>
+   <!-- <div id="advt1"> <img src="images/add1.png" /> </div>-->
+    <!-- end of "advt1" id -->
+    
+    <div id="advt2"> <img src="../images/add2.png" /> </div>
+    <!-- end of "advt1" id -->
+    
+   <div id="ifa-image" class="clearfix fl">
+         <img src="../images/photo.jpg"  class="clearfix fl"/>
+            <span class="ifa-name clearfix">Mr. A. B. Joshi</span>
+            <span class="ifa-advisor clearfix">(Your Advisor)</span>
+        </div><!-- end of "ifa-image" id -->
+    
+    <div id="log-out"> <img class="logout" src="../images/transparent.png"/>
+      <p>Logout</p>
+    </div>
+    <!-- end of "log-out" id --> 
+  </div>
+  <!-- end of "header" id -->
+  
+      <ul id="inner-nav-menu" class="clearfix ">
+        	<li class="my-goals"><a href="my-goals.html"><img class="my-goals-ico" src="../images/transparent.png"/>
+      <p>My Goals <span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+            <li class="my-plans"><a href="my-plan.html"><img class="my-plans-ico" src="../images/transparent.png"/>
+      <p>My Plans<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+            <li class="my-portf"><a href="my-portfolio.html"><img class="my-portf-ico" src="../images/transparent.png"/>
+      <p>My Portfolio<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+            <!--li class="my-inc"><a href="#"><img class="my-inc-ico" src="images/transparent.png"/><p>My Income<span class="grad-border"><img src="images/transparent.png"/></span></p></a></li-->
+            <li class="my-cashflow"><a href="my-income.html"><img class="my-cashflow-ico" src="../images/transparent.png"/>
+      <p>My Cashflow<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+            <li class="my-fin"><a href="#"><img class="my-fin-ico" src="../images/transparent.png"/><p>My Documents<span class="grad-border"><img src="../images/transparent.png"/></span></p></a></li>    <li class="my-rep"><a href="my-reports.html"><img class="my-rep-ico" src="../images/transparent.png"/>
+      <p>My Reports<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+<li class="my-acc"><a href="#"><img class="my-acc-ico" src="../images/transparent.png"/><p>My Account<span class="grad-border"><img src="../images/transparent.png"/></span></p></a></li>           
+     </ul><!-- end of "nav-menu" id -->  
+  
+  <div id="trapezoid" class="clearfix fr">
+    <p>Welcome&nbsp;<span> Mr. Parag Takalkar</span></p>
+  </div>
+  <div id="header-strip" class="fl">
+    <h3 class="clearfix fl">Announcement</h3>
+    <img class="short-menu clearfix fr"  src="../images/transparent.png" /> 
+    
+  </div>
+  <!-- end of "header-strip" id -->
+  
+  <div id="inner-shadow-strip"></div>
+  <!-- end of "inner-shadow-strip" id -->
+  
+  <div id="contents">
+  
+    <div id="inner_contents_announce"> 
+      <!--title starts-->
+      <div class="announce_title_bx">
+        <ul>
+          <li class="input_title_one fl">Date</li>
+          <li class="input_title_two fl">Time</li>
+          <li class="input_title_three fl">Days to Go</li>
+          <li class="input_title_four fl">Title</li>
+          <li class="input_title_five fl">Description</li>
+          <li class="input_title_six fl">Attachments</li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+      <!--title ends--> 
+      <!--txt starts-->
+      <div class="announce_li_bx">
+        <div class="announce_li_bx_in">
+          <ul>
+            <li class="input_txt_one fl">
+              Wednesday, 22 May, 2014 
+            </li>
+            <li class="input_txt_two fl">05:03:00 pm</li>
+            <li class="input_txt_three fl">
+              06 Days
+            </li>
+            <li class="input_txt_four fl">
+              General Meeting
+            </li>
+            <li class="input_txt_five fl"> Next Friday we will have meeting in office </li>
+             <li class="input_txt_six fl"><a href="#">Invitation Acceptance</a></li>
+            <div class="clr"></div>
+          </ul>
+          <!-- txt ends--> 
+          
+        </div>
+      </div>
+      <div class="announce_li_bx">
+        <div class="announce_li_bx_in">
+          <ul>
+            <li class="input_txt_one fl">
+              Monday, 12 May, 2014 
+            </li>
+            <li class="input_txt_two fl">10:30:00 pm</li>
+            <li class="input_txt_three fl">
+            Passed
+            </li>
+            <li class="input_txt_four fl">
+            New Lessons
+            </li>
+            <li class="input_txt_five fl"> We have Released New Lessons </li>
+             <li class="input_txt_six fl"><a href="#">Invitation Acceptance</a></li>
+            <div class="clr"></div>
+          </ul>
+          <!-- txt ends--> 
+          
+        </div>
+      </div>
+      
+      
+      
+    </div>
+    <!-- end of "inner-contents" id --> 
+  </div>
+  <!-- end of "contents" id -->
+  
+  <footer id="footer"> <img src="../images/finfra-logo.png" /> <span class="copyright">Copyright © 2014 </span> <span class="privacy">Privacy Policy </span> </footer>
+</div>
+<!-- End of "wrapper" id -->
+</body>
+</html>

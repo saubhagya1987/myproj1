@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+        <title>My Goals</title>
+        <link rel="shortcut icon" href="../images/favicon.ico" />
+        <link type="text/css" rel="stylesheet" href="../css/basic.css" />
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <link type="text/css" rel="stylesheet" href="../css/custom.css" />
+        <link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+        <script src="../js/sorting/jquery.min.js"></script>
+     	<script src="../js/sorting/jquery-ui.min.js"></script>
+ 		<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+        
+        <script src="../js/my_account_submenu.js"></script>
+     	 <script>
+        $(function() {
+          $( "#sortable" ).sortable();
+          $( "#sortable" ).disableSelection();
+        });
+        </script> 
+        
+         <!-- custom scroll to "common_in_content" -->
+        <script src="../js/plugin/jquery.slimscroll.js"></script>
+			<script>
+            $(document).ready(function(){
+			
+             });
+            </script>
+        <!-- custom scroll to "common_in_content" -->
+        </head>
+
+        <body>
+<div class="wrapper" id="my_goals_parent">
+          <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+              <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+                  <div class="menu_section">
+            <ul class="clearfix reset">
+                      <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+                      <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+                      <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change"><span></span>
+                          <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                              <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                              <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                              <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                              <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                            </ul>
+                  </form>
+                        </section>
+              </li>
+                      <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+                    </ul>
+          </div>
+                  <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+                </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+              <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a> <span class="head_txt">my goals</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+            </header>
+    <!-- Header Ends-->
+    <section class="content common_content">
+              <div class="combined_submenu clearfix">
+        <div class="partner_dashboard_submenu">
+                  <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+                  <div class="menu_section">
+            <ul class="clearfix reset ">
+                      <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+                      <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+                      <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+                      <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+                      <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+                      <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+                      <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+                      <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+                    </ul>
+          </div>
+                </div>
+        <div class="dc_dashboard_submenu">
+                  <h4 class="heading"><a href="data-collection.html">Data Collection Dashboard</a></h4>
+                  <ul class="clearfix reset first_col_menu">
+            <li class="menu emergency"><a href="emergency-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Emergency</span></a></li>
+            <li class="menu risk_cover"><a href="risk-cover.html" class="anch"><span class="thumb"></span><span class="txt">Risk Cover</span></a></li>
+            <li class="menu retirement"><a href="retirement-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Retirement</span></a></li>
+            <li class="menu succession"><a href="succession-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Succession</span></a></li>
+            <li class="menu financial"><a href="financial-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Financial</span></a></li>
+            <li class="menu cash_flow"><a href="cash-flow.html" class="anch"><span class="thumb"></span><span class="txt">Cash Flow</span></a></li>
+            <li class="menu loan_status"><a href="loan-status.html" class="anch"><span class="thumb"></span><span class="txt">Loan Status</span></a></li>
+            <li class="menu last clearfix"><a href="profile-info.html" class="anch personal_info"><span class="thumb"></span><span class="txt">Personal Info.</span></a> <a href="risk-profile.html" class="anch risk_profile"><span class="thumb"></span><span class="txt">Risk Profile</span></a> <a href="my-goals.html" class="anch my_goals"><span class="thumb"></span><span class="txt">My Goals</span></a></li>
+          </ul>
+                  <ul class="clearfix reset sec_col_menu">
+            <li class="menu education"><a href="education-goal-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Education</span></a></li>
+            <li class="menu property"><a href="purchase-property-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Property</span></a></li>
+            <li class="menu wedding"><a href="wedding-goal.html" class="anch"><span class="thumb"></span><span class="txt">Wedding</span></a></li>
+            <li class="menu car"><a href="car-goal.html" class="anch"><span class="thumb"></span><span class="txt">Car</span></a></li>
+            <li class="menu travel"><a href="travel-n-vacaction-goal.html" class="anch"><span class="thumb"></span><span class="txt">Travel</span></a></li>
+            <li class="menu business"><a href="business-goal.html" class="anch"><span class="thumb"></span><span class="txt">Business</span></a></li>
+            <li class="menu special_goal"><a href="special-goal.html" class="anch"><span class="thumb"></span><span class="txt">Special Goal</span></a></li>
+            <li class="menu other"><a href="other-goal.html" class="anch"><span class="thumb"></span><span class="txt">Other Goal</span></a></li>
+          </ul>
+                  <div class="clr"></div>
+                </div>
+        <div class="contact_configuration_submenu">
+                  <h4 class="heading"><a>Contact Configuration</a></h4>
+                  <div class="menu_section">
+            <ul class="clearfix reset ">
+                      <li class="menu coantact_setting"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Contact Settings</span></a></li>
+                      <li class="menu contact_rec"><a href="#" class="anch"><span class="thumb"></span><span class="txt"> Contact Recommendations</span></a></li>
+                    </ul>
+          </div>
+                </div>
+      </div>
+              <section class="in_content clearfix" id="my_goals">
+        
+        <div class="container">
+            <ul class="reset clearfix heading">
+                      <li class="title_one fl">Priority</li>
+                      <li class="title_two fl">Goal Category</li>
+                      <li class="title_three fl">Goal Title</li>
+                      <li class="title_four fl">Created Date</li>
+                      <li class="title_five fl">Goal Year</li>
+                      <li class="title_six fl">Goal Cost</li>
+                    </ul>
+            <ul id="sortable" class="ui-sortable">
+                     
+                <li class="ui-state-default">
+                <input name="srtidx" type="text" class="one fl" value="1"/>
+                <div class="two fl">Education</div>
+                <div class="first fl"><a href="education-goal-future-financial.html">Medical for Sonali</a></div>
+                <div class="second fl">22-Apr-2010</div>
+                <div class="third fl">2020</div>
+                <div class="fourth fl"><span class="cost">10</span><span class="unit"> lacs</span></div>
+                <div class="fifth fl"><div class="delete"></div></div>
+              </li>
+              
+              <li class="ui-state-default">
+                <input type="text" name="srtidx" class="one fl" value="2"/>
+                <div class="two fl">Business</div>
+                <div class="first fl"><a href="education-goal-future-financial.html">Hotel Business</a></div>
+                <div class="second fl">22-Apr-2010</div>
+                <div class="third fl">2020</div>
+                <div class="fourth fl"><span class="cost">10</span><span class="unit"> lacs</span></div>
+                <div class="fifth fl"><div class="delete"></div></div>
+              </li>
+              
+              <li class="ui-state-default">
+                <input type="text" name="srtidx" class="one fl" value="3"/>
+                <div class="two fl">Property</div>
+                <div class="first fl"><a href="education-goal-future-financial.html">New Property Purchase</a></div>
+                <div class="second fl">22-Apr-2010</div>
+                <div class="third fl">2020</div>
+                <div class="fourth fl"><span class="cost">10</span><span class="unit"> lacs</span></div>
+                <div class="fifth fl"><div class="delete"></div></div>
+              </li>
+              
+              <li class="ui-state-default">
+                <input type="text" name="srtidx" class="one fl" value="4"/>
+                <div class="two fl">Car Goal</div>
+                <div class="first fl"><a href="education-goal-future-financial.html">New Car Purchase</a></div>
+                <div class="second fl">22-Apr-2010</div>
+                <div class="third fl">2020</div>
+                <div class="fourth fl"><span class="cost">10</span><span class="unit"> lacs</span></div>
+                <div class="fifth fl"><div class="delete"></div></div>
+              </li>
+                  
+                  <li class="ui-state-default">
+                <input type="text" name="srtidx" class="one fl" value="5"/>
+                <div class="two fl">Travel</div>
+                <div class="first fl"><a href="education-goal-future-financial.html">Trip to Shimla</a></div>
+                <div class="second fl">22-Apr-2010</div>
+                <div class="third fl">2020</div>
+                <div class="fourth fl"><span class="cost">10</span><span class="unit"> lacs</span></div>
+                <div class="fifth fl"><div class="delete"></div></div>
+              </li>    
+                 
+                 <li class="ui-state-default">
+                <input type="text" name="srtidx" class="one fl" value="6"/>
+                <div class="two fl">Special Goal</div>
+                <div class="first fl"><a href="education-goal-future-financial.html">Sons Wedding</a></div>
+                <div class="second fl">22-Apr-2010</div>
+                <div class="third fl">2020</div>
+                <div class="fourth fl"><span class="cost">10</span><span class="unit"> lacs</span></div>
+                <div class="fifth fl"><div class="delete"></div></div>
+              </li>    
+              
+              <li class="ui-state-default">
+                <input type="text" name="srtidx" class="one fl" value="7"/>
+                <div class="two fl">Marriage</div>
+                <div class="first fl"><a href="education-goal-future-financial.html">Sons Wedding</a></div>
+                <div class="second fl">22-Apr-2010</div>
+                <div class="third fl">2020</div>
+                <div class="fourth fl"><span class="cost">10</span><span class="unit"> lacs</span></div>
+                <div class="fifth fl"><div class="delete"></div></div>
+              </li>
+              
+              <li class="ui-state-default">
+                <input type="text" name="srtidx" class="one fl" value="8"/>
+                <div class="two fl">Marriage</div>
+                <div class="first fl"><a href="education-goal-future-financial.html">Sons Wedding</a></div>
+                <div class="second fl">22-Apr-2010</div>
+                <div class="third fl">2020</div>
+                <div class="fourth fl"><span class="cost">10</span><span class="unit"> lacs</span></div>
+                <div class="fifth fl"><div class="delete"></div></div>
+              </li>
+              
+              <li class="ui-state-default">
+                <input type="text" name="srtidx" class="one fl" value="9"/>
+                <div class="two fl">Marriage</div>
+                <div class="first fl"><a href="education-goal-future-financial.html">Sons Wedding</a></div>
+                <div class="second fl">22-Apr-2010</div>
+                <div class="third fl">2020</div>
+                <div class="fourth fl"><span class="cost">10</span><span class="unit"> lacs</span></div>
+                <div class="fifth fl"><div class="delete"></div></div>
+              </li>
+              
+              <li class="ui-state-default">
+                <input type="text" name="srtidx" class="one fl" value="10"/>
+                <div class="two fl">Marriage</div>
+                <div class="first fl"><a href="education-goal-future-financial.html">Sons Wedding</a></div>
+                <div class="second fl">22-Apr-2010</div>
+                <div class="third fl">2020</div>
+                <div class="fourth fl"><span class="cost">10</span><span class="unit"> lacs</span></div>
+                <div class="fifth fl"><div class="delete"></div></div>
+              </li>
+              
+              <li class="ui-state-default">
+                <input type="text" name="srtidx" class="one fl" value="11"/>
+                <div class="two fl">Marriage</div>
+                <div class="first fl"><a href="education-goal-future-financial.html">Sons Wedding</a></div>
+                <div class="second fl">22-Apr-2010</div>
+                <div class="third fl">2020</div>
+                <div class="fourth fl"><span class="cost">10</span><span class="unit"> lacs</span></div>
+                <div class="fifth fl"><div class="delete"></div></div>
+              </li>
+                    </ul>
+          </div>
+        
+        <!-- DC submenu Ends--> 
+        
+      </section>
+      
+            <!-- Common footer starts -->
+    <section id="Footer_Type_Two" class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup">
+            </li>
+            <li class="fl list"><a href="dashboard.html" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="dashboard.html" class="anch cancel"><span class="txt">Cancel</span></a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- Common footer ends -->
+      
+              <div class="overlay"></div>
+            </section>
+    <div class="clr"></div>
+  </section>
+        </div>
+<script>
+$(document).ready(function(){
+
+	$("#sortable").sortable({
+		stop: function( event, ui ) {
+			$('#sortable li.ui-state-default').each(function(k, v) {
+				$(this).find('input[name="srtidx"]').val($(this).index()+1)
+			});
+		}
+	});
+	
+});
+</script>
+</body>
+</html>

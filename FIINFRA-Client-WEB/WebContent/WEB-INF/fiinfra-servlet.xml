@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans 
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:util="http://www.springframework.org/schema/util" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+	 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+	 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd 
+	 http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd 
+	 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd 
+	 http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd
+	 http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+	 http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd"
+	 >
+    	 
+	
+	<context:annotation-config/>
+	<context:component-scan base-package="in.fiinfra"/>
+	<mvc:annotation-driven/>
+
+
+		
+	<!-- Configure bean For Rest template -->
+	<beans:bean id="clientHttpRequestInterceptor" class="in.fiinfra.common.token.ClientIntereceptor" lazy-init="true">
+ </beans:bean>
+ 
+ <beans:bean id="restTemplate" class="org.springframework.web.client.RestTemplate" lazy-init="true">
+  <beans:property name="requestFactory">
+   <beans:bean id="clientHttpRequestFactory"
+    class="org.springframework.http.client.CommonsClientHttpRequestFactory" />	
+	
+</beans:property>
+  <beans:property name="interceptors" ref="clientHttpRequestInterceptor">
+  </beans:property>
+  <beans:property name="messageConverters">
+   <beans:list>
+    <beans:bean id="jsonMessageConverter"
+     class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+     </beans:bean>
+   </beans:list>
+  </beans:property>
+ </beans:bean>	
+	
+	<beans:bean id="objectMapper" class="in.fiinfra.common.web.CustomJacksonObjectMapper" />
+	
+		    
+    <!-- ********************************************************************************************* -->
+    <!-- configuration for tiles -->    
+    <beans:bean id="viewResolver" 
+    	class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+    	<beans:property name="viewClass" 
+    		value="org.springframework.web.servlet.view.tiles2.TilesView">
+    	</beans:property>
+    </beans:bean> 
+    
+	<beans:bean id="tilesConfigurer"
+			class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+			<beans:property name="definitions">
+				<beans:list>
+					<beans:value>/WEB-INF/tiles.xml</beans:value>
+				</beans:list>
+			</beans:property>
+	
+	</beans:bean>
+	
+	<mvc:resources mapping="/app/images/**" location="file:/${app.image.path}"/>
+			
+	<!-- ************************************************************************************************-->
+	
+	<!-- configuration for resources mapping -->
+	<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**" />
+	<mvc:resources mapping="/images/**" location="/images/"/>
+
+	 
+	<mvc:interceptors><beans:bean class="in.fiinfra.cp.common.util.BreadCrumbInterceptor"></beans:bean></mvc:interceptors> 
+    
+    <!-- ******************************************************************************** -->
+    
+    <!-- Configuring message property -->
+    <beans:bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource" scope="singleton">
+		<beans:property name="basenames">
+		    <beans:list>
+			<beans:value>authentication-messages</beans:value>
+			<beans:value>user-messages</beans:value>
+			</beans:list>
+		</beans:property>
+  	</beans:bean>	
+  	
+  	<!-- Configuring web service url's property -->
+  	<context:property-placeholder location="classpath:urls.properties"/>
+  	
+  	<!-- Configuring  property  for error message-->
+  <!-- 	<context:property-placeholder location="classpath:error.properties"/> -->
+  	     
+     <beans:bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+   <beans:bean id="FiinfraAppService" class="in.fiinfra.cp.common.service.FiinfraAppService">
+     	<beans:constructor-arg>
+        	<util:properties location="classpath:urls.properties"/> 
+    	</beans:constructor-arg>
+     <beans:property name="requestFactory">
+   <beans:bean id="clientHttpRequestFactory"
+    class="org.springframework.http.client.CommonsClientHttpRequestFactory" />
+  </beans:property>
+  <beans:property name="interceptors" ref="clientHttpRequestInterceptor">
+  </beans:property>
+  <beans:property name="messageConverters">
+   <beans:list>
+    <beans:bean id="jsonMessageConverter"
+     class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+     </beans:bean>
+     
+</beans:list>
+  </beans:property>
+     </beans:bean>
+     
+     
+     <beans:bean id="UserService" class="in.fiinfra.auth.service.UserService"/>
+      <beans:bean id="FinancialService" class="in.fiinfra.financial.Service.FinancialService"/>
+       <beans:bean id="PortfolioService" class="in.fiinfra.portfolio.service.PortfolioService"/>
+       <beans:bean id="QuestionService" class="in.fiinfra.question.Service.QuestionService"/>
+        <beans:bean id="QueryService" class="in.fiinfra.query.ctrl.service.QueryService"/> 
+       <beans:bean id="DocumentService" class="in.fiinfra.document.service.DocumentService"/> 
+       <beans:bean id="NoteService" class="in.fiinfra.note.service.NoteService"/> 
+       <beans:bean id="CommonService" class="in.fiinfra.cp.common.service.CommonService"/>
+     	<beans:bean id="ProfileService" class="in.fiinfra.profile.service.ProfileService"/>
+     	<beans:bean id="PasswordService" class="in.fiinfra.profile.service.PasswordService"/>
+     	
+      <!-- <beans:bean id="ReportService" class="in.fiinfra.Report.service.ReportService"/> -->
+
+<beans:bean class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" id="passwordEncoder" lazy-init="true"/>
+
+	<beans:bean class="in.fiinfra.common.util.AppConstant">
+		<beans:property name="cdn" value="${cdn}" />
+	</beans:bean>
+     
+</beans:beans>				

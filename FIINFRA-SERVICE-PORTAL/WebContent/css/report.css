@@ -1,0 +1,8 @@
+@CHARSET "ISO-8859-1";
+
+.docicon{
+	background:url(../images/allCommon-Icons.png) no-repeat -41px -100px; 
+	padding-right:18px; padding-top:0px;}	
+.pdficon{
+	background:url(../images/allCommon-Icons.png) no-repeat -0px -690px; 
+	padding-right:18px; padding-top: 3px;}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chat</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link rel="stylesheet" href="../css/main-style.css" type="text/css" />
+<link rel="stylesheet" href="../css/reset.css" type="text/css" />
+<link rel="stylesheet" href="../css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../css/jquery-ui.css" type="text/css" />
+<link rel="stylesheet" href="../css/selectboxit.css" type="text/css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/selectboxit.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/jquery.ui.touch-punch.js"></script>
+<script src="../js/jquery.bxslider.js"></script>
+<script src="../js/perfect-scrollbar.js"></script>
+
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+	
+  
+ 	 $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+    });
+</script>
+<!-- Custom Selectbox Ends -->
+
+
+
+<!-- Filter section toggle starts -->
+<script>
+$(document).ready(function(){
+  $("#chat_list .div_dragger").click(function(){
+   $("#chat_filter").slideToggle("slow");
+	$(".div_dragger span").animate("slow").toggleClass("div_dragger_up","slow");
+	if($(".div_dragger span").hasClass("div_dragger_up"))
+	{
+	 $("#chat_filter #statusSelectBoxIt .selectboxit-text").text("Select Contact");
+	 $("#chat_filter #typeSelectBoxIt .selectboxit-text").text("Select Name");
+	$("#chat_filter .common_input").val("");
+	}
+  });
+});
+</script>
+<!-- Filter section toggle ends -->
+
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+	 $('#chat_list .content').perfectScrollbar();
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+
+</head>
+
+</head>
+<body>
+<div id="wrapper" class="clearfix">
+  <div id="header"> <a class="logo" href="index.html"> <span id="logo"> <img src="../images/temp_logo.png" /></span><!-- end of "logo" id --> 
+    </a> 
+    <!-- <div id="advt1"> <img src="images/add1.png" /> </div>--> 
+    <!-- end of "advt1" id -->
+    
+    <div id="advt2"> <img src="../images/add2.png" /> </div>
+    <!-- end of "advt1" id -->
+    
+    <div id="ifa-image" class="clearfix fl"> <img src="../images/photo.jpg"  class="clearfix fl"/> <span class="ifa-name clearfix">Mr. A. B. Joshi</span> <span class="ifa-advisor clearfix">(Your Advisor)</span> </div>
+    <!-- end of "ifa-image" id -->
+    
+    <div id="log-out"> <img class="logout" src="../images/transparent.png"/>
+      <p>Logout</p>
+    </div>
+    <!-- end of "log-out" id --> 
+  </div>
+  <!-- end of "header" id -->
+  
+  <ul id="inner-nav-menu" class="clearfix">
+    <li class="my-goals"><a href="my-goals.html"><img class="my-goals-ico" src="../images/transparent.png"/>
+      <p>My Goals <span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-plans"><a href="my-plan.html"><img class="my-plans-ico" src="../images/transparent.png"/>
+      <p>My Plans<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-portf"><a href="my-portfolio.html"><img class="my-portf-ico" src="../images/transparent.png"/>
+      <p>My Portfolio<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <!--li class="my-inc"><a href="#"><img class="my-inc-ico" src="images/transparent.png"/><p>My Income<span class="grad-border"><img src="images/transparent.png"/></span></p></a></li-->
+    <li class="my-cashflow"><a href="my-income.html"><img class="my-cashflow-ico" src="../images/transparent.png"/>
+      <p>My Cashflow<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-fin"><a href="#"><img class="my-fin-ico" src="../images/transparent.png"/>
+      <p>My Documents<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>    <li class="my-rep"><a href="my-reports.html"><img class="my-rep-ico" src="../images/transparent.png"/>
+      <p>My Reports<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+<li class="my-acc"><a href="my-profile.html"><img class="my-acc-ico" src="../images/transparent.png"/>
+      <p>My Account<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+  </ul>
+  <!-- end of "nav-menu" id -->
+  
+  <div id="trapezoid" class="clearfix fr">
+    <p>Welcome&nbsp;<span> Mr. Parag Takalkar</span></p>
+  </div>
+  <div id="header-strip" class="fl">
+    <h3 class="clearfix fl">CHAT</h3>
+    <img class="short-menu clearfix fr"  src="../images/transparent.png" /></div>
+  <!-- end of "header-strip" id -->
+  
+  <div id="inner-shadow-strip"></div>
+  <!-- end of "inner-shadow-strip" id -->
+  
+    <section id="chat_list" class="clearfix">
+        <div id="chat_filter">
+          <ul class="reset clearfix parameters first">
+            <li class="first">
+              <select id="">
+                <option>Select Contact</option>
+                <option>Rohan Prabhune</option>
+                <option>Pooja Bhalerao</option>
+              </select>
+            </li>
+            <li class="second">
+              <select id="">
+                <option>Select Name</option>
+                <option>Minal Deshpande</option>
+                <option>Kunal Rastogi</option>
+              </select>
+            </li>
+          </ul>
+          <ul class="reset clearfix parameters second">
+            <li class="fourth">
+              
+                <textarea  class="common_input" name="" cols="" rows=""></textarea>
+            </li>
+          </ul>
+          <ul class="reset clearfix action third">
+            <li><a href="#" class="post fl"><span class="txt">Post</span></a></li>
+            <li><a href="#" class="file fl"><span class="txt">File</span></a></li>
+            <li><a href="#" class="link fl"><span class="txt">Link</span></a></li>
+            <li>
+              <input type="submit" value="Show" class="common_btn fr">
+            </li>
+          </ul>
+          <div class="clr"></div>
+        </div>
+        <div class="div_dragger"><span></span></div>
+        <!-- Chat Content Starts-->
+        <div class="content">
+         
+        <!-- First User Comment Starts-->
+          <div class="first_user_bx fl clearfix">
+            <div class="user_pic fl"><img src="../images/user_one.png" width="40" height="40" alt=""></div>
+            <div class="user_comment fl">
+              <div class="title">Baba Bhapkar</div>
+              <div class="txt">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+              <div class="date">Jul 04, 2014 7:34pm</div>
+            </div>
+          </div>
+          <!-- First User Comment Ends-->
+          
+          
+          <!-- Second User Comment Starts-->
+          <div class="second_user_bx clearfix fr">
+            <div class="user_pic fr"><img src="../images/user_two.png" width="40" height="40" alt=""></div>
+            <div class="user_comment fl">
+              <div class="title">Rohan Prabhune</div>
+              <div class="txt">	Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+              <div class="date">Jul 04, 2014 7:37pm</div>
+            </div>
+          </div>
+            <!-- Second User Comment Ends-->
+
+
+        <!-- First User Comment Starts-->
+          <div class="first_user_bx fl clearfix">
+            <div class="user_pic fl"><img src="../images/user_one.png" width="40" height="40" alt=""></div>
+            <div class="user_comment fl">
+              <div class="title">Baba Bhapkar</div>
+              <div class="txt">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</div>
+              <div class="date">Jul 04, 2014 7:40pm</div>
+            </div>
+          </div>
+          <!-- First User Comment Ends-->
+
+
+        </div>
+        <div class="footer">
+          <div class="footer-left fl">
+            <textarea name="" cols="" rows=""></textarea>
+            <input type="submit" value="Share" class="common_btn fr">
+          </div>
+          <div class="footer-right fr"> <a href="#" class="post fl"><span class="txt">Post</span></a> <a href="#" class="file fl"><span class="txt">File</span></a> <a href="#" class="link fl"><span class="txt">Link</span></a> </div>
+        </div>
+        <!-- Chat Content Ends--> 
+        
+      </section>
+  <!-- end of "contents" id -->
+  
+  <footer id="footer"> <img src="../images/finfra-logo.png" /> <span class="copyright">Copyright © 2014 </span> <span class="privacy">Privacy Policy </span> </footer>
+</div>
+<!-- End of "wrapper" id -->
+</body>
+</html>

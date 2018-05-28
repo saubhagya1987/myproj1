@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Edit-Term-Life-Insurance</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<!--<link type="text/css" rel="stylesheet" href="../css/temp_rohan_css.css" />-->
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<link type="text/css" rel="stylesheet" href="../css/listbox.css"/>
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/listbox.js"></script>
+<script>
+$(function() {
+	  $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-M-yy",
+      showOn: "button",
+	  buttonText: '',
+	  changeMonth: true,
+      changeYear: true
+     });
+  });
+  
+  
+  </script>
+<script>
+$(document).ready(function(){
+ $('.wrapper').addClass("edit_term_life_insurance_wrapper add_assets");
+ $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent fl'></div>" );
+  $('.common_in_content').slimScroll();
+   $('.mebmers_covered').listbox();
+    var availableProducts = ["ActionScript","AppleScript","Asp","BASIC","C","C++","Clojure","COBOL",
+"ColdFusion","Erlang","Fortran","Groovy","Haskell","Java","JavaScript","Lisp","Perl","PHP",
+"Python","Ruby","Scala","Scheme"];
+    $( ".product_list" ).autocomplete({source: availableProducts});
+  // $("select").selectBoxIt();
+});
+</script>
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">Edit Life Insurance : Term</span><span class="heading_icon"><span class="head_icon"></span></span>
+          <div class="desc_container"> <a href="#" class="edit"></a></div>
+        </h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+      <section class="in_content common_in_content"> 
+        <!-- Common_in_contnet starts-->
+        <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <section id="edit_term_life_insurance" class="in_content common_in_content clearfix">
+          <div class="continer_parent">
+            <div class="fd_box dynamic_box northspace6">
+              <ul class="clearfix head_title first_level_heading reset">
+                <li class="title_one label fl">Family Member</li>
+                <li class="title_two label fl">Product</li>
+                <li class="title_three label fl">Sum Assured</li>
+                <li class="title_four label fl">Annual Premium</li>
+                <li class="title_five label fl">Start Year</li>
+              </ul>
+              <ul class="clearfix data_inputs first_level_inputs reset">
+                <li class="input_one label fl">
+                  <select class="mebmers_covered" multiple>
+                    <option>Self</option>
+                    <option>Wife</option>
+                    <option>Father</option>
+                    <option>Mother</option>
+                    <option>Son</option>
+                    <option>Daughter</option>
+                    <option>All</option>
+                  </select>
+                </li>
+                <li class="input_two label fl">
+                  <input type="text" class="common_input product_list"/>
+                </li>
+                <li class="input_three label fl">
+                  <input type="text" class="common_input"/>
+                </li>
+                <li class="input_four label fl">
+                  <input type="text" class="common_input"/>
+                </li>
+                <li class="input_five label fl">
+                  <input type="text" class="common_input datepicker fl"/>
+                </li>
+              </ul>
+              <ul class="clearfix head_title second_level_heading reset">
+                <li class="title_six label fl">Maturity Year</li>
+                <li class="title_seven label fl">Maturity Value</li>
+                <li class="title_eight label fl">Current Value</li>
+                <li class="title_nine label fl">Remarks</li>
+              </ul>
+              <ul class="clearfix data_inputs second_level_inputs reset">
+                <li class="input_six label fl">
+                  <input type="text" class="common_input datepicker fl"/>
+                </li>
+                <li class="input_seven label fl"></li>
+                <li class="input_eight label fl">
+                  <input type="text" class="common_input"/>
+                </li>
+                <li class="input_nine label fl">
+                  <input type="text" class="common_input"/>
+                </li>
+                <li class="input_ten label fl">
+                <textarea class="common_input"></textarea>
+                 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- Common_in_contnet ends-->
+        
+        <div class="overlay"></div>
+      </section>
+      <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <!--<li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>-->
+            
+            <li class="fl list"><a href="#" class="anch save_new"><span class="txt">Save &amp; Add</span></a></li>
+            <li class="fl list"><a href="#" class="anch save_close"><span class="txt">Save &amp; Close</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+          </ul>
+        </div>
+        <!-- <a href="list-of-tasks.html" class="back navgation"><span class="txt">Back</span></a> <a href="list-of-tasks.html" class="next navgation"><span class="txt">Next</span></a>--> </section>
+      
+      <!-- Common footer ends --> 
+    </section>
+    <!-- Common_content Ends--> 
+    
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends--> 
+<!-- For Common Custom File Input--> 
+<script src="../js/plugin/jquery-filestyle.js"></script> 
+<!-- For Common Custom File Input Ends-->
+</body>
+</html>

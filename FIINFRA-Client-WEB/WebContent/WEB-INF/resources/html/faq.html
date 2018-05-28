@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FAQ'S</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link rel="stylesheet" href="../css/main-style.css" type="text/css" />
+<link rel="stylesheet" href="../css/reset.css" type="text/css" />
+<link rel="stylesheet" href="../css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../css/jquery-ui.css" type="text/css" />
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/common.js"></script>
+<script>
+
+
+  $(function() {
+    $( "#accordion" ).accordion({
+      heightStyle: "content"
+    });
+  });
+  </script>
+<script>
+$(document).ready(function () {
+    /* Equity*/
+    $("#gen_ques").click(function () {
+      //  $(".equity_question_bx").FadeIn("slow");
+		 $.when($(".question_bx").not("#details").fadeOut("slow")).done(function() {
+          $("#details").fadeToggle("slow");
+		  });
+       });
+
+
+    $("#dc_ques").click(function () {
+      //  $(".equity_question_bx").FadeIn("slow");
+		 $.when($(".question_bx").not("#D_C_details").fadeOut("slow")).done(function() {
+          $("#D_C_details").fadeToggle("slow");
+		  });
+       });
+
+    $("#cost_ques").click(function () {
+      //  $(".equity_question_bx").FadeIn("slow");
+		 $.when($(".question_bx").not("#Cost_details").fadeOut("slow")).done(function() {
+          $("#Cost_details").fadeToggle("slow");
+		  });
+       });
+
+    $("#serv_tec_ques").click(function () {
+      //  $(".equity_question_bx").FadeIn("slow");
+		 $.when($(".question_bx").not("#Serv_Tec_details").fadeOut("slow")).done(function() {
+          $("#Serv_Tec_details").fadeToggle("slow");
+		  });
+       });
+});
+</script>
+</head>
+<body>
+<div id="wrapper" class="clearfix">
+  <div id="header"> <a class="logo" href="../index.html"> <span id="logo"> <img src="../images/temp_logo.png" /></span><!-- end of "logo" id --> 
+    </a> 
+    <!-- <div id="advt1"> <img src="images/add1.png" /> </div>--> 
+    <!-- end of "advt1" id -->
+    
+    <div id="advt2"> <img src="../images/add2.png" /> </div>
+    <!-- end of "advt1" id -->
+    
+    <div id="ifa-image" class="clearfix fl"> <img src="../images/photo.jpg"  class="clearfix fl"/> <span class="ifa-name clearfix">Mr. A. B. Joshi</span> <span class="ifa-advisor clearfix">(Your Advisor)</span> </div>
+    <!-- end of "ifa-image" id -->
+    
+    <div id="log-out"> <img class="logout" src="../images/transparent.png"/>
+      <p>Logout</p>
+    </div>
+    <!-- end of "log-out" id --> 
+  </div>
+  <!-- end of "header" id -->
+  
+     <ul id="inner-nav-menu" class="clearfix ">
+        	<li class="my-goals"><a href="my-goals.html"><img class="my-goals-ico" src="../images/transparent.png"/>
+      <p>My Goals <span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+            <li class="my-plans"><a href="my-plan.html"><img class="my-plans-ico" src="../images/transparent.png"/>
+      <p>My Plans<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+            <li class="my-portf"><a href="my-portfolio.html"><img class="my-portf-ico" src="../images/transparent.png"/>
+      <p>My Portfolio<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+            <!--li class="my-inc"><a href="#"><img class="my-inc-ico" src="images/transparent.png"/><p>My Income<span class="grad-border"><img src="images/transparent.png"/></span></p></a></li-->
+            <li class="my-cashflow"><a href="my-income.html"><img class="my-cashflow-ico" src="../images/transparent.png"/>
+      <p>My Cashflow<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+            <li class="my-fin"><a href="#"><img class="my-fin-ico" src="../images/transparent.png"/><p>My Documents<span class="grad-border"><img src="../images/transparent.png"/></span></p></a></li>    <li class="my-rep"><a href="my-reports.html"><img class="my-rep-ico" src="../images/transparent.png"/>
+      <p>My Reports<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+<li class="my-acc"><a href="#"><img class="my-acc-ico" src="../images/transparent.png"/><p>My Account<span class="grad-border"><img src="../images/transparent.png"/></span></p></a></li>           
+     </ul><!-- end of "nav-menu" id -->  
+  
+  <div id="trapezoid" class="clearfix fr">
+    <p>Welcome&nbsp;<span> Mr. Parag Takalkar</span></p>
+  </div>
+  <div id="header-strip" class="fl">
+  
+    <h3 class="clearfix fl">FAQ'S</h3>
+    <img class="short-menu clearfix fr"  src="../images/transparent.png" />  
+    
+  </div>
+  
+  <!-- end of "header-strip" id -->
+  <div id="inner-shadow-strip"></div>
+  <!-- end of "inner-shadow-strip" id -->
+  <div class="clearfix"></div>
+  <div id="contents" class="clearfix">
+    <div id="faq" class="in_content clearfix"> 
+       
+         <div class="fl" id="question_category">
+         <ul class="reset clearfix cateogery_ul">
+         <li id="gen_ques" class="question_type">General Questions</li>
+         <li id="dc_ques" class="question_type">Data &amp; Client Confidentiality</li>
+         <li id="cost_ques" class="question_type">Costs</li>
+         <li id="serv_tec_ques" class="question_type">Services &amp; Technologies</li>
+         </ul>
+         
+         </div>
+         <div class="question_bx fr" id="details">
+         
+         <div id="accordion" class="category_accordian general_questions">
+  <h3><span class="question_no">Q<span class="count">1</span>.</span>What is the role of Axis Mutual Fund?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+
+  <h3><span class="question_no">Q<span class="count">2</span>.</span>What is the arrangement between Axis and Freedom? is it exclusive?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">3</span>.</span>Why Freedom? What are the credentialsof Freedom?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">4</span>.</span>Has Axis conducted a due diligence on Freedom?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">5</span>.</span>What did the due diligence involve?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">6</span>.</span>Why should i join this program?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+    <h3><span class="question_no">Q<span class="count">7</span>.</span>Why am i chosen to be part of this program?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+ 
+</div>
+
+       <!--<div id="accordion" class="category_accordian dc_confidentiality">
+  <h3><span class="question_no">Q<span class="count">1</span>.</span>What is the role of Axis Mutual Fund?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+
+  <h3><span class="question_no">Q<span class="count">2</span>.</span>What is the arrangement between Axis and Freedom? is it exclusive?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">3</span>.</span>Why Freedom? What are the credentialsof Freedom?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">4</span>.</span>Has Axis conducted a due diligence on Freedom?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">5</span>.</span>What did the due diligence involve?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">6</span>.</span>Why should i join this program?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+    <h3><span class="question_no">Q<span class="count">7</span>.</span>Why am i chosen to be part of this program?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+ 
+</div>
+
+       <div id="accordion" class="category_accordian costs">
+  <h3><span class="question_no">Q<span class="count">1</span>.</span>What is the role of Axis Mutual Fund?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+
+  <h3><span class="question_no">Q<span class="count">2</span>.</span>What is the arrangement between Axis and Freedom? is it exclusive?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">3</span>.</span>Why Freedom? What are the credentialsof Freedom?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">4</span>.</span>Has Axis conducted a due diligence on Freedom?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">5</span>.</span>What did the due diligence involve?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">6</span>.</span>Why should i join this program?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+    <h3><span class="question_no">Q<span class="count">7</span>.</span>Why am i chosen to be part of this program?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+ 
+</div> 
+
+
+        <div id="accordion" class="category_accordian services_tech">
+  <h3><span class="question_no">Q<span class="count">1</span>.</span>What is the role of Axis Mutual Fund?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+
+  <h3><span class="question_no">Q<span class="count">2</span>.</span>What is the arrangement between Axis and Freedom? is it exclusive?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">3</span>.</span>Why Freedom? What are the credentialsof Freedom?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">4</span>.</span>Has Axis conducted a due diligence on Freedom?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">5</span>.</span>What did the due diligence involve?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+  <h3><span class="question_no">Q<span class="count">6</span>.</span>Why should i join this program?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+  
+    <h3><span class="question_no">Q<span class="count">7</span>.</span>Why am i chosen to be part of this program?</h3>
+  <div class="clearfix">
+    <div class="fl type">A.</div>
+    <div class="fr ans">
+    <p class="txt">Axis Mutual Fund is empowering certian handpicked IFAs to establish their practise/ business in a professional, client centric, compliant &amp; progressive manner.  </p> 
+    </div>
+  </div>
+ 
+</div>-->
+         
+         </div>
+         
+      
+      
+      
+      <div class="question_bx fr" id="D_C_details">Data &amp; Client Confidentiality Details</div>
+      <div class="question_bx fr" id="Cost_details">Costs Details</div>
+      <div class="question_bx fr" id="Serv_Tec_details">Services &amp; Technology Details</div>
+                   
+        
+                
+       
+        
+         
+     
+    </div>
+    <!-- end of "inner-contents" id --> 
+  </div>
+  <!-- end of "contents" id -->
+  <footer id="footer"> <img src="../images/finfra-logo.png" /> <span class="copyright">Copyright © 2014 </span> <span class="privacy">Privacy Policy </span> </footer>
+</div>
+<!-- End of "wrapper" id -->
+</body>
+</html>

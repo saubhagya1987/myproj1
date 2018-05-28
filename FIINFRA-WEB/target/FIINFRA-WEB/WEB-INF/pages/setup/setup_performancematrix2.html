@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link href="../../../images/favicon.ico" rel="shortcut icon" />
+        <script src="../../../js/jquery-1.9.1.js"></script>
+        <script src="../../../js/jquery.ui.core.js"></script>
+        <script src="../../../js/jquery.ui.widget.js"></script>
+        <script src="../../../js/bootstrap.js"></script>
+        <link rel="stylesheet" href="../../../css/zebra_dialog.css" type="text/css">
+
+        <!-- -responsive css-->
+        <link href="../../../css/bootstrap.css" rel="stylesheet">
+        <link href="../../../css/partner_setup.css" rel="stylesheet">
+        <link href="../../../css/partner.css" rel="stylesheet">
+        <!-- -responsive css-->
+
+        <script src="../../../js/common.js"></script>
+        <script src="../../../js/pop.js"></script>
+
+        <link rel="stylesheet" href="../../../css/selectboxit.css" type="text/css" />
+        <script src="../../../js/selectboxit.js"></script>
+
+        <script src="https://www.google.com/jsapi"></script>
+
+        <link href="../../../css/custom2.css" rel="stylesheet">
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("select").selectBoxIt();
+            });
+
+            google.load("visualization", "1", {packages: ["corechart"]});
+            google.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable
+                        ([
+                            ['Quarter', 'Clients'],
+                            ['Q1 (2013-14)', 10],
+                            ['Q2 (2013-14)', 20],
+                            ['Q3 (2013-14)', 30],
+                            ['Q4 (2013-14)', 25],
+                            ['Q1 (2014-15)', 100],
+                        ]);
+
+                var options = {
+                    /* title: 'The decline of \'The 39 Steps\'',
+                     vAxis: {title: 'Accumulated Rating'},*/
+                    legend: {position: 'none'},
+                    colors: ['#952754'],
+                    isStacked: true
+                };
+
+                var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
+
+                chart.draw(data, options);
+            }
+        </script>
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <div class="container-head">
+                    <div class="col-md-12 text-right">
+                        <span class="pull-left">Partner Setup </span>
+                    </div>
+                </div>
+
+                <div class="container-body">
+
+                    <div class="col-md-12" style="margin-top:10px; padding-left:10px;" id="pnl-bv">
+                        <div class="list-group">
+                            <a href="" class="list-group-item active">Performance Matrix</a>
+                            <div class="list-group-item">
+                                <div class="row text-center">
+                                    <br/>
+                                    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row clearfix" id="permtrx_footer">
+                            <label class="form_label">
+                                Compare Your
+                            </label>
+                            <select class="bx col-lg-2">
+                                <option value="Zimmedari Meter Score">Zimmedari Meter Score</option>
+                                <option value="No. of Clients">No. of Clients</option>
+                                <option value="Goals Planned">Goals Planned</option>
+                                <option value="No. of action Plan Conversions">No. of action Plan Conversions</option>
+                                <option value="No. of SIP's">No. of SIP's</option>
+                                <option value="Serices/Product Classes Sold">Serices/Product Classes Sold</option>
+                                <option value="Total Investment Done">Total Investment Done</option>
+                            </select>
+                            <label class="form_label">with</label>
+                            <select class="bx">
+                                <option value="Best">Best</option>
+                                <option value="Average">Average</option>
+                            </select>
+                            <label class="form_label">in</label>
+                            <select class="bx">
+                                <option value="City">City</option>
+                                <option value="State">State</option>
+                                <option value="Class">Class</option>
+                                <option value="Category">Category</option>
+                            </select>
+                        </div>
+                        <br/><br/>
+                    </div>
+                </div></div>
+            <br/><br/>
+            <!-- Center part End -->
+
+            <footer style="position:fixed;bottom:0px;width:100%;z-index:40">
+                <div class="row">
+                    <div class="bottomstrip">
+                        <div class="container">
+                            <div id="powerby"><img src="../../../images/finfra_logo.png"> </div>
+                            <div style="margin: 15px 0 0 0;float: left;">
+                                <a target="_blank" style="color: white; padding-left: 80px;" href="https://www.facebook.com/axismfexpertslounge">
+                                    <img style="height: 25px; margin-left: 309px;" alt="" src="../../../images/facebook.png"> </a>
+                            </div>
+                            <div class="copyright">&copy;2014 FIINFRA Pvt. Ltd. All Rights Reserved.</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END login-form -->
+            </footer>
+        </section>
+    </body>
+</html>

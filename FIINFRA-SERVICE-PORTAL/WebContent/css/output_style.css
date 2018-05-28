@@ -1,0 +1,670 @@
+* { margin: 0; padding: 0; }
+@page { size:29.4cm 41.0cm; }
+html{height: 100%;}
+body { font: 14px/1.4 Calibri, Arial, Helvetica, Sans-serif; overflow-y: scroll; height: 100%}
+
+article, aside, figure, footer, header, nav, section { display: block; }
+
+.oneRowTable{
+	width: 100%;
+}
+.break{
+	margin-bottom: 5px;
+	text-align: justify;
+	margin-left: 10px;
+	font-family: Calibri, Arial, Helvetica, Sans-serif;
+	line-height: 26px;
+	margin-right: 10px;
+}
+.suggestion .break{
+	font-size: 12px !important;	
+}
+.suggestion{
+	font-size: 12px !important;	
+}
+.suggestion_text .break{
+	font-size: 12px !important;	
+}
+
+.group:before,
+.group:after {
+    content: "";
+} 
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1;
+}
+
+@font-face
+{
+font-family: aachen-bt;
+src: url("https://fi-i.com//Fiinfra/fonts/aachen-bt.ttf");
+}
+.specificGoal{
+	text-align:justify;
+	margin:20px;
+	font-size:16px;
+	line-height:20px;
+	font-family: aachen-bt;
+	src: url("https://fi-i.com//Fiinfra/fonts/aachen-bt.ttf");
+}
+body{
+	color: #666;
+}
+
+a img{
+	outline: none;
+	border: none;
+}
+
+a{
+	color:#0066FF;
+	text-decoration: none;
+}
+
+a:hover{
+	color:#006C30;
+	text-decoration: underline;
+}
+
+.center{
+	margin: 0px auto;
+}
+
+
+.output-body{	
+	width: 840px;
+	text-align: center;
+	
+}
+
+.current-sit .savings-pm{
+	float: left;
+	background: url("https://fi-i.com//Fiinfra/images/pf-op1/savings-pm.png") no-repeat;
+	padding-left: 70px;
+	height: 170px;
+    padding-right: 0;
+    padding-top: 60px;
+    width:50px;
+	 margin-top:30px;
+	
+	
+}
+.saving_text{
+	float:left;
+	font-size:18px;
+	margin-top:20px;}
+	
+.saving_textright{
+	font-size:18px;
+	margin-left: 300px;
+	margin-top:20px;
+	}
+
+.current-sit .pot-savings-pm{
+	background: url("https://fi-i.com//Fiinfra/images/pf-op1/pot-savings-pm.png") no-repeat scroll 18px 80px transparent;
+	float: right;
+	width: 129px;
+	height: 170px;
+	 margin-right: 20px;
+	 margin-top:30px;
+    padding-top: 60px;
+}
+
+#disclaimer{
+	width:650px;
+	display:block;
+	float:left;	
+	margin:10px 0 20px 20px;
+	font-size:11px;
+	color:#000;
+	text-align:left;
+	line-height:15px;
+
+}
+#powerby{
+	display:block;
+	float:right;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right: 51px;
+	}
+#disclaimer h2{
+color:#3a2493;
+font-size:20px;
+font-weight:bold;
+margin-bottom:10px;:
+}
+
+
+
+
+.small-pile{
+	float: left;
+	 padding-top: 20px;
+    width: 200px;
+	color:#000;
+	text-align:center;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+
+}
+
+
+#mainwrapper{
+	width:1000px;
+	background-color:#FFF;
+	height:1450px !important;
+	border: 1px solid;
+	
+	
+	}
+
+.output_header1{
+		float:left;	
+		background:url("https://fi-i.com//Fiinfra/images/pf-op1/output_header1.gif") no-repeat top right;
+		height:92px;
+		width:1000px;
+		margin:0px  0 0 0px;
+}
+.output_header_head{
+	float:right;
+	margin:55px 95px 0px 0px;	
+	font-weight:bold;
+	font-size:20px;
+	font-family:Calibri;
+	color:#ffffff;}
+	
+.mainleft{
+	float:left;
+	width:800px;
+	margin:30px 0 10px 10px;
+	text-align:center;
+
+}
+	
+#mainright{
+	width:129px;
+	float:left;
+	margin:10px 0px 10px 0;
+}
+table{
+width:90%;
+float:left;
+}
+.col_head{
+	width:300px;
+	color:#595654;
+	text-align:left;
+		font-family:Calibri, Arial, Helvetica, Sans-serif;}
+.col_head1{
+	width:200px;
+	color:#595654;
+	text-align:left;
+		font-family:Calibri, Arial, Helvetica, Sans-serif;}
+.col_headorange{
+	width:300px;
+	color:#595654;
+	text-align:left;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;}
+
+.col_alt{
+	background-color:#ecf5e1;}
+
+.col_alt_orange{
+	background-color:#eadad4; 
+	text-align:left;}
+
+	
+td{
+
+	height:20px;
+	border-bottom:#a1bc5c 1px solid;
+	border-right:#a1bc5c 1px solid;
+	text-align:left;
+	font-size:16px;
+	margin:7px;
+	color:#666767;
+	font-weight:normal;
+	padding:5px;
+	text-align:center;
+	width:48px;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	line-height:15px;
+		}
+.tdleft{
+	border-left:#a1bc5c 1px solid;}
+.tdtop{
+	border-top:#a1bc5c 1px solid;}
+.tdselected{
+	color:#FFFFFF;
+	background-color:#3a2493;}
+.tablehead{
+	background-color:#9fbb59;
+	color:#221e18;
+	height:63px;
+	font-weight:bold;
+	font-size:16px;
+	text-align:center;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	}
+.tableheadorange{
+	background-color:#e77817;
+	color:#fff;
+	font-weight:bold;
+	font-size:16px;
+	text-align:center;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	}
+.headcolorange{
+	background-color:#f9d2c3;
+	font-size:16px;
+	text-align:left;
+	color:#4a4645;
+	width:20%;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;}
+.headcol{
+	background-color:#d9dfce;
+	font-size:16px;
+	text-align:center;
+	color:#4a4645;
+	width:20%;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;}
+.lighttext{
+	color:#9f9f9c;
+}
+
+.output_header{
+		float:left;	
+		background:url("https://fi-i.com//Fiinfra/images/pf-op1/output_header.gif") no-repeat top right;
+		height:92px;
+		width:1000px;
+		margin:0px  0 0 0px;
+}	
+.mainbg{
+	float:left;
+	background:url("https://fi-i.com//Fiinfra/images/pf-op1/body-bg_1000_1.jpg") no-repeat top left;
+	height:1430px;
+	width:987px;
+	
+	border: 10px solid;
+	border-color: #3a2493;
+}
+
+#mainwrapper h1{
+	position:relative;
+	float:center;
+	top:374px;
+	text-align:center;
+	color:white;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+}
+
+#mainwrapper h3{
+	position:relative;
+	float:center;
+	top:431px;
+	text-align:center;
+	font-size:40px;
+	color:#FFF;
+	font:Calibri, Arial, Helvetica, Sans-serif;}
+
+#mainwrapper .box{
+	float:left;
+	margin:452px 470px 0 190px;
+	width:650px;
+	height:290px;
+	text-align:center;}
+
+.clientlogo{
+	margin-top:308px;
+	display:block;
+	float:left;
+	width:350px;
+	height:140px;
+	background-color:#fff;
+	text-align:left;
+	margin-left: 10px;
+	
+	
+
+}
+#clientname{
+	margin-top:308px;
+	display:block;
+	float:right;
+	width:330px;
+	height:140px;
+	
+	text-align:right;
+
+}
+
+#clientname h4{
+	color:#1b0866;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	margin:10px;
+	text-align:right;
+}
+
+#clientname h5{
+	color:#000;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	margin:10px;
+	text-align:right;
+}
+
+#clientname p{
+	color:#000;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	margin:10px;
+		text-align:right;
+}
+.clear{
+	clear:both;}
+
+.pf-op-body{
+	box-shadow: 1px 1px 6px #333;
+	background: #fff;
+	width: 1000px;
+	margin-bottom:30px;
+}
+.pf-op-container{
+	width: 90%;
+	font-family: Calibri, Arial, Helvetica, Sans-serif;
+}
+.pf-op-body .launch-anchors{
+	height: 380px;
+}
+
+.pf-op-body h1.pathfinder{
+	color: #fff;
+	font-family: Calibri, Arial, Helvetica, Sans-serif;
+	font-size: 40px;
+}
+
+.pathfinder-heading-susbtitle{
+	font-family: Calibri, Arial, Helvetica, Sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	color: #7f7f7f;
+	margin-top: -8px;
+	margin-bottom: 30px;
+}
+
+.pf-op-body h2{
+	color: #0070C0;
+	font-family: Calibri, Arial, Helvetica, Sans-serif;
+	font-size: 20px;
+	float: none;
+	background: none;
+}
+
+.pf-op-body h1{
+	color: #92D050;
+}
+
+.pf-op-body h3{
+	color: #7f7f7f;
+}
+
+.body-8-bg{
+	background: url("https://fi-i.com//Fiinfra/images/pf-op1/body-bg.png") no-repeat -70px -70px;
+}
+
+img.small-flower{
+	float: left;
+	margin-top: -170px;
+}
+
+.pf-op-body .left-top-title{
+	background: #92D050;
+	color:#fff;
+	padding-top: 25px;
+	padding-bottom: 15px;
+	text-align: center;
+	font-size: 18px;
+	width: 250px;
+	border-radius: 0 0 26px 26px;
+	margin-bottom: 20px;
+	font-family: aachen-bt;
+}
+
+.pf-op-body .first-take, .pf-op-body .current-sit, .pf-op-body .graphical-rep, .pf-op-body .suggestion{
+	height: 275px;
+	border: 2px dotted #C9D255;
+	float: left;
+	color: #000;
+}
+
+
+
+.pf-op-body .first-take{
+	width: 30%;
+}
+
+.pf-op-body .current-sit{
+	width: 68%;
+	margin-left:10px;
+}
+
+
+.pf-op-body .graphical-rep{
+	width: 58%;
+	margin-bottom:20px;
+	background: #C9D255;
+	color: #333;
+	margin-top:10px;
+}
+
+.pf-op-body .suggestion{
+	width: 40%;
+	margin-top:10px;
+	margin-left:10px;
+}
+
+.pf-op-body p.heading{
+	margin-top: 10px;
+	margin-bottom:10px;
+	color: #3a2493;
+	font-weight: bold;
+	font-size:20px;
+	text-align:center;
+	margin-left:10px;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+}
+
+#graphic_text{
+	text-align:justify;
+	margin:20px;
+	font-size:16px;
+	line-height:28px;
+}
+
+.pf-op-body .graphical-rep p.heading{
+	color: #3a2493;
+	text-align:center;
+	margin-left:5px;
+}
+
+.pf-op-body .graphical-rep h1.mainh1{
+float:left;
+	font-size:3em;
+	color:#333;}
+.red{
+color:red;}
+
+.pf-op-body .suggestion p.heading{
+	color: #3a2493;
+	margin-left:5px;
+	text-align:center;
+}
+
+.suggestion_text{
+	text-align:justify;
+	margin:10px;
+	font-size:16px;
+	line-height:28px;}
+	
+.current-sittext{
+	text-align:justify;
+	margin:10px;
+	font-size:16px;
+	line-height:18px;
+	color:red;}
+
+.coin-jars{
+position: relative;
+top: 20px;
+	}
+#coin-jars-text	{
+	margin-top:20px;
+	margin-left:180px;
+}
+#coin-jars-text	p{
+	float:left;
+	font-size:14px;
+	font-weight:bold;}
+
+.coin-jars-text1{
+	
+	margin-left:50px;
+
+}
+.personal_text{
+
+	font-size:18px;
+	text-align:center;
+	color:#FF6600;}
+.border{
+	border:none;
+	text-align:left;
+
+}
+.loanimg{
+	float:left;
+	margin-left:40px;
+	
+}
+
+.loantext{
+float:left;
+	padding-left: 30px;
+    padding-top: 70px;
+    width: 202px;
+	text-align:left;
+}
+
+.container {
+	margin-left: 28%;
+}
+
+
+.small-font{
+font-size: 14px !important;
+}
+.first-take,.mainleft,.graphical-rep{
+margin-left: 20px;
+}
+.outputfooter{
+	float:left;
+	height:91px;
+	width:980px;
+	margin:5px 0 0 10px;
+}
+.outputfooter1{
+
+	background:url(https://fi-i.com//Fiinfra/images/pf-op1/output_footer_1.png) no-repeat top right;
+	float:left;
+	height:89px;
+	width:782px;
+	margin:0;
+}
+.outputfooter2{
+
+	float:left;
+	height:89px;
+	width:166px;
+	margin:0;
+}
+
+
+.output_header_mainhead{
+	float:right;
+	margin:50px 95px 0px 0px;	
+	font-weight:bold;
+	font-size:30px;
+	font-family:Calibri;
+	color:#ffffff;}
+	
+.left{
+	float:left;
+	width:50%;
+	margin:0 15px;
+}
+.left .heading{
+	margin: 10px;
+
+	color: #3a2493;
+	font-weight: bold;
+	font-size:20px;
+	text-align:left;/*urmila*/
+
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+}
+.right .heading{
+	margin: 10px;
+
+	color: #3a2493;
+	font-weight: bold;
+	font-size:20px;
+	text-align:left;
+
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+}
+#text{
+	text-align:justify;
+	margin:0px 0 0 45px;
+	font-size:18px;
+	line-height:20px;
+}
+
+.left .text ul{
+	margin:0;
+	padding:0;
+	list-style:disc;}
+.left .text ul li{
+	margin:0;
+	padding:0;
+	list-style:disc;}
+.right{
+	float:left;
+	width:45%;
+		margin:0 0 0 5px;
+		}
+
+
+.line{
+
+float:left;
+width:98%;
+margin:0 5px;}
+#textnew{
+	text-align:justify;
+	margin:0px 0 0 20px;
+	font-size:18px;
+	line-height:20px;
+}
+
+#textnew ul{
+margin:0px; 
+
+	padding:0;
+	list-style:none}
+#textnew ul li{
+		margin:0;
+	padding:0 0 0 2px;
+	}
+.rightspace{
+margin:0 10px 0 0;}

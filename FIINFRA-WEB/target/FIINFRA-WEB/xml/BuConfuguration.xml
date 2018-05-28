@@ -1,0 +1,62 @@
+<BuConfiguration>
+	<Bu Id="27827">
+		<Section Name="Advertisement In Dc Input">
+			<!--<Configuration isImagePath="1" ImagePath="images/shubhachintak/dcad1.jpg" isUrl="0" Url="">
+			</Configuration>-->
+			<Configuration isImagePath="0" ImagePath="" isUrl="0" Url="">
+			</Configuration>
+		</Section>
+		<Section Name="Footer Facebook Url">
+			<Configuration  isImagePath="1" ImagePath="/images/facebook.png" isUrl="1" Url="https://www.facebook.com/axismfexpertslounge">
+			</Configuration>
+		</Section>
+		<Section Name="Top Section-Landing page">
+			<Configuration  isImagePath="1" ImagePath="" isUrl="0" Url="">
+			</Configuration>
+		</Section>	
+	</Bu>
+	<Bu Id="27828">
+		<Section Name="Advertisement In Dc Input">
+			<!--<Configuration isImagePath="1" ImagePath="images/dcad1.jpg" isUrl="0" Url="">
+			</Configuration>-->
+			<Configuration isImagePath="0" ImagePath="" isUrl="0" Url="">
+			</Configuration>
+		</Section>
+		<Section Name="Footer Facebook Url">
+			<Configuration isImagePath="1" ImagePath="/images/facebook.png" isUrl="1" Url="https://www.facebook.com">
+			</Configuration>
+		</Section>
+		<Section Name="Top Section-Landing page">
+			<Configuration isImagePath="0" ImagePath="" isUrl="0" Url="">
+			</Configuration>
+		</Section>
+	</Bu>
+	<Bu Id="27829">
+		<Section Name="Advertisement In Dc Input">
+			<Configuration  isImagePath="0" ImagePath="" isUrl="0" Url="">
+			</Configuration>
+		</Section>
+		<Section Name="Footer Facebook Url">
+			<Configuration  isImagePath="1"  ImagePath="/images/facebook.png" isUrl="1" Url="https://www.facebook.com">
+			</Configuration>
+		</Section>
+		<Section Name="Top Section-Landing page">
+			<Configuration  isImagePath="0"  ImagePath="" isUrl="0" Url="">
+			</Configuration>
+		</Section>
+	</Bu>
+	<Bu Id="27830">
+		<Section Name="Advertisement In Dc Input">
+			<Configuration  isImagePath="0"  ImagePath="" isUrl="0" Url="">
+			</Configuration>
+		</Section>
+		<Section Name="Footer Facebook Url">
+			<Configuration   isImagePath="1"  ImagePath="/images/facebook.png" isUrl="0" Url="https://www.facebook.com">
+			</Configuration>
+		</Section>
+		<Section Name="Top Section-Landing page">
+			<Configuration  isImagePath="0"  ImagePath="" isUrl="0" Url="">
+			</Configuration>
+		</Section>
+	</Bu>
+</BuConfiguration>

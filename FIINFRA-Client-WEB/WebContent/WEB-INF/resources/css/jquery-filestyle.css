@@ -1,0 +1,20 @@
+/*
+ * jquery-filestyle
+ * http://dev.tudosobreweb.com.br/jquery-filestyle/
+ *
+ * Copyright (c) 2013 Markus Vinicius da Silva Lima
+ * Version 0.1.3
+ * Licensed under the MIT license.
+ */
+.jquery-filestyle { /*display: inline-block; */*display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+margin: 0 0 10px; padding: 0; }
+div.jquery-filestyle label, div.jquery-filestyle input[type=text][disabled] { font-family: sans-serif; }
+div.jquery-filestyle input[type=text][disabled] { margin: 0; vertical-align: middle; margin-bottom: 10px; height: 16px;border: 1px solid #A44B6F; -moz-box-shadow: 0 0 5px 0 #B0B0B0 inset; -webkit-box-shadow: 0 0 5px 0 #B0B0B0 inset; box-shadow: 0 0 5px 0 #B0B0B0 inset /*0px 1px 0px 0px #8C8C8C inset*/; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; padding: 5px 4px 5px 9px; font-family: "allerregular"; color: #7A7A7A; font-size: 15px !important; padding:7px; background:#fff }
+div.jquery-filestyle label { display: inline-block; *display: inline;/* IE7 inline-block hack */
+*zoom: 1;padding: 5px 12px; vertical-align: middle; line-height: 20px;margin:0 0px 15px 20px; width: auto; color: #FFF; font-size: 15px; font-family: "Aller Bold"; border: 1px solid #FFF; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow:0px 0px 5px 0px #2D2D2D; -webkit-box-shadow:0px 0px 5px 0px #2D2D2D; box-shadow: 0px 0px 5px 0px #2D2D2D; cursor: pointer; text-align: center; background: #BA385A; background: -moz-linear-gradient(top, rgba(186, 56, 90, 1) 0%, rgba(233, 105, 157, 1) 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #BA385A), color-stop(100%, #E9699D)); background: -webkit-linear-gradient(top, #BA385A 0%, #E9699D 100%); background: -o-linear-gradient(top, rgba(186, 56, 90, 1) 0%, rgba(233, 105, 157, 1) 100%); background: -ms-linear-gradient(top, rgba(186, 56, 90, 1) 0%, rgba(233, 105, 157, 1) 100%); background: linear-gradient(to bottom, #BA385A 0%, #E9699D 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba385a', endColorstr='#e9699d', GradientType=0 );
+}
+div.jquery-filestyle label:active { background: #BA8794; background: -moz-linear-gradient(top, rgba(186, 135, 148, 1) 0%, rgba(187, 63, 94, 1) 59%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #BA8794), color-stop(59%, #BB3F5E)); background: -webkit-linear-gradient(top, #BA8794 0%, #BB3F5E 59%); background: -o-linear-gradient(top, rgba(186, 135, 148, 1) 0%, rgba(187, 63, 94, 1) 59%); background: -ms-linear-gradient(top, rgba(186, 135, 148, 1) 0%, rgba(187, 63, 94, 1) 59%); background: linear-gradient(to bottom, #BA8794 0%, #BB3F5E 59%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba8794', endColorstr='#bb3f5e', GradientType=0 );
+}

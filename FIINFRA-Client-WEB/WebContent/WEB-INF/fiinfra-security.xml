@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns:security="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+ 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+ 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	
+	<context:annotation-config/>
+	<context:component-scan base-package="in.fiinfra"/>
+	
+	
+ 	<security:http pattern="/resources/**" security="none" />
+	
+<security:http pattern="/app/images/**" security="none" />
+	
+
+	<security:http pattern="/**" use-expressions="true" auto-config="false"
+		entry-point-ref="authEntryPoint">
+		<security:intercept-url pattern="/**"
+			access="hasAnyRole('Admin','Partner','Member','RNA','PST','Client','Lead')" />
+		<security:custom-filter position="PRE_AUTH_FILTER" ref="authFilter"/>
+		<security:logout invalidate-session="true" logout-url="/sign-out" success-handler-ref="cpLogoutSuccessHandler" />
+		 
+	</security:http>
+ 
+ 	<beans:bean id="cpLogoutSuccessHandler"		class="in.fiinfra.auth.ctrl.CPLogoutHandler" />
+	
+	<beans:bean id="authEntryPoint"		class="in.fiinfra.auth.ctrl.AuthEntryPoint" />
+
+	<!-- Filter for REST services. -->
+	<beans:bean id="authFilter"
+		class="in.fiinfra.auth.ctrl.PreAuthFilter">
+		 <beans:property name="principalRequestHeader" value="token"/>
+		<beans:property name="authenticationManager" ref="authenticationManager" />
+	</beans:bean>	
+	
+	<beans:bean id="preauthAuthProvider" class="in.fiinfra.auth.ctrl.AuthProvider">
+        <beans:property name="preAuthenticatedUserDetailsService">
+            <beans:bean id="userDetailsServiceWrapper"  class="org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper">
+                <beans:property name="userDetailsService" ref="userService"/>
+            </beans:bean>
+        </beans:property>
+    </beans:bean>
+
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider
+			ref="preauthAuthProvider">
+		</security:authentication-provider>
+	</security:authentication-manager>
+		
+</beans:beans>

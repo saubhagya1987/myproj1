@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Goals - My Dreams</title>
+<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+$(document).ready(function(){
+createSlider('#travel_slider',0,100,1,'#travel_slider_value');
+createSlider('#car_slider',0,100,1,'#car_slider_value');
+createSlider('#education_slider',0,100,1,'#education_slider_value');
+createSlider('#business_slider',0,100,1,'#business_slider_value');
+createSlider('#property_slider',0,100,1,'#property_slider_value');
+createSlider('#spcial_goal_slider',0,100,1,'#spcial_goal_slider_value');  
+/*** Common Function For Value Slider Starts ***/
+
+function createSlider(ctrlName, minVal, maxVal, stepBy, ctrlTextBox) {
+ 
+    $(ctrlName).slider({
+        min: minVal,
+        max: maxVal,
+        step: stepBy,
+        slide: function (event, ui) {
+            $(ctrlTextBox).text(ui.value);
+			
+        }
+    });
+     $(ctrlTextBox).text($(ctrlName).slider("value"));
+	
+}
+
+/*** Common Function For Value Slider Ends ***/
+});
+</script>
+<style>
+/***Custom Fonts Strats***/
+@font-face {
+ font-family: 'open_sanslight';
+ src: url('fonts/opensans-light-webfont.eot');
+ src: url('fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-light-webfont.woff') format('woff'), url('fonts/opensans-light-webfont.ttf') format('truetype'), url('fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+font-family:"Aller Bold";
+src:url("fonts/Aller_Bd.eot?") format("eot"), url("fonts/Aller_Bd.woff") format("woff"), url("fonts/Aller_Bd.ttf") format("truetype"), url("fonts/Aller_Bd.svg#Aller-Bold") format("svg");
+font-weight:normal;
+font-style:normal;
+}
+ @font-face {
+ font-family: 'allerregular';
+ src: url('fonts/aller_rg-webfont.eot');
+ src: url('fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/aller_rg-webfont.woff') format('woff'), url('fonts/aller_rg-webfont.ttf') format('truetype'), url('fonts/aller_rg-webfont.svg#allerregular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: 'alleritalic';
+ src: url('fonts/aller_it-webfont.eot');
+ src: url('fonts/aller_it-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/aller_it-webfont.woff') format('woff'), url('fonts/aller_it-webfont.ttf') format('truetype'), url('fonts/aller_it-webfont.svg#alleritalic') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+ @font-face {
+ font-family: 'open_sansregular';
+ src: url('fonts/opensans-regular-webfont.eot');
+ src: url('fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-regular-webfont.woff') format('woff'), url('fonts/opensans-regular-webfont.ttf') format('truetype'), url('fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: 'open_sansbold';
+ src: url('fonts/opensans-bold-webfont.eot');
+ src: url('fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-bold-webfont.woff') format('woff'), url('fonts/opensans-bold-webfont.ttf') format('truetype'), url('fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+/***Custom Fonts Ends***/
+/***Common Css Starts***/
+/* Basic Css Strats*/
+/****************************************************************************************************
+
+* Filename: basic.css
+
+****************************************************************************************************/
+
+/* GLOBAL RESET 
+
+**********************************************************/
+
+body, h1, h2, h3, h4, h5, h6, p { margin:0; line-height:1 }
+input[type="radio"], input[type="checkbox"] { margin:0; vertical-align:-2px }
+a:link, a:active, a:visited { text-decoration:none }
+a:active, a:focus, textarea:focus, input:focus { outline: none }
+textarea { overflow:auto; resize:none }
+img { border:none }
+table { border-collapse:collapse; border-spacing:0; table-layout:fixed }
+/* INDIVIDUAL RESETs
+
+**********************************************************/
+
+.reset { list-style:none; padding:0; margin:0 }
+.nomargin { margin:0 }
+.nopadding { padding:0!important }
+/* ALIGN CENTER
+
+**********************************************************/
+
+.equalgap { margin:0 auto }
+/* FLOATS
+
+**********************************************************/
+
+.fl { float:left }
+.fr { float:right }
+.fn { float:none }
+/* CLEAR FLOAT
+
+**********************************************************/
+
+.clearfix:after { content:"\0020"; display:block; height:0; clear:both; visibility:hidden; overflow:hidden }
+.clr { clear:both; overflow:hidden; height:0 }
+/* WIDTH 100% 
+
+**********************************************************/
+
+.fullwid { width:100% }
+/* DISPLAYs, POSITIONs & OVERFLOWs 
+
+**********************************************************/
+
+.inline { display:inline }
+.ovfl-hidden { overflow:hidden }
+.rel { position:relative }
+.absolute { position:absolute }
+.absoluted > * { position:absolute }
+.inlineBlock { display:inline-block }
+.hide-elem { display:none !important }
+/* ALL TEXT CSS
+
+**********************************************************/
+
+/* font SIZES */
+
+.vsmlTxt { font-size:10px }
+.smlTxt { font-size:11px }
+.paraTxt { font-size:12px }
+.bigTxt { font-size:14px }
+/*font WEIGHTS */
+
+.strong { font-weight:bold }
+.normTxt { font-weight:normal }
+/* text TRANSFORMS */
+
+.allCaps { text-transform:capitalize }
+.upperCase { text-transform:uppercase }
+.underlined { text-decoration:underline }
+/* text ALIGN & content ALIGN for inline level ELEMENTS */
+
+.centerAll { text-align:center }
+.leftAlign { text-align:left }
+.rightAlign { text-align:right }
+.justified { text-align:justify }
+/* Basic Css Ends*/
+.wrapper { width:792px; margin:0 auto; height:1124px; color:#3a3a3a; font-family: 'allerregular'; }
+.header { height:65px; background:#1d87bd url(images/header_pattern.png) no-repeat center right }
+.desc_heading { background: #FFF; width: 366px; height: 50px; margin: 7px 0 0; border-radius: 0 30px 30px 0; -moz-border-radius: 0 30px 30px 0; -webkit-border-radius: 0 30px 30px 0; }
+.content { height:1041px }
+.footer { height:18px; background:#c0c0c0 }
+.page_heading { color: #FFF; font-size: 23px; font-family: "Aller Bold"; line-height: 63px; text-align: center; width: 393px; text-shadow: 1px 2px 1px #0B2B3C; }
+.footer { font-size:12px; font-family: "Aller Bold"; line-height: 19px; }
+.footer .footer_tagline { margin:0 0 0 22px; }
+.page_no { margin:0 26px 0 0; }
+/***Common Css Ends***/
+/***Goals My Dreams Starts***/
+.ifa_head_logo { height: 47px; margin: 1px; width:auto; overflow:hidden; display: inline-block }
+.ifa_head_logo img { max-height:100%; width:auto; }
+.head_txt2 { color: #1D87BD; font-size: 23px; font-family: "Aller Bold"; display: inline-block; margin: 0 0 0 14px; vertical-align: 12px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width:298px; text-align:center }
+#goals_my_dreams { font-family: "Aller Bold"; }
+#goals_my_dreams .box1 {min-height: 622px;}
+#goals_my_dreams .goal_ul li { width:254px; margin: 77px 0 0; }
+#goals_my_dreams .goal_cat { font-size:12px; margin:0 0 10px 0; text-align:center; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width:100%; }
+#goals_my_dreams .goal_cat .specific { color:#1d87bd }
+#goals_my_dreams .goal_asset_desc .goal_val { width:106px; height:88px; background:#9cbc01; margin:0 15px 0 0; -moz-border-radius: 55px 0 0 55px; -webkit-border-radius: 55px 0 0 55px; border-radius: 55px 0 0 55px; -moz-box-shadow: -1px 2px 2px 0px #6C6C6C; -webkit-box-shadow: -1px 2px 2px 0px #6C6C6C; box-shadow: -1px 2px 2px 0px #6C6C6C; }
+#goals_my_dreams .goal_asset_desc .asset_val { width:106px; height:88px; background:#368ebc; margin:0 0 0 15px; -moz-border-radius:0 55px 55px 0; -webkit-border-radius:0 55px 55px 0; border-radius:0 55px 55px 0; -moz-box-shadow: 1px 2px 2px 0px #6C6C6C; -webkit-box-shadow: 1px 2px 2px 0px #6C6C6C; box-shadow: 1px 2px 2px 0px #6C6C6C; }
+#goals_my_dreams .goal_asset_desc .goal_val .heading { font-size:10px; text-align:center; margin: 6px 0 0; }
+#goals_my_dreams .goal_asset_desc .asset_val .heading { color:#fff; font-size:10px; text-align:center; margin: 6px 0 0; }
+#goals_my_dreams .goal_asset_desc .goal_value { font-size: 20px; width: 40px; margin:21px 0 0 23px; text-align: center; border-bottom: 1px dashed; padding: 0 0 1px 0; }
+#goals_my_dreams .goal_asset_desc .goal_value:after { content: "lac"; position: absolute; font-size: 12px; top: 3px; right: -18px; }
+#goals_my_dreams .goal_asset_desc .goal_value:before { content: ""; background: url(images/black_rupee.png) no-repeat center center; width: 8px; height: 11px; top: 4px; left: -10px; display: block; position: absolute; }
+#goals_my_dreams .goal_asset_desc .asset_value { font-size: 20px; width: 40px; margin:21px 0 0 44px; text-align: center; border-bottom: 1px dashed; padding: 0 0 1px 0; color:#fff }
+#goals_my_dreams .goal_asset_desc .asset_value:after { content: "lac"; position: absolute; font-size: 12px; top: 3px; right: -18px; color:#fff }
+#goals_my_dreams .goal_asset_desc .asset_value:before { content: ""; background: url(images/white_ruppe.png) no-repeat center center; width: 8px; height: 11px; top: 4px; left: -11px; display: block; position: absolute; }
+#goals_my_dreams .goal_detal .goal_logo_year { height:69px; width:69px; background: #3A3A3A; position: absolute; margin: 0; top: 9px; left: 91px; -moz-border-radius: 41px; -webkit-border-radius: 41px; border-radius: 41px; -moz-box-shadow: 0px 0px 0px 4px #FFF; -webkit-box-shadow: 0px 0px 0px 4px #FFF; box-shadow: 0px 0px 0px 4px #FFF; }
+#goals_my_dreams .goal_detal .goal_logo_year .year { text-align: center; color: #FFF; margin: 47px 0 0; font-size: 13px; }
+#goals_my_dreams .goal_detal .goal_logo_year.travel_logo { background:#3A3A3A url(images/travel_goal.png) no-repeat center 7px }
+#goals_my_dreams .goal_detal .goal_logo_year.car_logo { background:#3A3A3A url(images/car_goal.png) no-repeat center 7px }
+#goals_my_dreams .goal_detal .goal_logo_year.edu_logo { background:#3A3A3A url(images/education_goal.png) no-repeat center 7px }
+#goals_my_dreams .goal_detal .goal_logo_year.business_logo { background:#3A3A3A url(images/business_goal.png) no-repeat center 7px }
+#goals_my_dreams .goal_detal .goal_logo_year.property_logo { background:#3A3A3A url(images/property_goal.png) no-repeat center 7px }
+#goals_my_dreams .goal_detal .goal_logo_year.spcial_logo { background:#3A3A3A url(images/special_goal.png) no-repeat center 7px }
+#goals_my_dreams .goal_detal .slider_parent { width: 174px; margin: 4px auto 0; }
+#goals_my_dreams .goal_detal .goal_slider { /*background: url(images/slider_bg.png) no-repeat center center;*/ width: 141px; height: 20px; border: none; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; position:relative }
+#goals_my_dreams .goal_detal .goal_slider:after { content:""; display:block; width: 157px; height: 20px; position:absolute; background: url(images/slider_bg.png) no-repeat center center; left: -14px; }
+#goals_my_dreams .goal_detal .ui-slider .ui-slider-handle {
+background url(../images/slider_button.png) no-repeat; height: 8px; width: 8px; border: none; -moz-box-shadow: 0px 1px 2px 0px #000; -webkit-box-shadow: 0px 1px 2px 0px #000; box-shadow: 0px 1px 2px 0px #000; top: 7px !important; }
+#goals_my_dreams .goal_detal .goal_slider_value { font-size:12px; border:none; font-family: "Aller Bold"; width: 22px; position:relative; margin:4px 0 0 10px; }
+#goals_my_dreams .goal_detal .goal_slider_value:after { content: "%"; display: block; position: absolute; color: #3A3A3A; top: 0; right:-13px; font-size: 12px; }
+#goals_my_dreams .goal_detal .result_stat { border:3px solid #3a3a3a; -moz-border-radius: 19px; -webkit-border-radius: 19px; border-radius: 19px; width: 87%; margin: 0 auto; }
+#goals_my_dreams .goal_detal .result_stat .paraTxt { margin:2px 0 2px 0; font-size:11px }
+#goals_my_dreams .goal_detal .result_stat .invst_txt { font-size:8px }
+#goals_my_dreams .goal_detal .result_stat .reg_invesment { width:49%; border-right:1px solid #bddcec; height: 60px; }
+#goals_my_dreams .goal_detal .result_stat .one_time_invesment { width:50%; height: 60px; }
+#goals_my_dreams .goal_detal .result_stat .amount { font-size:12px; margin:15px 0 3px 0; position:relative }
+#goals_my_dreams .goal_detal .result_stat .amount .val:before { content: ""; display: block; position: absolute; background: url(images/black_rupee.png) no-repeat center center; width: 8px; height: 11px; left: -10px; top: 3px; }
+#goals_my_dreams .goal_detal .result_stat .thumb_status { width:56px; border-top:1px solid #3a3a3a; -moz-border-radius: 12px 0 0 0; -webkit-border-radius:12px 0 0 0; border-radius: 12px 0 0 0; }
+#goals_my_dreams .goal_detal .result_stat .txt_status { background:#f0f0f0; border-top:1px solid #3a3a3a; border-left:1px solid #3a3a3a; width:163px; font-size:10px; line-height:18px; color:#000; -moz-border-radius: 0 0 18px 0; -webkit-border-radius: 0 0 18px 0; border-radius: 0 0 18px 0; }
+#goals_my_dreams .goal_detal .result_stat .thumb_status.achievable { background:url(images/thumb_up.png) no-repeat center center; height: 18px; }
+#goals_my_dreams .goal_detal .result_stat .thumb_status.partially_achievable { background:url(images/partial_achivable.png) no-repeat center center; height: 18px; }
+#goals_my_dreams .goal_detal .result_stat .thumb_status.not_achievable { background:url(images/not_achivable.png) no-repeat center center; height:18px }
+#goals_my_dreams .final_summary .container { background:#f4f4f4; border:1px solid #368ebc; min-height:241px; width:190px; -moz-border-radius: 100px 100px 0 0; -webkitborder-radius: 100px 100px 0 0; border-radius: 100px 100px 0 0; -moz-box-shadow: 0px 2px 0px 0px #999; -webkit-box-shadow: 0px 2px 0px 0px #999; box-shadow: 0px 2px 0px 0px #999; padding:10px }
+#goals_my_dreams .final_summary > li { margin: 0 26px 0; }
+#goals_my_dreams .report { margin: 137px 0 0; }
+.theme_color { color:#1D87BD }
+#goals_my_dreams .report .second p.txt1 { line-height: 30px; margin: 54px 0 0; text-align: center; font-size: 12px; }
+#goals_my_dreams .report .third p { line-height: 30px; text-align: center; font-size: 12px; }
+#goals_my_dreams .report .third p.txt1 { margin:38px 0 0; line-height: 18px; }
+#goals_my_dreams .report .third p.txt2 { line-height: 14px; text-align: left; margin: 11px 0 0; }
+#goals_my_dreams .report .third .asset_combo li { margin: 3px 0; list-style: disc; }
+#goals_my_dreams .report .third .asset_combo { margin: 3px 0 0 14px; list-style: disc; }
+#goals_my_dreams .report .first .money_flow { font-size: 12px; margin: 41px 0 0; text-align: center; }
+#goals_my_dreams .report .first .money_flow li { line-height:20px; }
+#goals_my_dreams .report .first .money_flow li .rs_symbol { display: inline-block; background: url(images/black_rupee.png) no-repeat center center; width: 8px; height: 11px; margin: 0px 1px 0 3px; vertical-align: -2px; }
+#goals_my_dreams .report .first .investment .heading { background: #343434; border-top: 1px solid #AEAEAE; border-bottom: 1px solid #AEAEAE; margin: 0 0 0 -10px; width: 210px; color: #FFF; font-size: 16px; text-align: center; height: 22px; line-height: 21px; }
+#goals_my_dreams .report .first .running { width:50%; text-align:left; font-size:12px }
+#goals_my_dreams .report .first .reqiured { width:50%; text-align:right; font-size:12px }
+#goals_my_dreams .report .first .investment p { line-height: 24px; }
+#goals_my_dreams .report .first .investment { border-bottom: 1px solid #898989; -moz-box-shadow:0px 2px 5px 1px #A8A8A8; -webkit- box-shadow:0px 2px 5px 1px #A8A8A8;
+box-shadow:0px 2px 5px 1px #A8A8A8; width: 189px; margin: 20px 0 0 -10px; padding: 0 10px; }
+/***Goals My Dreams Ends***/
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="header clearfix">
+    <div class="desc_heading fl">
+      <div class="ifa_head_logo"><img src="images/ifa_head_logo.png"/></div>
+      <h2 class="head_txt2">Sachin R. Tendulkar</h2>
+    </div>
+    <h1 class="page_heading fr">Goals - My Dreams</h1>
+  </div>
+  <div class="content" id="goals_my_dreams">
+    <div class="box1 goals">
+      <div class="grid_adjuster">
+        <ul class="reset clearfix goal_ul">
+     <!--     <li class="fl">
+            <div class="goal_detal">
+              <h3 class="goal_cat"><span class="main_cat">Travel</span> - <span class="specific">World Tour</span></h3>
+              <div class="goal_asset_desc rel clearfix">
+                <div class="goal_val fl">
+                  <h5 class="heading">Goal Value</h5>
+                  <div class="value goal_value rel">100</div>
+                </div>
+                <div class="goal_logo_year travel_logo">
+                  <div class="year">2107</div>
+                </div>
+                <div class="asset_val fl">
+                  <h5 class="heading">Asset Value</h5>
+                  <div class="value asset_value rel">100</div>
+                </div>
+              </div>
+              <div class="slider_parent clearfix">
+                <div class="goal_slider fl" id="travel_slider"></div>
+                <div class="fr goal_slider_value" id="travel_slider_value"></div>
+              </div>
+              <div class="result_stat">
+                <p class="centerAll paraTxt">Investment Required to Achieve Goal</p>
+                <div class="fl reg_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">Regular Investment</p>
+                </div>
+                <div class="fr one_time_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">One time Investment</p>
+                </div>
+                <div class="clr">&nbsp;</div>
+                <div class="quick_status clearfix">
+                  <div class="fl achievable thumb_status"></div>
+                  <div class="fr centerAll txt_status">Can Achieve</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="fl">
+            <div class="goal_detal">
+              <h3 class="goal_cat"><span class="main_cat">Car</span> - <span class="specific">Car for Myself </span></h3>
+              <div class="goal_asset_desc rel clearfix">
+                <div class="goal_val fl">
+                  <h5 class="heading">Goal Value</h5>
+                  <div class="value goal_value rel">100</div>
+                </div>
+                <div class="goal_logo_year car_logo">
+                  <div class="year">2107</div>
+                </div>
+                <div class="asset_val fl">
+                  <h5 class="heading">Asset Value</h5>
+                  <div class="value asset_value rel">100</div>
+                </div>
+              </div>
+              <div class="slider_parent clearfix">
+                <div class="goal_slider fl" id="car_slider"></div>
+                <div class="fr goal_slider_value" id="car_slider_value"></div>
+              </div>
+              <div class="result_stat">
+                <p class="centerAll paraTxt">Investment Required to Achieve Goal</p>
+                <div class="fl reg_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">Regular Investment</p>
+                </div>
+                <div class="fr one_time_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">One time Investment</p>
+                </div>
+                <div class="clr">&nbsp;</div>
+                <div class="quick_status clearfix">
+                  <div class="fl partially_achievable thumb_status"></div>
+                  <div class="fr centerAll txt_status">Partially Achieve</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="fl">
+            <div class="goal_detal">
+              <h3 class="goal_cat"><span class="main_cat">Education</span> - <span class="specific">Medical for Sonali</span></h3>
+              <div class="goal_asset_desc rel clearfix">
+                <div class="goal_val fl">
+                  <h5 class="heading">Goal Value</h5>
+                  <div class="value goal_value rel">100</div>
+                </div>
+                <div class="goal_logo_year edu_logo">
+                  <div class="year">2107</div>
+                </div>
+                <div class="asset_val fl">
+                  <h5 class="heading">Asset Value</h5>
+                  <div class="value asset_value rel">100</div>
+                </div>
+              </div>
+              <div class="slider_parent clearfix">
+                <div class="goal_slider fl" id="education_slider"></div>
+                <div class="fr goal_slider_value" id="education_slider_value"></div>
+              </div>
+              <div class="result_stat">
+                <p class="centerAll paraTxt">Investment Required to Achieve Goal</p>
+                <div class="fl reg_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">Regular Investment</p>
+                </div>
+                <div class="fr one_time_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">One time Investment</p>
+                </div>
+                <div class="clr">&nbsp;</div>
+                <div class="quick_status clearfix">
+                  <div class="fl not_achievable thumb_status"></div>
+                  <div class="fr centerAll txt_status">Can Not Achieve</div>
+                </div>
+              </div>
+            </div>
+          </li>
+         
+     <li class="fl">
+            <div class="goal_detal">
+              <h3 class="goal_cat"><span class="main_cat">Business</span> - <span class="specific">Gold Import-Export</span></h3>
+              <div class="goal_asset_desc rel clearfix">
+                <div class="goal_val fl">
+                  <h5 class="heading">Goal Value</h5>
+                  <div class="value goal_value rel">100</div>
+                </div>
+                <div class="goal_logo_year business_logo">
+                  <div class="year">2107</div>
+                </div>
+                <div class="asset_val fl">
+                  <h5 class="heading">Asset Value</h5>
+                  <div class="value asset_value rel">100</div>
+                </div>
+              </div>
+              <div class="slider_parent clearfix">
+                <div class="goal_slider fl" id="business_slider"></div>
+                <div class="fr goal_slider_value" id="business_slider_value"></div>
+              </div>
+              <div class="result_stat">
+                <p class="centerAll paraTxt">Investment Required to Achieve Goal</p>
+                <div class="fl reg_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">Regular Investment</p>
+                </div>
+                <div class="fr one_time_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">One time Investment</p>
+                </div>
+                <div class="clr">&nbsp;</div>
+                <div class="quick_status clearfix">
+                  <div class="fl achievable thumb_status"></div>
+                  <div class="fr centerAll txt_status">Can Achieve</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="fl">
+            <div class="goal_detal">
+              <h3 class="goal_cat"><span class="main_cat">Property</span> - <span class="specific">My Dream Bunglow</span></h3>
+              <div class="goal_asset_desc rel clearfix">
+                <div class="goal_val fl">
+                  <h5 class="heading">Goal Value</h5>
+                  <div class="value goal_value rel">100</div>
+                </div>
+                <div class="goal_logo_year property_logo">
+                  <div class="year">2107</div>
+                </div>
+                <div class="asset_val fl">
+                  <h5 class="heading">Asset Value</h5>
+                  <div class="value asset_value rel">100</div>
+                </div>
+              </div>
+              <div class="slider_parent clearfix">
+                <div class="goal_slider fl" id="property_slider"></div>
+                <div class="fr goal_slider_value" id="property_slider_value"></div>
+              </div>
+              <div class="result_stat">
+                <p class="centerAll paraTxt">Investment Required to Achieve Goal</p>
+                <div class="fl reg_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">Regular Investment</p>
+                </div>
+                <div class="fr one_time_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">One time Investment</p>
+                </div>
+                <div class="clr">&nbsp;</div>
+                <div class="quick_status clearfix">
+                  <div class="fl achievable thumb_status"></div>
+                  <div class="fr centerAll txt_status">Can Achieve</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="fl">
+            <div class="goal_detal">
+              <h3 class="goal_cat"><span class="main_cat">Special</span> - <span class="specific">Home Decoration</span></h3>
+              <div class="goal_asset_desc rel clearfix">
+                <div class="goal_val fl">
+                  <h5 class="heading">Goal Value</h5>
+                  <div class="value goal_value rel">100</div>
+                </div>
+                <div class="goal_logo_year spcial_logo">
+                  <div class="year">2107</div>
+                </div>
+                <div class="asset_val fl">
+                  <h5 class="heading">Asset Value</h5>
+                  <div class="value asset_value rel">100</div>
+                </div>
+              </div>
+              <div class="slider_parent clearfix">
+                <div class="goal_slider fl" id="spcial_goal_slider"></div>
+                <div class="fr goal_slider_value" id="spcial_goal_slider_value"></div>
+              </div>
+              <div class="result_stat">
+                <p class="centerAll paraTxt">Investment Required to Achieve Goal</p>
+                <div class="fl reg_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">Regular Investment</p>
+                </div>
+                <div class="fr one_time_invesment">
+                  <p class="amount centerAll"><span class="val rel">9,77,50,000</span>/-</p>
+                  <p class="centerAll invst_txt">One time Investment</p>
+                </div>
+                <div class="clr">&nbsp;</div>
+                <div class="quick_status clearfix">
+                  <div class="fl achievable thumb_status"></div>
+                  <div class="fr centerAll txt_status">Can Achieve</div>
+                </div>
+              </div>
+            </div>
+          </li>-->
+          
+        
+          
+          
+        </ul>
+      </div>
+    </div>
+    <div class="box2 report">
+      <ul class="clearfix reset final_summary">
+        <li class="fl first">
+          <div class="container">
+            <ul class="reset money_flow">
+              <li>Your Income - <span class="rs_symbol"></span><span class="val theme_color">9,77,50,000</span></li>
+              <li>Your Expenses -<span class="rs_symbol"></span> <span class="val theme_color">51,000</span></li>
+              <li>Your Loan EMI -<span class="rs_symbol"></span> <span class="val theme_color">18,000</span></li>
+              <li>SURPLUS AVAILABLE -<span class="rs_symbol"></span> <span class="val theme_color">37,000</span></li>
+            </ul>
+            <div class="investment">
+              <h5 class="heading">Investment</h5>
+              <div class="fl running">
+                <p class="txt">Running</p>
+                <p class="amount"><span class="rs_symbol"></span><span class="val">9,77,50,000</span>/-</p>
+              </div>
+              <div class="fr reqiured">
+                <p class="txt">Required</p>
+                <p class="amount"><span class="rs_symbol"></span><span class="val">9,77,50,000</span>/-</p>
+              </div>
+              <div class="clr"></div>
+            </div>
+          </div>
+        </li>
+        <li class="fl second">
+          <div class="container">
+            <p class="txt1">DREAMS can become <span class="theme_color">REALITY</span> when
+              You can improve <span class="theme_color">SURPLUS</span> And <span class="theme_color">INVEST</span> properly
+              And <span class="theme_color">REBALANCE</span> regularly</p>
+          </div>
+        </li>
+        <li class="fl third">
+          <div class="container ">
+            <p class="txt1">Invest in different assets in 
+              proportions suitable to your goal 
+              and your risk tolerance</p>
+            <p class="txt2"> <span class="theme_color">ASSET ALLOCATION</span> can be done in combination of</p>
+            <ul class="reset paraTxt asset_combo">
+              <li class="theme_color">Fixed deposits</li>
+              <li class="theme_color">Shares</li>
+              <li class="theme_color">Mutual Funds</li>
+              <li class="theme_color">Gold</li>
+              <li class="theme_color">Property</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer clearfix">
+    <div class="fl footer_tagline">True Friends of New Investors</div>
+    <div class="fr page_no">(<span class="no">2</span>)</div>
+  </div>
+</div>
+</body>
+</html>

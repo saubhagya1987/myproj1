@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Risk Profile</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-filestyle.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/common_unit_selector.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+
+
+<script>
+$(document).ready(function(){
+ $('.wrapper').addClass("risk_profile_subscribed_wrapper");
+    $('.dynamic_insurance_container').slimScroll();
+	 $(".life_insurance").click(function(){
+	 $("#life_insurance").prop("checked", true);
+	 $("#genral_insurance").prop("checked", false);	 
+	if(!($(".life_insurance_container ").is(":visible")))
+   {
+   $.when($(".dynamic_box").fadeOut("blind")).done(function() {
+       $(".life_insurance_container ").fadeIn("slow");
+	   });
+   }
+}) 
+ $(".genral_insurance").click(function(){
+	  $("#life_insurance").prop("checked", false);
+	 $("#genral_insurance").prop("checked", true);
+    if(!($(".genral_insurance_container ").is(":visible")))
+   {
+   $.when($(".dynamic_box").fadeOut("blind")).done(function() {
+       $(".genral_insurance_container ").fadeIn("slow");
+	   });
+   }
+}) 
+
+
+
+    
+});
+</script>
+
+
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">Risk Profile</span><span class="heading_icon"><span class="head_icon"><img src="../images/risk_profile.png" alt="" width="35" height="37"></span></span>
+          <div class="desc_container"> <a href="#" class="edit"></a></div>
+        </h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+      <section class="in_content common_in_content"> 
+        <!-- Common_in_contnet starts-->
+        <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <section id="risk_profile_subscribed" class="in_content common_in_content clearfix">
+          
+          <div class="top_toggle clearfix northspace3">
+          <div class="fl insurance_type westspace1 genral_insurance"><input name="insurance_type" type="radio" value="" id="genral_insurance" checked class="fl"><label for="fd" class="fl inlineBlock westspace1">General Insurance</label></div>
+          <div class="fl insurance_type westspace2 life_insurance"><input name="insurance_type" type="radio" value="" id="life_insurance" class="fl"><label for="fd" class="fl inlineBlock westspace1">Life Insurance</label></div>
+          
+          
+          </div>
+          
+          <div class="dynamic_insurance_container">
+          <div class="genral_insurance_container dynamic_box clearfix" id="genral_insurance_container">
+          <div class="type_box fl clearfix critical_illness">
+        	<div class="header"><p>Critical Illness</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><a class="icon" href="genral-insurance-details.html#Critical_Illness"></a></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <div class="goal-no"><p>3</p></div>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Required Cover</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div>
+        
+          <div class="type_box fl clearfix health">
+        	<div class="header"><p>Health</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><a href="genral-insurance-details.html#Health" class="icon"></a></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <div class="goal-no"><p>3</p></div>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Required Cover</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div>
+        
+          <div class="type_box fl clearfix personal_accident">
+        	<div class="header"><p>Personal Accident</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><a class="icon" href="genral-insurance-details.html#Personal_Accident"></a></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <div class="goal-no"><p>3</p></div>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Required Cover</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div>
+        
+          <div class="type_box fl asset clearfix">
+        	<div class="header"><p>Asset</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><a class="icon" href="genral-insurance-details.html#Asset"></a></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <div class="goal-no"><p>3</p></div>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Required Cover</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div>
+        
+        
+        
+          </div>
+          
+          <div class="life_insurance_container clearfix dynamic_box hide" id="life_insurance_container">
+          <div class="type_box fl clearfix term">
+        	<div class="header"><p>Term</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><a class="icon" href="life-insurance-details.html#term"></a></div><!-- icon-bg Ends-->
+                <!--<div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <div class="goal-no"><p>3</p></div>
+                </div>--><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Required Cover</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div>
+        
+          <div class="type_box fl clearfix endowment">
+        	<div class="header"><p>Endowment</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><a class="icon" href="life-insurance-details.html#endowment"></a></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <div class="goal-no"><p>3</p></div>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Required Cover</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div>
+        
+          <div class="type_box fl clearfix money_back">
+        	<div class="header"><p>Money Back</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><a class="icon" href="life-insurance-details.html#money_back"></a></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <div class="goal-no"><p>3</p></div>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Required Cover</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div>
+        
+          <div class="type_box fl ulip clearfix">
+        	<div class="header"><p>ULIP</p></div><!-- header Ends-->
+            <div class="upper-part">
+                <div class="icon-bg fl"><a class="icon" href="life-insurance-details.html#ulip"></a></div><!-- icon-bg Ends-->
+                <div class="linked-goals fr">
+                    <p># of Linked Goals</p>
+                    <div class="goal-no"><p>3</p></div>
+                </div><!-- linked-goals Ends-->
+            </div><!-- upper-part Ends-->
+            
+            <div class="box-footer fl">
+            	<div class="box-footer-header">
+                	<p class="av fl">Required Cover</p>
+                    <p class="aa fr">Allocated Amount</p>
+                </div><!-- box-footer-header Ends-->
+                
+                <div class="box-footer-left-side fl">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">20</div>
+                    <div class="unit fl">Lac</div>
+                </div><!-- box-footer-left-side Ends-->
+                <div class="devider fl"></div>
+                <div class="box-footer-right-side fr">
+                	<div class="rupee-sign fl"></div>
+                    <div class="amount fl">30</div>
+                    <div class="unit fl">Lac</div>
+                    <br>                       
+                    <div class="percentage">(<span class="percent_value">30</span>%)</div>
+                </div><!-- box-footer-right-side Ends-->
+                                                
+            </div><!-- box-footer Ends-->
+            
+        </div>
+        
+        
+        
+          </div>
+          </div>
+      <!--<div class="asset-summary-footer clearfix">
+    
+    	<a href="asset-details.html" class="asset-management fl">
+        	<div class="title">Asset Details</div>
+            <div class="icon-bg"><div class="icon fl"></div></div>  
+            <div class="icon-reflection"></div>       
+        </a>
+        
+        <a href="goal-to-asset-allocation.html" class="goal-allocation fl">
+        	<div class="title">Goal to Assets Allocation</div>
+            <div class="icon-bg"><div class="icon fl"></div></div>  
+            <div class="icon-reflection"></div>       
+        </a>
+
+        <div class="view1 fl">
+        	<div class="title">View</div>
+            <div class="icon-bg"><div class="icon fl"></div></div>  
+            <div class="icon-reflection"></div>       
+        </div>
+        
+        <div class="view-options fl">
+        	<div class="view-bg">
+            	<ul>
+                	<li>Goals</li>
+                    <li>Unused Assets</li>
+                    <li>Future Cashflow</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="total fl">
+        	<div class="total-asset-value">
+            	<p>Total Asset Value</p>
+            	<div class="rupee-sign fl"></div>
+                <div class="amount fl">30</div>
+                <div class="unit fl">Lac</div>
+            </div>
+            <div class="total-allocated-value">
+            	<p>Total Allocated Value</p>
+            	<div class="rupee-sign fl"></div>
+                <div class="amount fl">30</div>
+                <div class="unit fl">Lac</div>
+                <div class="total_percentage fr">(<span class="total_percent_value">30</span>%)</div>
+            </div>
+        </div>
+        
+          	
+    </div> -->
+        </section>
+        <!-- Common_in_contnet ends-->
+        
+        <div class="overlay"></div>
+      </section>
+      <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <!--<ul class="reset clearfix fr btn_grup2">
+            </li>
+           <li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>
+            
+            <li class="fl list"><a href="#" class="anch save_new"><span class="txt">Save &amp; Add</span></a></li>
+           <li class="fl list"><a href="#" class="anch save_close"><span class="txt">Save &amp; Close</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+          </ul>-->
+        </div>
+        <!-- <a href="list-of-tasks.html" class="back navgation"><span class="txt">Back</span></a> <a href="list-of-tasks.html" class="next navgation"><span class="txt">Next</span></a>--> </section>
+      
+      <!-- Common footer ends --> 
+    </section>
+    <!-- Common_content Ends--> 
+    
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends--> 
+
+</body>
+</html>

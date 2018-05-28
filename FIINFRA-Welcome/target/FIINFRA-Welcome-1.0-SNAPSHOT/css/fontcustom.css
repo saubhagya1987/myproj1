@@ -1,0 +1,55 @@
+/*
+  Icon Font: fontcustom
+*/
+
+@font-face {
+	font-family: "fontcustom";
+	src: url("../fonts/fontcustom_3ee9543f4e7dd821030c3c5726c91aca.eot");
+	src: url("../fonts/fontcustom_3ee9543f4e7dd821030c3c5726c91aca.eot?#iefix") format("embedded-opentype"),  url("../fonts/fontcustom_3ee9543f4e7dd821030c3c5726c91aca.woff") format("woff"),  url("../fonts/fontcustom_3ee9543f4e7dd821030c3c5726c91aca.ttf") format("truetype"),  url("../fonts/fontcustom_3ee9543f4e7dd821030c3c5726c91aca.svg#fontcustom") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {
+@font-face {
+	font-family: "fontcustom";
+	src: url("../fonts/fontcustom_3ee9543f4e7dd821030c3c5726c91aca.svg#fontcustom") format("svg");
+}
+}
+[data-icon]:before {
+	content: attr(data-icon);
+}
+[data-icon]:before, .icon-client:before, .icon-csv:before, .icon-fontcustom_aeeec7d95de482d8b7979380984caca4:before, .icon-my-goals:before, .icon-opportunity:before, .icon-premium_client:before, .icon-x-ray:before {
+	display: inline-block;
+	font-family: "fontcustom";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+.icon-client:before {
+	content: "\f101";
+}
+.icon-csv:before {
+	content: "\f102";
+}
+.icon-fontcustom_aeeec7d95de482d8b7979380984caca4:before {
+	content: "\f103";
+}
+.icon-my-goals:before {
+	content: "\f100";
+}
+.icon-opportunity:before {
+	content: "\f104";
+}
+.icon-premium_client:before {
+	content: "\f105";
+}
+.icon-x-ray:before {
+	content: "\f106";
+}

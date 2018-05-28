@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Education Goal</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link href="../css/custom.css" rel="stylesheet" type="text/css" />
+<link href="../css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/plugin/jquery.autosize.input.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/common_unit_selector.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<!-- intilazie custom checkbox starts-->
+<script>
+$(document).ready(function(){
+$('.toggle').toggles();
+}) 
+</script>
+<!-- intilazie custom checkbox ends-->
+<!-- Toggle real checkbox as per custom checkbox strats -->
+<script>
+$(document).ready(function(){
+
+$("#car_type").on('toggle', function (e, active) {
+    if (active) {
+     ;
+	  $(".car_type").prop("checked", true);
+	
+	   
+    } else {
+    
+	   $(".car_type").prop("checked", false);
+	
+    }
+	
+});
+
+}) 
+</script>
+<!-- Toggle real checkbox as per custom checkbox ends -->
+<!-- Fuel type starts -->
+<script>
+$(document).ready(function(){
+  $(".thumb_select_ul a").click(function(){
+	
+    $(this).children(".categoery").toggleClass("not_applicable");
+
+  });
+});
+</script>
+<!-- Fuel type ends -->
+<!--Header input box dynamic width change starts-->
+<script>
+$(document).ready(function(){
+	$("#purchase_car .car_description").keypress(function(){
+  var sum=50;
+$('.desc_container input,.desc_container a').each( function(){ sum += $(this).width(); });
+$('.desc_container').width( sum );
+});
+});
+</script>
+<script>
+$(document).ready(function(){
+	    $('#purchase_car .car_description').bind("keypress keydown", function(e) {
+         
+		   var sum=50;
+            if (e.which == 46){         
+			  $('.desc_container input,.desc_container a').each( function(){ sum += $(this).width(); });
+              $('.desc_container').width( sum );
+            }
+            if (e.which == 8) {
+         
+			  $('.desc_container input,.desc_container a').each( function(){ sum += $(this).width(); });
+              $('.desc_container').width( sum );
+            }
+    });
+
+});
+</script>
+<!--Header input box dynamic width change starts-->
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+  
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+ 
+});
+</script>
+<!-- Custom Selectbox Ends -->
+
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+    $('.common_in_content').slimScroll();
+	 //Down Payment value Slider
+	  createSlider('#down_payment',0,100,1,"#d_payment")
+	  //Loan Amount value Slider
+	  createSlider('#loan_amount',0,100,1,"#l_amount")
+	  //Loan Interest value Slider
+	  createSlider('#loan_interset',5,18,1,"#l_interset")
+	  //Loan Duration value Slider
+	  createSlider('#other_loan_duration',1,12,1,"#other_l_duration")
+	  
+
+	  //Advice Assumptions Drop Down value Slider
+	  createSlider('#advice_eg_assump_01',6,20,1,"#advice_eg_assump_01_payment")
+	  createSlider('#advice_eg_assump_02',5,20,1,"#advice_eg_assump_02_payment")
+	  createSlider('#advice_eg_assump_03',5,20,1,"#advice_eg_assump_03_payment")
+	  createSlider('#advice_eg_assump_04',3,12,1,"#advice_eg_assump_04_payment")
+	  createSlider('#advice_eg_assump_05',0,100,1,"#advice_eg_assump_05_payment")
+	  
+    $('.Advice_Assump_Menu_In').perfectScrollbar();
+	  
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+<!-- Unit selector -->
+<script>
+$(document).ready(function(){
+  $(".common_unit_selector li").click(function(){
+	$(".common_unit_selector li").removeClass("unit_selected");
+    $(this).addClass("unit_selected");
+
+  });
+});
+</script>
+<!-- Unit selector ends -->
+
+<!--Map Pop-up Box-->
+<script>
+$(document).ready(function(){
+  
+  $(".Edu_Con_Btn").click(function(){
+    $(".overlay").fadeIn();
+	$("#Edu_Con").fadeIn();
+	});
+	
+	$("#Edu_Con .close").click(function(){
+    $(".overlay").fadeOut("slow");
+	$("#Edu_Con").fadeOut("slow");
+	 });
+
+
+  $("#Edu_Area_Btn").click(function(){
+    $(".overlay").fadeIn();
+	$("#Edu_Area").fadeIn();
+	});
+	
+	$("#Edu_Area .close").click(function(){
+    $(".overlay").fadeOut("slow");
+	$("#Edu_Area").fadeOut("slow");
+	 });
+});
+</script>
+
+<!--Map Pop-up Boxs -->
+
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="Global_Goal"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="#" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="#" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">EDUCATION</span><span class="heading_icon_two"><img src="../images/education-goal-icon.png" alt="" width="43" height="40"/></span>
+          <div class="desc_container">
+            <input type="text" class="car_description" value="Medical for Sonali" data-autosize-input='{ "space":0 }'/>
+            <a href="#" class="edit"></a></div>
+        </h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <div class="priority_bx">
+      <div class="priority_bx_icon fl"></div>
+      <div class="priority_bx_txt_bx fl">
+        <div class="priority_no">50</div>
+        <div class="priority_no_txt">Similar Goal by other people</div>
+      </div>
+    </div>
+    <section class="content common_content">
+      <div class="combined_submenu clearfix">
+        <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset ">
+              <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dc_dashboard_submenu">
+          <h4 class="heading"><a href="data-collection.html">Data Collection Dashboard</a></h4>
+          <ul class="clearfix reset first_col_menu">
+            <li class="menu emergency"><a href="emergency-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Emergency</span></a></li>
+            <li class="menu risk_cover"><a href="risk-cover.html" class="anch"><span class="thumb"></span><span class="txt">Risk Cover</span></a></li>
+            <li class="menu retirement"><a href="retirement-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Retirement</span></a></li>
+            <li class="menu succession"><a href="succession-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Succession</span></a></li>
+            <li class="menu financial"><a href="financial-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Financial</span></a></li>
+            <li class="menu cash_flow"><a href="cash-flow.html" class="anch"><span class="thumb"></span><span class="txt">Cash Flow</span></a></li>
+            <li class="menu loan_status"><a href="loan-status.html" class="anch"><span class="thumb"></span><span class="txt">Loan Status</span></a></li>
+            <li class="menu last clearfix"><a href="profile-info.html" class="anch personal_info"><span class="thumb"></span><span class="txt">Personal Info.</span></a> <a href="risk-profile.html" class="anch risk_profile"><span class="thumb"></span><span class="txt">Risk Profile</span></a> <a href="my-goals.html" class="anch my_goals"><span class="thumb"></span><span class="txt">My Goals</span></a></li>
+          </ul>
+          <ul class="clearfix reset sec_col_menu">
+            <li class="menu education"><a href="education-goal-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Education</span></a></li>
+            <li class="menu property"><a href="purchase-property-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Property</span></a></li>
+            <li class="menu wedding"><a href="wedding-goal.html" class="anch"><span class="thumb"></span><span class="txt">Wedding</span></a></li>
+            <li class="menu car"><a href="car-goal.html" class="anch"><span class="thumb"></span><span class="txt">Car</span></a></li>
+            <li class="menu travel"><a href="travel-n-vacaction-goal.html" class="anch"><span class="thumb"></span><span class="txt">Travel</span></a></li>
+            <li class="menu business"><a href="business-goal.html" class="anch"><span class="thumb"></span><span class="txt">Business</span></a></li>
+            <li class="menu special_goal"><a href="special-goal.html" class="anch"><span class="thumb"></span><span class="txt">Special Goal</span></a></li>
+            <li class="menu other"><a href="other-goal.html" class="anch"><span class="thumb"></span><span class="txt">Other Goal</span></a></li>
+          </ul>
+          <div class="clr"></div>
+        </div>
+        <div class="contact_configuration_submenu">
+          <h4 class="heading"><a>Contact Configuration</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset ">
+              <li class="menu coantact_setting"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Contact Settings</span></a></li>
+              <li class="menu contact_rec"><a href="#" class="anch"><span class="thumb"></span><span class="txt"> Contact Recommendations</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="common_unit_selector">
+        <ul class="clearfix reset">
+          <li class="k"><span class="unit">K</span></li>
+          <li class="lacs unit_selected"><span class="unit">Lac</span></li>
+          <li class="cr"><span class="unit">Cr</span></li>
+        </ul>
+        <p>All figures are in :</p>
+      </section>
+      
+      <!-- advive adssumption starts--> 
+      <a href="#">
+      <div class="common_ad_ass_selector">
+        <ul class="clearfix reset selector">
+          <li class="select">
+            <p>Advice Assumptions</p>
+          </li>
+        </ul>
+        <div class="Advice_Assump_Menu">
+          <ul class="clearfix reset Advice_Assump_Menu_In" >
+            <li class="clearfix">
+              <label class="form_label">Expected Returns on all existing Investment(%)</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">6%</span><span class="high extrem">20%</span></div>
+                  <div id="advice_eg_assump_01"></div>
+                  <div class="counter_parent_new">
+                    <input type="text" id="advice_eg_assump_01_payment" class="range_counter" />
+                    <span class="unit">%</span></div>
+                </div>
+              </div>
+            </li>
+            <li class="clearfix">
+              <label class="form_label">Gold investments returns (%) CAGR expected</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">5%</span><span class="high extrem">20%</span></div>
+                  <div id="advice_eg_assump_02"></div>
+                  <div class="counter_parent_new">
+                    <input type="text" id="advice_eg_assump_02_payment" class="range_counter" />
+                    <span class="unit">%</span> </div>
+                </div>
+              </div>
+            </li>
+            <li class="clearfix">
+              <label class="form_label">Equity investments returns (%) CAGR expected</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">5%</span><span class="high extrem">20%</span></div>
+                  <div id="advice_eg_assump_03"></div>
+                  <div class="counter_parent_new">
+                    <input type="text" id="advice_eg_assump_03_payment" class="range_counter" />
+                    <span class="unit">%</span> </div>
+                </div>
+              </div>
+            </li>
+            <li class="clearfix">
+              <label class="form_label">Fixed income returns (%)</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">3</span><span class="high extrem">12</span></div>
+                  <div id="advice_eg_assump_04"></div>
+                  <div class="counter_parent_new">
+                    <input type="text" id="advice_eg_assump_04_payment" class="range_counter" />
+                    <span class="unit">%</span> </div>
+                </div>
+              </div>
+            </li>
+            <li class="clearfix">
+              <label class="form_label">Real Estate investments growth rate (%) CAGR expected</label>
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span></div>
+                  <div id="advice_eg_assump_05"></div>
+                  <div class="counter_parent_new">
+                    <input type="text" id="advice_eg_assump_05_payment" class="range_counter" />
+                    <span class="unit">%</span> </div>
+                </div>
+              </div>
+            </li>
+            <li class="clearfix"> <a class="cancel">CANCEL</a><a class="save">SAVE</a></li>
+          </ul>
+        </div>
+      </div>
+      </a>
+      <div class="clr"></div>
+      <!-- advive adssumption ends--> 
+      
+      <!-- Common_in_contnet starts-->
+      <section id="education_goal" class="in_content common_in_content clearfix education_goal" >
+        <div class="row_one">
+          <div class="title-bg">
+            <div class="title">Course Info</div>
+          </div>
+          <div class="fl first_col">
+            <ul class="reset clearfix first_col_ul">
+              <li class="clearfix">
+                <label class="form_label">Education for</label>
+                <select id="brand">
+                  <option>Select</option>
+                  <option>Family Member</option>
+                </select>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Course Level</label>
+                <select id="brand">
+                  <option>Select</option>
+                  <option>Course Level1</option>
+                  <option>Course Level2</option>
+                  <option>Course Level3</option>
+                  <option>Course Level4</option>
+                </select>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Course Subject</label>
+                <select id="category">
+                  <option>Select</option>
+                  <option>Course Subject1</option>
+                  <option>Course Subject2</option>
+                  <option>Course Subject3</option>
+                  <option>Course Subject4</option>
+                </select>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Expected Year of Joining</label>
+                <!--<input type="text" class="common_input2 datepicker" name="input">-->
+                <select id="year">
+                  <option>Select</option>
+                  <option>2014</option>
+                  <option>2015</option>
+                  <option>2016</option>
+                  <option>2017</option>
+                  <option>2018</option>
+                  <option>2019</option>
+                  <option>2020</option>
+                  <option>2021</option>
+                  <option>2022</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="fr second_col">
+            <ul class="reset clearfix second_col_ul">
+              <li class="clearfix">
+                <label class="form_label" id="edu_exp">Education <br>
+                  Expenses</label>
+                <div class="input_counter_parent">
+                  <input type="text" class="input_counter" value="00.00" id="car_price">
+                  <span class="unit dynamic">lacs</span> </div>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Down Payment</label>
+                <div class="range_parent">
+                  <div class="scale clearfix">
+                    <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+                    <div id="down_payment"></div>
+                    <div class="counter_parent rupee">
+                      <input type="text" id="d_payment" class="range_counter" />
+                      <span class="unit dynamic">lacs</span> </div>
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Loan Amount</label>
+                <div class="range_parent">
+                  <div class="scale clearfix">
+                    <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+                    <div id="loan_amount"></div>
+                    <div class="counter_parent rupee">
+                      <input type="text" id="l_amount" class="range_counter"/>
+                      <span class="unit dynamic">lacs</span> </div>
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Loan Interest</label>
+                <div class="range_parent">
+                  <div class="scale clearfix">
+                    <div class="scale_range"><span class="low extrem">5%</span><span class="high extrem">18%</span></div>
+                    <div id="loan_interset"></div>
+                    <div class="counter_parent">
+                      <input type="text" id="l_interset" class="range_counter"/>
+                      <span class="unit">%</span> </div>
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Loan Duration</label>
+                <div class="range_parent">
+                  <div class="scale clearfix">
+                    <div class="scale_range"><span class="low extrem">1</span><span class="high extrem">12</span></div>
+                    <div id="other_loan_duration"></div>
+                    <div class="counter_parent">
+                      <input type="text" id="other_l_duration" class="range_counter"/>
+                      <span class="unit">yrs</span> </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="row_one">
+          <div class="title-bg">
+            <div class="title">Preferred Location</div>
+          </div>
+          <div class="fl first_col">
+            <ul class="reset clearfix first_col_ul">
+              <li class="clearfix">
+                <label class="form_label">Country Interested</label>
+                <select id="brand">
+                  <option>Select</option>
+                  <option>Australia</option>
+                  <option>France</option>
+                  <option>Germany</option>
+                  <option>Norway</option>
+                </select>
+                <img class="Edu_Con_Btn" src="../images/world_icon.png" width="29" height="28" alt=""> </li>
+              <li class="clearfix">
+                <label class="form_label">State</label>
+                <select id="category">
+                  <option>Select</option>
+                  <option> New South Wales</option>
+                  <option>Queensland</option>
+                  <option>Western Australia</option>
+                  <option>New South Wales</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="fr second_col">
+            <ul class="reset clearfix second_col_ul">
+              <li class="clearfix">
+                <label class="form_label">Search by Map</label>
+                <a id="Edu_Area_Btn" class="search_magento_btn"><span class="search_magento_in">Search</span></a> </li>
+              <li class="clearfix">
+                <label class="form_label">Institute Type</label>
+                <select id="category">
+                  <option>Select</option>
+                  <option> Govt Aided</option>
+                  <option>Private Aided</option>
+                </select>
+                <img src="../images/star-rating.png" alt="" width="96" height="27" hspace="10" align="absmiddle"> </li>
+            </ul>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="row_one">
+          <div class="title-bg">
+            <div class="title">Your Preferences</div>
+          </div>
+          <div class="fl first_col">
+            <ul class="reset clearfix first_col_ul">
+              <li class="clearfix">
+                <label class="form_label">University Preference <!--<span class="form_label_small">(Please specify in order of priority)</span>--></label>
+                <input type="text" disabled class="fixed_txt_box" id="d_payment" value="Sydney University" />
+              </li>
+            </ul>
+          </div>
+          <div class="fr second_col">
+            <ul class="reset clearfix second_col_ul">
+              <li class="clearfix">
+                <label class="form_label">Annual Fees</label>
+                <div class="txt_box_symbol"><img src="../images/rupee-symbol.png" alt="" width="12" height="18"></div>
+                <input type="text" disabled class="fixed_txt_box" id="d_payment" value="12,00,159.00" />
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+      </section>
+      <!-- Common_in_contnet ends--> 
+      <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup3">
+            </li>
+            <li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+            <li class="fl list"><a href="#" class="anch skip"><span class="txt">Skip</span></a></li>
+          </ul>
+          <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <li class="fl list"><a href="#" class="anch add_note"><span class="txt">Add Notes</span></a></li>
+            <li class="fl list"><a href="#" class="anch add_doc"><span class="txt">Add Doc</span></a></li>
+          </ul>
+          <ul class="reset clearfix fl btn_grup1">
+            </li>
+            <li class="fl list"><a href="#" class="anch analysis"><span class="txt">Analysis</span></a></li>
+            <li class="fl list"><a href="#" class="anch suggeset"><span class="txt">Suggestion</span></a></li>
+            <li class="fl list"><a href="#" class="anch action_plan"><span class="txt">Action Plan</span></a></li>
+          </ul>
+        </div>
+        <a href="data-collection.html" class="back navgation"><span class="txt">Back</span></a> <a href="purchase-property-future-financial.html" class="next navgation"><span class="txt">Next</span></a> </section>
+      <div id="Edu_Con" class="common_custom_modal_edu_con"> <span class="close">X</span> <img src="../images/map.png" width="657" height="390" alt=""></div>
+      <div id="Edu_Area" class="common_custom_modal_edu_con"> <span class="close">X</span>
+        <div id="Edu_Area_Top">
+          <input class="Edu_txt_bx" placeholder="Lorem" name="" type="text">
+          <input class="Edu_txt_bx2" placeholder="Lorem" name="" type="text">
+          <a href="#" class="Edu_Submit">Search</a> </div>
+        <img src="../images/map_area.png" width="657" height="390" alt=""></div>
+      <!-- Common footer ends -->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+    
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends--> 
+
+<!-- Datepicker --> 
+<script>
+$(function() {
+	  $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-M-yy",
+      showOn: "button",
+	  buttonText: '',
+     });
+  });
+  
+  
+  </script> 
+<script>
+$(document).ready(function(){
+  
+ $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent'></div>" );
+ 
+});
+</script> 
+<!-- Datepicker Ends -->
+
+</body>
+</html>

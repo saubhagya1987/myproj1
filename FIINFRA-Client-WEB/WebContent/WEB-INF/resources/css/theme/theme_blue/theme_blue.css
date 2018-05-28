@@ -1,0 +1,346 @@
+@charset "utf-8";
+/* CSS Document */
+form label.error:after{border-top: 7px solid #276b95;}
+#banner .banner-name-main .banner-nav .banner-nav1.active,#networth1 .separator,#earning_expenses1 .separator{background-color:#276b95;}
+
+#gup_shup_main .gup_shup_main_in .calcy_li_bx .calcy_li_bx_in .add_document_slider  .rply_bx   .login_btn {/* background:-webkit-linear-gradient(top, #E6689C 0%, #E6689C 50%, #952654 50%, #E0689A 92%); */ border:1px solid #FFFFFF;  border-bottom-left-radius:7px;  border-bottom-right-radius:7px;  border-top-left-radius:7px;  border-top-right-radius:7px;  box-shadow:#A5A5A5 0 2px 2px;  color:#FFFFFF;  cursor:pointer;  font-family:'aller bold';  font-size:15px;  height:33px;  margin:8px 10px 0 9px;  padding:5px;  width:120px;
+
+
+background: #69b7e7 !important; /* Old browsers */
+background: -moz-linear-gradient(top,  #69b7e7 0%, #69b7e7 50%, #377da8 51%, #69b7e7 100%) !important; /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#69b7e7), color-stop(50%,#69b7e7), color-stop(51%,#377da8), color-stop(100%,#69b7e7)) !important; /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #69b7e7 0%,#69b7e7 50%,#377da8 51%,#69b7e7 100%) !important; /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #69b7e7 0%,#69b7e7 50%,#377da8 51%,#69b7e7 100%) !important; /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #69b7e7 0%,#69b7e7 50%,#377da8 51%,#69b7e7 100%) !important; /* IE10+ */
+background: linear-gradient(to bottom,  #69b7e7 0%,#69b7e7 50%,#377da8 51%,#69b7e7 100%) !important; /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69b7e7', endColorstr='#69b7e7',GradientType=0 ) !important; /* IE6-9 */
+
+}
+
+#chat_list .content .first_user_bx .user_pic { height:40px; width:40px; border:1px solid #3AA4DA; border-radius: 7px;}
+#query-comment-content-in{border: 1px solid #3AA4DA !important;}
+#query-comment-content-in .comment-bx-two-inset .txt-editor {border: 1px solid #3AA4DA !important;}
+#query-comment-content-in .comment-bx .comment-profile-bx-left {border: 1px solid #3AA4DA !important;}
+#query-comment-content-in .comment-title-one {color:#3AA4DA !important;}
+.common_dialog{border: 1px solid #3AA4DA !important;}
+.add_mf_li_bx .grt_bx_date {border: 1px solid #3AA4DA !important;}
+.dc_status_comp {background: url(images/custom_red_checkbox.png) no-repeat -27px 0px;}
+
+/*For Font Color*/
+
+#trapezoid span,#trapezoid-two span,#tools .big-tools h3,#tools .big-tools1 h3,#tools .big-tools2 h3,#tools .big-tools3 h3,#bottom .bottom-box .gup-shup1 .like-no,#bottom .bottom-box .gup-shup1 .comment-no ,#bottom .bottom-box .gup-shup2 .like-no,#bottom .bottom-box .gup-shup2 .comment-no,#bottom .bottom-box .gup-shup1 a,#bottom .bottom-box .gup-shup2 a,#bottom .bottom-box .testimonial1 a,#bottom .bottom-box .testimonial2 a,#bottom .bottom-box a,#ifa-image .ifa-name,#log-out p,#earning_expenses1 .my_earnings .my_earnings_rs,#achievement_scale1 .overall_scale_bar_graph .current_scale,.nt_income .total-asset-value .total-value,.sen_msg_amt,#my_assets .ui-state-active a, #my_assets .ui-state-active a:link, #my_assets .ui-state-active a:visited,#header-strip h3 .title_it,.sen_msg_txt_unit,#my_reports_main .my_reports_bx_in .top .top_left_in ul li a,#my_reports_main .my_reports_bx_in .top .top_right_in ul li a,#my_reports_main .my_reports_bx_in .bottom .bottom_left ul li a,#my_reports_main .my_reports_bx_in .bottom .bottom_right ul li a,#personalization .ui-state-active a, #personalization .ui-state-active a:link, #personalization .ui-state-active a:visited,.no_data_message,#dragger li.alert-bg a p span,#achievement_scale1 .goal_risk .risk .highlighted,#goals1 .goal_txt span.invest,#goals1 .goal_txt span.closer_percentage,#goals1 .goal_txt span.achived_goals,#goals1 .goal_txt span.total_goals,.advisor_submenu li.menu .label,.common_ad_ass_selector p,.range_counter,.Advice_Assump_Menu .range_counter,.spinner,.thumb_select_ul .not_applicable + .label,#dc_screens #bottom .total-asset-value .total-value,#retirement-planning #bottom .total-asset-value .total-value,#contents .dc_in_content_new .my_goal_redirect .count,.input_counter,.asset_allocation_btn,#testimonial_main .testimonial_main_in .calcy_li_bx .calcy_li_bx_in .add_document_slider .mon_house_exp_bx_in_cnt .top .top_left a,#calculator .left_bx label,#calculator .left_bx .calcy_li_bx_in label,#calculator .total-value,#calculator .right_bx label,.congo .congrates,.congo_feedback .congrates,.congo_feedback .acknowledge a,.poll-of-day_in .time,.poll-of-day_in .bx .title .type,#faq #accordion .type,#faq #accordion .question_no,#faq #accordion .ans,.content .chat_thread .chat_thread_middle .commentor,.content .chat_thread .chat_thread_left .name,#chat_list .footer .footer-right .post:hover,#chat_list .footer .footer-right .file:hover,#chat_list .footer .footer-right .link:hover,#gup_shup_main .gup_shup_main_in .calcy_li_bx .calcy_li_bx_in .add_document_slider .mon_house_exp_bx_in_cnt .top .top_left a,#gup_shup_main .gup_shup_main_in .calcy_li_bx .calcy_li_bx_in .add_document_slider .mon_house_exp_bx_in_cnt .top .view_icon_bx,#gup_shup_main .gup_shup_main_in .calcy_li_bx .calcy_li_bx_in .add_document_slider .mon_house_exp_bx_in_cnt .top .like_icon_bx,#gup_shup_main .gup_shup_main_in .calcy_li_bx .calcy_li_bx_in .add_document_slider .mon_house_exp_bx_in_cnt .top .comment_icon_bx,#gup_shup_main .gup_shup_main_in .calcy_li_bx .calcy_li_bx_in .add_document_slider .mon_house_exp_bx_in_cnt .bottom .date,.required_star,#inner-contents-graph .digit,#banner .add-image-btn-txt { color:#276b95 !important; }
+
+/*Background Color*/
+
+#achievement_scale1 .separator,p.title,.exp_grt_per,.selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor,.add_docs_parent .heading,#personalization .datepicker-trigger-parent,#ui-datepicker-div .ui-datepicker-header,#my_alerts #pending_tasks .header_strip,#my_alerts #pending_queries .header_strip,#feedback_main .feeback_bx_in1 .calcy_li_bx .calcy_li_bx_in .add_document_slider .notification,#x_ray_main .fin_x_ray .calcy_li_bx .calcy_li_bx_in .add_document_slider .notification,.partner_dashboard_submenu li a:active,#Global_Goal .row_one .title-bg .title,form label.error,.ui-dialog .ui-dialog-titlebar,.datepicker-trigger-parent,#bucket_allocation_bx .bucket_allocation_bx_ul li.input_title_one,#bucket_allocation_bx .bucket_allocation_bx_ul li.input_title_two,#bucket_allocation_bx .bucket_allocation_bx_ul li.input_title_three,#bucket_allocation_bx .bucket_allocation_bx_ul li.input_title_four,#bucket_allocation_bx .bucket_allocation_bx_ul li.input_title_five,#bucket_allocation_bx .total_bx,#bucket_allocation_bx .total_bx,#calender_main .calender_main_bx_in .bottom_right .my_calender_title_bx,.responsive-calendar .day.active a,.btn-primary,#query-list #pending_queries .header_strip,#feedback_main .feeback_bx_in .calcy_li_bx .calcy_li_bx_in .add_document_slider .notification,#feedback_main .feeback_bx_in6 .calcy_li_bx .calcy_li_bx_in .add_document_slider .notification,#risk_profile_pop_box,#risk_profile_pop_box ul li:active,#risk_profile_pop_box ul,.analysis_parent .first_column .heading, .analysis_parent .second_column .heading,.analysis_parent .first_column .heading, .analysis_parent .second_column .heading,#risk_profile_analysis .asset_allocation th,#my_goals #education .header_strip,#my_goals #property .header_strip,#add_notes .heading,.my_plan_li_bx ul li.input_txt_ten .n-f,#my_goals #special .header_strip,#my_goals #traval_vacations .header_strip,#my_goals #car .header_strip,#my_goals #property .header_strip,#my_goals #special .header_strip,#my_goals #other_goal .header_strip,#my_goals #business .header_strip,#my_goals #wedding .header_strip{background-color: #276b95 !important;}
+
+/*-----------2px Border Line---------------*/
+#bottom .bottom-box,#inner-contents .goals-bg,.emergency_icon,.emergency_planning_icon,.risk_cover_icon,.risk_icon,.retirement_icon,.succession_icon,.icon_35001,.icon_35003,.icon_35004,.icon_35005,.icon_35006,.icon_35007,.icon_35008,.icon_35012,.icon_35013,.icon_35014,.icon_35015,.icon_small_35001,.icon_small_35003,.icon_small_35004,.icon_small_35005,.icon_small_35006,.icon_small_35007,.icon_small_35008,.icon_small_35012,.icon_small_35013,.icon_small_35014,.icon_small_35015,.icon_39001,.icon_39002,.icon_39003,.icon_39004,.icon_39005,.icon_39006,.icon_39007,.icon_39008,.icon_39009,.icon_39010,.icon_39011,.icon_39012,.icon_39013,.icon_39014,.icon_39015,.icon_39016,.icon_39017,.icon_39018,.icon_39019,.icon_74001,.icon_74002,.icon_74003,.icon_74004,.icon_74005,.icon_74006,.icon_74007,.icon_74008,.icon_74009,.icon_74010,.icon_74011,#my-doc-main .main_doc-bg,#my_reports_main .my_reports_bx_in .bottom .bottom_right_in .action_icon,#my_reports_main .my_reports_bx_in .top .top_left_in .goal_icon,#my_reports_main .my_reports_bx_in .top .top_right_in .portfolio_icon,#my_reports_main .my_reports_bx_in .bottom .bottom_left_in .finance_icon,#contents .dc_in_content_new .my_goal_redirect .count,.icon_76001,.icon_76002,.icon_76003,.icon_76004,.icon_76005,.icon_76006,.icon_76007,.icon_72001,.icon_72002,.icon_72003,.icon_72004,.icon_72005,.icon_72006,.icon_72007,.icon_75001,.icon_75002,.icon_75003,.icon_75004,.icon_75005,.icon_75006,.icon_75007,.icon_75008,.icon_75009,.my_earnings_icon.icon_74012,.icon_74013{border: 2px solid #276b95;}
+
+/*-----------2px right left bottom Border Line---------------*/
+#div_dragger{border-right: 2px solid #276b95; border-left: 2px solid #276b95; border-bottom: 2px solid #276b95;}
+
+/*-----------1px Border Line---------------*/
+#inner-contents .goals .goal-year .slider-bg,#inner-contents .goals .goal-budget .slider-bg,#inner-contents .goals .achieved-budget .slider-bg,.partner_dashboard_submenu,.nt_income,#my_assets .ui-tabs .ui-tabs-panel,#my_assets .ui-tabs .ui-tabs-active,.com-ifa,.com-ifa02,#data-graph.common_sliding_radio,.selectboxit-container .selectboxit,.my_income_li_bx .grt_bx,.exp_grt_bx,.ui-slider,.selectboxit-list,#my_reports_main .my_reports_bx_in .top .top_left_in,#my_reports_main .my_reports_bx_in .bottom .bottom_right_in,#my_reports_main .my_reports_bx_in .top .top_right_in,#my_reports_main .my_reports_bx_in .bottom .bottom_left_in,#personalization .ui-tabs .ui-tabs-active,#personalization .ui-tabs .ui-tabs-panel,.common_input, .common_textarea,.common_input5, .common_textarea,#personalization .first_col .common_input,#personalization #password_details,.advisor_submenu,.Advice_Assump_Menu,#dc_screens #bottom .total-asset-value,#risk_cover .bg-box,#retirement-planning #bottom .total-asset-value,#retirement-planning #bottom .total-asset-value,.unit_selected,#Other_Goal_txt_editor,#CTH .parameters > li.third .grt_bx, #CTH .parameters > li.fourth .grt_bx,.my_portfolio_li_bx .grt_bx,#risk_cover #health_insurance,.common_input2,#bucket_allocation_bx,#bucket_allocation_bx .input,#bucket_allocation_bx .input,#bucket_allocation_bx .input_dis,#achievement_scale1 .overall_scale_bar_graph .overall_bar,#Risk_Profile_In .first_col .box,#Risk_Profile_In .second_col .box,#calculator .right_bx .btn_bx .btn_bx_in,#calculator .total-asset-value,.add_fd_li_bx .grt_bx,.add_rd_li_bx .grt_bx,.add_saving_li_bx .grt_bx,.add_ppf_li_bx .grt_bx,.add_mf_li_bx .grt_bx,.add_gold_li_bx .grt_bx,.add_stock_li_bx .grt_bx,.add_stock_li_bx .grt_bx,#Global_Goal .fixed_txt_box,.poll-of-day_in .bx,.ui-dialog,#inner-contents .goals .range_parent .slider-bg,.my_exp_li_bx .grt_bx,#inner-contents .goals .range_parent .slider-bg,#faq #question_category,#faq #accordion .ans,#calender_main .calender_main_bx_in .top ul li .today_div_dragger:hover,.content .chat_thread .chat_thread_left .image_container,#risk_profile_analysis .asset_allocation td, #risk_profile_analysis .asset_allocation th,.analysis_parent .first_column,.analysis_parent .second_column,.analysis_parent .first_row,.add_documents_parent_inside .Third_column .add_document_slider ul li .img,.add_docs_parent .add_docs_parent_inside .input,.add_docs_parent .add_docs_parent_inside .comment,.add_docs_parent .sec_column,#inner-contents-graph .net-income,#inner-contents-graph .net-income{border: 1px solid #3AA4DA;}
+
+#bucket_allocation_bx .bucket_allocation_bx_ul li.input_title_one,#bucket_allocation_bx .bucket_allocation_bx_ul li.input_title_two,#bucket_allocation_bx .bucket_allocation_bx_ul li.input_title_three,#bucket_allocation_bx .bucket_allocation_bx_ul li.input_title_four,#calender_main .calender_main_bx_in .top ul li .today_div_dragger:hover,#savings-table .devider{border-right: 1px solid #3AA4DA;}
+
+
+#risk_cover .bg-box{border: 1px solid #3AA4DA !important;}
+
+
+/*----------- [Border Right 1px Line] -----------*/
+#tools .big-tools,#tools .small-tools,#tools .big-tools1,#tools .small-tools1,#tools .big-tools2,#tools .small-tools2{border-right: 1px solid #3AA4DA;}
+
+
+/*-----------1px Border Bottom Line-----------*/
+#log-out{border: 1px solid #3AA4DA;}
+
+/*-----------1px Border Dashed Line-----------*/
+.partner_dashboard_submenu li.menu .line,#gup_shup_main .gup_shup_main_in .calcy_li_bx .calcy_li_bx_in .add_document_slider .mon_house_exp_bx_in_cnt .comment_bx_dashed{border-bottom: 1px dashed #3AA4DA;}
+
+/*-----------1px Border Left Line-----------*/
+.selectboxit-arrow-container{border-left: 1px solid #3AA4DA;}
+
+/*Dashed Border Bottom Line 1px*/
+.advisor_submenu li.menu .bg {border-bottom: 1px dashed #3AA4DA;}
+	
+/*Border Bottom Line 1px*/
+#bottom .bottom-box .testimonial1 .image,#bottom .bottom-box .testimonial2 .image,#ifa-image img,#advt1 img, #advt2 img{border: 1px solid #3AA4DA;}
+
+/*Border Bottom Line 1px*/
+#gup_shup_main .gup_shup_main_in .calcy_li_bx_in,#savings-table,#testimonial_main .testimonial_main_in .calcy_li_bx_in{border-bottom: 1px solid #ca514e;}
+
+/*Border Bottom Left Line 1px*/
+.common_footer_actions #main_actions .list {border-left: 1px solid #3AA4DA;}
+
+/*Top Border 2px*/
+#footer,#banner .image img,#banner #achievement_scale1,#banner #goals1,#banner #networth1,#banner #earning_expenses1,#chat_list .footer{border-top: 2px solid #3AA4DA;}
+
+/*Top Border 1px*/
+#calender_main .calender_main_bx_in .bottom,#x_ray_main .fin_x_ray .calcy_li_bx_in,#feedback_main .feeback_bx_in1 .calcy_li_bx_in,#feedback_main .feeback_bx_in .calcy_li_bx_in,#feedback_main .feeback_bx_in6 .calcy_li_bx_in,#feedback_main .feeback_bx_in .calcy_li_bx_in,#gup_shup_main .gup_shup_main_in .calcy_li_bx_in,#testimonial_main .testimonial_main_in .calcy_li_bx_in,#savings-table{border-top: 1px solid #3AA4DA;}
+
+/*Bottom Border 1px*/
+#x_ray_main .fin_x_ray .calcy_li_bx_in,#feedback_main .feeback_bx_in1 .calcy_li_bx_in,#feedback_main .feeback_bx_in .calcy_li_bx_in,#feedback_main .feeback_bx_in6 .calcy_li_bx_in,#feedback_main .feeback_bx_in .calcy_li_bx_in{border-bottom: 1px solid #3AA4DA;}
+
+/*Bottom Border 2px*/
+#footer,#banner .image img,#banner #achievement_scale1,#banner #goals1,#banner #networth1,#banner #earning_expenses1{border-bottom: 2px solid #3AA4DA;}
+
+/*Bottom Border 2px Dashed Line*/
+
+/*Bottom Border 2px Dashed Line*/
+#goals1 .goal_txt span.total_goals,#goals1 .goal_txt span.achived_goals,#goals1 .goal_txt span.invest,#goals1 .goal_txt span.closer_percentage{border-bottom: 2px dashed #3AA4DA;}
+
+/*Drop Down Submenu Starts*/
+.partner_d_s_line{float: left; border-bottom: 1px dashed #649335; width:60%;}
+.partner_d_s_alert{color:#3AA4DA}
+/*Drop Down Submenu Ends*/
+
+/*Index CSS*/
+
+#nav-menu .my-goals .grad-border,#nav-menu .my-plans .grad-border,#nav-menu .my-portf .grad-border,#nav-menu .my-cashflow .grad-border,#nav-menu .my-fin .grad-border,#nav-menu .my-rep .grad-border,#nav-menu .my-acc .grad-border,#inner-nav-menu .my-goals .grad-border,#inner-nav-menu .my-plans .grad-border,#inner-nav-menu .my-portf .grad-border,#inner-nav-menu .my-cashflow .grad-border,#inner-nav-menu .my-fin .grad-border,#inner-nav-menu .my-rep .grad-border,#inner-nav-menu .my-acc .grad-border{background: url(images/sprite.png) -384px -68px;}
+
+#nav-menu .my-goals,#nav-menu .my-portf,#nav-menu .my-plans,#nav-menu .my-cashflow,#nav-menu .my-fin,#nav-menu .my-rep,#nav-menu .my-acc,#inner-nav-menu .my-goals,#inner-nav-menu .my-portf,#inner-nav-menu .my-plans,#inner-nav-menu .my-cashflow,#inner-nav-menu .my-fin,#inner-nav-menu .my-rep,#inner-nav-menu .my-acc {background: url(images/sprite.png) -250px -20px;}
+
+#nav-menu .my-goals-ico:hover,#inner-nav-menu .my-goals-ico_active { background:url(images/sprite.png) -10px -184px; }
+#nav-menu .my-plans-ico:hover,#inner-nav-menu .my-plans-ico_active { background:url(images/sprite.png) -80px -184px; }
+#nav-menu .my-portf-ico:hover,#inner-nav-menu .my-portf-ico_active { background:url(images/sprite.png) -149px -181px; }
+#nav-menu .my-inc-ico:hover { background:url(images/sprite.png) -225px -181px; }
+#nav-menu .my-cashflow-ico:hover,#inner-nav-menu .my-cashflow-ico_active { background:url(images/sprite.png) -469px -105px; }
+#nav-menu .my-fin-ico:hover,#inner-nav-menu .my-fin-ico_active { background:url(images/sprite3.png) -585px -162px; }
+#nav-menu .my-rep-ico:hover,#inner-nav-menu .my-rep-ico_active { background:url(images/sprite.png) -466px -181px; }
+#nav-menu .my-acc-ico:hover,#inner-nav-menu .my-acc-ico_active { background:url(images/sprite.png) -552px -181px; }
+
+
+#dragger li.alert-bg:hover { background:url(images/sprite.png) -73px -34px; }
+#dragger .enj-scale:hover { background:url(images/sprite.png) -73px -34px; }
+#dragger .polls:hover { background:url(images/sprite.png) -73px -34px; }
+#dragger .faq:hover { background:url(images/sprite.png) -73px -34px; }
+#dragger .quick-help:hover { background:url(images/sprite.png) -73px -34px; }
+#dragger .soft-adv:hover { background:url(images/sprite.png) -73px -34px; }
+
+
+
+
+
+#banner .image-changer {background: url(images/sprite.png) -10px -52px;}
+
+#drag_handle {background: url(images/drag_handle.png);}
+#dragger {background: url(images/homepg-drpdwn.png);}
+#log-out img.logout {background: url(images/sprite.png) -21px -6px;}
+
+/*Index Page CSS Ends*/
+
+/*My Goals*/
+
+#inner-nav-menu .my-goals-ico:hover { background:url(images/sprite.png) -10px -184px; }
+#inner-nav-menu .my-plans-ico:hover { background:url(images/sprite.png) -80px -184px; }
+#inner-nav-menu .my-portf-ico:hover { background:url(images/sprite.png) -149px -181px; }
+#inner-nav-menu .my-inc-ico:hover { background:url(images/sprite.png) -225px -181px; }
+#inner-nav-menu .my-cashflow-ico:hover { background:url(images/sprite.png) -469px -105px; }
+#inner-nav-menu .my-fin-ico:hover { background:url(images/sprite3.png) -585px -162px; }
+#inner-nav-menu .my-rep-ico:hover { background:url(images/sprite.png) -466px -181px; }
+#inner-nav-menu .my-acc-ico:hover { background:url(images/sprite.png) -552px -181px; }
+
+.car {background: url(images/sprite.png) -927px -512px;}
+.higher_education {background: url(images/sprite.png) -833px -423px;}
+.travel_or_vacation { background:url(images/sprite.png) -1019px -512px; width:90px; height:90px; }
+.marriage { background:url(images/sprite.png) -742px -512px; width:90px; height:90px; }
+.car { background:url(images/sprite.png) -927px -512px; width:90px; height:90px; }
+.property_or_house { background:url(images/sprite.png) -1113px -512px; width:90px; height:90px; }
+.start_business { background:url(images/sprite.png) -835px -512px; width:90px; height:90px; }
+.special-goals { background:url(images/sprite.png) -1020px -423px; width:90px; height:90px; }
+.asset { background:url(images/sprite3.png) -1035px -251px; width:90px; height:90px; }
+.parental_responsibility { background:url(images/sprite3.png) -1139px -251px; width:90px; height:90px; }
+.emergency { background:url(images/sprite3.png) -1349px -251px; width:90px; height:90px; }
+.retirement { background:url(images/sprite3.png) -1246px -251px; width:90px; height:90px; }
+.others { background:url(images/sprite.png) -929px -422px; width:90px; height:90px; }
+.status-danger { background:url(images/sprite.png) 546px 0px; width:40px; height:40px; }
+.status-medium { background:url(images/sprite.png) 546px 0px; width:40px; height:40px; }
+.status-comfortable { background:url(images/sprite.png) 546px 0px; width:40px; height:40px; }
+.content .chat_thread .chat_thread_right .comment_no_bg {background: url(images/comment_no_bg.png);}
+#chat_list .footer .footer-right .post:hover {background: url(images/sprite3.png) no-repeat -859px -10px;}
+#chat_list .footer .footer-right .file:hover {background: url(images/sprite3.png) no-repeat -554px -10px;}
+#chat_list .footer .footer-right .link:hover {background: url(images/sprite3.png) no-repeat -748px -10px;}
+#gup_shup_main .gup_shup_main_in .calcy_li_bx_in a.bx-prev {background: url(images/sprite02.png) no-repeat -295px -300px;}
+#gup_shup_main .gup_shup_main_in .calcy_li_bx_in a.bx-next {background: url(images/sprite02.png) no-repeat -354px -300px;}
+#header-strip .add-new-query-btn img:hover { background: url(images/sprite3.png) -489px -193px; }
+
+#inner-contents .goals .goal-year .current-year,#inner-contents .goals .achieved-budget .slider-bg,#data-graph.common_sliding_radio .ui-slider-handle,.ui-slider .ui-slider-handle,.aa_yes,.aa_no,#calculator .right_bx .btn_bx .btn_bx_in:hover, #calculator .right_bx .btn_bx .btn_bx_in.active,#inner-contents .goals .range_parent .current-year,#faq #question_category ul li.active{background: #5aa5cf; /* Old browsers */
+background: -moz-linear-gradient(top,  #5aa5cf 0%, #0d4377 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5aa5cf), color-stop(100%,#0d4377)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #5aa5cf 0%,#0d4377 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #5aa5cf 0%,#0d4377 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #5aa5cf 0%,#0d4377 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #5aa5cf 0%,#0d4377 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5aa5cf', endColorstr='#0d4377',GradientType=0 );*/ /* IE6-9 */
+}
+
+/*Data Collection Images*/
+#data_collection .column_right .category {background: url(images/dc_hexagonal.png) no-repeat center center;}
+#contents .dc_in_content_new .my_goal_redirect {background: url(images/my_goal_redirect.png) no-repeat center center;}
+
+
+
+/*Toggle Button*/
+.toggle-slide .toggle-on{background: #0b4c75; /* Old browsers */
+background: -moz-linear-gradient(top,  #0b4c75 0%, #0b4c75 49%, #63bbd9 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0b4c75), color-stop(49%,#0b4c75), color-stop(100%,#63bbd9)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #0b4c75 0%,#0b4c75 49%,#63bbd9 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #0b4c75 0%,#0b4c75 49%,#63bbd9 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #0b4c75 0%,#0b4c75 49%,#63bbd9 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #0b4c75 0%,#0b4c75 49%,#63bbd9 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b4c75', endColorstr='#63bbd9',GradientType=0 );*/ /* IE6-9 */
+}
+
+.selectboxit-arrow-container{background: #fff url("images/sprite02.png") no-repeat -37px -83px;}
+.selectboxit-open .selectboxit-arrow-container{ background:#fff url("images/sprite02.png") no-repeat -1px -84px}
+#personal_details .second_col {background: url("images/column_divder_bg.png") no-repeat scroll left center rgba(0, 0, 0, 0);}
+	
+.partner_dashboard_submenu:before {background: url("images/sprite3.png") no-repeat -307px -16px;}
+
+#my_reports_main .my_reports_bx_in .top .top_left_in .goal_icon{background-image: url("images/sprite.png");}
+#my_reports_main .my_reports_bx_in .top .top_right_in .portfolio_icon{background-image: url("images/sprite.png");}
+#my_reports_main .my_reports_bx_in .bottom .bottom_left_in .finance_icon{background-image: url("images/sprite.png");}
+#my_reports_main .my_reports_bx_in .bottom .bottom_right_in .action_icon{background-image: url("images/sprite02.png");}
+
+#my_reports_main .my_reports_bx_in{background: url("images/v_strip.png") no-repeat center top;}
+#my_reports_main .my_reports_bx_in .top{background: url("images/h_strip.png") no-repeat center 269px;}
+
+#x_ray_main .fin_x_ray .calcy_li_bx .calcy_li_bx_in .add_document_slider .common_radio_button{background: url("images/radio_btn_bg.png") no-repeat center center;}
+
+.toggle-on.active + .toggle-blob {background: url("images/yes_checked.png") no-repeat center center;}
+.applicable {background:url("images/emergency_applicable.png") no-repeat center center;}
+.not_applicable {background: url("images/emergency_applicable.png") no-repeat center center;}
+.ui-datepicker-trigger {background: url("images/datepicker.png") no-repeat center center;}
+.mandatory {background: url("images/sprite3.png") no-repeat scroll -11px -59px rgba(0, 0, 0, 0);}
+#contact_details .Cont_Details_second_col,#contact_details .Cont_Details_third_col {background: url("images/column_divder_bg.png") no-repeat scroll left center rgba(0, 0, 0, 0);}
+#header-strip .my-password-btn img:hover {background: url("images/sprite3.png") repeat scroll -328px -201px rgba(0, 0, 0, 0);
+}
+#header-strip .my-profile-btn img:hover {background: url("images/sprite3.png") repeat scroll -278px -202px rgba(0, 0, 0, 0);
+}
+.advisor_submenu:before {background: url("images/pd_submenu_arrow.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.common_ad_ass_selector p {background-image: url("images/advice_assumption.png");}	
+.Advice_Assump_Menu:before {background: url("images/Drop_Menu.png") repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.common_footer_actions .back,.common_footer_actions .back {background: url("images/back_nav.png") no-repeat;}
+.common_footer_actions .next,.common_footer_actions .next{background: url("images/next_nav.png") no-repeat;}
+#tools .big-tools .lock {background: url("images/lock_close.png") no-repeat scroll center center rgba(0, 0, 0, 0);}
+#tools .big-tools .unlock {background: url("images/lock_open.png") no-repeat scroll center center rgba(0, 0, 0, 0);}
+#header-strip .my-loan-btn img:hover {background: url("images/sprite.png") -528px -10px;}
+#header-strip .my-asset-btn img:hover {background: url("images/sprite.png") -470px -9px;}
+#header-strip .my-income-btn img:hover {background: url(images/sprite.png) -468px -9px;}
+#header-strip .my-savings-btn img:hover {background: url(images/sprite.png) -503px -403px ;}
+#header-strip .add-income-btn img:hover {background: url("images/sprite.png") -544px -404px;}
+#header-strip .my-expenses-btn img:hover {background: url(images/sprite.png) -528px -10px !important;}
+.asset_allocation_btn{background: url("images/asset_allocation_link_icon.png") no-repeat left 7px;}
+#risk_cover .bg-box:before {background: url("images/risk-cover-bg-box-arrow.png") no-repeat center center;}
+#retirement-planning .white_checkbox {background: url("images/custom_red_checkbox.png") no-repeat left center;}
+.red_custom_checkbox_checked {background: url(images/custom_red_checkbox.png) no-repeat right center!important;}
+#Global_Goal .row_one .title-bg {background: url("images/title-bg.png") repeat-x scroll center center rgba(0, 0, 0, 0);}
+#Global_Goal .second_col {background: url("images/column_divder_bg.png") no-repeat scroll left center rgba(0, 0, 0, 0);}
+#data_collection .column_right .current_finacial { background: url(images/dc_column_divder.png) no-repeat center right;}
+.family_invest_yes {background: url(images/family_invested_yes.png);}
+.family_access_money_yes {background: url(images/family_access_money_yes.png);}
+.family_will_yes {background: url(images/family_will_yes.png);}
+#Risk_Profile_In .first_col .risk_profile_answer,#Risk_Profile_In .second_col .risk_profile_answer{background-image: url(images/risk_profile_answer.png);}
+#testimonial_main .testimonial_main_in .calcy_li_bx_in a.bx-prev {background: url(images/sprite02.png) no-repeat -295px -300px;}
+#testimonial_main .testimonial_main_in .calcy_li_bx_in a.bx-next {background: url(images/sprite02.png) no-repeat -354px -300px;}
+
+#Risk_Profile_In .first_col .box_pen {background: url("images/sprite3.png") no-repeat scroll -355px -355px rgba(0, 0, 0, 0);}
+#Risk_Profile_In .second_col .box_pen2 {background: url("images/sprite3.png") no-repeat scroll -355px -355px rgba(0, 0, 0, 0);}
+
+#calender_main .calender_main_bx_in .bottom_right .export_icon {background: url(images/sprite02.png) -41px -275px;}
+
+#calculator .left_bx {background-image: url(images/v_strip_two.png);}
+
+#calender_main .td_eve {background: url(images/sprite02.png) -714px -47px;}
+
+.last-poll {width: 460px; background: url(images/v_strip_two.png) top right no-repeat; }
+
+#x_ray_main .fin_x_ray .calcy_li_bx .calcy_li_bx_in .add_document_slider .common_radio_button_checked {background: url(images/yes_checked.png) no-repeat center center;}
+#x_ray_main .fin_x_ray .calcy_li_bx_in a.bx-prev {background: url(images/sprite02.png) no-repeat -295px -300px;}
+#x_ray_main .fin_x_ray .calcy_li_bx_in a.bx-next {background: url(images/sprite02.png) no-repeat -354px -300px;}
+
+#x_ray_main .fin_x_ray .calcy_li_bx_in ul li .common_custom_checkbox {background: url(images/sprite02.png) no-repeat -77px -47px;}
+#x_ray_main .fin_x_ray .calcy_li_bx_in ul li .white_checkbox_checked {background: url(images/sprite02.png) no-repeat -31px -47px;}
+
+#feedback_main .feeback_bx_in1 .calcy_li_bx .calcy_li_bx_in .add_document_slider .common_radio_button {background: url(images/radio_btn_bg.png) no-repeat center center;}
+
+#feedback_main .feeback_bx_in1 .calcy_li_bx .calcy_li_bx_in .add_document_slider .common_radio_button_checked {background: url(images/yes_checked.png) no-repeat center center;}
+#feedback_main .feeback_bx_in .navigation li.active:after,#feedback_main .feeback_bx_in1 .navigation li.active:after,#feedback_main .feeback_bx_in6 .navigation li.active:after {background: url(images/sprite3.png) no-repeat -526px -170px #649335;}
+#feedback_main .feeback_bx_in1 .calcy_li_bx_in a.bx-next {background: url(images/sprite02.png) no-repeat -354px -300px;}
+#feedback_main .feeback_bx_in1 .calcy_li_bx_in a.bx-prev {background: url(images/sprite02.png) no-repeat -295px -300px;}
+
+#feedback_main .feeback_bx_in .calcy_li_bx .calcy_li_bx_in .add_document_slider .common_radio_button_checked {background: url(images/yes_checked.png) no-repeat center center;}
+#feedback_main .feeback_bx_in .calcy_li_bx_in a.bx-next {background: url(images/sprite02.png) no-repeat -354px -300px;}
+#feedback_main .feeback_bx_in .calcy_li_bx_in a.bx-prev {background: url(images/sprite02.png) no-repeat -295px -300px;}
+
+#feedback_main .feeback_bx_in .calcy_li_bx_in ul li .white_checkbox_checked {background: url(images/sprite02.png) no-repeat -31px -47px !important;}
+#feedback_main .feeback_bx_in6 .calcy_li_bx_in a.bx-prev {background: url(images/sprite02.png) no-repeat -295px -300px;}
+#feedback_main .feeback_bx_in6 .calcy_li_bx_in a.bx-next {background: url(images/sprite02.png) no-repeat -354px -300px;}
+.common_radio_button {background: url(images/radio_btn_bg.png) no-repeat center center;}
+.common_radio_button_checked {background: url(images/yes_checked.png) no-repeat center center;}
+
+#feedback_main .feeback_bx_in .calcy_li_bx_in ul li .common_custom_checkbox {background: url(images/sprite02.png) no-repeat -77px -47px;}
+
+#header-strip .my-docs-btn img:hover { background:url(images/sprite3.png) -459px -196px; }
+#data_collection .circular_bg {background: url(images/dc_circular.png) no-repeat center center;}
+#data_collection .column_left {background: url(images/dc_column_divder.png) no-repeat center right;}
+/*Images Ends*/
+	
+.ui-dialog .ui-dialog-buttonpane button, #personalization .btn_bx .submit_btn,.main-btn,#personalization .btn_bx2 .submit_btn,#personalization .btn_bx2 .cancel_btn,#data_collection .column_right .what_if,.Advice_Assump_Menu .save,.Advice_Assump_Menu .cancel,#my_assets .submit_btn,#bucket_allocation_bx .btn_bx .cancel_btn,.btn_bx1 .cancel_btn,.add_btn_bx .cancel_btn,.add_btn_bx .submit_btn,#personalization .btn_bx2 .submit_btn,#personalization .btn_bx2 .cancel_btn,#risk_profile_analysis .btn_bx .cancel_btn,li.list .btn{background: #69b7e7; /* Old browsers */
+background: -moz-linear-gradient(top,  #69b7e7 0%, #68b6e6 48%, #296e98 50%, #68b2df 92%, #69b3e0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#69b7e7), color-stop(48%,#68b6e6), color-stop(50%,#296e98), color-stop(92%,#68b2df), color-stop(100%,#69b3e0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #69b7e7 0%,#68b6e6 48%,#296e98 50%,#68b2df 92%,#69b3e0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #69b7e7 0%,#68b6e6 48%,#296e98 50%,#68b2df 92%,#69b3e0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #69b7e7 0%,#68b6e6 48%,#296e98 50%,#68b2df 92%,#69b3e0 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #69b7e7 0%,#68b6e6 48%,#296e98 50%,#68b2df 92%,#69b3e0 100%); /* W3C */
+/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69b7e7', endColorstr='#69b3e0',GradientType=0 ); */ /* IE6-9 */}
+
+
+.ui-dialog .ui-dialog-buttonpane button:active,#personalization .btn_bx .submit_btn:active,#bucket_allocation_bx .btn_bx .cancel_btn:active,.btn_bx1 .cancel_btn:active,main-btn:active,.add_btn_bx .cancel_btn:active,.add_btn_bx .submit_btn:active,#my_assets .submit_btn:active,#personalization .btn_bx2 .submit_btn:active,#personalization .btn_bx2 .cancel_btn:active,#risk_profile_analysis .btn_bx .cancel_btn:active,li.list .btn:active {background: #69b3e0; /* Old browsers */background: -moz-linear-gradient(top,  #69b3e0 0%, #68b2df 8%, #296e98 50%, #68b6e6 52%, #69b7e7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#69b3e0), color-stop(8%,#68b2df), color-stop(50%,#296e98), color-stop(52%,#68b6e6), color-stop(100%,#69b7e7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #69b3e0 0%,#68b2df 8%,#296e98 50%,#68b6e6 52%,#69b7e7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #69b3e0 0%,#68b2df 8%,#296e98 50%,#68b6e6 52%,#69b7e7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #69b3e0 0%,#68b2df 8%,#296e98 50%,#68b6e6 52%,#69b7e7 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #69b3e0 0%,#68b2df 8%,#296e98 50%,#68b6e6 52%,#69b7e7 100%); /* W3C */
+/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69b3e0', endColorstr='#69b7e7',GradientType=0 ); */ /* IE6-9 */	
+}
+
+/*For Chat*/
+
+#chat_list .footer .footer-left .common_btn{background: #3c86be; /* Old browsers */
+background: -moz-linear-gradient(top,  #3c86be 0%, #67c0e7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3c86be), color-stop(100%,#67c0e7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #3c86be 0%,#67c0e7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #3c86be 0%,#67c0e7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #3c86be 0%,#67c0e7 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #3c86be 0%,#67c0e7 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c86be', endColorstr='#67c0e7',GradientType=0 );*/ /* IE6-9 */
+}
+
+#chat_list .footer .footer-left .common_btn:active{background: #67c0e7; /* Old browsers */
+background: -moz-linear-gradient(top,  #67c0e7 0%, #3c86be 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#67c0e7), color-stop(100%,#3c86be)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #67c0e7 0%,#3c86be 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #67c0e7 0%,#3c86be 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #67c0e7 0%,#3c86be 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #67c0e7 0%,#3c86be 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c0e7', endColorstr='#3c86be',GradientType=0 ); /* IE6-9 */
+}
+
+/*Line Divider*/
+
+.content .chat_thread .separator{background: #dbdbdb; /* Old browsers */
+background: -moz-linear-gradient(top,  #dbdbdb 0%, #3a84bc 25%, #3a84bc 75%, #dbdbdb 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(25%,#3a84bc), color-stop(75%,#3a84bc), color-stop(100%,#dbdbdb)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #dbdbdb 0%,#3a84bc 25%,#3a84bc 75%,#dbdbdb 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #dbdbdb 0%,#3a84bc 25%,#3a84bc 75%,#dbdbdb 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #dbdbdb 0%,#3a84bc 25%,#3a84bc 75%,#dbdbdb 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #dbdbdb 0%,#3a84bc 25%,#3a84bc 75%,#dbdbdb 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#dbdbdb',GradientType=0 );*/ /* IE6-9 */
+}
+
+#risk_profile_analysis .first_column .type_indicator .conservative_type.selected {-moz-box-shadow: 0px 0px 5px 1px #276b95 inset; -webkit-box-shadow: 0px 0px 5px 1px #276b95 inset; box-shadow: 0px 0px 5px 1px #276b95 inset;}
+#risk_profile_analysis .first_column .type_indicator .balance_type.selected {-moz-box-shadow: 0px 0px 5px 1px #276b95 inset; -webkit-box-shadow: 0px 0px 5px 1px #276b95 inset; box-shadow: 0px 0px 5px 1px #276b95 inset;}
+#risk_profile_analysis .first_column .type_indicator .aggressive_type.selected {-moz-box-shadow: 0px 0px 5px 1px #276b95 inset; -webkit-box-shadow: 0px 0px 5px 1px #276b95 inset; box-shadow: 0px 0px 5px 1px #276b95 inset;}

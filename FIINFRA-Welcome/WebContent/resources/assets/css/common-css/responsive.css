@@ -1,0 +1,11 @@
+@media screen and (max-width: 1024px) {
+.wrapper{ width:100%}
+}
+/* Login */
+@media screen and (max-width: 1024px) {
+#login .main .in_content{ width:35%}	
+#login .in_content .logo{width:60%}
+#login .in_content #login_form{width: 92%;}
+#login #login_form input[type="text"], #login #login_form input[type="password"]{width: 75%;}
+#login #login_form input[type="text"], #login #login_form input[type="password"]{}
+}

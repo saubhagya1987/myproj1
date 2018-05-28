@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Data Collection</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<!--[if gte IE 9]>
+  <style type="text/css">
+.common_header .page_header,.common_header .person_account .submenu,.common_header #password_change,.common_header #password_change .blue_btn{filter: none;}
+.common_header #password_change .blue_btn:hover{filter: none;}
+  </style>
+<![endif]-->
+
+</head>
+
+<body>
+<div class="wrapper" id="data_collection_parent">
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+                            <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change"><span></span> 
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a> <span class="head_txt">data collection</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--><section class="content common_content">
+    <div class="combined_submenu clearfix"><div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset ">
+              <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dc_dashboard_submenu">
+        <h4 class="heading"><a href="data-collection.html">Data Collection Dashboard</a></h4>
+        <ul class="clearfix reset first_col_menu">
+              <li class="menu emergency"><a href="emergency-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Emergency</span></a></li>
+              <li class="menu risk_cover"><a href="risk-cover.html" class="anch"><span class="thumb"></span><span class="txt">Risk Cover</span></a></li>
+              <li class="menu retirement"><a href="retirement-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Retirement</span></a></li>
+              <li class="menu succession"><a href="succession-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Succession</span></a></li>
+              <li class="menu financial"><a href="financial-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Financial</span></a></li>
+              <li class="menu cash_flow"><a href="cash-flow.html" class="anch"><span class="thumb"></span><span class="txt">Cash Flow</span></a></li>
+              <li class="menu loan_status"><a href="loan-status.html" class="anch"><span class="thumb"></span><span class="txt">Loan Status</span></a></li>
+              <li class="menu last clearfix"><a href="profile-info.html" class="anch personal_info"><span class="thumb"></span><span class="txt">Personal Info.</span></a> <a href="risk-profile.html" class="anch risk_profile"><span class="thumb"></span><span class="txt">Risk Profile</span></a> <a href="my-goals.html" class="anch my_goals"><span class="thumb"></span><span class="txt">My Goals</span></a></li> 
+            </ul>
+            
+            <ul class="clearfix reset sec_col_menu">
+              <li class="menu education"><a href="education-goal-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Education</span></a></li>
+               <li class="menu property"><a href="purchase-property-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Property</span></a></li>
+                   <li class="menu wedding"><a href="wedding-goal.html" class="anch"><span class="thumb"></span><span class="txt">Wedding</span></a></li>
+                    <li class="menu car"><a href="car-goal.html" class="anch"><span class="thumb"></span><span class="txt">Car</span></a></li>
+  <li class="menu travel"><a href="travel-n-vacaction-goal.html" class="anch"><span class="thumb"></span><span class="txt">Travel</span></a></li>
+              <li class="menu business"><a href="business-goal.html" class="anch"><span class="thumb"></span><span class="txt">Business</span></a></li>
+              <li class="menu special_goal"><a href="special-goal.html" class="anch"><span class="thumb"></span><span class="txt">Special Goal</span></a></li>
+              <li class="menu other"><a href="other-goal.html" class="anch"><span class="thumb"></span><span class="txt">Other Goal</span></a></li>
+            </ul>
+        <div class="clr"></div>
+        
+        </div>
+        <div class="contact_configuration_submenu">
+          <h4 class="heading"><a>Contact Configuration</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset ">
+              <li class="menu coantact_setting"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Contact Settings</span></a></li>
+              <li class="menu contact_rec"><a href="#" class="anch"><span class="thumb"></span><span class="txt"> Contact Recommendations</span></a></li>
+          
+            </ul>
+          </div>
+        </div>
+        </div> <a href="my-goals.html" class="my_goal_redirect">
+      <h4 class="head">My Goals</h4>
+      <span class="count">5</span>
+      </a>
+      <section class="in_content clearfix" id="data_collection">
+      
+       <!-- <div class="page_submenu">
+          <h4 class="heading">Contact Configuartion</h4>
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="menu contact_setting"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Contact Setting</span></a></li>
+              <li class="menu contact_recomm"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Contact Recommendations</span></a></li>
+            </ul>
+          </div>
+        </div>-->
+        <!-- DC submenu Ends-->
+        <div class="column_left">
+          <div class="first_col">
+            <div id="personal_info" class="circular_bg"><a class="hit_area" href="profile-info.html"><span>Personal Information</span></a></div>
+          </div>
+          <div class="sec_col">
+            <div id="risk_profile" class="circular_bg"><a class="hit_area" href="risk-profile.html"><span>Risk Profile</span></a></div>
+          </div>
+        </div>
+        <div class="column_right clearfix">
+          <div class="current_finacial">
+            <div class="heading fr clearfix">
+              <div class="head_thumb fr"><span></span></div>
+              <p class="fr">Current Financial Status</p>
+            </div>
+            <div class="clr"></div>
+            <div class="category" id="emergency"><a class="hit_area" href="emergency-readiness.html"><span>Emergency</span></a></div>
+            <div class="category" id="risk_cover"><a class="hit_area" href="risk-cover.html"><span>Risk Cover</span></a></div>
+            <div class="category" id="goal_readiness"><div class="dc_status_comp"></div><a class="hit_area" href="financial-readiness.html"><span>Goal Readiness</span></a></div>
+            <div class="category" id="retirement_readiness"><a class="hit_area" href="retirement-readiness.html"><span>Retirement Readiness</span></a></div>
+            <div class="category" id="cash_flow"><div class="dc_status_comp"></div><a class="hit_area" href="cash-flow.html"><span>Cash Flow</span></a></div>
+            <div class="category" id="loan_status"><a class="hit_area" href="loan-status.html"><span>Loan Status</span></a></div>
+            <div class="category" id="succession_readiness"><a class="hit_area" href="succession-readiness.html"><span>Succession Readiness</span></a></div>
+          </div>
+          <div class="future_finacial">
+            <div class="heading fl clearfix">
+              <div class="head_thumb fl"><span></span></div>
+              <p class="fr">Future Financial Expectations</p>
+            </div>
+            <div class="clr"></div>
+            <div class="category" id="wedding"><a class="hit_area" href="wedding-goal.html"><span>Wedding</span></a></div>
+            <div class="category" id="education"><a class="hit_area" href="education-goal-future-financial.html"><span>Education</span></a></div>
+            <div class="category" id="buisness"><a class="hit_area" href="business-goal.html"><span>Buisness</span></a></div>
+            <div class="category" id="car"><div class="dc_status_comp"></div><a class="hit_area" href="car-goal.html"><span>Car</span></a></div>
+            <div class="category" id="travel"><div class="dc_status_comp"></div><a class="hit_area" href="travel-n-vacaction-goal.html"><span>Travel</span></a></div>
+            <div class="category" id="others"><a class="hit_area" href="other-goal.html"><span>Other Goal</span></a></div>
+            <div class="category" id="spcial_goal"><a class="hit_area" href="special-goal.html"><span>Special Goal</span></a></div>
+            <div class="category" id="property"><a class="hit_area" href="purchase-property-future-financial.html"><span>Property</span></a></div>
+          </div>
+          <div class="clr"></div>
+          <div class="actions">
+            <div class="action_parent">
+              <ul class="reset clearfix">
+                <li><a href="#" class="what_if foot_links"><span class="txt">What If</span></a></li>
+                <li><a href="#" class="report foot_links"><span class="txt">Generate Report</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="overlay"></div>
+    </section>
+    <div class="clr"></div>
+  </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<meta name="viewport" content="width=1024">
+<title>Advice Recommendations</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+
+ <script>
+  $(document).ready(function(){
+  $(function() {
+    $( "#tabs" ).tabs();
+    $('.ui-tabs-panel').perfectScrollbar();
+  });
+   
+  });
+  </script>
+</head>
+
+<body>
+<div class="wrapper" id="advice_recommendation">
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+                            <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change"><span></span>
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="personalization.html" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a> <span class="head_txt">Advice Recommendations</span><span class="heading_icon"><span class="head_icon"><img class="rp-margin" src="../images/advice_recommendations_icon.png" alt=""/></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--><section class="content common_content">
+    <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset">    <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+     <section class="in_content clearfix" id="advice_recommendation_in"> 
+        
+        <!-- DC submenu Ends-->
+        
+        <div class="column_left clearfix">
+          <div class="advice_recommendation_dc">
+            <div class="category" id="risk_cover"><a class="hit_area" href="risk-cover-advice-recommendation.html">
+              <h4 class="head">Risk Cover</h4>
+              <span> It doesn't matter how hard you hit if you cannot take a punch...</span></a></div>
+            <div class="category" id="loan_planning"><a class="hit_area" href="loans.html">
+              <h4 class="head">Loans</h4>
+              <span>Loans are both good and bad...</span></a></div>
+            <div class="category" id="goal_plan"><a class="hit_area" href="goal-plan.html">
+              <h4 class="head">Goal Plan</h4>
+              <span>Setting goals and investing for goals in-stills discipline and focus...</span></a></div>
+            <div class="category" id="tax_planning"><a class="hit_area" href="tax-planning.html">
+              <h4 class="head">Tax Planning</h4>
+              <span>Paying tax is a responsibility, saving tax is a right...</span></a></div>
+            <div class="category" id="emergency_planning"><a class="hit_area" href="emergency-planning.html">
+              <h4 class="head">Emergency Planning</h4>
+              <span>Accidents or health setbacks can happen to anyone and the need for large...</span></a></div>
+            <div class="category" id="vacation_planning"><a class="hit_area" href="vacation-planning.html">
+              <h4 class="head">Vacation Planning</h4>
+              <span>Lorem ipsum dolor sit
+              amet, consectetur adipis
+              cinglor sitelit ipsum dolor...</span></a></div>
+            <div class="category" id="succession_planning"><a class="hit_area" href="succession-planning.html">
+              <h4 class="head">Succession Planning</h4>
+              <span>Planning to smoothly pass on your assets is as important as life insurance itself...</span></a></div>
+          </div>
+          <div class="clr"></div>
+        </div>
+        <div class="column_right clearfix">
+          <div id="help_tips_top" class="clearfix">
+            <div class="help_tips_top_in">HELP TIPS</div>
+          </div>
+           <div id="tabs">
+  <ul class="reset clearfix">
+    <li id="risk_cover_tab"><a href="#risk_cover_content"></a></li>
+    <li id="loans_tab"><a href="#loans_tab_content"></a></li>
+    <li id="emergency_planning_tab"><a href="#emergency_planning_contnent"></a></li>
+    <li id="goal_plan_tab"><a href="#goal_plan_content"></a></li>
+    <li id="tax_planning_tab"><a href="#tax_planning_contnet"></a></li>
+    <li id="succession_planning_tab"><a href="#succession_planning_content"></a></li>
+    <li id="vacation_planning_tab"><a href="#vacation_planning_contnet"></a></li>
+  </ul>
+  <div id="risk_cover_content">
+  <h3 class="heading">Risk Cover</h3>
+   <p class="strong"> "It doesn't matter how hard you hit if you cannot take a punch"</p>  
+
+<p>Assets are built with a lot of hard work. But it takes just one unfortunate event like a health crisis or a freak accident to wipe it all away.</p>
+
+<p>Protecting your key assets from common risks is as important if not more important, than building more assets.</p>
+
+<p class="strong northspace1">Key assets are </p>
+<ul>
+<li>Earning capacity of an individual</li>
+<li>Physical or other assets that generate income  / save costs</li>
+</ul>
+
+<p class="strong">Common risks </p>
+<p class="strong">That impact earning capacity of an individual are</p>
+<ul>
+<li>Early death</li>   <li> Critical illnesses</li>     <li>Accidents</li>    <li>Health setbacks</li>
+<p class="strong">That can destroy assets that generate income are</p>
+<li>Natural calamities</li>    <li>Man made mischief</li>    <li>Law suits</li>
+</ul>
+
+<p>Insurance is the most economical way of protecting most risks. </p>
+  </div>
+  <div id="loans_tab_content">
+   <h3 class="heading">Loans</h3>
+   <p>Loans are both good and bad.</p> 
+<p>Good because they help you purchase big assets without having all the money and yet enjoying most of the wealth the asset creates.</p>
+<p>Bad because, you have to bear the interest cost and there is constant pressure on cash flows.</p>
+<p>Managing loans better can substantially improve your financial situation. </p>
+<p class="strong northspace1">A few ways to managing loans responsibly are :</p>
+ <ul>
+<li>Borrow only when it will improve your net worth</li>
+ <li>Borrow at competitive costs</li>
+ <li>Repay on time avoiding penalties</li>
+ <li>Pay off loans earlier if you can </li>
+ <li>Maintain all paperwork diligently</li>
+ <li>Check your credit rating scores on a periodic basis </li>
+
+</ul>
+  </div>
+  <div id="emergency_planning_contnent">
+   <h3 class="heading">Emergency Planning</h3>
+    <p>Emergencies can happen. We have in our lifetime witnessed earthquakes, tsunamis, cyclones, deluge and a few other natural calamities which have thrown many peoples' life in disarray. Accidents or health setbacks can happen to anyone and the need for large amounts of money in short notice may arise, followed by long periods of income loss.</p>
+
+<p class="strong northspace1">Creating an emergency fund will help to</p>
+<ul>
+<li>Avoid borrowing</li>
+<li>Avoid distress selling of assets</li>
+<li>Avoid use of assets meant for some other goals</li>
+</ul>
+
+<p class="strong">How much Emergency funds a person needs to be decided on the following basis</p>
+<ul>
+<li>More the number of sources of income lesser is the amount required</li>
+<li>More stable income with better employment benefits lesser is the amount required</li>
+</ul>
+
+<p>However an amount equivalent to atleast <strong>6 times household expenses</strong> is strongly recommended. And it is best to maintain that amount in safe and accessible investments like</p>
+<ul>
+<li>Liquid funds</li>
+<li>Bank fixed deposits</li>
+<li>Savings bank account</li>
+</ul>
+
+  </div>
+  
+  <div id="goal_plan_content">
+   <h3 class="heading">Goal Plan</h3>
+   <p> Setting goals and investing for goals instills discipline and focus to the whole exercise of investment planning.</p>
+<p>Once investments are aligned to goals, the need for action is triggered not by market movements not in our control but on life events, more in our control.
+</p>
+<p class="strong northspace1">The Steps to Goal based planning are :</p>
+<ul>
+<li>Identify and name the Goal</li>
+<li>Specify when you would like the goal achieved</li>
+<li>Specify how much if might cost if the goal is to be achieved today</li>
+<li>Check if existing assets can be used for this goal and calculate if that is going to be enough</li>
+<li>If yes, provide for regular rebalancing of assets and ensure that asset can be converted to cash and used at the time of goal</li>
+<li>If not, depending on time to goal and risk profile, arrive at additional investments to be made to meet the goal</li>
+<li>Choose the right investment options and begin investing. </li>
+<li>Stick to the plan till goal is reached.</li>
+</ul>
+  </div>
+  
+  <div id="tax_planning_contnet">
+    <h3 class="heading">Tax Planning</h3>
+    <p>"Paying tax is a responsibility, saving tax is a right"</p>
+<p>All income whether salary or business income or rent or interest or lottery – are all subject to income tax.</p>
+<p>Tax laws undergo regular change. With some expert help and advance planning you could save some money from the taxman and invest it for your own future use.</p>
+
+
+  </div>
+  
+  <div id="succession_planning_content">
+  <h3 class="heading">Succession Planning</h3>
+  <p> Planning to smoothly pass on your assets is as important as life insurance itself.</p> 
+<p class="strong">A well designed succession plan provides for</p>
+<ul>
+<li>Giving enough knowledge to the family on details of assets available</li>
+<li>Making certain assets easily available to family when you can't operate it yourself (emergency situations)</li>
+<li>In the unfortunate event of death, all dependents get easy access to the wealth you would like them to have.</li>
+</ul>
+<p>Succession Planning is a specialized and complex area and seeking expert help is recommended.</p>
+
+  </div>
+  
+  <div id="vacation_planning_contnet">
+    <h3 class="heading">Vacation Planning</h3>
+  </div>
+  
+</div>
+   <div id="help_tips_bottom" class="clearfix"> 
+<div class="clr"> </div>
+</div>      
+          
+        </div>
+      </section>
+    </section>
+    <div class="clr"></div>
+  </section>
+</div>
+</body>
+</html>

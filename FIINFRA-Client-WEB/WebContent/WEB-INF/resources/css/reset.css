@@ -1,0 +1,210 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/****************************************************************************************************
+
+* Filename: basic.css
+
+****************************************************************************************************/
+
+/* GLOBAL RESET 
+
+**********************************************************/
+
+body, h1, h2, h3, h4, h5, h6, p { margin:0; line-height:1 }
+input[type="radio"], input[type="checkbox"] { margin:0; vertical-align:-2px }
+a:link, a:active, a:visited { text-decoration:none }
+a:active, a:focus, textarea:focus, input:focus { outline: none }
+textarea { overflow:auto; resize:none }
+img{border:none}
+table { border-collapse:collapse; border-spacing:0; table-layout:fixed }
+/* INDIVIDUAL RESETs
+
+**********************************************************/
+
+.reset { list-style:none; padding:0; margin:0 }
+.nomargin { margin:0 }
+.nopadding { padding:0!important }
+/* ALIGN CENTER
+
+**********************************************************/
+
+.equalgap { margin:0 auto }
+/* FLOATS
+
+**********************************************************/
+
+.fl { float:left }
+.fr { float:right }
+.fn { float:none }
+
+
+/* CLEAR FLOAT
+
+**********************************************************/
+
+.clearfix:after { content:"\0020"; display:block; height:0; clear:both; visibility:hidden; overflow:hidden }
+.clr { clear:both; overflow:hidden; height:0 }
+/* WIDTH 100% 
+
+**********************************************************/
+
+.fullwid { width:100% }
+/* DISPLAYs, POSITIONs & OVERFLOWs 
+
+**********************************************************/
+
+.inline { display:inline }
+.ovfl-hidden { overflow:hidden }
+.rel { position:relative }
+.absolute { position:absolute }
+.absoluted > * { position:absolute }
+.inlineBlock { display:inline-block }
+.hide-elem { display:none !important }
+/* ALL TEXT CSS
+
+**********************************************************/
+
+/* font SIZES */
+
+.vsmlTxt { font-size:10px }
+.smlTxt { font-size:11px }
+.paraTxt { font-size:12px }
+.bigTxt { font-size:14px }
+/*font WEIGHTS */
+
+.strong{ font-weight:bold }
+.normTxt{ font-weight:normal }
+/* text TRANSFORMS */
+
+.allCaps { text-transform:capitalize }
+.upperCase { text-transform:uppercase }
+.underlined { text-decoration:underline }
+/* text ALIGN & content ALIGN for inline level ELEMENTS */
+
+.centerAll { text-align:center }
+.leftAlign { text-align:left }
+.rightAlign { text-align:right }
+.justified { text-align:justify }
+/* MAKE MENUS / TABS / NAVS
+
+**********************************************************/
+
+/* PADDINGS and MARGINS (north east south west)
+
+**********************************************************/
+
+.padwest1 { padding-left:5px }
+.padwest2 { padding-left:10px }
+.padwest3 { padding-left:15px }
+.padwest4 { padding-left:20px }
+.padwest5 { padding-left:25px }
+.padwest6 { padding-left:30px }
+.padeast1 { padding-right:5px }
+.padeast2 { padding-right:10px }
+.padeast3 { padding-right:15px }
+.padeast4 { padding-right:20px }
+.padeast5 { padding-right:25px }
+.padeast6 { padding-right:30px }
+.westspace1 { margin-left:5px }
+.westspace2 { margin-left:10px }
+.westspace3 { margin-left:15px }
+.westspace4 { margin-left:20px }
+.westspace5 { margin-left:25px }
+.westspace6 { margin-left:30px }
+.westspace20{ margin-left:100px }
+.eastspace1 { margin-right:5px }
+.eastspace2 { margin-right:10px }
+.eastspace3 { margin-right:15px }
+.eastspace4 { margin-right:20px }
+.eastspace5 { margin-right:25px }
+.eastspace6 { margin-right:30px }
+.eastspace20{ margin-right:100px }
+.padsouth1 { padding-bottom:5px }
+.padsouth2 { padding-bottom:10px }
+.padsouth3 { padding-bottom:15px }
+.padsouth4 { padding-bottom:20px }
+.padsouth5 { padding-bottom:25px }
+.padsouth6 { padding-bottom:30px }
+.padnorth1 { padding-top:5px }
+.padnorth2 { padding-top:10px }
+.padnorth3 { padding-top:15px }
+.padnorth4 { padding-top:20px }
+.padnorth5 { padding-top:25px }
+.padnorth6 { padding-top:30px }
+.southspace1 { margin-bottom:5px }
+.southspace2 { margin-bottom:10px }
+.southspace3 { margin-bottom:15px }
+.southspace4 { margin-bottom:20px }
+.southspace5 { margin-bottom:25px }
+.southspace6 { margin-bottom:30px }
+.northspace1 { margin-top:5px}
+.northspace2 { margin-top:10px}
+.northspace3 { margin-top:15px }
+.northspace4 { margin-top:20px }
+.northspace5 { margin-top:25px }
+.northspace6 { margin-top:30px;}
+.northspace7 { margin-top:35px}
+.pad-nesw1 { padding:5px }
+.pad-nesw2 { padding:10px }
+.pad-nesw3 { padding:15px }
+.pad-nesw4 { padding:20px }
+.pad-nesw5 { padding:25px }
+.pad-nesw6 { padding:30px }
+.neswspace1 { margin:5px }
+.neswspace2 { margin:10px }
+.neswspace3 { margin:15px }
+.neswspace4 { margin:20px }
+.neswspace5 { margin:25px }
+.neswspace6 { margin:30px }
+
+    /**
+    * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+    * http://cssreset.com
+    */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    display: block;
+    }
+    body {
+    line-height: 1;
+    }
+    ol, ul {
+    list-style: none;
+    }
+    blockquote, q {
+    quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    content: '';
+    content: none;
+    }
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+	a{text-decoration:none;}
+	.noborder{border:none !important;}

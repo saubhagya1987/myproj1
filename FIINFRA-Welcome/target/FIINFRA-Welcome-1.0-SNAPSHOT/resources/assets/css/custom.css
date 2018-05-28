@@ -1,0 +1,194 @@
+/*** Fonts Starts ***/
+@font-face { font-family: 'open_sansregular'; src: url('../fonts/opensans-regular-webfont.eot'); src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'open_sansbold'; src: url('../fonts/opensans-bold-webfont.eot'); src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-bold-webfont.woff') format('woff'), url('../fonts/opensans-bold-webfont.ttf') format('truetype'), url('../fonts/opensans-bold-webfont.svg#open_sansbold') format('svg'); font-weight: normal; font-style: normal; }
+/*** Fonts Starts ***/
+/*** Global Class Starts ***/
+/***Basic Css Starts***/
+/* INDIVIDUAL RESETs
+**********************************************************/
+.reset { list-style: none; padding: 0; margin: 0 }
+.nomargin { margin: 0 }
+.nopadding { padding: 0 !important }
+/* ALIGN CENTER
+**********************************************************/
+.equalgap { margin: 0 auto }
+/* FLOATS
+**********************************************************/
+.fl { float: left }
+.fr { float: right }
+.fn { float: none }
+/* CLEAR FLOAT
+**********************************************************/
+.clr { clear: both; overflow: hidden; height: 0 }
+/* WIDTH 100% 
+**********************************************************/
+.fullwid { width: 100% }
+/* DISPLAYs, POSITIONs & OVERFLOWs 
+**********************************************************/
+.inline { display: inline }
+.ovfl-hidden { overflow: hidden }
+.rel { position: relative }
+.absolute { position: absolute }
+.absoluted > * { position: absolute }
+.inlineBlock { display: inline-block }
+.hide-elem { display: none }
+/* ALL TEXT CSS
+**********************************************************/
+/* font SIZES */
+.vsmlTxt { font-size: 10px }
+.smlTxt { font-size: 11px }
+.paraTxt { font-size: 12px }
+.bigTxt { font-size: 14px }
+.size-12 { font-size: 12px!important; }
+.size-14 { font-size: 14px!important; }
+.size-16 { font-size: 16px!important; }
+.size-18 { font-size: 18px!important; }
+.size-19 { font-size: 19px!important; }
+.size-20 { font-size: 20px!important; }
+.size-21 { font-size: 21px!important; }
+.size-24 { font-size: 24px!important; }
+.size-36 { font-size: 36px!important; }
+.size-48 { font-size: 48px!important; }
+.size-60 { font-size: 60px!important; }
+.size-72 { font-size: 72px!important; }
+/*font WEIGHTS */
+.strong { font-weight: bold }
+.normTxt { font-weight: normal!important }
+/* text TRANSFORMS */
+.allCaps { text-transform: capitalize }
+.upperCase { text-transform: uppercase }
+.underlined { text-decoration: underline }
+/* text ALIGN & content ALIGN for inline level ELEMENTS */
+.centerAll { text-align: center }
+.leftAlign { text-align: left }
+.rightAlign { text-align: right }
+.justified { text-align: justify }
+/* MAKE MENUS / TABS / NAVS
+**********************************************************/
+/* PADDINGS and MARGINS (north east south west)
+**********************************************************/
+.padwest1 { padding-left: 5px }
+.padwest2 { padding-left: 10px }
+.padwest3 { padding-left: 15px }
+.padwest4 { padding-left: 20px }
+.padwest5 { padding-left: 25px }
+.padwest6 { padding-left: 30px }
+.padeast1 { padding-right: 5px }
+.padeast2 { padding-right: 10px }
+.padeast3 { padding-right: 15px }
+.padeast4 { padding-right: 20px }
+.padeast5 { padding-right: 25px }
+.padeast6 { padding-right: 30px }
+.westspace0 { margin-left: 0 }
+.westspace1 { margin-left: 5px }
+.westspace2 { margin-left: 10px }
+.westspace3 { margin-left: 15px }
+.westspace4 { margin-left: 20px }
+.westspace5 { margin-left: 25px }
+.westspace6 { margin-left: 30px }
+.westspace7 { margin-left: 35px }
+.eastspace0 { margin-right: 0 }
+.eastspace1 { margin-right: 5px }
+.eastspace2 { margin-right: 10px }
+.eastspace3 { margin-right: 15px }
+.eastspace4 { margin-right: 20px }
+.eastspace5 { margin-right: 25px }
+.eastspace6 { margin-right: 30px }
+.eastspace7 { margin-right: 35px }
+.padsouth1 { padding-bottom: 5px }
+.padsouth2 { padding-bottom: 10px }
+.padsouth3 { padding-bottom: 15px }
+.padsouth4 { padding-bottom: 20px }
+.padsouth5 { padding-bottom: 25px }
+.padsouth6 { padding-bottom: 30px }
+.padnorth1 { padding-top: 5px }
+.padnorth2 { padding-top: 10px }
+.padnorth3 { padding-top: 15px }
+.padnorth4 { padding-top: 20px }
+.padnorth5 { padding-top: 25px }
+.padnorth6 { padding-top: 30px }
+.southspace0 { margin-bottom: 0 }
+.southspace1 { margin-bottom: 5px }
+.southspace2 { margin-bottom: 10px }
+.southspace3 { margin-bottom: 15px }
+.southspace4 { margin-bottom: 20px }
+.southspace5 { margin-bottom: 25px }
+.southspace6 { margin-bottom: 30px }
+.northspace0 { margin-top: 0 }
+.northspace1 { margin-top: 5px }
+.northspace2 { margin-top: 10px }
+.northspace3 { margin-top: 15px }
+.northspace4 { margin-top: 20px }
+.northspace5 { margin-top: 25px }
+.northspace6 { margin-top: 30px; }
+.pad-nesw1 { padding: 5px }
+.pad-nesw2 { padding: 10px }
+.pad-nesw3 { padding: 15px }
+.pad-nesw4 { padding: 20px }
+.pad-nesw5 { padding: 25px }
+.pad-nesw6 { padding: 30px }
+.neswspace1 { margin: 5px }
+.neswspace2 { margin: 10px }
+.neswspace3 { margin: 15px }
+.neswspace4 { margin: 20px }
+.neswspace5 { margin: 25px }
+.neswspace6 { margin: 30px }
+/*** Global Class Ends ***/
+/***/
+html{min-height: 100%;height: 100%; }
+body { font-family: 'open_sansregular'; }
+body{ height: 100%; min-height: 100% }
+/*#main-container { height: 95% }*/
+.margin_5px { margin: 5px }
+.tabular_break_word td, .tabular_break_word th { word-wrap: break-word; white-space: pre-line !important; }
+.inactive_link { cursor: no-drop; color: #BEBEBE!important; text-decoration: none!important }
+.pointer { cursor: pointer }
+.no_decoration { text-decoration: none !important }
+#navbar.navbar { min-height: 50px; }
+#navbar .ace-nav>li { line-height: 50px; height: 50px; }
+.navbar-fixed-top+.main-container { padding-top: 50px;height: 95%;}
+.modal-footer{ background:none}
+.no-skin .sidebar.menu-min .nav-list>li>.arrow:after,.no-skin .sidebar.menu-min .nav-list>li>.arrow:before{display:none}
+.main-content-inner{  height: 100%;min-height: 100%;}
+.ui-menu .ui-menu-item{color:#444}
+/***/
+/**Jqgrid */
+.jq_parent { min-height: 600px;/*overflow:auto;*/ }
+#grid-table_checkbox { text-align: center!important }
+.ui-jqgrid-bdiv { height: auto!important; max-height: 550px }
+@media only screen and (max-width: 340px) {
+.ace-nav>li.greet_user>a{min-width:43px;max-width:43px}	
+.ace-nav>li.greet_user>a .ace-icon{ width:13px; }
+.ace-nav>li.open .user-info.hidden-xs{ display:none!important}
+.ace-nav>li.open .user-info{top: 0;}
+}
+@media only screen and (max-width: 331px) {
+.ui-jqgrid .ui-jqgrid-pager { height: 112px; }
+}
+/**UI Slider**/
+.scale_range { width: 100%; position: relative; height: 22px; }
+.scale_range .extrem { position: absolute; }
+.scale_range .low { left: 0 }
+.scale_range .high { right: 0 }
+/**UI Slider**/
+/** Customized Top Menu Starts **/
+.ace-nav>li.cust_top_menu >a { line-height: 27px; padding: 8px }
+.ace-nav>li.cust_top_menu>a>.ace-icon { display: block; width: auto; }
+.cust_top_menu .menu-text { font-size: 11px; }
+/** Customized Top Menu Ends **/
+/** Footer Starts **/
+.footer { height: auto; width: auto; padding-top: 0 }
+.footer .footer-inner { position: static }
+.footer .footer-inner .footer-content { background: #f2f2f2; bottom: 0px; padding: 0 8px; border-top: 1px double #E5E5E5; position: static; line-height: 29px; }
+/** Footer Ends **/
+/* Header Linkbar Starts */
+@media only screen and (max-width:991px) {
+#linkbar{top:50px}
+#linkbar.sidebar.responsive.menu-min { -moz-transform: translateX(53px); -webkit-transform: translateX(53px); -o-transform: translateX(53px); -ms-transform: translateX(53px); transform: translateX(53px) }
+#linkbar.sidebar .nav-wrap+.ace-scroll { left: 0 }
+#linkbar.sidebar.menu-min .nav-list li>.arrow { left: 8px; }
+.no-skin #linkbar.sidebar.menu-min .nav-list>li>.arrow:before,.no-skin #linkbar.sidebar.menu-min .nav-list>li>.arrow:after{ -webkit-transform: rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg); -ms-transform: rotate(180deg);transform:rotate(180deg)}
+.no-skin #linkbar.sidebar {border-width: 0 0px 1px 1px;}
+#linkbar.sidebar.menu-min .nav-list>li>a>.menu-text {left:-176px;}
+/* Header Linkbar Ends */
+/***/

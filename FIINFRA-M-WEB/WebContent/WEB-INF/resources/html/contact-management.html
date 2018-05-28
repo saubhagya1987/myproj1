@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Profile Info - Contact</title>
+<link rel="shortcut icon" href="resources/images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="resources/css/basic.css" />
+<link type="text/css" rel="stylesheet" href="resources/css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="resources/css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="resources/css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="resources/css/perfect-scrollbar.css" />
+<link type="text/css" rel="stylesheet" href="resources/css/main.css" />
+<link type="text/css" rel="stylesheet" href="resources/css/responsive.css" />
+<link href="resources/css/custom.css" rel="stylesheet" type="text/css">
+<script src="resources/js/jquery-1.11.0.min.js"></script>
+<script src="resources/js/jquery-ui.js"></script>
+<script src="resources/js/jquery.mousewheel.js"></script>
+<script src="resources/js/toggles.js"></script>
+<script src="resources/js/jquery.ui.touch-punch.js"></script>
+<script src="resources/js/plugin/my_account_submenu.js"></script>
+<!--<script src="resources/js/jquery.ddslick.js"></script>-->
+<script src="resources/js/plugin/jquery_ui_range_slider.js"></script>
+<script src="resources/js/jquery.autosize.input.js"></script>
+<script src="resources/js/perfect-scrollbar.js"></script>
+<script src="resources/js/selectboxit.js"></script>
+<script>
+  $(function() {
+    $( "#Profile_Info_Tab" ).accordion();
+  });
+  </script>
+<!-- intilazie custom checkbox starts-->
+<script>
+$(document).ready(function(){
+$('.toggle').toggles();
+}) 
+</script>
+<!-- intilazie custom checkbox ends-->
+<!-- Toggle real checkbox as per custom checkbox strats -->
+<script>
+$(document).ready(function(){
+
+$("#car_type").on('toggle', function (e, active) {
+    if (active) {
+     ;
+	  $(".car_type").prop("checked", true);
+	
+	   
+    } else {
+    
+	   $(".car_type").prop("checked", false);
+	
+    }
+	
+});
+
+}) 
+</script>
+<!-- Toggle real checkbox as per custom checkbox ends -->
+<!-- Fuel type starts -->
+<script>
+$(document).ready(function(){
+  $(".thumb_select_ul a").click(function(){
+ $(".thumb_select_ul a").children(".categoery").removeClass("not_applicable");
+    $(this).children(".categoery").addClass("not_applicable");
+
+  });
+});
+</script><!-- Fuel type ends -->
+<!--Header input box dynamic width change starts-->
+<script>
+$(document).ready(function(){
+	$("#purchase_car .car_description").keypress(function(){
+  var sum=50;
+$('.desc_container input,.desc_container a').each( function(){ sum += $(this).width(); });
+$('.desc_container').width( sum );
+});
+});
+</script>
+<script>
+$(document).ready(function(){
+	    $('#purchase_car .car_description').bind("keypress keydown", function(e) {
+         
+		   var sum=50;
+            if (e.which == 46){         
+			  $('.desc_container input,.desc_container a').each( function(){ sum += $(this).width(); });
+              $('.desc_container').width( sum );
+            }
+            if (e.which == 8) {
+         
+			  $('.desc_container input,.desc_container a').each( function(){ sum += $(this).width(); });
+              $('.desc_container').width( sum );
+            }
+    });
+
+});
+</script>
+<!--Header input box dynamic width change starts-->
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+  
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+ 
+});
+</script>
+<!-- Custom Selectbox Ends -->
+
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+    $('.common_in_content').perfectScrollbar();
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+.common_header .person_account .submenu,.common_header #password_change,.common_header #password_change .blue_btn,.#emergency_readiness .count,.toggle-slide .toggle-on{filter: none;}
+.common_header #password_change .blue_btn:hover,.toggle-slide .toggle-on:hover,.toggle-slide .toggle-on:active{filter: none;}
+  </style>
+<![endif]-->
+
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="Profile_Info"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="login.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="#" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="#" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="resources/images/add2.png" /></a> <a href="#" class="header_add add1"><img src="resources/images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="#"><img src="resources/images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">Profile Info for</span><span class="heading_icon"><span class="head_icon"><img src="resources/images/profile_info_icon.png" width="35" height="37" alt=""></span></span>
+          <div class="title">Parag Takalkar</div>
+          <div class="title2">(opportunity)</div>
+        </h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content"> 
+      <!--Aditya Forget Password Pop Up starts here-->
+      
+      <div id="Profile_Info_Tab">
+        <h3>Personal Details</h3>
+        <div>
+          <p style="margin-left:20px; margin-bottom:20px;">
+            <label class="form_label">Name</label>
+            <select id="personal">
+              <option>Mr.</option>
+              <option>Mrs.</option>
+              <option>Dr.</option>
+              <option>Ms.</option>
+              <option>Master.</option>
+              <option>Miss.</option>
+            </select>
+            <input name="" type="text" class="common_input" value="First Name">
+            <input name="" type="text" class="common_input" value="Last Name">
+          </p>
+          <div id="personal_details" class="fl first_col">
+            <ul class="reset clearfix first_col_ul">
+              <li class="clearfix">
+                <label class="form_label">Date of Birth</label>
+                <input type="text" class="common_input5 datepicker" name="input">
+                &nbsp; </li>
+              <li class="clearfix">
+                <label class="form_label">Gender</label>
+                <ul class="reset clearfix thumb_select_ul emergency_categoery_ul">
+                  <li class="fl"><a href="#">
+                    <div class="categoery job">
+                      <div class="thumb male"></div>
+                    </div>
+                    <label class="label">Male</label>
+                    </a></li>
+                  <li class="fl"><a href="#">
+                    <div class="categoery other not_applicable">
+                      <div class="thumb female"></div>
+                    </div>
+                    <label class="label">Female</label>
+                    </a></li>
+                </ul>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Marital Status</label>
+                <select id="service">
+                  <option>Single</option>
+                  <option>Married</option>
+                  <option>Divorced</option>
+                  <option>Widowed</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="fr second_col">
+            <ul class="reset clearfix second_col_ul">
+              <li class="clearfix">
+                <label class="form_label">Occupation</label>
+                <select id="service">
+                  <option>Business</option>
+                  <option>Service</option>
+                  <option>Housewife</option>
+                  <option>Student</option>
+                  <option>Retired</option>
+                </select>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Company Name</label>
+                <input class="common_input" name="" type="text">
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Designation</label>
+                <input class="common_input" name="" type="text">
+              </li>
+              <li class="clearfix">
+                <label class="form_label">PAN No</label>
+                <input class="common_input" name="" type="text">
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h3>Contact Details</h3>
+        <div>
+          <div class="Cont_Details_first_col">
+            <ul class="reset clearfix Cont_Details_first_col_ul">
+              <li class="clearfix">
+                <label class="form_label">Address 1</label>
+                <input name="input" type="text" class="common_input">
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Address 2</label>
+                <input name="input" type="text" class="common_input">
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Address 3</label>
+                <input name="input" type="text" class="common_input">
+              </li>
+            </ul>
+          </div>
+          <div class="Cont_Details_second_col">
+            <ul class="reset clearfix Cont_Details_second_col_ul">
+              <li class="clearfix">
+                <label class="form_label">Country</label>
+                <select id="category">
+                  <option>India</option>
+                  <option>China</option>
+                </select>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">State</label>
+                <select name="category" id="category2">
+                  <option>Maharashtra</option>
+                  <option>Karnataka</option>
+                </select>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">City</label>
+                <select name="category2" id="category3">
+                  <option>Pune </option>
+                  <option>Mumbai</option>
+                  <option>Nagpur</option>
+                </select>
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Pin Code</label>
+                <input type="text" class="common_input" value="411045">
+              </li>
+            </ul>
+          </div>
+          <div class="Cont_Details_third_col">
+            <ul class="reset clearfix Cont_Details_third_col_ul">
+              <li class="clearfix">
+                <label class="form_label">Email</label>
+                <input name="input" type="text" class="common_input">
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Mobile</label>
+                <input name="input" type="text" class="common_input">
+              </li>
+              <li class="clearfix">
+                <label class="form_label">Alternate No.</label>
+                <input name="input" type="text" class="common_input">
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <h3>Origination Details</h3>
+        <div id="origination-details">
+          <li style=" margin-bottom:20px;">
+            <label class="form_label">Campaign Name</label>
+            <input name="" type="text" class="common_input" value="Axis">
+          </li>
+          <li style=" margin-bottom:20px;">
+            <label class="form_label">Opportunity Source</label>
+            <select id="Opportunity_Source2">
+              <option>Web</option>
+              <option>Email</option>
+              <option>Seminar</option>
+            </select>
+          </li>
+          <li style="margin-bottom:20px;">
+            <label class="form_label">Referred By</label>
+            <input name="" type="text" class="common_input" value="Mr. Joshi">
+          </li>
+          </div>
+        </div>
+      
+      <!--Aditya Forget Password Pop Up ends here--> 
+      
+      <!-- Common_in_contnet starts--> 
+      
+      <!-- Common_in_contnet ends--> 
+      <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup3">
+            </li>
+            <li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+          </ul>
+        </div>
+        <a href="#" class="back navgation"><span class="txt">Back</span></a> <a href="#" class="next navgation"><span class="txt">Next</span></a> </section>
+      
+      <!-- Common footer ends -->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+    
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+
+<!-- Datepicker --> 
+<script>
+$(function() {
+    $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-mm-yy",
+	  showOn: "button",
+	  buttonText: '',
+     });
+  });
+  
+  
+  </script>
+  <script>
+$(document).ready(function(){
+  
+ $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent'></div>" );
+ 
+});
+</script>
+<!-- Datepicker Ends --> 
+
+</body>
+</html>

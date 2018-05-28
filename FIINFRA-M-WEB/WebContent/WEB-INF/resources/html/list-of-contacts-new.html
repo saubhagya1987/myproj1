@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<meta name="viewport" content="width=1024">
+<title>List of Contacts</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+	
+    $(".wrapper").addClass("new_contacts_wrapper");
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+	
+    });
+</script>
+<!-- Custom Selectbox Ends -->
+<!-- Filter section toggle starts -->
+<script>
+$(document).ready(function(){
+  $("#contact_list .div_dragger").click(function(){
+   $("#query_filter").slideToggle("slow");
+	$(".div_dragger span").animate("slow").toggleClass("div_dragger_up","slow");
+	if($(".div_dragger span").hasClass("div_dragger_up"))
+	{
+	 $("#query_filter #statusSelectBoxIt .selectboxit-text").text("Status");
+	 $("#query_filter #typeSelectBoxIt .selectboxit-text").text("Type");
+	 $("#query_filter #sourceSelectBoxIt .selectboxit-text").text("Source");
+	$("#query_filter .common_input").val("");
+	}
+  });
+});
+</script>
+<!-- Filter section toggle ends -->
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+    $('.common_in_content').slimScroll();
+	$('.grid_adjuster').slimScroll();
+	 $('#contact_list #contacts .name .txt').perfectScrollbar();
+	  $('#contact_list #contacts .contact_email .email_add').perfectScrollbar();
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+<!-- Filter section toggle ends -->
+<!--White Custom checkbox -->
+<script>
+$(document).ready(function(){
+  $("#contacts .white_checkbox").click(function(){
+    $(this).toggleClass("white_checkbox_checkbox_checked");
+	
+	 if ($(this).next( ".default_checkbox" ).is(":checked")) {
+		
+       $(this).next( ".default_checkbox" ).prop("checked", false);
+    } else {
+       $(this).next( ".default_checkbox" ).prop("checked", true);
+	
+    }
+	
+  });
+});
+</script>
+<!--White Custom checkbox ends-->
+
+<script>
+$(document).ready(function(){
+
+  $("#contact_list #contacts .click_action").click(function(){
+  $("#contact_list #contacts .click_action").not(this).removeClass("action_clicked");
+  $(this).toggleClass("action_clicked");
+ 
+  });
+
+});
+</script>
+<script>
+$(document).ready(function(){
+
+
+  
+    
+	<!--Add note main menu starts--> 
+  $("#contact_list #contacts #add_note").click(function(e){
+   
+   $("#contact_list #contacts #add_note").not(this).closest(".contact_parent").next("#add_note_actions").slideUp("slow");
+  if((!$(this).closest(".contact_parent").next("#add_note_actions").is(':visible')))
+   {
+	 $(this).closest(".contact_parent").next("#add_note_actions").slideDown("slow");  
+   }
+   else
+   {
+	   $(this).closest(".contact_parent").next("#add_note_actions").slideUp("slow");
+	  }
+    $("#add_note_actions").click(function (e) {
+        e.stopPropagation();
+	});
+  });
+  <!--Add note main menu  ends -->
+   
+    <!--Add note submenu starts--> 
+  $("#contact_list #contacts #add_note_actions .main_name").click(function(){
+   $("#contact_list #contacts #add_note_actions .main_name").removeClass("menu_clicked");
+   $(this).addClass("menu_clicked");
+   
+   $("#contact_list #contacts #add_note_actions .main_name").next(".note_actions").slideUp("slow");
+   if((!$(this).next(".note_actions").is(':visible')))
+   {
+	 $(this).next(".note_actions").slideDown("slow");  
+   }
+      
+  });
+  <!--Add note submenu ends --> 
+  
+ 
+});
+</script>
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="contact_list_wrapper"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="personalization.html" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a> 
+          <!--<a href="add-contact.html" class="header_btn" id="add_contact">Add Contact</a>-->
+          <button class="header_btn" id="add_contact">Add Contact</button>
+          <button class="header_btn" id="bulk_delete">Bulk Delete</button>
+          <button class="header_btn" id="activate_dc">Activate D.C</button>
+          <span class="head_txt">list of contacts</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+      <div class="partner_dashboard_submenu">
+        <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+        <div class="menu_section">
+          <ul class="clearfix reset">
+            <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+            <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+            <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+            <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+            <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+            <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+            <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+            <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Common_in_contnet starts-->
+      <section id="contact_list" class="in_content common_in_content clearfix">
+        <div id="query_filter">
+          <ul class="reset clearfix parameters">
+            <li class="first">
+              <select id="status">
+                <option>Status</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </li>
+            <li class="second">
+              <select id="type">
+                <option>Type</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </li>
+            <li class="third">
+              <select id="source">
+                <option>Source</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </li>
+            <li class="fourth">
+              <input type="text" class="common_input" placeholder="Enter First, Last Name, Email or PAN..."/>
+            </li>
+          </ul>
+          <ul class="reset clearfix action">
+            <li>
+              <input type="reset" class="common_btn">
+            </li>
+            <li>
+              <input type="submit" value="Search" class="common_btn">
+            </li>
+          </ul>
+          <div class="clr"></div>
+        </div>
+        <div class="div_dragger"><span></span></div>
+        <!-- Sort Starts-->
+        <section id="result_sort" class="clearfix">
+          <div class="sort"><span class="txt">Sort by:</span>
+            <button class="sort_btn" id="sort_name">Name</button>
+            <button class="sort_btn" id="sort_date">Date</button>
+          </div>
+          <div id="alphabetical_search">
+            <ul class="reset clearfix">
+              <li>A</li>
+              <li>B</li>
+              <li>C</li>
+              <li>D</li>
+              <li>E</li>
+              <li>F</li>
+              <li>G</li>
+              <li>H</li>
+              <li>I</li>
+              <li>J</li>
+              <li>K</li>
+              <li>L</li>
+              <li>M</li>
+              <li>N</li>
+              <li>O</li>
+              <li>P</li>
+              <li>Q</li>
+              <li>R</li>
+              <li>S</li>
+              <li>T</li>
+              <li>U</li>
+              <li>V</li>
+              <li>W</li>
+              <li>X</li>
+              <li>Y</li>
+              <li>Z</li>
+            </ul>
+          </div>
+        </section>
+        <!-- Sort Ends--> 
+        <!-- Contcts Starts-->
+        <section id="contacts">
+          <ul class="reset clearfix header">
+              <li class="first">&nbsp;</li>
+              <li class="second">Name</li>
+              <li class="third">Level</li>
+              <li class="fourth">Progress</li>
+              <li class="fifth">Status</li>
+              <li class="sixth">Contact No.</li>
+              <li class="seventh">Creation Date</li>
+              <li class="eight">DC Stage</li>
+              <li class="nine">Email</li>
+              <li class="ten">Actions</li>
+            </ul>
+          <div class="grid_adjuster">
+            
+            <ul class="reset clearfix contact_ul">
+              <li class="contact_li">
+                <div class="clearfix contact_parent">
+                  <div class="first select fl field">
+                    <div class="chekbox_parent"> <span class="white_checkbox"></span>
+                      <input type="checkbox" name="contact_person" class="default_checkbox">
+                    </div>
+                  </div>
+                  <div class="second name fl field">
+                    <div class="txt">Rohan Prabhune</div>
+                  </div>
+                  <div class="third level fl field">
+                    <div class="client pc_client"></div>
+                  </div>
+                  <div class="fourth progress fl field">
+                    <div class="circle complete"></div>
+                  </div>
+                  <div class="fifth status fl field txt_data">Open</div>
+                  <div class="sixth phone fl field txt_data">9881547693</div>
+                  <div class="seventh create_date fl field txt_data">29-Sep-2014</div>
+                  <div class="eight dc_storage fl field txt_data">Completed</div>
+                  <div class="nine contact_email fl field txt_data">
+                    <div class="email_add">rohan8.p@gmail.com</div>
+                  </div>
+                  <div class="ten action fl field">
+                    <div id="action_popup" class="clearfix"> <a href="edit-profile.html"  class="click_action" id="edit"><span class="icon"></span></a> <a href="data-collection.html"  class="click_action" id="data_collect"><span class="icon"></span></a>
+                      <div class="click_action rel" id="add_note"><span class="icon"></span></div>
+                      <!--<a href="query.html" class="click_action" id="help"><span class="icon"></span></a>--> </div>
+                  </div>
+                </div>
+                <div id="add_note_actions">
+                  <ul class="reset clearfix">
+                    <li id="analysis_report">
+                      <div class="main_name">Analysis Report</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_cust">
+                      <div class="main_name">Action Plan (Customer)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_fa">
+                      <div class="main_name">Action Plan (FA)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="contact_li">
+                <div class="clearfix contact_parent">
+                  <div class="first select fl field">
+                    <div class="chekbox_parent"> <span class="white_checkbox"></span>
+                      <input type="checkbox" name="contact_person" class="default_checkbox">
+                    </div>
+                  </div>
+                  <div class="second name fl field">
+                    <div class="txt">Rohan Prabhune </div>
+                  </div>
+                  <div class="third level fl field">
+                    <div class="client opportunity"></div>
+                  </div>
+                  <div class="fourth progress fl field">
+                    <div class="circle three_fourth"></div>
+                  </div>
+                  <div class="fifth status fl field txt_data">Completed</div>
+                  <div class="sixth phone fl field txt_data">9881547693</div>
+                  <div class="seventh create_date fl field txt_data">29-Sep-2014</div>
+                  <div class="eight dc_storage fl field txt_data">Completed</div>
+                  <div class="nine contact_email fl field txt_data">
+                    <div class="email_add">rohan8.p@gmail.com</div>
+                  </div>
+                  <div class="ten action fl field">
+                    <div id="action_popup" class="clearfix"> <a href="edit-profile.html"  class="click_action" id="edit"><span class="icon"></span></a> <a href="data-collection.html"  class="click_action" id="data_collect"><span class="icon"></span></a>
+                      <div class="click_action rel" id="add_note"><span class="icon"></span></div>
+                      <!--<a href="query.html" class="click_action" id="help"><span class="icon"></span></a>--> </div>
+                  </div>
+                </div>
+                <div id="add_note_actions">
+                  <ul class="reset clearfix">
+                    <li id="analysis_report">
+                      <div class="main_name">Analysis Report</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_cust">
+                      <div class="main_name">Action Plan (Customer)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_fa">
+                      <div class="main_name">Action Plan (FA)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="contact_li">
+                <div class="clearfix contact_parent">
+                  <div class="first select fl field">
+                    <div class="chekbox_parent"> <span class="white_checkbox"></span>
+                      <input type="checkbox" name="contact_person" class="default_checkbox">
+                    </div>
+                  </div>
+                  <div class="second name fl field">
+                    <div class="txt">Rohan Prabhune</div>
+                  </div>
+                  <div class="third level fl field">
+                    <div class="client standard_client"></div>
+                  </div>
+                  <div class="fourth progress fl field">
+                    <div class="circle one_half"></div>
+                  </div>
+                  <div class="fifth status fl field txt_data">Completed</div>
+                  <div class="sixth phone fl field txt_data">9881547693</div>
+                  <div class="seventh create_date fl field txt_data">29-Sep-2014</div>
+                  <div class="eight dc_storage fl field txt_data">Completed</div>
+                  <div class="nine contact_email fl field txt_data">
+                    <div class="email_add">rohan8.p@gmail.com</div>
+                  </div>
+                  <div class="ten action fl field">
+                    <div id="action_popup" class="clearfix"> <a href="edit-profile.html"  class="click_action" id="edit"><span class="icon"></span></a> <a href="data-collection.html"  class="click_action" id="data_collect"><span class="icon"></span></a>
+                      <div class="click_action rel" id="add_note"><span class="icon"></span></div>
+                      <!--<a href="query.html" class="click_action" id="help"><span class="icon"></span></a>--> </div>
+                  </div>
+                </div>
+                <div id="add_note_actions">
+                  <ul class="reset clearfix">
+                    <li id="analysis_report">
+                      <div class="main_name">Analysis Report</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_cust">
+                      <div class="main_name">Action Plan (Customer)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_fa">
+                      <div class="main_name">Action Plan (FA)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="contact_li">
+                <div class="clearfix contact_parent">
+                  <div class="first select fl field">
+                    <div class="chekbox_parent"> <span class="white_checkbox"></span>
+                      <input type="checkbox" name="contact_person" class="default_checkbox">
+                    </div>
+                  </div>
+                  <div class="second name fl field">
+                    <div class="txt">Rohan Prabhune </div>
+                  </div>
+                  <div class="third level fl field">
+                    <div class="client standard_client"></div>
+                  </div>
+                  <div class="fourth progress fl field">
+                    <div class="circle one_fourth"></div>
+                  </div>
+                  <div class="fifth status fl field txt_data">Completed</div>
+                  <div class="sixth phone fl field txt_data">9881547693</div>
+                  <div class="seventh create_date fl field txt_data">29-Sep-2014</div>
+                  <div class="eight dc_storage fl field txt_data">Completed</div>
+                  <div class="nine contact_email fl field txt_data">
+                    <div class="email_add">rohan8.p@gmail.com</div>
+                  </div>
+                  <div class="ten action fl field">
+                    <div id="action_popup" class="clearfix"> <a href="edit-profile.html"  class="click_action" id="edit"><span class="icon"></span></a> <a href="data-collection.html"  class="click_action" id="data_collect"><span class="icon"></span></a>
+                      <div class="click_action rel" id="add_note"><span class="icon"></span></div>
+                      <!--<a href="query.html" class="click_action" id="help"><span class="icon"></span></a>--> </div>
+                  </div>
+                </div>
+                <div id="add_note_actions">
+                  <ul class="reset clearfix">
+                    <li id="analysis_report">
+                      <div class="main_name">Analysis Report</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_cust">
+                      <div class="main_name">Action Plan (Customer)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_fa">
+                      <div class="main_name">Action Plan (FA)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="contact_li">
+                <div class="clearfix contact_parent">
+                  <div class="first select fl field">
+                    <div class="chekbox_parent"> <span class="white_checkbox"></span>
+                      <input type="checkbox" name="contact_person" class="default_checkbox">
+                    </div>
+                  </div>
+                  <div class="second name fl field">
+                    <div class="txt">Rohan Prabhune </div>
+                  </div>
+                  <div class="third level fl field">
+                    <div class="client standard_client"></div>
+                  </div>
+                  <div class="fourth progress fl field">
+                    <div class="circle empty"></div>
+                  </div>
+                  <div class="fifth status fl field txt_data">Completed</div>
+                  <div class="sixth phone fl field txt_data">9881547693</div>
+                  <div class="seventh create_date fl field txt_data">29-Sep-2014</div>
+                  <div class="eight dc_storage fl field txt_data">Completed</div>
+                  <div class="nine contact_email fl field txt_data">
+                    <div class="email_add">rohan8.p@gmail.com</div>
+                  </div>
+                  <div class="ten action fl field">
+                    <div id="action_popup" class="clearfix"> <a href="edit-profile.html"  class="click_action" id="edit"><span class="icon"></span></a> <a href="data-collection.html"  class="click_action" id="data_collect"><span class="icon"></span></a>
+                      <div class="click_action rel" id="add_note"><span class="icon"></span></div>
+                      <!--<a href="query.html" class="click_action" id="help"><span class="icon"></span></a>--> </div>
+                  </div>
+                </div>
+                <div id="add_note_actions">
+                  <ul class="reset clearfix">
+                    <li id="analysis_report">
+                      <div class="main_name">Analysis Report</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_cust">
+                      <div class="main_name">Action Plan (Customer)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_fa">
+                      <div class="main_name">Action Plan (FA)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="contact_li">
+                <div class="clearfix contact_parent">
+                  <div class="first select fl field">
+                    <div class="chekbox_parent"> <span class="white_checkbox"></span>
+                      <input type="checkbox" name="contact_person" class="default_checkbox">
+                    </div>
+                  </div>
+                  <div class="second name fl field">
+                    <div class="txt">Rohan Prabhune</div>
+                  </div>
+                  <div class="third level fl field">
+                    <div class="client pc_client"></div>
+                  </div>
+                  <div class="fourth progress fl field">
+                    <div class="circle complete"></div>
+                  </div>
+                  <div class="fifth status fl field txt_data">Open</div>
+                  <div class="sixth phone fl field txt_data">9881547693</div>
+                  <div class="seventh create_date fl field txt_data">29-Sep-2014</div>
+                  <div class="eight dc_storage fl field txt_data">Completed</div>
+                  <div class="nine contact_email fl field txt_data">
+                    <div class="email_add">rohan8.p@gmail.com</div>
+                  </div>
+                  <div class="ten action fl field">
+                    <div id="action_popup" class="clearfix"> <a href="edit-profile.html"  class="click_action" id="edit"><span class="icon"></span></a> <a href="data-collection.html"  class="click_action" id="data_collect"><span class="icon"></span></a>
+                      <div class="click_action rel" id="add_note"><span class="icon"></span></div>
+                      <!--<a href="query.html" class="click_action" id="help"><span class="icon"></span></a>--> </div>
+                  </div>
+                </div>
+                <div id="add_note_actions">
+                  <ul class="reset clearfix">
+                    <li id="analysis_report">
+                      <div class="main_name">Analysis Report</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_cust">
+                      <div class="main_name">Action Plan (Customer)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_fa">
+                      <div class="main_name">Action Plan (FA)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="contact_li">
+                <div class="clearfix contact_parent">
+                  <div class="first select fl field">
+                    <div class="chekbox_parent"> <span class="white_checkbox"></span>
+                      <input type="checkbox" name="contact_person" class="default_checkbox">
+                    </div>
+                  </div>
+                  <div class="second name fl field">
+                    <div class="txt">Rohan Prabhune </div>
+                  </div>
+                  <div class="third level fl field">
+                    <div class="client standard_client"></div>
+                  </div>
+                  <div class="fourth progress fl field">
+                    <div class="circle three_fourth"></div>
+                  </div>
+                  <div class="fifth status fl field txt_data">Completed</div>
+                  <div class="sixth phone fl field txt_data">9881547693</div>
+                  <div class="seventh create_date fl field txt_data">29-Sep-2014</div>
+                  <div class="eight dc_storage fl field txt_data">Completed</div>
+                  <div class="nine contact_email fl field txt_data">
+                    <div class="email_add">rohan8.p@gmail.com</div>
+                  </div>
+                  <div class="ten action fl field">
+                    <div id="action_popup" class="clearfix"> <a href="edit-profile.html"  class="click_action" id="edit"><span class="icon"></span></a> <a href="data-collection.html"  class="click_action" id="data_collect"><span class="icon"></span></a>
+                      <div class="click_action rel" id="add_note"><span class="icon"></span></div>
+                      <!--<a href="query.html" class="click_action" id="help"><span class="icon"></span></a>--> </div>
+                  </div>
+                </div>
+                <div id="add_note_actions">
+                  <ul class="reset clearfix">
+                    <li id="analysis_report">
+                      <div class="main_name">Analysis Report</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_cust">
+                      <div class="main_name">Action Plan (Customer)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_fa">
+                      <div class="main_name">Action Plan (FA)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="contact_li">
+                <div class="clearfix contact_parent">
+                  <div class="first select fl field">
+                    <div class="chekbox_parent"> <span class="white_checkbox"></span>
+                      <input type="checkbox" name="contact_person" class="default_checkbox">
+                    </div>
+                  </div>
+                  <div class="second name fl field">
+                    <div class="txt">Rohan Prabhune</div>
+                  </div>
+                  <div class="third level fl field">
+                    <div class="client standard_client"></div>
+                  </div>
+                  <div class="fourth progress fl field">
+                    <div class="circle one_half"></div>
+                  </div>
+                  <div class="fifth status fl field txt_data">Completed</div>
+                  <div class="sixth phone fl field txt_data">9881547693</div>
+                  <div class="seventh create_date fl field txt_data">29-Sep-2014</div>
+                  <div class="eight dc_storage fl field txt_data">Completed</div>
+                  <div class="nine contact_email fl field txt_data">
+                    <div class="email_add">rohan8.p@gmail.com</div>
+                  </div>
+                  <div class="ten action fl field">
+                    <div id="action_popup" class="clearfix"> <a href="edit-profile.html"  class="click_action" id="edit"><span class="icon"></span></a> <a href="data-collection.html"  class="click_action" id="data_collect"><span class="icon"></span></a>
+                      <div class="click_action rel" id="add_note"><span class="icon"></span></div>
+                      <!--<a href="query.html" class="click_action" id="help"><span class="icon"></span></a>--> </div>
+                  </div>
+                </div>
+                <div id="add_note_actions">
+                  <ul class="reset clearfix">
+                    <li id="analysis_report">
+                      <div class="main_name">Analysis Report</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_cust">
+                      <div class="main_name">Action Plan (Customer)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_fa">
+                      <div class="main_name">Action Plan (FA)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="contact_li">
+                <div class="clearfix contact_parent">
+                  <div class="first select fl field">
+                    <div class="chekbox_parent"> <span class="white_checkbox"></span>
+                      <input type="checkbox" name="contact_person" class="default_checkbox">
+                    </div>
+                  </div>
+                  <div class="second name fl field">
+                    <div class="txt">Rohan Prabhune </div>
+                  </div>
+                  <div class="third level fl field">
+                    <div class="client standard_client"></div>
+                  </div>
+                  <div class="fourth progress fl field">
+                    <div class="circle one_fourth"></div>
+                  </div>
+                  <div class="fifth status fl field txt_data">Completed</div>
+                  <div class="sixth phone fl field txt_data">9881547693</div>
+                  <div class="seventh create_date fl field txt_data">29-Sep-2014</div>
+                  <div class="eight dc_storage fl field txt_data">Completed</div>
+                  <div class="nine contact_email fl field txt_data">
+                    <div class="email_add">rohan8.p@gmail.com</div>
+                  </div>
+                  <div class="ten action fl field">
+                    <div id="action_popup" class="clearfix"> <a href="edit-profile.html"  class="click_action" id="edit"><span class="icon"></span></a> <a href="data-collection.html"  class="click_action" id="data_collect"><span class="icon"></span></a>
+                      <div class="click_action rel" id="add_note"><span class="icon"></span></div>
+                      <!--<a href="query.html" class="click_action" id="help"><span class="icon"></span></a>--> </div>
+                  </div>
+                </div>
+                <div id="add_note_actions">
+                  <ul class="reset clearfix">
+                    <li id="analysis_report">
+                      <div class="main_name">Analysis Report</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_cust">
+                      <div class="main_name">Action Plan (Customer)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_fa">
+                      <div class="main_name">Action Plan (FA)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="contact_li">
+                <div class="clearfix contact_parent">
+                  <div class="first select fl field">
+                    <div class="chekbox_parent"> <span class="white_checkbox"></span>
+                      <input type="checkbox" name="contact_person" class="default_checkbox">
+                    </div>
+                  </div>
+                  <div class="second name fl field">
+                    <div class="txt">Rohan Prabhune </div>
+                  </div>
+                  <div class="third level fl field">
+                    <div class="client standard_client"></div>
+                  </div>
+                  <div class="fourth progress fl field">
+                    <div class="circle empty"></div>
+                  </div>
+                  <div class="fifth status fl field txt_data">Completed</div>
+                  <div class="sixth phone fl field txt_data">9881547693</div>
+                  <div class="seventh create_date fl field txt_data">29-Sep-2014</div>
+                  <div class="eight dc_storage fl field txt_data">Completed</div>
+                  <div class="nine contact_email fl field txt_data">
+                    <div class="email_add">rohan8.p@gmail.com</div>
+                  </div>
+                  <div class="ten action fl field">
+                    <div id="action_popup" class="clearfix"> <a href="edit-profile.html"  class="click_action" id="edit"><span class="icon"></span></a> <a href="data-collection.html"  class="click_action" id="data_collect"><span class="icon"></span></a>
+                      <div class="click_action rel" id="add_note"><span class="icon"></span></div>
+                      <!--<a href="query.html" class="click_action" id="help"><span class="icon"></span></a>--> </div>
+                  </div>
+                </div>
+                <div id="add_note_actions">
+                  <ul class="reset clearfix">
+                    <li id="analysis_report">
+                      <div class="main_name">Analysis Report</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_cust">
+                      <div class="main_name">Action Plan (Customer)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                    <li id="action_plan_fa">
+                      <div class="main_name">Action Plan (FA)</div>
+                      <div class="note_actions clearfix">
+                        <div class="view">View</div>
+                        <div class="email">Email</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p class="found"><span class="count">5</span> items found, displaying all items.</p>
+          <div class="down_more">Load More</div>
+        </section>
+        <!-- Contacts Ends--> 
+        
+      </section>
+      <!-- Common_in_contnet ends--> 
+      <!-- Common footer starts --> 
+      <!-- <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+         <ul class="reset clearfix fr btn_grup3">
+            </li>
+            <li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+            <li class="fl list"><a href="#" class="anch skip"><span class="txt">Skip</span></a></li>
+          </ul>
+         <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <li class="fl list"><a href="#" class="anch add_note"><span class="txt">Add Notes</span></a></li>
+            <li class="fl list"><a href="#" class="anch add_doc"><span class="txt">Add Doc</span></a></li>
+          </ul>
+          <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <li class="fl list"><a href="#" class="anch new_query"><span class="txt">New Query</span></a></li>
+            <li class="fl list"><a href="#" class="anch delete_query"><span class="txt">Delete Query</span></a></li>
+          </ul>
+         <ul class="reset clearfix fl btn_grup1">
+            </li>
+            <li class="fl list"><a href="#" class="anch analysis"><span class="txt">Analysis</span></a></li>
+            <li class="fl list"><a href="#" class="anch suggeset"><span class="txt">Suggestion</span></a></li>
+            <li class="fl list"><a href="#" class="anch action_plan"><span class="txt">Action Plan</span></a></li>
+          </ul>
+        </div>
+        <a href="#" class="back navgation"><span class="txt">Back</span></a> <a href="#" class="next navgation"><span class="txt">Next</span></a> </section>--> 
+      
+      <!-- Common footer ends -->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+    
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+
+</body>
+</html>

@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+        <meta name="viewport" content="width=1024">
+        <title>Goals</title>
+        <link rel="shortcut icon" href="../images/favicon.ico" />
+        <link type="text/css" rel="stylesheet" href="../css/basic.css" />
+        <link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+        <link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+        <link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+        <link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+        <link type="text/css" rel="stylesheet" href="../css/custom.css" />
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+        <script src="../js/plugin/jquery-1.11.0.min.js"></script>
+        <script src="../js/plugin/jquery.mousewheel.js"></script>
+        <script src="../js/plugin/jquery-ui.js"></script>
+        <script src="../js/plugin/toggles.js"></script>
+        <script src="../js/my_account_submenu.js"></script>
+        <script src="../js/jquery_ui_range_slider.js"></script>
+        <script src="../js/plugin/selectboxit.js"></script>
+        <!--<script src="../js/jquery.slimscroll.js"></script>-->
+        <script src="../js/plugin/jquery.slimscroll.js"></script>
+        <script src="../js/plugin/perfect-scrollbar.js"></script>
+        <!-- Custom Selectbox starts -->
+
+        <!-- Goals Chart starts -->
+        <script src="../js/plugin/highcharts/highcharts.js"></script>
+        <script src="../js/plugin/highcharts/exporting.js"></script>
+        <!-- Goals Chart ends -->
+
+        <script>
+            $(document).ready(function() {
+                $("select").selectBoxIt();
+                // Calls the selectBoxIt method on your HTML select box
+
+                $(".selectboxit-container").click(function() {
+                    $(".selectboxit-option-first").remove();
+                });
+
+                $('.gl-dragger').on('click', function() {
+				$('li.input_txt_three .cust_email').perfectScrollbar('update');
+                    var goal = this.id;
+                    goal = goal.replace('dgr-', '');
+                    if (goal != 'car') {
+                        $('.goals_list_bx02').hide();
+                    }
+                    $('.bx-goal').not('#bx-' + goal).slideUp();
+                    $('.gl-dragger').not(this).removeClass('active');
+                    $('#bx-' + goal).slideToggle();
+                    $('.gl-dragger').not(this).children('span').removeClass('goals_div_dragger_up');
+                    $(this).children('span').animate('slow').toggleClass('goals_div_dragger_up', 'slow');
+                    if ($(this).hasClass('active')) {
+                        $(this).removeClass('active');
+                    } else {
+                        $(this).addClass('active');
+                    }
+                });
+
+                /* custom scroll to "common_in_content" */
+                $('.common_in_content').slimScroll();
+                $('.goals_in_content').slimScroll();
+				 $('li.input_txt_three .cust_email').perfectScrollbar();
+				
+
+                /* Alrternate row color */
+                $(".records_ul:even").addClass("even_row");
+                $(".records_ul:odd").addClass("odd_row");
+
+                /* Common Custom checkbox */
+                $(".common_custom_checkbox").click(function() {
+                    $(this).toggleClass("common_custom_checkbox_checked");
+                    if ($(this).next(".default_checkbox").is(":checked")) {
+                        $(this).next(".default_checkbox").prop("checked", false);
+                    } else {
+                        $(this).next(".default_checkbox").prop("checked", true);
+                    }
+                });
+
+
+            });
+        </script>
+        <!--Common Custom checkbox ends-->
+
+        <!--[if lt IE 9]>
+        <script src="../js/html5shiv.js"></script>
+        <![endif]-->
+
+        <style type="text/css">
+            #wrap-tooltips {display:none;position:absolute;}
+            ul.tooltip {list-style:none;display:inline-block;/*border: solid 1px #952754;border-radius: 5px;*/margin:0;padding:0}
+            ul.tooltip li {color: #952754;}
+            ul.tooltip li.header {background-color: #E9E9E9;}
+            ul.tooltip li span.col {width: 80px;height:30px;line-height:30px;vertical-align:middle;padding: 3px 5px;display:inline-block;text-align: right;border-right: solid 1px #EAEAEA}
+            ul.tooltip li span.col.name {width: 100px; color: #000;text-align: left}
+            ul.tooltip li.header span.col.name {width: 100px; color: #952754}
+            ul.tooltip li span.col:last-child {border: 0}
+            ul.tooltip li span {font-weight: bold}
+
+            .btn-toggle {width: 100px}
+            .btn-toggle .lbl, .btn-toggle a {width: 50px;min-width: 40px;height:30px;display:inline-block;float:left;line-height:30px;vertical-align:middle;font-size:12px;text-align: center; font-family: "allerregular"; font-size: 12px; color:#FFF; text-shadow: 1px 1px 1px #000;}
+
+            #bx-car .btn-toggle {left: 70px}
+            #bx-edu .btn-toggle {left: 840px}
+			#bx-travel .btn-toggle {left: 320px}
+			#bx-property .btn-toggle {left: 840px}
+			
+			#grf-car{border-top:1px solid #942754; margin-top: 3px;}
+			#grf-travel{border-top:1px solid #942754; margin-top: 3px;}
+			#grf-edu{border-top:1px solid #942754; margin-top: 3px;}
+			#grf-prop{border-top:1px solid #942754; margin-top: 3px;}
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                /* graph - cars */
+                var arrGoalsCar = {
+                    'Mini Car': {
+                        'totalamount': 40,
+                        'cars': [{
+                                'Cheverolet': {'nofc': 5, 'cost': 25},
+                                'Honda': {'nofc': 5, 'cost': 25},
+                                'Maruti': {'nofc': 25, 'cost': 25},
+                                'Hyundai': {'nofc': 5, 'cost': 25}
+                            }]
+                    },
+                    'Sports Car': {
+                        'totalamount': 30,
+                        'cars': [{
+                                'Cheverolet': {'nofc': 25, 'cost': 25},
+                                'Honda': {'nofc': 5, 'cost': 25},
+                                'Maruti': {'nofc': 25, 'cost': 25},
+                                'Hyundai': {'nofc': 5, 'cost': 25}
+                            }]
+                    },
+                    'Sedan Car': {
+                        'totalamount': 20,
+                        'cars': [{
+                                'Cheverolet': {'nofc': 5, 'cost': 25},
+                                'Honda': {'nofc': 5, 'cost': 25},
+                                'Maruti': {'nofc': 25, 'cost': 25},
+                                'Hyundai': {'nofc': 5, 'cost': 25}
+                            }]
+                    },
+                    'Hatchback Car': {
+                        'totalamount': 20,
+                        'cars': [{
+                                'Cheverolet': {'nofc': 5, 'cost': 25},
+                                'Honda': {'nofc': 5, 'cost': 25},
+                                'Maruti': {'nofc': 25, 'cost': 25},
+                                'Hyundai': {'nofc': 5, 'cost': 25}
+                            }]
+                    },
+                    'SUV': {
+                        'totalamount': 20,
+                        'cars': [{
+                                'Cheverolet': {'nofc': 5, 'cost': 25},
+                                'Honda': {'nofc': 5, 'cost': 25},
+                                'Maruti': {'nofc': 25, 'cost': 25},
+                                'Hyundai': {'nofc': 5, 'cost': 25}
+                            }]
+                    },
+                    'Wagon': {
+                        'totalamount': 20,
+                        'cars': [{
+                                'Cheverolet': {'nofc': 5, 'cost': 25},
+                                'Honda': {'nofc': 5, 'cost': 25},
+                                'Maruti': {'nofc': 25, 'cost': 25},
+                                'Hyundai': {'nofc': 5, 'cost': 25}
+                            }]
+                    }
+
+                };
+                RenderPieChart('grf-car', [
+                    ['Mini Car', 4.0],
+                    ['Sports Car', 2.0],
+                    ['Sedan Car', 5.0],
+                    ['Hatchback Car', 20.0],
+                    ['SUV', 40.0],
+                    ['Wagon', 30.0]
+                ], 'car');
+
+                function showTooltip(name, goaltype) {
+                    var goal = null; //arrGoals[name];
+                    var strd = '';
+                    if (goaltype == 'car') {
+                        goal = arrGoalsCar[name];
+                        strd = '<li class="header"><span class="col name">Name</span><span class="col">No. of Cars</span><span class="col">Cost</span></li>';
+                    } else if (goaltype == 'travel') {
+                        goal = arrGoalsTravel[name];
+                        strd = '<li class="header"><span class="col name">Destination</span><span class="col">No. of Goals</span><span class="col">Cost</span></li>';
+                    } else if (goaltype == 'edu') {
+                        goal = arrGoalsEdu[name];
+                        strd = '<li class="header"><span class="col name">Faculty</span><span class="col">No. of Goals</span><span class="col">Cost</span></li>';
+                    } else if (goaltype == 'prop') {
+                        goal = arrGoalsProp[name];
+                        strd = '<li class="header"><span class="col name">Size</span><span class="col">No. of Goals</span><span class="col">Cost</span></li>';
+                    }
+                    if (goal !== undefined) {
+                        var st = '<ul class="tooltip">';
+                        st += strd;
+
+                        $.each(goal.cars, function(k, carm) {
+                            $.each(carm, function(k, car) {
+                                st += '<li><span class="col name">' + k + '</span><span class="col">' + car['nofc'] + '</span><span class="col">' + car['cost'] + '</span></li>';
+                            });
+                        });
+                        st += '</ul>';
+                    }
+                    return st;
+                }
+
+                function RenderPieChart(elementId, dataList, goaltype) {
+                    new Highcharts.Chart({
+                        chart: {
+                            renderTo: elementId,
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false
+                        }, title: {
+                            text: ''
+                        },
+                        tooltip: {
+                            useHTML: true,
+                            borderColor: '#952754',
+                            borderRadius: 5,
+                            formatter: function() {
+                                //return '<b>' + this.point.name + '</b>: ' + this.percentage + ' %';
+                                //return '<div id="wrap-tooltips">'+showTooltip(this.point.name)+ '</div>';
+                                return '<div id="wrap-tooltips1">' + showTooltip(this.point.name, goaltype) + '</div>';
+                            }
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    enabled: true,
+                                    color: '#000000',
+                                    connectorColor: '#000000',
+                                    formatter: function() {
+                                        return '<b>' + this.point.name + '</b>: ' + Math.round(this.percentage);
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                                type: 'pie',
+                                name: 'Browser share',
+                                data: dataList
+                            }]
+                    });
+                }
+
+                /* graph - travel */
+                var arrGoalsTravel = {
+                    'Africa': {
+                        'totalamount': '35 Lac',
+                        'goals': [{
+                                'SA': {'nofc': 15, 'cost': '10 Lac'},
+                                'Brazil': {'nofc': 50, 'cost': '10 Lac'},
+                                'Peru': {'nofc': 10, 'cost': '15 Lac'}
+                            }]
+
+                    },
+                    'Europe': {
+                        'totalamount': '45 Lac',
+                        'goals': [{
+                                'UK': {'nofc': 5, 'cost': '10 Lac'},
+                                'Germany': {'nofc': 20, 'cost': '20 Lac'},
+                                'France': {'nofc': 10, 'cost': '15 Lac'}
+                            }]
+                    },
+                    'USA': {
+                        'totalamount': '70 Lac',
+                        'cars': [{
+                                'Los Angels': {'nofc': 10, 'cost': '15 Lac'},
+                                'Las Vegas': {'nofc': 25, 'cost': '25 Lac'},
+                                'New York': {'nofc': 10, 'cost': '30 Lac'}
+                            }]
+                    }
+                };
+                RenderPieChart('grf-travel', [
+                    ['Africa', 25],
+                    ['Europe', 35],
+                    ['USA', 40]
+                ], 'travel');
+
+                /* graph - edu */
+                var arrGoalsEdu = {
+                    'Engineering': {
+                        'totalamount': 20,
+                        'goals': [{
+                                'Mechanical': {'nofc': 15, 'cost': 1500000},
+                                'Computer': {'nofc': 50, 'cost': 1000000},
+                                'Civil': {'nofc': 10, 'cost': 2000000}
+                            }]
+
+                    },
+                    'Medicine': {
+                        'totalamount': 20,
+                        'goals': [{
+                                'Mechanical': {'nofc': 5, 'cost': 100000},
+                                'Computer': {'nofc': 20, 'cost': 5000000},
+                                'Civil': {'nofc': 10, 'cost': 2000000}
+                            }]
+                    },
+                    'Business': {
+                        'totalamount': 20,
+                        'cars': [{
+                                'Mechanical': {'nofc': 10, 'cost': 1000000},
+                                'Computer': {'nofc': 25, 'cost': 100000},
+                                'Civil': {'nofc': 10, 'cost': 2000000}
+                            }]
+                    },
+                    'Science': {
+                        'totalamount': 10,
+                        'cars': [{
+                                'Mechanical': {'nofc': 10, 'cost': 1000000},
+                                'Computer': {'nofc': 25, 'cost': 100000},
+                                'Civil': {'nofc': 10, 'cost': 2000000}
+                            }]
+                    },
+                    'Law': {
+                        'totalamount': 14,
+                        'cars': [{
+                                'Mechanical': {'nofc': 10, 'cost': 1000000},
+                                'Computer': {'nofc': 25, 'cost': 100000},
+                                'Civil': {'nofc': 10, 'cost': 2000000}
+                            }]
+                    },
+                    'Humanity': {
+                        'totalamount': 16,
+                        'cars': [{
+                                'Mechanical': {'nofc': 10, 'cost': 1000000},
+                                'Computer': {'nofc': 25, 'cost': 100000},
+                                'Civil': {'nofc': 10, 'cost': 2000000}
+                            }]
+                    }
+                };
+
+                RenderPieChart('grf-edu', [
+                    ['Engineering', 20],
+                    ['Medicine', 20],
+                    ['Business', 20],
+                    ['Science', 10],
+                    ['Law', 14],
+                    ['Humanity', 16]
+                ], 'edu');
+
+                /* graph - prop */
+                var arrGoalsProp = {
+                    'Land': {
+                        'totalamount': '35 Lac',
+                        'goals': [{
+                                'NA': {'nofc': 15, 'cost': '10 Lac'},
+                                'Agree': {'nofc': 50, 'cost': '10 Lac'}
+                            }]
+
+                    },
+                    'Flat': {
+                        'totalamount': '45 Lac',
+                        'goals': [{
+                                '1BHK': {'nofc': 5, 'cost': '10 Lac'},
+                                '2BHK': {'nofc': 20, 'cost': '20 Lac'},
+                                '3BHK': {'nofc': 10, 'cost': '15 Lac'}
+                            }]
+                    },
+                    'Row House': {
+                        'totalamount': '70 Lac',
+                        'cars': [{
+                                'Furnished': {'nofc': 10, 'cost': '15 Lac'},
+                                'Unfurnished': {'nofc': 25, 'cost': '25 Lac'}
+                            }]
+                    },
+                    'Villa': {
+                        'totalamount': '45 Lac',
+                        'goals': [{
+                                'Furnished': {'nofc': 10, 'cost': '15 Lac'},
+                                'Unfurnished': {'nofc': 25, 'cost': '25 Lac'}
+                            }]
+                    },
+                    'Commercial': {
+                        'totalamount': '45 Lac',
+                        'goals': [{
+                                'Shop': {'nofc': 5, 'cost': '10 Lac'},
+                                'Tower': {'nofc': 20, 'cost': '20 Lac'},
+                                'Other': {'nofc': 10, 'cost': '15 Lac'}
+                            }]
+                    }
+                };
+                RenderPieChart('grf-prop', [
+                    ['Land', 25],
+                    ['Flat', 35],
+                    ['Row House', 40],
+                    ['Villa', 35],
+                    ['Commercial', 35]
+                ], 'prop');
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- Wrapper starts-->
+        <div class="wrapper" id="goals">
+            <!-- Main starts-->
+
+            <section class="main">
+                <!-- Header Starts-->
+                <header class="common_header inner_header">
+                    <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+                        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+                        <section class="submenu">
+                            <div class="menu_section">
+                                <ul class="clearfix reset">
+                                    <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+                                    <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+                                    <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                                        <section id="password_change">
+                                            <form method="post" action="" name="change_password">
+                                                <ul class="reset">
+                                                    <li>
+                                                        <label>Existing Password (from email)</label>
+                                                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                                                    </li>
+                                                    <li>
+                                                        <label>New Password</label>
+                                                        <input type="password" class="pass" name="new_pass" required>
+                                                    </li>
+                                                    <li>
+                                                        <label>Re-enter Password</label>
+                                                        <input type="password" class="pass re_pass" name="re_pass" required>
+                                                        <span class="error re_enter_error">Password did not match</span> </li>
+                                                    <li class="clearfix">
+                                                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                                                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                                                    </li>
+                                                </ul>
+                                            </form>
+                                        </section>
+                                    </li>
+                                    <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+                                </ul>
+                            </div>
+                            <p class="personal"><a href="personalization.html" class="anchor">Personalization</a></p>
+                        </section>
+                        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+                        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+                    </section>
+                    <div class="page_header">
+                        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">GOALS</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+                    </div>
+                </header>
+                <!-- Header Ends-->
+
+                <!-- Common_content Starts-->
+                <section class="content common_content">
+                    <div class="partner_dashboard_submenu">
+                        <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+                        <div class="menu_section">
+                            <ul class="clearfix reset">
+                                <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+                                <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+                                <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+                                <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+                                <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+                                <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+                                <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+                                <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Common_in_contnet starts-->
+                    <section class="in_content common_in_content clearfix goals_bx_in">
+                        <!-- inside goal page class-->
+                        <div class="top_bx">
+                            <ul class="top_bx_ul_bx">
+                                <li>
+                                    <div class="top_bx_in">
+                                        <div class="car"></div>
+                                    </div>
+                                    <div class="middle_bx_in">
+                                        <div class="top">
+                                            <div class="form_label">No. of Goals : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="100" />
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="form_label">Total Goal Amt : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="500" />
+                                                <span class="unit">lacs</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom_bx_in">
+                                        <div id="dgr-car" class="gl-dragger goals_div_dragger"><span class=""></span></div>
+                                    </div>
+                                </li>
+                                <!--Travel-->
+                                <li>
+                                    <div class="top_bx_in">
+                                        <div class="travel"></div>
+                                    </div>
+                                    <div class="middle_bx_in">
+                                        <div class="top">
+                                            <div class="form_label">No. of Goals : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="100" />
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="form_label">Total Goal Amt : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="500" />
+                                                <span class="unit">lacs</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom_bx_in">
+                                        <div id="dgr-travel" class="gl-dragger travel_goals_div_dragger"><span></span></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top_bx_in">
+                                        <div class="wedding"></div>
+                                    </div>
+                                    <div class="middle_bx_in">
+                                        <div class="top">
+                                            <div class="form_label">No. of Goals : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="100" />
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="form_label">Total Goal Amt : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="500" />
+                                                <span class="unit">lacs</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom_bx_in">
+                                        <div id="dgr-wedding" class="gl-dragger wedding_goals_div_dragger"><span></span></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top_bx_in">
+                                        <div class="education"></div>
+                                    </div>
+                                    <div class="middle_bx_in">
+                                        <div class="top">
+                                            <div class="form_label">No. of Goals : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="100" />
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="form_label">Total Goal Amt : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="500" />
+                                                <span class="unit">lacs</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom_bx_in">
+                                        <div id="dgr-edu" class="gl-dragger education_goals_div_dragger"><span></span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="clr"></div>
+                        </div>
+
+                        <div id="bx-car" class="bx-goal car_goals_list_bx">
+                            <div class="goals_list_bx">
+                                <div class="btn-toggle common_sliding_radio"> <span class="lbl">Data</span> <span class="lbl">Graph</span></div>
+                                <div class="pnl-toggle">
+                                    <ul>
+                                        <li class="input_title_one">Sr. No.</li>
+                                        <li class="input_title_two">Customer Name</li>
+                                        <li class="input_title_three">E-mail</li>
+                                        <li class="input_title_four">Phone</li>
+                                        <li class="input_title_five">Goal Amount</li>
+                                        <li class="input_title_six">Start Year</li>
+                                        <li class="input_title_seven">End Year</li>
+                                        <li class="input_title_eight">Completed (%)</li>
+                                        <li class="input_title_nine">Status</li>
+                                    </ul><div class="clr"></div>
+                                    <!--title-->
+                                    <!--txt list-->
+                                    <div class="goals_in_content">
+                                        <ul>
+                                            <li class="input_txt_one">1</li>
+                                            <li class="input_txt_two">Prachi Walke</li>
+                                            <li class="input_txt_three"><span class="cust_email">prachiwalke@gmail.comprachiwalke@gmail.comprachiwalke@gmail.com</span></li>
+                                            <li class="input_txt_four">9892568745</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2006</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">50%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">2</li>
+                                            <li class="input_txt_two">Sanjay Dhoshi</li>
+                                            <li class="input_txt_three">sanjaydos@gmail.com</li>
+                                            <li class="input_txt_four">8923568589</li>
+                                            <li class="input_txt_five">08 lacs</li>
+                                            <li class="input_txt_six">2010</li>
+                                            <li class="input_txt_seven">2015</li>
+                                            <li class="input_txt_eight">80%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_bad"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">3</li>
+                                            <li class="input_txt_two">Rohan Prabhune</li>
+                                            <li class="input_txt_three">Rohanp@gmail.com</li>
+                                            <li class="input_txt_four">8956795328</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2006</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">40%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_neutral"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">4</li>
+                                            <li class="input_txt_two">Aditya Sangawar</li>
+                                            <li class="input_txt_three">Adityas@gmail.com</li>
+                                            <li class="input_txt_four">8956795328</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2007</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">50%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">5</li>
+                                            <li class="input_txt_two">Vineet Malhotra</li>
+                                            <li class="input_txt_three">Vineetm@gmail.com</li>
+                                            <li class="input_txt_four">8896752316</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2010</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">10%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">6</li>
+                                            <li class="input_txt_two">Sunita Vikhe</li>
+                                            <li class="input_txt_three">SunitaV@gmail.com</li>
+                                            <li class="input_txt_four">8965741235</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2011</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">20%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl-toggle">
+                                    <div id="grf-car"></div><div class="clr"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Car Goals List View-->
+                        <!-- Travel Goals List View-->
+                        <div id="bx-travel" class="bx-goal travel_goals_list_bx">
+                            <div class="goals_list_bx">
+                                <div class="btn-toggle common_sliding_radio"> <span class="lbl">Data</span> <span class="lbl">Graph</span></div>
+                                <div class="pnl-toggle">
+                                    <ul>
+                                        <li class="input_title_one">Sr. No.</li>
+                                        <li class="input_title_two">Customer Name</li>
+                                        <li class="input_title_three">E-mail</li>
+                                        <li class="input_title_four">Phone</li>
+                                        <li class="input_title_five">Goal Amount</li>
+                                        <li class="input_title_six">Start Year</li>
+                                        <li class="input_title_seven">End Year</li>
+                                        <li class="input_title_eight">Completed (%)</li>
+                                        <li class="input_title_nine">Status</li>
+                                    </ul><div class="clr"></div>
+                                    <!--title-->
+                                    <!--txt list-->
+                                    <div class="goals_in_content">
+                                        <ul>
+                                            <li class="input_txt_one">1</li>
+                                            <li class="input_txt_two">Prachi Walke</li>
+                                            <li class="input_txt_three">prachiwalke@gmail.com</li>
+                                            <li class="input_txt_four">9892568745</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2006</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">50%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">2</li>
+                                            <li class="input_txt_two">Sanjay Dhoshi</li>
+                                            <li class="input_txt_three">sanjaydos@gmail.com</li>
+                                            <li class="input_txt_four">8923568589</li>
+                                            <li class="input_txt_five">08 lacs</li>
+                                            <li class="input_txt_six">2010</li>
+                                            <li class="input_txt_seven">2015</li>
+                                            <li class="input_txt_eight">80%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_bad"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">3</li>
+                                            <li class="input_txt_two">Rohan Prabhune</li>
+                                            <li class="input_txt_three">Rohanp@gmail.com</li>
+                                            <li class="input_txt_four">8956795328</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2006</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">40%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_neutral"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">4</li>
+                                            <li class="input_txt_two">Aditya Sangawar</li>
+                                            <li class="input_txt_three">Adityas@gmail.com</li>
+                                            <li class="input_txt_four">8956795328</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2007</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">50%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">5</li>
+                                            <li class="input_txt_two">Vineet Malhotra</li>
+                                            <li class="input_txt_three">Vineetm@gmail.com</li>
+                                            <li class="input_txt_four">8896752316</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2010</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">10%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">6</li>
+                                            <li class="input_txt_two">Sunita Vikhe</li>
+                                            <li class="input_txt_three">SunitaV@gmail.com</li>
+                                            <li class="input_txt_four">8965741235</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2011</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">20%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pnl-toggle">
+                                    <div id="grf-travel"></div><div class="clr"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Travel Goals List View-->
+                        <!-- Wedding Goals List View-->
+                        <div id="bx-wedding" class="bx-goal wedding_goals_list_bx">
+                            <div class="goals_list_bx">
+                                <!--title-->
+                                <ul>
+                                    <li class="input_title_one">Sr. No.</li>
+                                    <li class="input_title_two">Customer Name</li>
+                                    <li class="input_title_three">E-mail</li>
+                                    <li class="input_title_four">Phone</li>
+                                    <li class="input_title_five">Goal Amount</li>
+                                    <li class="input_title_six">Start Year</li>
+                                    <li class="input_title_seven">End Year</li>
+                                    <li class="input_title_eight">Completed (%)</li>
+                                    <li class="input_title_nine">Status</li>
+                                </ul><div class="clr"></div>
+                                <!--title-->
+                                <!--txt list-->
+                                <div class="goals_in_content">
+                                    <ul>
+                                        <li class="input_txt_one">1</li>
+                                        <li class="input_txt_two">Prachi Walke</li>
+                                        <li class="input_txt_three">prachiwalke@gmail.com</li>
+                                        <li class="input_txt_four">9892568745</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2006</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">50%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">2</li>
+                                        <li class="input_txt_two">Sanjay Dhoshi</li>
+                                        <li class="input_txt_three">sanjaydos@gmail.com</li>
+                                        <li class="input_txt_four">8923568589</li>
+                                        <li class="input_txt_five">08 lacs</li>
+                                        <li class="input_txt_six">2010</li>
+                                        <li class="input_txt_seven">2015</li>
+                                        <li class="input_txt_eight">80%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_bad"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">3</li>
+                                        <li class="input_txt_two">Rohan Prabhune</li>
+                                        <li class="input_txt_three">Rohanp@gmail.com</li>
+                                        <li class="input_txt_four">8956795328</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2006</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">40%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_neutral"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">4</li>
+                                        <li class="input_txt_two">Aditya Sangawar</li>
+                                        <li class="input_txt_three">Adityas@gmail.com</li>
+                                        <li class="input_txt_four">8956795328</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2007</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">50%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">5</li>
+                                        <li class="input_txt_two">Vineet Malhotra</li>
+                                        <li class="input_txt_three">Vineetm@gmail.com</li>
+                                        <li class="input_txt_four">8896752316</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2010</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">10%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">6</li>
+                                        <li class="input_txt_two">Sunita Vikhe</li>
+                                        <li class="input_txt_three">SunitaV@gmail.com</li>
+                                        <li class="input_txt_four">8965741235</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2011</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">20%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Wedding Goals List View-->
+                        <!-- Education Goals List View-->
+                        <div id="bx-edu" class="bx-goal education_goals_list_bx">
+                            <div class="goals_list_bx">
+                                <div class="btn-toggle common_sliding_radio"> <span class="lbl">Data</span> <span class="lbl">Graph</span></div>
+                                <div class="pnl-toggle">
+                                    <ul>
+                                        <li class="input_title_one">Sr. No.</li>
+                                        <li class="input_title_two">Customer Name</li>
+                                        <li class="input_title_three">E-mail</li>
+                                        <li class="input_title_four">Phone</li>
+                                        <li class="input_title_five">Goal Amount</li>
+                                        <li class="input_title_six">Start Year</li>
+                                        <li class="input_title_seven">End Year</li>
+                                        <li class="input_title_eight">Completed (%)</li>
+                                        <li class="input_title_nine">Status</li>
+                                    </ul><div class="clr"></div>
+                                    <!--title-->
+                                    <!--txt list-->
+                                    <div class="goals_in_content">
+                                        <ul>
+                                            <li class="input_txt_one">1</li>
+                                            <li class="input_txt_two">Prachi Walke</li>
+                                            <li class="input_txt_three">prachiwalke@gmail.com</li>
+                                            <li class="input_txt_four">9892568745</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2006</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">50%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">2</li>
+                                            <li class="input_txt_two">Sanjay Dhoshi</li>
+                                            <li class="input_txt_three">sanjaydos@gmail.com</li>
+                                            <li class="input_txt_four">8923568589</li>
+                                            <li class="input_txt_five">08 lacs</li>
+                                            <li class="input_txt_six">2010</li>
+                                            <li class="input_txt_seven">2015</li>
+                                            <li class="input_txt_eight">80%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_bad"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">3</li>
+                                            <li class="input_txt_two">Rohan Prabhune</li>
+                                            <li class="input_txt_three">Rohanp@gmail.com</li>
+                                            <li class="input_txt_four">8956795328</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2006</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">40%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_neutral"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">4</li>
+                                            <li class="input_txt_two">Aditya Sangawar</li>
+                                            <li class="input_txt_three">Adityas@gmail.com</li>
+                                            <li class="input_txt_four">8956795328</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2007</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">50%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">5</li>
+                                            <li class="input_txt_two">Vineet Malhotra</li>
+                                            <li class="input_txt_three">Vineetm@gmail.com</li>
+                                            <li class="input_txt_four">8896752316</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2010</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">10%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">6</li>
+                                            <li class="input_txt_two">Sunita Vikhe</li>
+                                            <li class="input_txt_three">SunitaV@gmail.com</li>
+                                            <li class="input_txt_four">8965741235</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2011</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">20%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pnl-toggle">
+                                    <div id="grf-edu"></div><div class="clr"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Education Goals List View-->
+                        <div class="top_bx">
+                            <ul class="top_bx_ul_bx">
+                                <li>
+                                    <div class="top_bx_in">
+                                        <div class="business"></div>
+                                    </div>
+                                    <div class="middle_bx_in">
+                                        <div class="top">
+                                            <div class="form_label">No. of Goals : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="100" />
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="form_label">Total Goal Amt : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="500" />
+                                                <span class="unit">lacs</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom_bx_in">
+                                        <div id="dgr-business" class="gl-dragger business_goals_div_dragger"><span></span></div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="top_bx_in">
+                                        <div class="other_goal"></div>
+                                    </div>
+                                    <div class="middle_bx_in">
+                                        <div class="top">
+                                            <div class="form_label">No. of Goals : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="100" />
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="form_label">Total Goal Amt : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="500" />
+                                                <span class="unit">lacs</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom_bx_in">
+                                        <div id="dgr-other" class="gl-dragger other_goal_div_dragger"><span></span></div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="top_bx_in">
+                                        <div class="special_goal"></div>
+                                    </div>
+                                    <div class="middle_bx_in">
+                                        <div class="top">
+                                            <div class="form_label">No. of Goals : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="100" />
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="form_label">Total Goal Amt : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="500" />
+                                                <span class="unit">lacs</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom_bx_in">
+                                        <div id="dgr-special" class="gl-dragger special_goal_div_dragger"><span></span></div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="top_bx_in">
+                                        <div class="property_goal"></div>
+                                    </div>
+                                    <div class="middle_bx_in">
+                                        <div class="top">
+                                            <div class="form_label">No. of Goals : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="100" />
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="form_label">Total Goal Amt : </div>
+                                            <div class="counter_parent">
+                                                <input type="text" class="range_counter" id="advice_eg_assump_01_payment" value="500" />
+                                                <span class="unit">lacs</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom_bx_in">
+                                        <div id="dgr-property" class="gl-dragger property_goal_div_dragger"><span></span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="clr"></div>
+                        </div>
+
+                        <div class="clr"></div>
+
+                        <!-- Business Goals List View-->
+                        <div id="bx-business" class="bx-goal business_goals_list_bx">
+                            <div class="goals_list_bx">
+                                <!--title-->
+                                <ul>
+                                    <li class="input_title_one">Sr. No.</li>
+                                    <li class="input_title_two">Customer Name</li>
+                                    <li class="input_title_three">E-mail</li>
+                                    <li class="input_title_four">Phone</li>
+                                    <li class="input_title_five">Goal Amount</li>
+                                    <li class="input_title_six">Start Year</li>
+                                    <li class="input_title_seven">End Year</li>
+                                    <li class="input_title_eight">Completed (%)</li>
+                                    <li class="input_title_nine">Status</li>
+                                </ul><div class="clr"></div>
+                                <!--title-->
+                                <!--txt list-->
+                                <div class="goals_in_content">
+                                    <ul>
+                                        <li class="input_txt_one">1</li>
+                                        <li class="input_txt_two">Prachi Walke</li>
+                                        <li class="input_txt_three">prachiwalke@gmail.com</li>
+                                        <li class="input_txt_four">9892568745</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2006</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">50%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">2</li>
+                                        <li class="input_txt_two">Sanjay Dhoshi</li>
+                                        <li class="input_txt_three">sanjaydos@gmail.com</li>
+                                        <li class="input_txt_four">8923568589</li>
+                                        <li class="input_txt_five">08 lacs</li>
+                                        <li class="input_txt_six">2010</li>
+                                        <li class="input_txt_seven">2015</li>
+                                        <li class="input_txt_eight">80%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_bad"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">3</li>
+                                        <li class="input_txt_two">Rohan Prabhune</li>
+                                        <li class="input_txt_three">Rohanp@gmail.com</li>
+                                        <li class="input_txt_four">8956795328</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2006</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">40%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_neutral"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">4</li>
+                                        <li class="input_txt_two">Aditya Sangawar</li>
+                                        <li class="input_txt_three">Adityas@gmail.com</li>
+                                        <li class="input_txt_four">8956795328</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2007</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">50%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">5</li>
+                                        <li class="input_txt_two">Vineet Malhotra</li>
+                                        <li class="input_txt_three">Vineetm@gmail.com</li>
+                                        <li class="input_txt_four">8896752316</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2010</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">10%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">6</li>
+                                        <li class="input_txt_two">Sunita Vikhe</li>
+                                        <li class="input_txt_three">SunitaV@gmail.com</li>
+                                        <li class="input_txt_four">8965741235</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2011</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">20%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Business Goals List View-->
+
+
+                        <!-- Other Goals List View-->
+                        <div id="bx-other" class="bx-goal other_goal_list_bx">
+                            <div class="goals_list_bx">
+                                <!--title-->
+                                <ul>
+                                    <li class="input_title_one">Sr. No.</li>
+                                    <li class="input_title_two">Customer Name</li>
+                                    <li class="input_title_three">E-mail</li>
+                                    <li class="input_title_four">Phone</li>
+                                    <li class="input_title_five">Goal Amount</li>
+                                    <li class="input_title_six">Start Year</li>
+                                    <li class="input_title_seven">End Year</li>
+                                    <li class="input_title_eight">Completed (%)</li>
+                                    <li class="input_title_nine">Status</li>
+                                </ul><div class="clr"></div>
+                                <!--title-->
+                                <!--txt list-->
+                                <div class="goals_in_content">
+                                    <ul>
+                                        <li class="input_txt_one">1</li>
+                                        <li class="input_txt_two">Prachi Walke</li>
+                                        <li class="input_txt_three">prachiwalke@gmail.com</li>
+                                        <li class="input_txt_four">9892568745</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2006</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">50%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">2</li>
+                                        <li class="input_txt_two">Sanjay Dhoshi</li>
+                                        <li class="input_txt_three">sanjaydos@gmail.com</li>
+                                        <li class="input_txt_four">8923568589</li>
+                                        <li class="input_txt_five">08 lacs</li>
+                                        <li class="input_txt_six">2010</li>
+                                        <li class="input_txt_seven">2015</li>
+                                        <li class="input_txt_eight">80%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_bad"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">3</li>
+                                        <li class="input_txt_two">Rohan Prabhune</li>
+                                        <li class="input_txt_three">Rohanp@gmail.com</li>
+                                        <li class="input_txt_four">8956795328</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2006</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">40%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_neutral"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">4</li>
+                                        <li class="input_txt_two">Aditya Sangawar</li>
+                                        <li class="input_txt_three">Adityas@gmail.com</li>
+                                        <li class="input_txt_four">8956795328</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2007</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">50%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">5</li>
+                                        <li class="input_txt_two">Vineet Malhotra</li>
+                                        <li class="input_txt_three">Vineetm@gmail.com</li>
+                                        <li class="input_txt_four">8896752316</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2010</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">10%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">6</li>
+                                        <li class="input_txt_two">Sunita Vikhe</li>
+                                        <li class="input_txt_three">SunitaV@gmail.com</li>
+                                        <li class="input_txt_four">8965741235</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2011</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">20%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Other Goal List View-->
+
+
+                        <!-- Special Goals List View-->
+                        <div id="bx-special" class="bx-goal special_goal_list_bx">
+                            <div class="goals_list_bx">
+                                <!--title-->
+                                <ul>
+                                    <li class="input_title_one">Sr. No.</li>
+                                    <li class="input_title_two">Customer Name</li>
+                                    <li class="input_title_three">E-mail</li>
+                                    <li class="input_title_four">Phone</li>
+                                    <li class="input_title_five">Goal Amount</li>
+                                    <li class="input_title_six">Start Year</li>
+                                    <li class="input_title_seven">End Year</li>
+                                    <li class="input_title_eight">Completed (%)</li>
+                                    <li class="input_title_nine">Status</li>
+                                </ul><div class="clr"></div>
+                                <!--title-->
+                                <!--txt list-->
+                                <div class="goals_in_content">
+                                    <ul>
+                                        <li class="input_txt_one">1</li>
+                                        <li class="input_txt_two">Prachi Walke</li>
+                                        <li class="input_txt_three">prachiwalke@gmail.com</li>
+                                        <li class="input_txt_four">9892568745</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2006</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">50%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">2</li>
+                                        <li class="input_txt_two">Sanjay Dhoshi</li>
+                                        <li class="input_txt_three">sanjaydos@gmail.com</li>
+                                        <li class="input_txt_four">8923568589</li>
+                                        <li class="input_txt_five">08 lacs</li>
+                                        <li class="input_txt_six">2010</li>
+                                        <li class="input_txt_seven">2015</li>
+                                        <li class="input_txt_eight">80%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_bad"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">3</li>
+                                        <li class="input_txt_two">Rohan Prabhune</li>
+                                        <li class="input_txt_three">Rohanp@gmail.com</li>
+                                        <li class="input_txt_four">8956795328</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2006</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">40%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_neutral"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">4</li>
+                                        <li class="input_txt_two">Aditya Sangawar</li>
+                                        <li class="input_txt_three">Adityas@gmail.com</li>
+                                        <li class="input_txt_four">8956795328</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2007</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">50%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">5</li>
+                                        <li class="input_txt_two">Vineet Malhotra</li>
+                                        <li class="input_txt_three">Vineetm@gmail.com</li>
+                                        <li class="input_txt_four">8896752316</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2010</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">10%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul><div class="clr"></div>
+                                    <ul>
+                                        <li class="input_txt_one">6</li>
+                                        <li class="input_txt_two">Sunita Vikhe</li>
+                                        <li class="input_txt_three">SunitaV@gmail.com</li>
+                                        <li class="input_txt_four">8965741235</li>
+                                        <li class="input_txt_five">10 lacs</li>
+                                        <li class="input_txt_six">2011</li>
+                                        <li class="input_txt_seven">2018</li>
+                                        <li class="input_txt_eight">20%</li>
+                                        <li class="input_txt_nine">
+                                            <div class="ifa_goal_status_good"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Special Goal List View-->
+
+
+                        <!-- Property Goals List View-->
+                        <div id="bx-property" class="bx-goal property_goal_list_bx">
+                            <div class="goals_list_bx">
+                                <div class="btn-toggle common_sliding_radio"> <span class="lbl">Data</span> <span class="lbl">Graph</span></div>
+                                <div class="pnl-toggle">
+                                    <ul>
+                                        <li class="input_title_one">Sr. No.</li>
+                                        <li class="input_title_two">Customer Name</li>
+                                        <li class="input_title_three">E-mail</li>
+                                        <li class="input_title_four">Phone</li>
+                                        <li class="input_title_five">Goal Amount</li>
+                                        <li class="input_title_six">Start Year</li>
+                                        <li class="input_title_seven">End Year</li>
+                                        <li class="input_title_eight">Completed (%)</li>
+                                        <li class="input_title_nine">Status</li>
+                                    </ul><div class="clr"></div>
+                                    <!--title-->
+                                    <!--txt list-->
+                                    <div class="goals_in_content">
+                                        <ul>
+                                            <li class="input_txt_one">1</li>
+                                            <li class="input_txt_two">Prachi Walke</li>
+                                            <li class="input_txt_three">prachiwalke@gmail.com</li>
+                                            <li class="input_txt_four">9892568745</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2006</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">50%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">2</li>
+                                            <li class="input_txt_two">Sanjay Dhoshi</li>
+                                            <li class="input_txt_three">sanjaydos@gmail.com</li>
+                                            <li class="input_txt_four">8923568589</li>
+                                            <li class="input_txt_five">08 lacs</li>
+                                            <li class="input_txt_six">2010</li>
+                                            <li class="input_txt_seven">2015</li>
+                                            <li class="input_txt_eight">80%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_bad"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">3</li>
+                                            <li class="input_txt_two">Rohan Prabhune</li>
+                                            <li class="input_txt_three">Rohanp@gmail.com</li>
+                                            <li class="input_txt_four">8956795328</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2006</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">40%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_neutral"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">4</li>
+                                            <li class="input_txt_two">Aditya Sangawar</li>
+                                            <li class="input_txt_three">Adityas@gmail.com</li>
+                                            <li class="input_txt_four">8956795328</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2007</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">50%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">5</li>
+                                            <li class="input_txt_two">Vineet Malhotra</li>
+                                            <li class="input_txt_three">Vineetm@gmail.com</li>
+                                            <li class="input_txt_four">8896752316</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2010</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">10%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul><div class="clr"></div>
+                                        <ul>
+                                            <li class="input_txt_one">6</li>
+                                            <li class="input_txt_two">Sunita Vikhe</li>
+                                            <li class="input_txt_three">SunitaV@gmail.com</li>
+                                            <li class="input_txt_four">8965741235</li>
+                                            <li class="input_txt_five">10 lacs</li>
+                                            <li class="input_txt_six">2011</li>
+                                            <li class="input_txt_seven">2018</li>
+                                            <li class="input_txt_eight">20%</li>
+                                            <li class="input_txt_nine">
+                                                <div class="ifa_goal_status_good"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pnl-toggle">
+                                    <div id="grf-prop"></div><div class="clr"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Property Goal List View-->
+
+                    </section>
+                    <!-- Common_in_contnet ends-->
+                    <div class="overlay"></div>
+                </section>
+                <!-- Common_content Ends-->
+
+            </section>
+            <!-- Main ends-->
+        </div>
+        <!-- Wrapper ends-->
+    </body>
+</html>

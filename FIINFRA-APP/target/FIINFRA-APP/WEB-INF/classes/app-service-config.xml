@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<import resource="classpath:app-dao-config.xml" />
+
+	<bean id="adminService" class="in.fiinfra.admin.service.AdminServiceImpl">
+		<property name="adminDao">
+			<ref bean="adminDao" />
+		</property>
+	</bean>
+	<bean id="departmentListService" class="in.fiinfra.serviceportal.service.DepartmentListServiceImpl"> <!-- created by :suvarna --> 
+		<property name="departmentListDao">  
+			<ref bean="departmentListDao" />          
+		</property>
+	</bean> 
+	
+		<bean id="NotifyEventServices" class="in.fiinfra.serviceportal.service.NotifyEventServicesImpl"> <!-- created by :suvarna --> 
+		<property name="notifyEventDao">           
+			<ref bean="notifyEventDao" />            
+		</property>  
+	</bean>  
+	
+	<bean id="commonService" class="in.fiinfra.common.service.CommonServiceImpl">
+		<property name="commonDao">
+			<ref bean="commonDao" />
+		</property>
+	</bean>
+	
+	<bean id="partnerService" class="in.fiinfra.partner.service.PartnerServiceImpl">
+		<property name="partnerDao">
+			<ref bean="partnerDao" />
+		</property>
+	</bean>
+	
+	<bean id="opportunityService" class="in.fiinfra.opportunity.service.OpportunityServiceImpl">
+		<property name="opportunityDao">
+			<ref bean="opportunityDao" />
+		</property>
+	</bean>
+	
+	<bean id="clientService" class="in.fiinfra.client.service.ClientServiceImpl">
+		<property name="clientDao">
+			<ref bean="clientDao" />
+		</property>
+	</bean>
+		<bean id="dcService" class="in.fiinfra.utility.service.DCServiceImpl">
+		<property name="dcDao">
+			<ref bean="dcDao" />
+		</property>
+	</bean>
+	<bean id="etService" class="in.fiinfra.partner.service.ETServiceImpl">
+		<property name="etDao">
+			<ref bean="etDao" />
+		</property>
+	</bean>
+	<bean id="goalSummeryService" class="in.fiinfra.partner.service.GoalServiceImpl">
+		<property name="goalSummeryDao">
+			<ref bean="goalSummeryDao" />
+		</property>
+	</bean>
+	<bean id="folioService" class="in.fiinfra.partner.service.FolioServiceImpl">
+	</bean>
+<!-- 	service portal -->
+		<bean id="service" class="in.fiinfra.serviceportal.service.AddFaqServiceImpl">
+		<property name="addfaqDao">
+			<ref bean="addfaqDao" />
+		</property>
+	</bean>
+	
+		<bean id="bizunitServices" class="in.fiinfra.serviceportal.service.BizUnitServiceImpl">
+		<property name="bizunitDao">
+			<ref bean="bizunitDao" />
+		</property>
+	</bean>
+	
+		<bean id="settingServices" class="in.fiinfra.serviceportal.service.SettingServiceImpl">
+		<property name="settingDao">
+			<ref bean="settingDao" />
+		</property>
+	</bean>
+	
+
+		<bean id="partnerSPService" class="in.fiinfra.serviceportal.service.PartnerSPServiceImpl">
+		<property name="partnerSPDao">
+			<ref bean="partnerSPDao" />
+		</property>
+	</bean>
+		<bean id="downloadServices" class="in.fiinfra.serviceportal.service.DownloadServicesImpl">
+		<property name="downloadDao">
+			<ref bean="downloadDao" />
+		</property>
+	</bean>
+
+  <bean id="userServices" class="in.fiinfra.serviceportal.service.UserServiceImpl">
+		<property name="userDao">
+			<ref bean="userDao" />
+		</property>
+	</bean>
+	
+
+	<bean id="broadcastService" class="in.fiinfra.serviceportal.service.BroadcastServiceImpl">
+		<property name="broadcastDao">
+			<ref bean="broadcastDao" />
+		</property>
+	</bean>
+
+		<bean id="dashboardService" class="in.fiinfra.serviceportal.service.DashboardServiceImpl">
+		<property name="dashboardDao">
+			<ref bean="dashboardDao" />
+		</property>
+	</bean>
+	
+	<bean id="roleServices" class="in.fiinfra.serviceportal.service.RoleServicesImp">
+		<property name="roleListDao">
+			<ref bean="roleListDao" />
+		</property>
+	</bean>
+	
+	<bean id="teamMemberServices" class="in.fiinfra.serviceportal.service.TeamMemberServicesImpl">
+		<property name="teamMemberDao">
+			<ref bean="teamMemberDao" />
+		</property>
+	</bean>
+	
+	<bean id="codeTypeServices" class="in.fiinfra.serviceportal.service.CodeTypeServicesImpl">
+		<property name="codeTypeDao">
+			<ref bean="codeTypeDao" />
+		</property>
+	</bean>
+	
+	
+	<bean id="NotifyTemplateServices" class="in.fiinfra.serviceportal.service.NotifyTemplateServicesImpl"> <!-- created by :suvarna --> 
+		<property name="notifyTemplateDao">           
+			<ref bean="notifyTemplateDao"/>              
+		</property>
+	</bean>
+	
+	<bean id="productService" class="in.fiinfra.serviceportal.service.ProductServiceImpl">
+		<property name="productDao">
+			<ref bean="productDao" />
+		</property>
+	</bean>
+	
+		<bean id="testimonialServices" class="in.fiinfra.serviceportal.service.TestimonialServicesImpl">
+		<property name="testimonialDao">
+			<ref bean="testimonialDao" />
+		</property>
+	</bean>
+	
+		<bean id="loggedUserServices" class="in.fiinfra.serviceportal.service.LoggedUserServicesImpl">
+		<property name="loggedUserDao">
+			<ref bean="loggedUserDao" />
+		</property>
+	</bean>
+	
+	
+	<bean id="SPETServices" class="in.fiinfra.serviceportal.service.SPETServicesImpl">
+		<property name="etspDao">
+			<ref bean="etspDao" />
+		</property>
+	</bean>
+		<bean id="spexecutionService" class="in.fiinfra.serviceportal.service.SPExecutionServiceImpl">
+		<property name="spExecutionDao">
+			<ref bean="spExecutionDao" />
+		</property>
+	</bean>
+		<bean id="autopingService" class="in.fiinfra.serviceportal.service.AutoPingServiceImpl">
+		<property name="autopingDao">
+			<ref bean="autopingDao" />
+		</property>
+	</bean>
+			<bean id="QuartzJobService" class="in.fiinfra.serviceportal.service.QuartzJobServiceImpl">
+		<property name="QuartzJobDao">
+			<ref bean="QuartzJobDao" />
+		</property>
+	</bean>
+	
+		
+			<bean id="documentDataService" class="in.fiinfra.common.service.DocumentDataServiceImpl">
+		<property name="documentDataDao">
+			<ref bean="documentDataDao" />
+		</property>
+	</bean>
+
+<bean id="queryspservice" class="in.fiinfra.serviceportal.service.QueryspServiceImpl">
+		<property name="queryspDao">
+			<ref bean="queryspDao" />
+		</property>
+	</bean>
+	
+</beans>

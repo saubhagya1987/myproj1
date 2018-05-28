@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<import resource="classpath:app-data-source.xml" />
+
+	<bean id="adminDao" class="in.fiinfra.admin.dao.AdminDaoImpl"/>
+	<bean id="commonDao" class="in.fiinfra.common.dao.CommonDaoImpl"/>
+	<bean id="partnerDao" class="in.fiinfra.partner.dao.PartnerDaoImpl"/>
+	<bean id="opportunityDao" class="in.fiinfra.opportunity.dao.OpportunityDaoImpl"/>
+	<bean id="clientDao" class="in.fiinfra.client.dao.ClientDaoImpl"/>
+	<bean id="dcDao" class="in.fiinfra.utility.dao.DCDaoImpl"/>
+	<bean id="etDao" class="in.fiinfra.partner.dao.ETDaoImpl"></bean>
+	<bean id="goalSummeryDao" class="in.fiinfra.partner.dao.GoalSummeryDaoImpl"/>
+
+	<bean id="folioDao" class="in.fiinfra.partner.dao.FolioDaoImpl"/>
+
+	
+	
+	
+	
+	
+<!-- 	servicePortalBeans -->
+<!-- <bean id="addfaqDao" class="in.fiinfra.serviceportal.dao.AddFaqDaoImpl"/>
+<bean id="bizunitDao" class="in.fiinfra.serviceportal.dao.BizUnitDaoImpl"/>
+<bean id="settingDao" class="in.fiinfra.serviceportal.dao.SettingDaoImpl"/> -->
+
+<bean id="partnerSPDao" class="in.fiinfra.serviceportal.dao.PartnerSPDaoImpl"/>
+<bean id="downloadDao" class="in.fiinfra.serviceportal.dao.DownloadDaoImpl"/>
+
+<bean id="userDao" class="in.fiinfra.serviceportal.dao.UserDaoImpl"/>
+<bean id="dashboardDao" class="in.fiinfra.serviceportal.dao.DashboardDaoImpl"/>
+<bean id="departmentListDao" class="in.fiinfra.serviceportal.dao.DepartmentListDaoImpl"/>  
+<bean id="notifyEventDao" class="in.fiinfra.serviceportal.dao.NotifyEventDaoImpl"/>  
+
+<bean id="codeTypeDao" class="in.fiinfra.serviceportal.dao.CodeTypeDaoImpl"/>
+
+
+<bean id="notifyTemplateDao" class="in.fiinfra.serviceportal.dao.NotifyTemplateDaoImpl"/>
+<bean id="autopingDao" class="in.fiinfra.serviceportal.dao.AutoPingDaoImpl"/>
+<bean id="QuartzJobDao" class="in.fiinfra.serviceportal.dao.QuartzJobDaoImpl"/>
+
+
+<bean id="DataBrokerService" class="in.fiinfra.frmk.DataBrokerService">
+<property name="sqlFiles">
+			<list>
+				<value>/db/db_mobile_integration.xml</value>
+				<value>/db/db_subscription.xml</value>
+			</list>
+		</property>
+</bean>
+<bean id="DataBaseService" class="in.fiinfra.frmk.DataBaseService"/>
+
+</beans>

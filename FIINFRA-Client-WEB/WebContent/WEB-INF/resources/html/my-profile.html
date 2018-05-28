@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+  <meta name="viewport" content="width=1024">
+  <title>My Profile</title>
+  <link rel="shortcut icon" href="../images/favicon.ico" />
+  <link rel="stylesheet" a href="../css/reset.css"  type="text/css" />
+  <link rel="stylesheet" a href="../css/jquery-ui.css"  type="text/css" />
+  <link rel="stylesheet" a href="../css/main-style.css"  type="text/css" />
+  <link rel="stylesheet" a href="../css/custom.css"  type="text/css" />
+  <link rel="stylesheet" href="../css/selectboxit.css" type="text/css" />
+  <script src="../js/jquery-1.11.0.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/jquery_ui_range_slider.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/jquery.ui.touch-punch.js"></script>
+  <script src="../js/jquery-1.11.0.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/selectboxit.js"></script>
+  <!-- Custom Selectbox starts -->
+  <script>
+$(document).ready(function(){
+  	$( "#tabs" ).tabs();
+	$(function() {
+     $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-M-yy",
+      showOn: "button",
+	  buttonText: '',
+	  changeMonth: true,
+      changeYear: true
+     });
+	  $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent'></div>" );
+  });
+  
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+	 
+ 
+});
+</script>
+  <!-- Custom Selectbox Ends -->
+  <script>
+$(document).ready(function(){
+
+  $(".selectboxit-container ").click(function(){
+    //$('#personal_details_accordian').perfectScrollbar("update");
+	//$('#contact_details_accordian').perfectScrollbar("update");
+//	$('.family_details').perfectScrollbar("update");
+	});
+	 $(".thumb_select_ul a").click(function(){
+		//alert("hi");
+    $(this).children(".categoery").toggleClass("applicable");
+}) 
+}) 
+</script>
+
+  <!-- custom scroll to "common_in_content" -->
+  <script>
+$(document).ready(function(){
+	  //Tracker Details Rating value Slider
+	  createSlider('#Conversion_Probability',0,100,1,"#C_P_Value")
+	  createSlider('#opportunity_rating',1,3,1,"")
+	  
+	  
+  });
+
+</script>
+  <!-- custom scroll to "common_in_content" -->
+
+  <script>
+  $(function() {
+    $( "#Profile_Info_Tab" ).accordion({
+		heightStyle: "content",
+    autoHeight: false,
+    clearStyle: true, 
+		
+		});
+	
+	 // Preferred Product Count Intlalized	
+	var count=3;
+	
+	//Add Button Starts
+  $(".family_details").on("click", ".add", function() {
+	   $(this).fadeOut();
+	   count++;
+	   
+	$(this).prev(".close").fadeIn();
+	
+	$(this).parent().closest("ul").after("<ul class='reset clearfix Family_Details_col clearfix'><li class='clearfix li_one'><input name='input' type='text' class='common_input' placeholder='First Name'/></li><li class='clearfix li_two'><input name='input' type='text' class='common_input' placeholder='Last Name'/></li><li class='clearfix li_three'><input id='birth_date"+count+"' name='input' type='text' placeholder='dd-mmm-yyyy' class='birth_date common_input5 datepicker' disabled/></li><li class='clearfix li_five'><select name='category2'><option>Select</option><option>Father</option><option>Mother</option><option>Wife</option><option>Son</option></select></li><li class='clearfix li_six'><span class='common_input3'></span><div class='close'>x</div><div class='add'>+</div></li></ul>");
+	   //Preferred Product Count Written
+	 $("select").selectBoxIt();
+	 // createSlider("#your_age"+count,0,100,1,"#age"+count);
+	  
+	  $(function() {
+     $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-M-yy",
+      showOn: "button",
+	  buttonText: '',
+	  changeMonth: true,
+      changeYear: true
+     });
+  });
+  
+   $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent fl'></div>" );
+     
+	  $('.EP_cnt').perfectScrollbar('update');
+	 
+	  
+	});
+
+// Close Button 
+$(".family_details").on("click", ".close", function() {
+	
+	$(this).parent().closest("ul").siblings("ul").removeClass("moved_down");
+	$(this).parent().closest("ul").prev("ul").addClass("moved_down");
+	var count_section = $(this).parent().closest(".EP_cnt ").find(".selectboxit").length;
+	
+	
+	$(this).parent().closest("ul").remove();
+    $("ul:last-of-type").find(".add").fadeIn(); 
+	// removing record
+
+// Preferred Product Ends
+
+	
+	});	
+	
+	 
+  });
+  </script>
+  </head>
+  <body>
+  <div id="wrapper" class="clearfix">
+    <div id="header"> <a class="logo" href="index.html"> <span id="logo"> <img src="../images/temp_logo.png" /></span><!-- end of "logo" id --> 
+      </a> 
+      
+      <!--div id="advt1">
+        	<img src="images/add1.png" />
+        </div--><!-- end of "advt1" id -->
+      
+      <div id="advt2"> <img src="../images/add2.png" /> </div>
+      <!-- end of "advt1" id -->
+      
+      <div id="ifa-image" class="clearfix fl"> <img src="../images/photo.jpg"  class="clearfix fl"/> <span class="ifa-name clearfix">Mr. A. B. Joshi</span> <span class="ifa-advisor clearfix">(Your Advisor)</span> </div>
+      <!-- end of "ifa-image" id -->
+      
+      <div id="log-out"> <img class="logout" src="../images/transparent.png"/>
+        <p>Logout</p>
+      </div>
+      <!-- end of "log-out" id --> 
+    </div>
+    <!-- end of "header" id -->
+    
+    <ul id="inner-nav-menu" class="clearfix ">
+      <li class="my-goals"><a href="my-goals.html"><img class="my-goals-ico" src="../images/transparent.png"/>
+        <p>My Goals <span class="grad-border"><img src="../images/transparent.png"/></span></p>
+        </a></li>
+      <li class="my-plans"><a href="my-plan.html"><img class="my-plans-ico" src="../images/transparent.png"/>
+        <p>My Plans<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+        </a></li>
+      <li class="my-portf"><a href="my-portfolio.html"><img class="my-portf-ico" src="../images/transparent.png"/>
+        <p>My Portfolio<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+        </a></li>
+      <!--li class="my-inc"><a href="#"><img class="my-inc-ico" src="images/transparent.png"/><p>My Income<span class="grad-border"><img src="images/transparent.png"/></span></p></a></li-->
+      <li class="my-cashflow"><a href="my-income.html"><img class="my-cashflow-ico" src="../images/transparent.png"/>
+        <p>My Cashflow<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+        </a></li>
+      <li class="my-fin"><a href="#"><img class="my-fin-ico" src="../images/transparent.png"/>
+        <p>My Documents<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+        </a></li>
+      <li class="my-rep"><a href="my-reports.html"><img class="my-rep-ico" src="../images/transparent.png"/>
+        <p>My Reports<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+        </a></li>
+      <li class="my-acc"><a href="my-profile.html"><img class="my-acc-ico" src="../images/transparent.png"/>
+        <p>My Account<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+        </a></li>
+    </ul>
+    <!-- end of "nav-menu" id -->
+    
+    <div id="trapezoid" class="clearfix fr">
+      <p>Welcome&nbsp;<span> Mr. Parag Takalkar</span></p>
+    </div>
+    <div id="header-strip" class="fl">
+      <h3 class="clearfix fl">MY PROFILE</h3>
+      <img class="short-menu clearfix fr"  src="../images/transparent.png" /><!--<a href="#" class="my-history-btn clearfix fr"><img src="../images/transparent.png" />My History</a>--><a href="my-document.html" class="my-docs-btn clearfix fr"><img src="../images/transparent.png" />My Document</a> <a href="password.html" class="my-password-btn clearfix fr"><img src="../images/transparent.png" />My Password</a> <!--<a href="#" class="my-profile-btn clearfix fr"><img src="../images/transparent.png" />My Profile</a>--> </div>
+    <!-- end of "header-strip" id -->
+    
+    <div id="inner-shadow-strip"></div>
+    <!-- end of "inner-shadow-strip" id -->
+    
+    <div id="contents">
+      <section class="in_content clearfix" id="personalization">
+        <div style="padding:10px 10px 0;">
+          <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Personal Details</a></li>
+              <li><a href="#tabs-2">Contact Details</a></li>
+              <li><a href="#tabs-3">Family Details</a></li>
+              <!--<li><a href="#tabs-4">Origination Details</a></li>
+            <li><a href="#tabs-5">Tracker Details</a></li>-->
+            </ul>
+            <div id="tabs-1" class="tab_border">
+              <div id="personal_details"> 
+                <div class="first_top_col"> <span class="mandatory"> </span>
+                <label class="form_label">Name</label>
+                <select id="personal" class="bx">
+                  <option>Select</option>
+                  <option>Mr.</option>
+                  <option>Mrs.</option>
+                  <option>Dr.</option>
+                  <option>Ms.</option>
+                  <option>Master.</option>
+                  <option>Miss.</option>
+                </select>
+                <input name="" type="text" class="common_input" placeholder="First Name">
+                <input name="" type="text" class="common_input" placeholder="Last Name">
+              </div>
+                <div class="fl first_col">
+                  <ul class="reset clearfix first_col_ul">
+                    <li class="clearfix"> <span class="mandatory"> </span>
+                      <label class="form_label">Date of Birth</label>
+                      <input type="text" class="common_input5 datepicker" name="input" placeholder="dd-mmm-yyyy"  disabled>
+                      &nbsp; </li>
+                    <li class="clearfix"><span class="mandatory"> </span>
+                      <label class="form_label">Gender</label>
+                      <ul class="reset clearfix thumb_select_ul emergency_categoery_ul">
+                        <li class="fl not_clickable"><a href="#">
+                          <div class="categoery applicable">
+                          <div class="thumb male"></div>
+                        </div>
+                          <label class="label">Male</label>
+                          </a></li>
+                        <li class="fl not_clickable"><a href="#">
+                          <div class="categoery">
+                          <div class="thumb female"></div>
+                        </div>
+                          <label class="label">Female</label>
+                          </a></li>
+                      </ul>
+                    </li>
+                    <li class="clearfix">
+                      <label class="form_label">Marital Status</label>
+                      <select id="service" class="bx">
+                        <option>Select</option>
+                        <option>Single</option>
+                        <option>Married</option>
+                        <option>Divorced</option>
+                        <option>Widowed</option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+                <div class="fr second_col">
+                  <ul class="reset clearfix second_col_ul">
+                    <li class="clearfix">
+                      <label class="form_label">Occupation</label>
+                      <select id="service" class="bx">
+                        <option>Select</option>
+                        <option>Business</option>
+                        <option>Service</option>
+                        <option>Housewife</option>
+                        <option>Student</option>
+                        <option>Retired</option>
+                      </select>
+                    </li>
+                    <li class="clearfix">
+                      <label class="form_label">Company Name</label>
+                      <input class="common_input" name="" type="text">
+                    </li>
+                    <li class="clearfix">
+                      <label class="form_label">Designation</label>
+                      <input class="common_input" name="" type="text">
+                    </li>
+                    <li class="clearfix">
+                      <label class="form_label">PAN No</label>
+                      <input class="common_input" name="" type="text">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clr"> </div>
+            </div>
+            <div id="tabs-2" class="tab_border">
+              <div id="contact_details">
+                <div class="Cont_Details_first_col">
+                  <ul class="reset clearfix Cont_Details_first_col_ul">
+                    <li class="clearfix">
+                      <label class="form_label">Address 1</label>
+                      <input name="input" type="text" class="common_input">
+                    </li>
+                    <li class="clearfix">
+                      <label class="form_label">Address 2</label>
+                      <input name="input" type="text" class="common_input">
+                    </li>
+                    <li class="clearfix">
+                      <label class="form_label">Address 3</label>
+                      <input name="input" type="text" class="common_input">
+                    </li>
+                  </ul>
+                </div>
+                <div class="Cont_Details_second_col">
+                  <ul class="reset clearfix Cont_Details_second_col_ul">
+                    <li class="clearfix">
+                      <label class="form_label">Country</label>
+                      <select id="category" class="bx">
+                        <option>Select</option>
+                        <option>India</option>
+                        <option>China</option>
+                      </select>
+                    </li>
+                    <li class="clearfix">
+                      <label class="form_label">State</label>
+                      <select name="category" id="category2" class="bx">
+                        <option>Select</option>
+                        <option>Maharashtra</option>
+                        <option>Karnataka</option>
+                      </select>
+                    </li>
+                    <li class="clearfix">
+                      <label class="form_label">City</label>
+                      <select name="category2" id="category3" class="bx">
+                        <option>Select</option>
+                        <option>Pune</option>
+                        <option>Mumbai</option>
+                        <option>Nagpur</option>
+                      </select>
+                    </li>
+                    <li class="clearfix">
+                      <label class="form_label">Pin Code</label>
+                      <input type="text" class="common_input" value="411045">
+                    </li>
+                  </ul>
+                </div>
+                <div class="Cont_Details_third_col">
+                  <ul class="reset clearfix Cont_Details_third_col_ul">
+                    <li class="clearfix"> <span class="mandatory"> </span>
+                      <label class="form_label">Email</label>
+                      <input name="input" type="text" class="common_input">
+                    </li>
+                    <li class="clearfix"> <span class="mandatory"> </span>
+                      <label class="form_label">Mobile</label>
+                      <input name="input" type="text" class="common_input">
+                    </li>
+                    <li class="clearfix">
+                      <label class="form_label2">Alternate No.</label>
+                      <input name="input" type="text" class="common_input">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clr"> </div>
+            </div>
+            <div id="tabs-3" class="tab_border">
+              <div class="family_details">
+                <ul class="reset clearfix Family_Details_col clearfix">
+                  <li class="clearfix li_one">
+                    <input name="input" placeholder="First Name" type="text" class="common_input">
+                  </li>
+                  <li class="clearfix li_two">
+                    <input name="input" placeholder="Last Name" type="text" class="common_input">
+                  </li>
+                  <li class="clearfix li_three">
+                    <input id="birth_date1" name="input" type="text" placeholder="dd-mmm-yyyy" class="birth_date common_input5 datepicker" disabled>
+                  </li>
+                  <li class="clearfix li_five">
+                    <select name="category2" id="category3">
+                      <option>Select</option>
+                      <option>Father </option>
+                      <option>Mother</option>
+                      <option>Wife</option>
+                      <option>Son</option>
+                    </select>
+                  </li>
+                  <li class="clearfix li_six"> <span class="common_input3">Sr. Citizen</span> </li>
+                </ul>
+                <ul class="reset clearfix Family_Details_col clearfix">
+                  <li class="clearfix li_one">
+                    <input name="input" placeholder="First Name" type="text" class="common_input">
+                  </li>
+                  <li class="clearfix li_two">
+                    <input name="input" placeholder="Last Name" type="text" class="common_input">
+                  </li>
+                  <li class="clearfix li_three">
+                    <input id="birth_date2" name="input" type="text" placeholder="dd-mmm-yyyy" class="birth_date common_input5 datepicker" disabled>
+                  </li>
+                  <li class="clearfix li_five">
+                    <select name="category2" id="category3">
+                      <option>Select</option>
+                      <option>Father </option>
+                      <option>Mother</option>
+                      <option>Wife</option>
+                      <option>Son</option>
+                    </select>
+                  </li>
+                  <li class="clearfix li_six"> <span class="common_input3">Sr. Citizen</span> </li>
+                </ul>
+                <ul class="reset clearfix Family_Details_col clearfix">
+                  <li class="clearfix li_one">
+                    <input name="input" type="text" class="common_input" placeholder="First Name">
+                  </li>
+                  <li class="clearfix li_two">
+                    <input name="input" type="text" class="common_input" placeholder="Last Name">
+                  </li>
+                  <li class="clearfix li_three">
+                    <input id="birth_date3" name="input" type="text" placeholder="dd-mmm-yyyy" class="birth_date common_input5 datepicker" disabled>
+                  </li>
+                  <li class="clearfix li_five">
+                    <select name="category2" id="category3">
+                      <option>Select</option>
+                      <option>Father </option>
+                      <option>Mother</option>
+                      <option>Wife</option>
+                      <option>Son</option>
+                    </select>
+                  </li>
+                  <li class="clearfix li_six"> <span class="common_input3">Minor</span>
+                    <div class="add">+</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="clr"></div>
+            </div>
+            <!--<div id="tabs-4" class="tab_border">
+            <div id="origination-details">
+              <ul>
+                <li style=" margin-bottom:20px;">
+                  <label class="form_label">Campaign Name</label>
+                  <input name="" type="text" class="common_input" value="" placeholder="Axis">
+                </li>
+                <li style="margin-bottom:20px;">
+                  <label class="form_label">Opportunity Source</label>
+                  <select id="Opportunity_Source2" class="bx">
+                    <option>Select</option>
+                    <option>Seminar</option>
+                    <option>WebDirectLead</option>
+                    <option>WebCampaign</option>
+                    <option>Database</option>
+                    <option>Internal Referral</option>
+                    <option>External Referral</option>
+                    <option>Others</option>
+                  </select>
+                </li>
+                <li style="margin-bottom:20px;">
+                  <label class="form_label">Referred By</label>
+                  <input name="" type="text" class="common_input" value="" placeholder="Mr. Joshi">
+                </li>
+                <li class="clearfix">
+                  <label class="form_label">Interested in Offerings</label>
+                  <ul class="reset clearfix thumb_select_ul emergency_categoery_ul">
+                    <li class="fl"><a href="#">
+                      <div class="categoery">
+                        <div class="thumb financial_planning"></div>
+                      </div>
+                      <label class="label">Financial
+                        Planning</label>
+                      </a></li>
+                    <li class="fl"><a href="#">
+                      <div class="categoery">
+                        <div class="thumb retirement_planning"></div>
+                      </div>
+                      <label class="label">Retirement
+                        Planning</label>
+                      </a></li>
+                    <li class="fl"><a href="#">
+                      <div class="categoery">
+                        <div class="thumb succession_planning"></div>
+                      </div>
+                      <label class="label">Succession Planning</label>
+                      </a></li>
+                    <li class="fl"><a href="#">
+                      <div class="categoery">
+                        <div class="thumb tax_planning"></div>
+                      </div>
+                      <label class="label">Tax Planning</label>
+                      </a></li>
+                    <li class="fl"><a href="#">
+                      <div class="categoery">
+                        <div class="thumb mutual_funds"></div>
+                      </div>
+                      <label class="label">Mutual Funds</label>
+                      </a></li>
+                    <li class="fl"><a href="#">
+                      <div class="categoery">
+                        <div class="thumb life_insurance"></div>
+                      </div>
+                      <label class="label">Life Insurance</label>
+                      </a></li>
+                    <li class="fl"><a href="#">
+                      <div class="categoery">
+                        <div class="thumb general_insurance"></div>
+                      </div>
+                      <label class="label">General Insurance</label>
+                      </a></li>
+                    <li class="fl"><a href="#">
+                      <div class="categoery">
+                        <div class="thumb loans"></div>
+                      </div>
+                      <label class="label">Loans</label>
+                      </a></li>
+                    <li class="fl"><a href="#">
+                      <div class="categoery">
+                        <div class="thumb other_value-added"></div>
+                      </div>
+                      <label class="label">Other Value-Added Services</label>
+                      </a></li>
+                    <li class="fl"><a href="#">
+                      <div class="categoery">
+                        <div class="thumb other_investment"></div>
+                      </div>
+                      <label class="label">Other Investment Products</label>
+                      </a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div id="tabs-5" class="tab_border">
+            <div id="Tracker_Details">
+              <p>
+              <div class="fl first_col">
+                <ul class="reset clearfix first_col_ul">
+                  <li class="clearfix">
+                    <label class="form_label">Opportunity Status</label>
+                    <select id="Opportunity_Status" class="bx">
+                      <option>Select</option>
+                      <option>New</option>
+                      <option>Open</option>
+                      <option>Closed</option>
+                      <option>Cancelled</option>
+                    </select>
+                  </li>
+                  <li class="clearfix">
+                    <label class="form_label">Next Action</label>
+                    <select id="Opportunity_Status" class="bx">
+                      <option>Select</option>
+                      <option>Email</option>
+                      <option>SMS</option>
+                      <option>Call</option>
+                      <option>Meeting</option>
+                      <option>Collect Documents</option>
+                    </select>
+                  </li>
+                </ul>
+              </div>
+              <div class="fr second_col">
+                <ul class="reset clearfix second_col_ul">                 
+                  <li class="input_txt_four fl">
+                  <label class="form_label">Conversion Probability</label>
+                   <div class="fl">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+                        <div class="ui-slider-box-shadow">
+                          <div id="Conversion_Probability" class="effect2"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="C_P_Value" class="range_counter" />
+                          <span class="unit">k</span></div>
+                      </div>
+                    </div>  </div>
+                  </li>
+                  <li class="clearfix">
+                    <label class="form_label">Opportunity Rating</label>
+                   <div class="fl">
+                    <div class="range_parent">
+                      <div class="scale clearfix">
+                        <div class="scale_range"><span class="low extrem">Cold</span><span class="middle extrem">Warm</span><span class="high extrem">Hot</span> 
+                         
+                        </div>
+                         <div class="ui-slider-box-shadow">
+                        <div id="opportunity_rating"></div>
+                      </div></div>
+                    </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              </p>
+            </div>
+            <div class="clr"></div>
+          </div>--> 
+          </div>
+          <div class="btn_bx"><form>
+                    	<input type="button" class="submit_btn" value="SUBMIT">
+                        <input type="button" class="cancel_btn" value="CANCEL">
+                      
+          </form></div>
+        </div>
+      </section>
+    </div>
+    <footer id="footer"> <img src="../images/finfra-logo.png" /> <span class="copyright">Copyright © 2014 </span> <span class="privacy">Privacy Policy </span> </footer>
+  </div>
+</body>
+</html>

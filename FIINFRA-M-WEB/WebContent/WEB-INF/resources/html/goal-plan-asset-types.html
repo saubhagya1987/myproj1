@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Goal Plan Asset Types</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<link href="../css/custom.css" rel="stylesheet" type="text/css">
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<!--<script src="resources/js/jquery.ddslick.js"></script>-->
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/plugin/jquery.autosize.input.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script>
+  $(function() {
+    $( "#Emergency_Planning_Tab" ).accordion({ animate: 200 });
+  });
+  </script>
+
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+  
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+	 
+	 // Preferred Product Count Intlalized	
+	var count=15;
+	
+	//Add Button Starts
+  $(".EP_cnt").on("click", ".add", function() {
+	   $(this).fadeOut();
+	  count++;
+	   
+	$(this).prev(".close").fadeIn();
+	
+	$(this).parent().closest("ul").after("<ul class='reset clearfix dynamic_ul row'><li class='first ep_one'><div class='ep_left_label'><span class='common_custom_checkbox'></span><input type='checkbox' class='default_checkbox'></div></li><li class='second ep_two'><select id='asset_type_select"+ count +"'><option value='Select'>Select</option><option value='Select'>Large Cap</option><option value='Select'>Mid Cap</option><option value='Select'>Small Cap</option><option value='Select'>Multi Cap</option><option value='Select'>Shares &amp; Stock</option></select></li><li class='third ep_three'><div class='ep_slider_bx'><div class='EP'><div class='range_parent'><div class='scale clearfix'><div class='scale_range'><span class='low extrem'>0%</span><span class='high extrem'>100%</span></div><div id='asset_type_slider"+ count +"'></div></div><div class='counter_parent'><input type='text' id='asset_type_counter"+ count +"' class='range_counter'><span class='unit'>%</span></div></div></div><div class='clr'></div></div></li><li class='fourth ep_four'><div id='AssetType' class='icon_box'><div class='icon clearfix'><a href='goal-plan-associated-products.html'><div class='category'></div></a></div></div></li><li class='fifth ep_five'><span class='common_input at-comment'>(<span class='value'>0</span>)</span><div class='close'>x</div><div class='add'>+</div></li></ul>");
+	   //Preferred Product Count Written
+	  $("select").selectBoxIt();
+	  createSlider("#asset_type_slider"+count,0,100,1,"#asset_type_counter"+count);
+     
+	  $('.EP_cnt').perfectScrollbar('update');
+	 
+	  
+	});
+
+// Close Button 
+$(".EP_cnt").on("click", ".close", function() {
+	
+	$(this).parent().closest("ul").siblings("ul").removeClass("moved_down");
+	$(this).parent().closest("ul").prev("ul").addClass("moved_down");
+	var count_section = $(this).parent().closest(".EP_cnt ").find(".selectboxit").length;
+	
+	
+	$(this).parent().closest("ul").remove();
+    $("ul:last-of-type").find(".add").fadeIn(); 
+	// removing record
+
+// Preferred Product Ends
+
+	
+	});	
+	
+	$(".EP_cnt").on("click", ".delete", function() {
+		//alert("test");
+		$(this).closest(".AT_cnt_title").nextAll("ul").find(".white_checkbox_checkbox_checked").closest("ul").remove();
+		
+		$('.EP_cnt ul:last-of-type').find(".ep_five .at-comment").after("<div class='add'>+</div>");
+			  $(".EP_cnt ul:last-of-type").find(".add").fadeIn("slow");   
+	});
+ 
+});
+</script>
+<!-- Custom Selectbox Ends -->
+
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+    $('.common_in_content').slimScroll();
+     $('.EP_cnt').perfectScrollbar();
+    $('.Goal_Plan_Asset_Menu_In').perfectScrollbar();
+	// Estimated Life Expectancy value Slider
+	  createSlider('#at_large',0,100,1,'#at_large_input')
+	  createSlider('#at_mid',0,100,1,'#at_mid_input')
+	  createSlider('#at_sml',0,100,1,'#at_sml_input')
+	  createSlider('#at_mlt',0,100,1,'#at_mlt_input')
+	  createSlider('#at_srs',0,100,1,'#at_srs_input')
+
+	  createSlider('#at_mf_large',0,100,1,'#at_mf_large_input')
+	  createSlider('#at_mf_mid',0,100,1,'#at_mf_mid_input')
+	  createSlider('#at_mf_sml',0,100,1,'#at_mf_sml_input')
+	  createSlider('#at_mf_mlt',0,100,1,'#at_mf_mlt_input')
+	  createSlider('#at_mf_srs',0,100,1,'#at_mf_srs_input')
+
+
+	  createSlider('#at_g_large',0,100,1,'#at_g_large_input')
+	  createSlider('#at_g_mid',0,100,1,'#at_g_mid_input')
+	  createSlider('#at_g_sml',0,100,1,'#at_g_sml_input')
+	  createSlider('#at_g_mlt',0,100,1,'#at_g_mlt_input')
+	  createSlider('#at_g_srs',0,100,1,'#at_g_srs_input')
+
+
+	  createSlider('#at_u_large',0,100,1,'#at_u_large_input')
+	  createSlider('#at_u_mid',0,100,1,'#at_u_mid_input')
+	  createSlider('#at_u_sml',0,100,1,'#at_u_sml_input')
+	  createSlider('#at_u_mlt',0,100,1,'#at_mlt_u_input')
+	  createSlider('#at_u_srs',0,100,1,'#at_u_srs_input')
+
+	  createSlider('#equity',0,100,1,'#equity_input')
+	  createSlider('#mutual_funds',0,100,1,'#mutual_funds_input')
+	  createSlider('#debts',0,100,1,'#debts_input')
+
+
+	  // Expected Returns on all existing Investment value Slider
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+
+<!--Common Custom checkbox -->
+<script>
+$(document).ready(function(){
+  $("body").on("click",".common_custom_checkbox",function(){
+    $(this).toggleClass("white_checkbox_checkbox_checked");
+	
+	 if ($(this).next( ".default_checkbox" ).is(":checked")) {
+		
+       $(this).next( ".default_checkbox" ).prop("checked", false);
+    } else {
+       $(this).next( ".default_checkbox" ).prop("checked", true);
+	
+    }
+	
+  });
+});
+</script>
+<!--Common Custom checkbox ends-->
+
+<!-- Type of emergency faced select starts -->
+<script>
+$(document).ready(function(){
+  $(".icon a").click(function(){
+   // $(this).children("#AssetType.icon_box .category").toggleClass("at_applicable");
+//	$(this).find(".cross_circle").toggle();
+  });
+});
+</script>
+<!-- Type of emergency faced select ends -->
+
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix">
+          <button class="header_btn" id="default">Set Default</button> <a href="#" class="allocation"><span class="allocation_txt">Allocation</span> </a>
+          <span class="head_txt">Goal Plan : <a href="goal-plan.html"><span class="sub_head_txt allCaps"> Conservative > 1 - 3 years > Equity (<span class="dynamic_percntage">0</span>%) > Product Types</span></a> </span><span class="heading_icon"><span class="head_icon"><img src="../images/goal_plan.png" alt="" width="31" height="32" class="rp-margin"/></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+    <script>
+$(document).ready(function(){
+  $('.wrapper').attr('id', 'Emergency_Planning');
+});
+</script>
+      <div class="combined_submenu clearfix">
+        <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset ">
+              <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dc_dashboard_submenu">
+          <h4 class="heading"><a href="data-collection.html">Data Collection Dashboard</a></h4>
+          <ul class="clearfix reset first_col_menu">
+            <li class="menu emergency"><a href="emergency-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Emergency</span></a></li>
+            <li class="menu risk_cover"><a href="risk-cover.html" class="anch"><span class="thumb"></span><span class="txt">Risk Cover</span></a></li>
+            <li class="menu retirement"><a href="retirement-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Retirement</span></a></li>
+            <li class="menu succession"><a href="succession-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Succession</span></a></li>
+            <li class="menu financial"><a href="financial-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Financial</span></a></li>
+            <li class="menu cash_flow"><a href="cash-flow.html" class="anch"><span class="thumb"></span><span class="txt">Cash Flow</span></a></li>
+            <li class="menu loan_status"><a href="loan-status.html" class="anch"><span class="thumb"></span><span class="txt">Loan Status</span></a></li>
+            <li class="menu last clearfix"><a href="profile-info.html" class="anch personal_info"><span class="thumb"></span><span class="txt">Personal Info.</span></a> <a href="risk-profile.html" class="anch risk_profile"><span class="thumb"></span><span class="txt">Risk Profile</span></a> <a href="my-goals.html" class="anch my_goals"><span class="thumb"></span><span class="txt">My Goals</span></a></li>
+          </ul>
+          <ul class="clearfix reset sec_col_menu">
+            <li class="menu education"><a href="education-goal-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Education</span></a></li>
+            <li class="menu property"><a href="purchase-property-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Property</span></a></li>
+            <li class="menu wedding"><a href="wedding-goal.html" class="anch"><span class="thumb"></span><span class="txt">Wedding</span></a></li>
+            <li class="menu car"><a href="car-goal.html" class="anch"><span class="thumb"></span><span class="txt">Car</span></a></li>
+            <li class="menu travel"><a href="travel-n-vacaction-goal.html" class="anch"><span class="thumb"></span><span class="txt">Travel</span></a></li>
+            <li class="menu business"><a href="business-goal.html" class="anch"><span class="thumb"></span><span class="txt">Business</span></a></li>
+            <li class="menu special_goal"><a href="special-goal.html" class="anch"><span class="thumb"></span><span class="txt">Special Goal</span></a></li>
+            <li class="menu other"><a href="other-goal.html" class="anch"><span class="thumb"></span><span class="txt">Other Goal</span></a></li>
+          </ul>
+          <div class="clr"></div>
+        </div>
+        <div class="contact_configuration_submenu">
+          <h4 class="heading"><a>Contact Configuration</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset ">
+              <li class="menu coantact_setting"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Contact Settings</span></a></li>
+              <li class="menu contact_rec"><a href="#" class="anch"><span class="thumb"></span><span class="txt"> Contact Recommendations</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+               <!-- advive adssumption starts--> 
+    <div class="Goal_Plan_Asset_Menu">
+  <ul class="clearfix reset Goal_Plan_Asset_Menu_In" >
+    <li class="clearfix">
+      <label class="form_label">Equity</label>
+      <div class="range_parent">
+        <div class="scale clearfix">
+          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span></div>
+          <div id="equity"></div>
+          <div class="counter_parent_new">
+            <input type="text" id="equity_input" class="range_counter" />
+            <span class="unit">%</span></div>
+        </div>
+      </div>
+    </li>
+    <li class="clearfix">
+      <label class="form_label">Mutual Funds</label>
+      <div class="range_parent">
+        <div class="scale clearfix">
+          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span></div>
+          <div id="mutual_funds"></div>
+          <div class="counter_parent_new">
+            <input type="text" id="mutual_funds_input" class="range_counter" />
+            <span class="unit">%</span> </div>
+        </div>
+      </div>
+    </li>
+    <li class="clearfix">
+      <label class="form_label">Debts</label>
+      <div class="range_parent">
+        <div class="scale clearfix">
+          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span></div>
+          <div id="debts"></div>
+          <div class="counter_parent_new">
+            <input type="text" id="debts_input" class="range_counter" />
+            <span class="unit">%</span> </div>
+        </div>
+      </div>
+    </li>
+    <li class="clearfix"> <a class="cancel">CANCEL</a><a class="save">SAVE</a></li>
+  </ul>
+</div>
+    <div class="clr"></div>
+    <!-- advive adssumption ends--> 
+
+
+      <section class="in_content clearfix goal_plan_asset_types" id="Emergency_Planning_in">
+        <div style="margin:0 20px;">
+          <div id="Emergency_Planning_Tab" class="product_types_accordian">
+            <h3>Equity</h3>
+            <div class="EP_cnt" id="equity">
+              <div class="AT_cnt_title">
+                <ul class="reset clearfix">
+                  <li class="GP_one"><img class="delete" src="../images/delete_icon_two.png" alt="" width="22" height="22" align="absbottom"></li>
+                  <li class="GP_two">Product Category</li>
+                  <li class="GP_three">Range</li>
+                  <li class="GP_four">Allocated %</li>
+                  <li class="GP_five">Associated Products</li>
+                </ul>
+              </div>
+              <ul class="reset clearfix">
+                <li class="ep_one first">
+                  <div class="ep_left_label"><span class="dummy_custom_checkbox"></span>
+                  
+                  </div>
+                </li>
+                <li class="ep_two">
+                
+                <select id="product_type_1">
+                <option>Select</option>
+                <option>Large Cap</option>
+                <option>Mid Cap</option>
+                <option>Small Cap</option>
+                <option>Multi Cap</option>
+                <option>Shares &amp; Stock</option>
+                </select>
+                  
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_large"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_large_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              <ul class="reset clearfix">
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                <select id="product_type_2">
+                 <option>Select</option>
+                <option>Large Cap</option>
+                <option>Mid Cap</option>
+                <option>Small Cap</option>
+                <option>Multi Cap</option>
+                <option>Shares &amp; Stock</option>
+                </select>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_mid"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_mid_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              
+              <ul class="reset clearfix">
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                <select id="product_type_5">
+                <option>Select</option>
+                <option>Large Cap</option>
+                <option>Mid Cap</option>
+                <option>Small Cap</option>
+                <option>Multi Cap</option>
+                <option>Shares &amp; Stock</option>
+                </select>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_srs"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_srs_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                  <div class="add">+</div>
+                </li>
+              </ul>
+              
+              <div class="clr"></div>
+            </div>
+            <h3>Mutual Funds</h3>
+            <div class="EP_cnt" id="mutual_funds">
+              <div class="AT_cnt_title">
+                <ul class="reset clearfix">
+                  <li class="GP_one"><img class="delete" src="../images/delete_icon_two.png" alt="" width="22" height="22" align="absbottom"></li>
+                  <li class="GP_two">Product Category</li>
+                  <li class="GP_three">Range</li>
+                  <li class="GP_four">Allocated %</li>
+                  <li class="GP_five">Associated Products</li>
+                </ul>
+              </div>
+              <ul class="reset clearfix">
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="dummy_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+               <select id="product_type_6">
+                <option>Select</option>
+                <option>Large Cap</option>
+                <option>Mid Cap</option>
+                <option>Small Cap</option>
+                <option>Multi Cap</option>
+                <option>Shares &amp; Stock</option>
+                </select>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_mf_large"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_mf_large_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              <ul class="reset clearfix">
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                <select id="product_type_7">
+                <option>Select</option>
+                <option>Large Cap</option>
+                <option>Mid Cap</option>
+                <option>Small Cap</option>
+                <option>Multi Cap</option>
+                <option>Shares &amp; Stock</option>
+                </select>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_mf_mid"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_mf_mid_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              
+              <ul class="reset clearfix">
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+               <select id="product_type_10">
+                <option>Select</option>
+                <option>Large Cap</option>
+                <option>Mid Cap</option>
+                <option>Small Cap</option>
+                <option>Multi Cap</option>
+                <option>Shares &amp; Stock</option>
+                </select>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_mf_srs"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_mf_srs_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                 <div class="add">+</div>
+                </li>
+              </ul>
+            
+              <div class="clr"></div>
+            </div>
+            <h3>Debt</h3>
+            <div class="EP_cnt" id="gold">
+              <div class="AT_cnt_title">
+                <ul class="reset clearfix">
+                  <li class="GP_one"><img class="delete" src="../images/delete_icon_two.png" alt="" width="22" height="22" align="absbottom"></li>
+                  <li class="GP_two">Product Category</li>
+                  <li class="GP_three">Range</li>
+                  <li class="GP_four">Allocated %</li>
+                  <li class="GP_five">Associated Products</li>
+                </ul>
+              </div>
+              <ul class="reset clearfix">
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="dummy_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                <select id="product_type_11">
+                <option>Select</option>
+                <option>Large Cap</option>
+                <option>Mid Cap</option>
+                <option>Small Cap</option>
+                <option>Multi Cap</option>
+                <option>Shares &amp; Stock</option>
+                </select>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_g_large"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_g_large_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              <ul class="reset clearfix">
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                <select id="product_type_12">
+                <option>Select</option>
+                <option>Large Cap</option>
+                <option>Mid Cap</option>
+                <option>Small Cap</option>
+                <option>Multi Cap</option>
+                <option>Shares &amp; Stock</option>
+                </select>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_g_mid"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_g_mid_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              <ul class="reset clearfix">
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                 <select id="product_type_13">
+                <option>Select</option>
+                <option>Large Cap</option>
+                <option>Mid Cap</option>
+                <option>Small Cap</option>
+                <option>Multi Cap</option>
+                <option>Shares &amp; Stock</option>
+                </select>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_g_sml"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_g_sml_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              <ul class="reset clearfix">
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                <select id="product_type_14">
+                <option>Select</option>
+                <option>Large Cap</option>
+                <option>Mid Cap</option>
+                <option>Small Cap</option>
+                <option>Multi Cap</option>
+                <option>Shares &amp; Stock</option>
+                </select>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_g_mlt"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_g_mlt_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              <ul class="reset clearfix">
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+               <select id="product_type_15">
+                <option>Select</option>
+                <option>Large Cap</option>
+                <option>Mid Cap</option>
+                <option>Small Cap</option>
+                <option>Multi Cap</option>
+                <option>Shares &amp; Stock</option>
+                </select>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_g_srs"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_g_srs_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                <div class="add">+</div>
+                </li>
+              </ul>
+              
+              <div class="clr"></div>
+            </div>
+            <!--<h3>ULIP</h3>
+            <div class="EP_cnt" id="ulip">
+              <div class="AT_cnt_title">
+                <ul>
+                  <li class="GP_one"><img class="delete" src="../images/delete_icon_two.png" alt="" width="22" height="22" align="absbottom"></li>
+                  <li class="GP_two">Product Type</li>
+                  <li class="GP_three">Range</li>
+                  <li class="GP_four">% Shares</li>
+                </ul>
+              </div>
+              <ul>
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                  <label class="form_label">Large Cap</label>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_u_large"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_u_large_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              <ul>
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                  <label class="form_label">Mid Cap</label>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_u_mid"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_u_mid_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              <ul>
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                  <label class="form_label">Small Cap</label>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_u_sml"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_u_sml_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              <ul>
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                  <label class="form_label">Multi Cap</label>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_u_mlt"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_u_mlt_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+                <div class="clr"></div>
+              </ul>
+              <ul>
+                <li class="ep_one">
+                  <div class="ep_left_label"><span class="common_custom_checkbox"></span>
+                    <input type="checkbox" class="default_checkbox"/>
+                  </div>
+                </li>
+                <li class="ep_two">
+                  <label class="form_label">Shares &amp; Stock</label>
+                </li>
+                <li class="ep_three">
+                  <div class="ep_slider_bx">
+                    <div class="EP">
+                      <div class="range_parent">
+                        <div class="scale clearfix">
+                          <div class="scale_range"><span class="low extrem">0%</span><span class="high extrem">100%</span> </div>
+                          <div id="at_u_srs"></div>
+                        </div>
+                        <div class="counter_parent">
+                          <input type="text" id="at_u_srs_input" class="range_counter">
+                          <span class="unit">%</span> </div>
+                      </div>
+                    </div>
+                    <div class="clr"></div>
+                  </div>
+                </li>
+                <li class="ep_four">
+                  <div id="AssetType" class="icon_box">
+                    <div class="icon clearfix"><a href="goal-plan-associated-products.html">
+                      <div class="category"> <img src="../images/asset_type_icon.png" class="cross_circle" height="33" width="33" alt=""/></div>
+                      </a> </div>
+                  </div>
+                </li>
+                <li class="ep_five">
+                  <input name="input" type="text" disabled class="common_input at-comment" value="(0)">
+                </li>
+              </ul>
+              <div class="Asset_Types_Add_More">
+                <input class="add_more" type="submit" value="Add New Product Type">
+              </div>
+              <div class="clr"></div>
+            </div>-->
+          </div>
+        </div>
+      </section>
+      <!--Aditya Forget Password Pop Up ends here--> 
+      
+      <!-- Common_in_contnet starts--> 
+      
+      <!-- Common_in_contnet ends--> 
+      <!-- Common footer starts -->
+      <section id="Footer_Type_Two" class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup">
+            </li>
+            <li class="fl list"><a href="advice-recommendations.html" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="advice-recommendations.html" class="anch cancel"><span class="txt">Cancel</span></a></li>
+          </ul>
+        </div>
+      </section>
+      
+      <!--<section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup3">
+            </li>
+            <li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+         <li class="fl list"><a href="#" class="anch skip"><span class="txt">Skip</span></a></li> </ul>
+        </div>
+        <a href="#" class="back navgation"><span class="txt">Back</span></a> <a href="#" class="next navgation"><span class="txt">Next</span></a> </section>--> 
+      
+      <!-- Common footer ends -->
+      <div class="overlay"></div>
+    </section>
+  </section>
+  <!-- Common_content Ends-->
+  
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends--> 
+
+<!-- Datepicker --> 
+<script>
+$(function() {
+    $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-M-yy",
+	  showOn: "button",
+	  buttonText: '',
+     });
+  });
+  
+  
+  </script> 
+<script>
+$(document).ready(function(){
+  
+ $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent'></div>" );
+ 
+});
+</script> 
+<!-- Datepicker Ends -->
+
+</body>
+</html>

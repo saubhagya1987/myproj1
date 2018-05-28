@@ -1,0 +1,181 @@
+@media only screen and (min-width:320px) and (max-width:325px) {
+.ace-nav > li > a {
+padding: 0 6px;
+}
+}
+@media only screen and (min-width:320px) and (max-width:480px) {
+.main-content.dashboard .action_steps .infobox {
+margin: 5px 0 5px 20px;
+ min-width: 0;
+ width: 43% !important;
+}
+.main-content.dashboard .action_steps .infobox .ace-icon, .main-content.dashboard .action_steps .infobox .badge {
+font-size:30px
+}
+}
+ @media only screen and (min-width:361px) and (max-width:374px) {
+.ace-nav > li > a {
+padding: 0 6px;
+}
+}
+@media only screen and (min-width:320px) and (max-width:480px) {
+.main-content.dashboard .stats .infobox {
+height: auto;
+ margin: 2% 0 0 19px;
+ min-width: 0;
+ width: 43%;
+ text-align:center;
+ -moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+}
+.main-content.dashboard .stats .infobox > .infobox-data {
+font-size: 12px;
+text-align:center;
+text-indent: -17px;
+}
+.main-content.dashboard .stats .infobox > .infobox-data > .infobox-data-number {
+font-size: 1.7rem;
+}
+.main-content.clients .client_Action .infobox {
+height: 93px;
+ margin: 5px;
+ min-width: 0;
+ padding: 7px 0 0;
+ width: 45%;
+}
+.main-content.clients .client_Action .infobox .label {
+font-size:13px
+}
+}
+@media only screen and (min-width:374px) and (max-width:480px) {
+.main-content.dashboard .stats .infobox > .infobox-data {
+font-size: 13px;
+}
+}
+@media only screen and (min-width:481px) and (max-width:680px) {
+.main-content.dashboard .stats .infobox {
+width:50%
+}
+}
+@media only screen and (min-width:481px) and (max-width:992px) {
+.main-content.dashboard .stats {
+margin-left:10px
+}
+.main-content.dashboard .stats .infobox-orange {
+-moz-border-radius:0 0 0 6px;
+-webkit-border-radius:0 0 0 6px;
+border-radius:0 0 0 6px;
+}
+.main-content.dashboard .stats .infobox-red {
+-moz-border-radius:0 0 6px 0;
+-webkit-border-radius:0 0 6px 0;
+border-radius:0 0 6px 0;
+}
+}
+@media only screen and (min-width:481px) and (max-width:610px) {
+.main-content.clients .client_Action {
+float: none;
+ margin: 0 auto;
+ width: 70%;
+}
+.main-content.clients .client_Action .infobox {
+height: 101px;
+ margin: 5px;
+ padding: 7px 0 0;
+ width: 46%;
+}
+}
+@media only screen and (min-width:610px) and (max-width:770px) {
+.main-content.clients .client_Action .infobox { width:22%}	
+}
+@media only screen and (min-width:770px) {
+.main-content.clients .client_Action{ float:right}	
+.main-content.clients .client_Action .infobox { width:22%}	
+}
+@media only screen and (min-width:481px) and (max-width:668px) {
+.main-content.dashboard .action_steps {
+padding-left:24px
+}
+}
+@media only screen and (min-width:669px) and (max-width:992px) {
+.main-content.dashboard .action_steps .infobox {
+margin: 0 10px;
+}
+}
+@media only screen and (min-width:680px) and (max-width:880px) {
+.main-content.clients .client_stat .infobox {
+width:50%
+}
+}
+@media only screen and (min-width:680px) and (max-width:991px) {
+.main-content.dashboard .stats .infobox {
+ margin: 2% 1% 0;
+ width: 46%;
+ -moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+}
+.main-content.dashboard .stats .infobox > .infobox-data {
+min-width:0
+}
+}
+@media only screen and (min-width:481px) and (max-width:991px) {
+.main-content.dashboard .action_steps .infobox {
+ height: 178px;
+ margin: 2% 1% 0;
+ padding: 15px 4px 4px;
+ width: 32%;
+}
+.main-content.dashboard .action_steps .infobox .label {
+margin:37px 0 0;
+padding: .7em .6em .7em;
+}
+.main-content.dashboard .action_steps .infobox .badge {
+font-size:30px
+}
+.main-content.dashboard .action_steps .infobox .ace-icon {
+font-size:40px
+}
+}
+@media only screen and (min-width:992px) {
+.main-content.dashboard .action_steps {
+float:right;
+margin:13% 0 0 0
+}
+.main-content.dashboard .action_steps .infobox {
+margin:0 0 0 20px;
+width:20%
+}
+.main-content.dashboard .stats .infobox-red {
+-moz-border-radius:0 0 6px 6px;
+-webkit-border-radius: 0 0 6px 6px;
+border-radius:0 0 6px 6px;
+}
+.main-content.dashboard .action_steps .infobox .badge {
+font-size:30px
+}
+.main-content.dashboard .action_steps .infobox .ace-icon {
+font-size:40px
+}
+}
+@media only screen and (min-width:992px) and (max-width:1084px) {
+ .main-content.clients .client_stat .infobox {
+width:50%
+}
+}
+@media only screen and (min-width:1200px) {
+.main-content.clients .client_Action .infobox{ width:135px}	
+}
+@media only screen and (min-width:1513px) {
+.main-content.dashboard .stats .infobox-orange {
+-moz-border-radius:0 0 0 6px;
+-webkit-border-radius:0 0 0 6px;
+border-radius:0 0 0 6px;
+}
+.main-content.dashboard .stats .infobox-red {
+-moz-border-radius:0 0 6px 0;
+-webkit-border-radius:0 0 6px 0;
+border-radius:0 0 6px 0;
+}
+}

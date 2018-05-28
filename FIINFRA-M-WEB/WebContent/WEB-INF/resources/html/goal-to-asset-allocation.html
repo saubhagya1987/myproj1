@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<meta name="viewport" content="width=1024">
+<title>Goal to Asset Allocation</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/plugin/jquery.bxslider.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<!--<script src="../js/jquery.slimscroll.js"></script>-->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script>
+$(document).ready(function(){
+  	$('.goal_bx .bottom .bottom_in').slimScroll();
+//	$('.asset_to_goal_slider_bx_out').bxSlider();
+  });
+</script>
+<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Mutual Funds',     3],
+          ['Shares',      2],
+          ['Deposits',  2],
+          ['Retirement Funds', 2],
+          ['Gold',    1],
+          ['Property',    2],
+          ['Insurance',    1],
+          ['Others',    2]
+        ]);
+
+        var options = {
+          title: '',
+		   legend: 'none',
+		   colors: ['#910f34', '#c11342', '#d92771', '#ff4682', '#b91f5f', 'd92771', '#ff76ae', '#910f34'],
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        var chart1 = new google.visualization.PieChart(document.getElementById('piechart1'));
+        var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+        var chart3 = new google.visualization.PieChart(document.getElementById('piechart3'));
+
+        chart.draw(data, options);
+        chart1.draw(data, options);
+        chart2.draw(data, options);
+        chart3.draw(data, options);
+      }
+
+    </script>
+
+
+
+<script>
+$(document).ready(function(){
+   // $('.asset_summary_scroll').slimScroll();
+
+  $('.view1  .icon-bg').click(function(){
+ 	 if ( $('.view-options-g-to-a').css('visibility') == 'hidden' )
+    $('.view-options-g-to-a').css('visibility','visible');
+  else
+    $('.view-options-g-to-a').css('visibility','hidden');
+});
+});
+</script>
+
+</head>
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="asset_to_goal"> 
+  <!-- Main starts-->
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="personalization.html" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">GOAL TO ASSET ALLOCATION</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+      <div class="partner_dashboard_submenu">
+        <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+        <div class="menu_section">
+          <ul class="clearfix reset">
+            <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+            <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+            <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+            <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+            <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+            <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+            <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+            <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Common_in_contnet starts-->
+      <section class="asset_to_goal_bx_in"> <a class="goals_back_btn" href="asset-summary.html">Back</a>
+        <!--<div class="asset_to_goal_slider_bx_out">-->
+          <ul class="asset_to_goal_slider_bx clearfix">
+            <li class="fl"> <!--First Goal-->
+              <div class="goal_bx">
+                <div class="title">My Car Goal</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Present Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">Goal Year Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 25 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="car_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>
+                <div class="middle clearfix">
+                  <div id="piechart" style="width: 250px; height: 200px; margin-top: -21px; margin-left: -25px; "></div>
+                </div>
+                <div class="g_to_a_achieved">Can be Achieved</div>
+                <input type="button" class="a_to_g_edit" value="Edit">
+                <!--  <a class="a_to_g_edit" href="">Edit</a>--> 
+              </div>
+            </li>
+            <li class="fl"> <!--Second Goal-->
+              <div class="goal_bx">
+                <div class="title">Education for Sonali</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Present Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">Goal Year Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 25 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="edu_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>
+                <div class="middle clearfix">
+                  <div id="piechart1" style="width: 250px; height: 200px; margin-top: -21px; margin-left: -25px; "></div>
+                </div>
+                <div class="g_to_a_partially">Can be achieved partially</div>
+                <input type="button" class="a_to_g_edit" value="Edit">
+                <!--  <a class="a_to_g_edit" href="">Edit</a>--> 
+              </div>
+            </li>
+            <li class="fl"> <!--Third Goal-->
+              <div class="goal_bx">
+                <div class="title">Hospitality Franchise</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Present Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">Goal Year Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 25 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="bis_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>
+                <div class="middle clearfix">
+                  <div id="piechart2" style="width: 250px; height: 200px; margin-top: -21px; margin-left: -25px; "></div>
+                </div>
+                <div class="g_to_a_achieved">Can be Achieved</div>
+                <input type="button" class="a_to_g_edit" value="Edit">
+                <!--  <a class="a_to_g_edit" href="">Edit</a>--> 
+              </div>
+            </li>
+            <li class="fl"> <!--Fourth Goal-->
+              <div class="goal_bx">
+                <div class="title">Trip to Manali</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Present Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">Goal Year Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 25 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="tra_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>
+                <div class="middle clearfix">
+                  <div id="piechart3" style="width: 250px; height: 200px; margin-top: -21px; margin-left: -25px; "></div>
+                </div>
+                <div class="g_to_a_difficult">Difficult to achieve</div>
+                <input type="button" class="a_to_g_edit" value="Edit">
+                <!--  <a class="a_to_g_edit" href="">Edit</a>--> 
+              </div>
+            </li>
+            <li class="fl"> <!--First Goal-->
+              <div class="goal_bx">
+                <div class="title">My Car Goal1</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Present Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">Goal Year Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 25 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="car_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>
+                <div class="middle clearfix">
+                  <div id="piechart10" style="width: 250px; height: 200px; margin-top: -21px; margin-left: -25px; "></div>
+                </div>
+                <div class="g_to_a_achieved">Can be Achieved</div>
+                <input type="button" class="a_to_g_edit" value="Edit">
+                <!--  <a class="a_to_g_edit" href="">Edit</a>--> 
+              </div>
+            </li>
+            <li class="fl"> <!--Second Goal-->
+              <div class="goal_bx">
+                <div class="title">Education for Sonali1</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Present Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">Goal Year Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 25 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="edu_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>
+                <div class="middle clearfix">
+                  <div id="piechart11" style="width: 250px; height: 200px; margin-top: -21px; margin-left: -25px; "></div>
+                </div>
+                <div class="g_to_a_partially">Can be achieved partially</div>
+                <input type="button" class="a_to_g_edit" value="Edit">
+                <!--  <a class="a_to_g_edit" href="">Edit</a>--> 
+              </div>
+            </li>
+            <li class="fl"> <!--Third Goal-->
+              <div class="goal_bx">
+                <div class="title">Hospitality Franchise1</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Present Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">Goal Year Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 25 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="bis_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>
+                <div class="middle clearfix">
+                  <div id="piechart12" style="width: 250px; height: 200px; margin-top: -21px; margin-left: -25px; "></div>
+                </div>
+                <div class="g_to_a_achieved">Can be Achieved</div>
+                <input type="button" class="a_to_g_edit" value="Edit">
+                <!--  <a class="a_to_g_edit" href="">Edit</a>--> 
+              </div>
+            </li>
+            <li class="fl"> <!--Fourth Goal-->
+              <div class="goal_bx">
+                <div class="title">Trip to Manali1</div>
+                <div class="top clearfix">
+                  <div class="top_left fl">
+                    <div class="top">
+                      <div class="label">Present Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 10 lacs</div>
+                    </div>
+                  </div>
+                  <div class="top_right fr">
+                    <div class="top">
+                      <div class="label">Goal Year Value</div>
+                      <div class="label_two">Goal:</div>
+                      <div class="label_three"> <span class="WebRupee">Rs.</span> 25 lacs</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="label">Asset</div>
+                      <div class="label_two"> <span class="WebRupee">Rs.</span> 15 lacs</div>
+                    </div>
+                  </div>
+                  <div class="icon_bg">
+                    <div class="tra_g_icon"></div>
+                    <div class="yr">2017</div>
+                  </div>
+                </div>
+                <div class="middle clearfix">
+                  <div id="piechart13" style="width: 250px; height: 200px; margin-top: -21px; margin-left: -25px; "></div>
+                </div>
+                <div class="g_to_a_difficult">Difficult to achieve</div>
+                <input type="button" class="a_to_g_edit" value="Edit">
+                <!--  <a class="a_to_g_edit" href="">Edit</a>--> 
+              </div>
+            </li>
+          </ul>
+        <!--</div>-->
+        <div class="asset-summary-footer fl">
+    
+    	<a href="asset-details.html" class="asset-management fl">
+        	<div class="title">Asset Details</div>
+            <div class="icon-bg"><div class="icon fl"></div></div>  
+            <div class="icon-reflection"></div>       
+        </a><!-- asset-management Ends-->
+        
+        <a href="goal-to-asset-allocation.html" class="goal-allocation fl">
+        	<div class="title">Goal to Assets Allocation</div>
+            <div class="icon-bg"><div class="icon fl"></div></div>  
+            <div class="icon-reflection"></div>       
+        </a><!-- goal-allocation Ends-->
+
+        <div class="view1 fl">
+        	<div class="title">View</div>
+            <div class="icon-bg"><div class="icon fl"></div></div>  
+            <div class="icon-reflection"></div>       
+        </div><!-- view Ends-->
+        
+        <div class="view-options-g-to-a fl">
+        	<div class="view-bg">
+            	<ul>
+                	<li>Goals</li>
+                    <li>Unused Assets</li>
+                    <!--<li>Future Cashflow</li>-->
+                </ul>
+            </div>
+        </div><!-- view-options Ends-->
+        
+        <div class="total02 fl">
+                </div><!-- tota Ends-->
+        <div class="footer-platform"></div>
+          	
+    </div>
+      </section>
+      <!-- Common_in_contnet ends-->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+</body>
+<script>
+//$(window).load(function(){
+$(document).ready(function(){
+	$('.asset_to_goal_slider_bx ').bxSlider();
+  });
+</script>
+</html>

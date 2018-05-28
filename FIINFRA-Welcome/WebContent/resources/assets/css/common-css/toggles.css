@@ -1,0 +1,25 @@
+.toggle-slide { overflow: hidden; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; direction: ltr; }
+.toggle-slide .toggle-on, .toggle-slide .toggle-off, .toggle-slide .toggle-blob { float: left; }
+.toggle-slide .toggle-blob { position: relative; z-index: 99; cursor: hand; cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; }
+.toggle { width:95px; height:34px }
+.toggle-slide {-moz-border-radius: 9999px;-webkit-border-radius: 9999px;border-radius: 9999px; -moz-box-shadow: 0px 0px 0px 4px #FFF; -webkit-box-shadow: 0px 0px 0px 4px #FFF; box-shadow: 0px 0px 0px 4px #FFF; }
+.toggle-slide .toggle-on, .toggle-slide .toggle-off, .toggle-slide .toggle-blob { color: #fff; font-size: 17px; font-weight: bold; text-shadow: 2px 1px 1px #575757; font-family: "Aller Bold"; text-shadow:2px 1px 1px #575757; }
+.toggle-slide .toggle-on {-moz-border-radius: 9999px 0 0 9999px;-webkit-border-radius: 9999px 0 0 9999px; ;border-radius: 9999px 0 0 9999px; 
+background: #bd4562; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI0OSUiIHN0b3AtY29sb3I9IiNiZDQ1NjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTc3OGEyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(top,  #bd4562 49%, #e778a2 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(49%,#bd4562), color-stop(100%,#e778a2)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #bd4562 49%,#e778a2 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #bd4562 49%,#e778a2 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #bd4562 49%,#e778a2 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #bd4562 49%,#e778a2 100%); /* W3C */
+}
+.toggle-slide .toggle-off {-moz-border-radius: 0 9999px 9999px 0;-webkit-border-radius: 0 9999px 9999px 0;border-radius: 0 9999px 9999px 0; color: #fff; }
+.toggle-slide .toggle-on:after { height: 50%; content: ''; margin-top: -19%; display: block; border-radius: 9999px; margin-left: 10%; }
+.toggle-slide .toggle-off { background:#555555 }
+.toggle-slide .toggle-off:after { height: 50%; content: ''; margin-top: -19%; display: block; margin-right: 10%; border-radius: 9999px; }
+.toggle-slide .toggle-blob {-moz-border-radius: 50px;-webkit-border-radius: 50px;border-radius: 50px; background:url(../images/no_unchecked.png) no-repeat center center; }
+.toggle-on.active + .toggle-blob { background:url(../images/yes_checked.png) no-repeat center center }
+/*.toggle-blob:after { content: "";height: 32px; width: 32px; display: block; border-radius: 52px; position: absolute; top: 1px; right: 1px; box-shadow: 4px 1px 1px 4px #CCC; }*/
+.toggle { -moz-box-shadow:0px 0px 3px 6px #DBDBDB; -webkit-box-shadow:0px 0px 3px 6px #DBDBDB; box-shadow:0px 0px 3px 6px #DBDBDB; -moz-border-radius: 9999px; -webkit-border-radius: 9999px; border-radius: 9999px; }

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	
+	<bean id="recoJob" class="in.fiinfra.subx.scheduler.BilldeskRecoScheduler"> 
+		<property name="active" value="${scheduler.reco.active}" />
+	</bean>
+
+	<bean id="subxNotfJob" class="in.fiinfra.subx.scheduler.SubxNotfScheduler"> 
+		<property name="active" value="${scheduler.subxnotf.active}" />
+	</bean>
+	
+	<bean id="subxAutoExtendJob" class="in.fiinfra.subx.scheduler.SubxAutoExtendScheduler"> 
+		<property name="active" value="${scheduler.subxautoExtend.active}" />
+	</bean>
+	
+	
+
+	<bean id="recoJobBean"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="recoJob" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+
+	<bean id="recoJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="recoJobBean" />
+		<property name="startDelay" value="180000" />
+		<property name="cronExpression" value= "${scheduler.reco.cron}" /> 
+		
+	</bean>
+
+	<bean id="subxNotfJobBean"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="subxNotfJob" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+
+	<bean id="subxNotfJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="subxNotfJobBean" />
+		<property name="startDelay" value="180000" />
+		<!-- Every 2 Hour-->
+		<!--<property name="cronExpression" value="0 0 0/2 * * ?" /> -->
+		<!-- 0 15 10 ? * *"	 	Fire at 10:15am every day-->
+		<property name="cronExpression" value= "${scheduler.subxnotf.cron}" /> 
+		
+	</bean>
+
+	<bean id="subxAutoExtendJobBean"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="subxAutoExtendJob" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+
+	<bean id="subxAutoExtendJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="subxAutoExtendJobBean" />
+		<property name="startDelay" value="180000" />
+		<!-- Every 2 Hour-->
+		<!--<property name="cronExpression" value="0 0 0/2 * * ?" /> -->
+		<!-- 0 15 10 ? * *"	 	Fire at 10:15am every day-->
+		<property name="cronExpression" value= "${scheduler.subxautoExtend.cron}" /> 
+		
+	</bean>
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="jobDetails">
+			<list>
+				<ref bean="recoJobBean" />
+				<ref bean="subxNotfJobBean" />
+				<ref bean="subxAutoExtendJobBean" />
+			</list>
+		</property>
+		<property name="triggers">
+			<list>
+				<ref bean="recoJobTrigger" />
+				<ref bean="subxNotfJobTrigger" />
+				<ref bean="subxAutoExtendJobTrigger" />
+			</list>
+		</property>
+		<property name="quartzProperties">
+        <props>
+            <prop key="org.quartz.threadPool.threadCount">3</prop>
+        </props>
+    </property>  
+	</bean>
+</beans>

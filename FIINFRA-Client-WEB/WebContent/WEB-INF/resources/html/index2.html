@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Client Portal</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link rel="stylesheet" href="../css/main-style.css"  type="text/css" />
+<link rel="stylesheet" href="../css/reset.css"  type="text/css" />
+<link rel="stylesheet" href="../css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../css/jquery-ui.css" type="text/css" />
+
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/jquery.ui.touch-punch.js"></script>
+<script src="../js/highcharts.js"></script>
+<script src="../js/exporting.js"></script>
+
+
+<!--****** Code for Banner sliding Start *****-->
+<script>
+	$(document).ready(function () {
+		/* Equity*/
+		$("#earning_expenses").click(function () {
+			//$ this.css("background-color","#f00");
+			
+			$(".ee_txt").css("color","#fff");
+			$(".tn_txt").css("color","#3a3a3a");
+			$(".g_txt").css("color","#3a3a3a");
+			$(".as_txt").css("color","#3a3a3a");		
+			
+			$(".ee").css("background-color","#952754");
+			$(".tn").css("background-color","#fff");
+			$(".g").css("background-color","#fff");
+			$(".as").css("background-color","#fff");
+		  //  $(".equity_question_bx").FadeIn("slow");
+			 $.when($(".image").not("#earning_expenses1").fadeOut("slow")).done(function() {
+			  $("#earning_expenses1").fadeIn("slow");
+			  });
+		   });
+	
+	
+		$("#total_networth").click(function () {
+			
+			
+			$(".ee_txt").css("color","#3a3a3a");
+			$(".tn_txt").css("color","#fff");
+			$(".g_txt").css("color","#3a3a3a");
+			$(".as_txt").css("color","#3a3a3a");
+			
+			$(".ee").css("background-color","#fff");
+			$(".tn").css("background-color","#952754");
+			$(".g").css("background-color","#fff");
+			$(".as").css("background-color","#fff");
+		  //  $(".equity_question_bx").FadeIn("slow");
+			 $.when($(".image").not("#networth1").fadeOut("slow")).done(function() {
+			  $("#networth1").fadeIn("slow");
+			  });
+		   });
+	
+		$("#goals").click(function () {
+			
+			$(".ee_txt").css("color","#3a3a3a");
+			$(".tn_txt").css("color","#3a3a3a");
+			$(".g_txt").css("color","#fff");
+			$(".as_txt").css("color","#3a3a3a");	
+		
+			$(".ee").css("background-color","#fff");
+			$(".tn").css("background-color","#fff");
+			$(".g").css("background-color","#952754");
+			$(".as").css("background-color","#fff");
+		  //  $(".equity_question_bx").FadeIn("slow");
+			 $.when($(".image").not("#goals1").fadeOut("slow")).done(function() {
+			  $("#goals1").fadeIn("slow");
+			  });
+		   });
+	
+		$("#achievement_scale").click(function () {
+			
+			$(".ee_txt").css("color","#3a3a3a");
+			$(".tn_txt").css("color","#3a3a3a");
+			$(".g_txt").css("color","#3a3a3a");
+			$(".as_txt").css("color","#fff");
+			
+			
+			$(".ee").css("background-color","#fff");
+			$(".tn").css("background-color","#fff");
+			$(".g").css("background-color","#fff");
+			$(".as").css("background-color","#952754");
+		  //  $(".equity_question_bx").FadeIn("slow");
+			 $.when($(".image").not("#achievement_scale1").fadeOut("slow")).done(function() {
+			  $("#achievement_scale1").fadeIn("slow");
+			  });
+		   });
+	});
+</script>
+<!--****** Code for Banner sliding  End*****-->
+
+<!-- ***** Drag toggle starts *****-->
+<script>
+			$(document).ready(function(){
+			  $("#drag_handle").click(function(){
+			   $("#dragger").slideToggle("slow");
+				/*$(".div_dragger span").animate("slow").toggleClass("div_dragger_up","slow");*/
+				/*if($(".div_dragger span").hasClass("div_dragger_up"))
+				{
+				 $("#query_filter #statusSelectBoxIt .selectboxit-text").text("Status");
+				 $("#query_filter #typeSelectBoxIt .selectboxit-text").text("Type");
+				 $("#query_filter #sourceSelectBoxIt .selectboxit-text").text("Source");
+				$("#query_filter .common_input").val("");
+				}*/
+			  });
+			});
+</script>
+<!--***** Drag toggle ends *****-->
+
+
+
+
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <div id="top"> <a class="logo" href="index.html"> <span id="logo"> <img src="../images/temp_logo.png" /></span><!-- end of "logo" id --> 
+      </a> 
+      
+      <!--div id="advt1">
+        	<img src="images/add1.png" />
+        </div--><!-- end of "advt1" id -->
+      
+      <div id="advt2"> <img src="../images/add2.png" /> </div>
+      <!-- end of "advt1" id -->
+      
+      <div id="ifa-image" class="clearfix fl"> <img src="../images/photo.jpg"  class="clearfix fl"/> <span class="ifa-name clearfix">Mr. A. B. Joshi</span> <span class="ifa-advisor clearfix">(Your Advisor)</span> </div>
+      <!-- end of "ifa-image" id -->
+      
+      <div id="log-out"> <img class="logout" src="../images/transparent.png"/>
+        <p>Logout</p>
+      </div>
+      <!-- end of "log-out" id --> 
+    </div>
+    
+    <div class="drag_parent">
+    <div id="banner" class="clearfix fl">
+      <!--div class="image-changer"> </div-->
+      <!-- end of "image-changer" class -->
+      
+      <div class="image clearfix" ><img class="clearfix" src="../images/banner.png" /> <div class="image-changer"> </div></div>
+      
+     
+     
+      <div class="image clearfix fl" id="goals1" >
+            <div class="goal_piechart clearfix fl"><img src="../images/goal_piechart.png"></div>
+            <div class="goal_txt clearfix fr">
+                <p><span class="title_txt_width clearfix fl">Goal Achieved :- </span> <span class="achived_goals">&nbsp; 04</span><span class="slash"> /</span><span class="total_goals"> 10</span></p>
+                <p><span class="title_txt_width clearfix fl">You are  <span class="closer_percentage"> X </span><span> % </span> close to 4 more goals </span></p>
+     			<p><span class="title_txt_width clearfix fl">In discussions <span>invest </span><span class="invest">2000/- </span>additional <span>per month</span></span></p>      
+                <p class="details fr"><a href="#">Details...</a></p>
+            </div><!-- end of "goal_txt" -->
+      </div><!-- End of Banner Goals1 -->
+      
+      
+      <div class="image clearfix fl" id="achievement_scale1" >
+      
+            <div class="overall_scale_bar_graph clearfix fl">
+            	<span class="max_limit clearfix fl">100%</span>
+                <!--div class="level_bar"></div-->
+                <div class="current_scale">70%</div>
+                
+                <div class="overall_bar clearfix fl">
+                	<div class="level_bar one clearfix fl"></div>
+                    <div class="level_bar two clearfix fl"></div>
+                    <div class="level_bar three clearfix fl"></div>
+                    <div class="level_bar four clearfix fl"></div>
+                    <div class="level_bar five clearfix fl"></div>
+                    <div class="level_bar six clearfix fl"></div>
+                    <div class="level_bar seven clearfix fl"></div>
+                    <div class="level_bar eight clearfix fl"></div>
+                    <div class="level_bar nine clearfix fl"></div>
+                    <div class="level_bar ten clearfix fl"></div>         
+                </div>
+                
+                <span class="min_limit clearfix fl">0%</span>
+                <span class="overall_scale clearfix fl">Overall Scale</span>                
+            </div><!-- End of Banner overall_scale_bar_graph -->
+            
+            <div class="separator clearfix fl"></div>
+            
+            <div class="goal_risk clearfix fl">
+            	<div class="goal">
+                	<h3>Goals</h3>
+                	<div class="condition75"><p class="highlighted">Congratulations !</p><p>You are almost there. You are <span class="completion">75% </span>closer to your dream goal</p></div>
+                    <div class="condition50"><p class="highlighted">Go for it</p><p>You are <span class="completion">70% </span>closer to your dream goal</p></div>
+                    <div class="condition25"><p>You have taken first step.</p></div>
+                </div><!-- end of goal -->
+                
+                <div class="separator_horizontal clearfix" fl></div> 
+                              
+                <div  class="risk">
+                	<h3>Risk</h3>
+                	<div class="condition75"><p class="highlighted">Congratulations !</p><p>You are fully protected against all risks</p></div>
+                    <div class="condition50"><p class="highlighted">Go for it !</p><p>You are in control of all possible adversities</p></div>
+                    <div class="condition25"><p class="highlighted">Watchout !</p><p>A bit more precaution can help you to manage unforeseen risk</p></div>
+                </div><!-- end of risk -->            	
+            </div><!-- End of goal_risk -->
+            
+            <div class="separator clearfix fl"></div>
+            
+            <div class="succession clearfix fl">
+            	<div class="fam_inv align"><div class="family_invest_yes"></div><p>Your family know where you have invested your money.</p></div>
+                <div class="fam_inv align"><div class="family_access_money_yes"></div><p>Your family know where you have invested your money.</p></div>
+                <div class="fam_inv align"><div class="family_will_no"></div><p>Your family know where you have invested your money.</p></div>
+            </div><!-- End of succession -->
+            
+            <!--div class="goals_bar_graph clearfix fl">
+            	<span class="max_limit clearfix fl">100%</span>
+                <div class="level_bar"></div>
+                <div class="current_scale">90%</div>
+                <div class="overall_bar clearfix fl"></div>
+                <span class="min_limit clearfix fl">0%</span>
+                <span class="overall_scale clearfix fl">Goals</span>
+            </div><!-- End of Banner goals_bar_graph -->
+            
+            <!--div class="risk_bar_graph clearfix fl">
+            	<span class="max_limit clearfix fl">100%</span>
+                <div class="level_bar"></div>
+                <div class="current_scale">45%</div>
+                <div class="overall_bar clearfix fl"></div>
+                <span class="min_limit clearfix fl">0%</span>
+                <span class="overall_scale clearfix fl">Risk</span>
+            </div><!-- End of Banner risk_bar_graph -->
+            
+            <!--div class="succession_bar_graph clearfix fl">
+            	<span class="max_limit clearfix fl">100%</span>
+                <div class="level_bar"></div>
+                <div class="current_scale">65%</div>
+                <div class="overall_bar clearfix fl"></div>
+                <span class="min_limit clearfix fl">0%</span>
+                <span class="overall_scale clearfix fl">Succession</span>
+            </div><!-- End of Banner succession_bar_graph -->
+            <p class="details fr"><a href="#">Details...</a></p>
+            
+      </div><!-- End of Banner achievement_scale1 -->
+      
+      
+      
+        
+      <div class="image clearfix fl" id="earning_expenses1" >
+      	<div class="earning_expenses_piechart clearfix fl"><img src="../images/earning_expenses.png" class="clearfix fl";></div>
+
+        <div class="my_earnings clearfix fl">
+            <div class="my_earnings_icon align_icon clearfix"></div>
+            <div class="my_earnings_txt clearfix">My Earnings</div>
+            <div class="my_earnings_rs clearfix"><span class="my_earnings_rs_cost">8 </span><span class="my_earnings_rs_unit"> lacs/yr</span></div>
+         </div><!-- end of "my_earnings" -->
+         
+        <div class="separator clearfix fl"></div>	
+        <div class="earning_expenses_linechart clearfix fr"><img src="../images/earning_expenses_linegraph.png" class="clearfix fr";></div>
+        <p class="details fr"><a href="#">Details...</a></p>
+      </div>
+      
+      
+      <div class="image clearfix fl" id="networth1" >
+      		<div class="tn_own clearfix fl">
+            	<div class="own_piechart clearfix fl">
+                	<img class="clearfix fl" src="../images/tn_own.png">
+                </div>
+                <div class="i_own clearfix fr"><p class="title">I OWN</p><p class="amount">143 lacs</p></div>
+            </div><!-- End of Banner tn_own -->
+            <div class="separator clearfix fl"></div>	
+            <div class="tn_owe  clearfix fr">
+          		<div class="i_owe clearfix fl"><p class="title">I OWE</p><p class="amount">13.5 lacs</p></div>
+                <div class="owe_piechart clearfix fl">
+                    <img class="clearfix fl" src="../images/tn_owe.png">
+                </div>             
+            </div><!-- End of Banner tn_owe -->   
+            <p class="details clearfix fr"><a href="#">Details...</a></p>   
+      </div><!-- End of Banner networth1 -->
+      
+      
+      
+      
+      <!-- end of "image" class -->
+      
+      <div class="banner-name-main clearfix fr"><!-- parenting for below "banner-nav" -->
+        <div class="banner-nav clearfix">
+          <div class="banner-nav1 clearfix ee" id="earning_expenses">            
+            <p class="ee_txt">Earning / Expenses</p>
+          </div>
+          <!-- end of "banner-nav1" class -->
+          <div class="banner-nav1 clearfix tn" id="total_networth">
+            <p class="tn_txt">Total Networth</p>
+          </div>
+          <!-- end of "banner-nav1" class -->
+          <div class="banner-nav1 clearfix g" id="goals">
+            <p class="g_txt">Goals</p>
+          </div>
+          <!-- end of "banner-nav1" class -->
+          <div class="banner-nav1 clearfix as" id="achievement_scale">
+            <p class="as_txt">Achievement Scale</p>
+          </div>
+          <!-- end of "banner-nav1" class --> 
+        </div>
+        <!-- end of "banner-nav" id --> 
+      </div>
+      <!-- end of "banner-name-main" id --> 
+      
+    </div>
+    <!-- end of "banner" id -->
+    
+    <!--div id="shadow" class="clearfix fl"></div-->
+    
+        <ul id="dragger" class="clearfix fl">
+          <li class="alert-bg"><a href="my-alerts.html"><img class="alert-ico" src="../images/transparent.png"/>
+            <p>Alert</p>
+            </a></li>
+          <li class="enj-scale"><a href="feedback.html"><img class="enj-ico" src="../images/transparent.png"/>
+            <p>Feedback</p>
+            </a></li>
+          <li class="polls"><a href="my-polls.html"><img class="polls-ico" src="../images/transparent.png"/>
+            <p>Polls</p>
+            </a></li>
+          <li class="faq"><a href="faq.html"><img class="faq-ico" src="../images/transparent.png"/>
+            <p>FAQ's</p>
+            </a></li>
+          <li class="quick-help"><a href="#"><img class="qh-ico" src="../images/transparent.png"/>
+            <p>Quick Help</p>
+            </a></li>
+          <li class="soft-adv"><a href="chat.html"><img class="softadv-ico" src="../images/transparent.png"/>
+            <p>Soft Advice</p>
+            </a></li>
+        </ul>      
+        
+    </div>
+    <div id="drag_handle" class="clearfix fl"></div>
+    <!-- end of "dragger" id --> 
+  </header>
+  <ul id="nav-menu" class="clearfix">
+    <li class="my-goals clearfix fl"><a href="my-goals.html"><img class="my-goals-ico" src="../images/transparent.png"/>
+      <p>My Goals <span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-plans clearfix fl"><a href="my-plan.html"><img class="my-plans-ico" src="../images/transparent.png"/>
+      <p>My Plans<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-portf clearfix fl"><a href="my-portfolio.html"><img class="my-portf-ico" src="../images/transparent.png"/>
+      <p>My Portfolio<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <!--li class="my-inc"><a href="#"><img class="my-inc-ico" src="images/transparent.png"/><p>My Income<span class="grad-border"><img src="images/transparent.png"/></span></p></a></li-->
+    <li class="my-cashflow clearfix fl"><a href="my-income.html"><img class="my-cashflow-ico" src="../images/transparent.png"/>
+      <p>My Cashflow<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-fin clearfix fl"><a href="#"><img class="my-fin-ico" src="../images/transparent.png"/>
+      <p>My Documents<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>    
+      <li class="my-rep clearfix fl"><a href="my-reports.html"><img class="my-rep-ico" src="../images/transparent.png"/>
+      <p>My Reports<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+<li class="my-acc clearfix fl"><a href="my-profile.html"><img class="my-acc-ico" src="../images/transparent.png"/>
+      <p>My Account<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+  </ul>
+  <!-- end of "nav-menu" id -->
+  
+  <div id="trapezoid" class="clearfix fr">
+    <p>Welcome&nbsp;<span> Mr. Parag Takalkar</span></p>
+  </div>
+  <ul id="tools" class="clearfix fl">
+    <li class="big-tools"> <a href="#"> <img src="../images/transparent.png" />
+      <h3>D. C. Tool</h3>
+      <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+      </a> </li>
+    <!-- end of "big-tools" id -->
+    
+    <li class="small-tools"> <a href="calculator.html"> <img src="../images/transparent.png" border="0" />
+      <p>Calculator</p>
+      </a> </li>
+    <!-- end of "small-tools" id -->
+    
+    <li class="big-tools1"> <a href="#"> <img src="../images/transparent.png" />
+      <h3>Risk Profile Tool</h3>
+      <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+      </a> </li>
+    <!-- end of "big-tools" id -->
+    
+    <li class="small-tools1"> <a href="my-calender.html"> <img src="../images/transparent.png" />
+      <p>Calender</p>
+      </a> </li>
+    <!-- end of "small-tools" id -->
+    
+    <li class="big-tools2"> <a href="#"> <img src="../images/transparent.png" />
+      <h3>X-Ray Tool</h3>
+      <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+      </a> </li>
+    <!-- end of "big-tools" id -->
+    
+    <li class="small-tools2"> <a href="#"> <img src="../images/transparent.png" />
+      <p>Announcement</p>
+      </a> </li>
+    <!-- end of "small-tools" id -->
+    
+    <li class="big-tools3 noborder"> <a href="#"> <img src="../images/transparent.png" />
+      <h3>Raise a Query</h3>
+      <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+      </a> </li>
+    <!-- end of "big-tools" id -->
+  </ul>
+  <!-- end of "tools" id -->
+  
+  <div id="shadow1" class="clearfix fl"></div>
+  <!-- end of "shadow1" id -->
+  
+  <ul id="bottom">
+    <li class="bottom-box">
+      <h2 class="header-bg">Video</h2>
+      <div class="video1"><img src="../images/video.png" /></div>
+      <div class="video2"><img src="../images/video.png" /></div>
+      <a href="#">see more...</a> </li>
+    <!-- end of "bottom-box" class -->
+    
+    <li class="bottom-box">
+      <div class="header-bg">Gup-Shup</div>
+      <div class="gup-shup1">
+        <h3>LOREM IPSUM HEADER</h3>
+        <span class="comment-no">5</span>
+        <div class="comment"><img src="../images/transparent.png" /></div>
+        <span class="like-no">31</span>
+        <div class="like"><img src="../images/transparent.png" /></div>
+        <span class="name">Parag Takalkar / </span> <span class="date">02 April, 2014</span>
+        <p>Lorem ipsum dolor sit amet, consec tetur adipis cinglor sitelit ...</p>
+        <a href="#">read more...</a>
+        <div class="border"></div>
+      </div>
+      <!-- end of "gup-shup1" class -->
+      
+      <div class="gup-shup2">
+        <h3>LOREM IPSUM HEADER</h3>
+        <span class="comment-no">5</span>
+        <div class="comment"><img src="../images/transparent.png" /></div>
+        <span class="like-no">31</span>
+        <div class="like"><img src="../images/transparent.png" /></div>
+        <span class="name">Parag Takalkar / </span> <span class="date">02 April, 2014</span>
+        <p>Lorem ipsum dolor sit amet, consec tetur adipis cinglor sitelit ...</p>
+        <a href="#">read more...</a>
+        <div class="border"></div>
+      </div>
+      <!-- end of "gup-shup2" class --> 
+      
+      <a class="view-all" href="#">view all...</a> </li>
+    <!-- end of "bottom-box" class -->
+    
+    <li class="bottom-box">
+      <div class="header-bg">Testimonial</div>
+      <div class="testimonial1">
+        <div class="image fl"><img src="../images/male_avatar.png" /></div>
+        <!-- end of "image" class --> 
+        
+       <div class="fl profile_txt_box"> <div class="name">Parag Takalkar</div>
+        <div class="city">PUNE</div></div>
+        <p>Lorem ipsum dolor sit amet, consec tetur adipis cinglor sitelit ...</p>
+        <a href="#">read more...</a>
+        <div class="border"></div>
+        <div class="clr"></div>
+      </div>
+      <!-- end of "testimonial1" class -->
+      
+      <div class="testimonial2">
+        <div class="image fl"><img src="../images/male_avatar.png" /></div>
+        <!-- end of "image" class --> 
+        
+       <div class="fl profile_txt_box"> <div class="name">Parag Takalkar</div>
+        <div class="city">PUNE</div></div>
+        <p>Lorem ipsum dolor sit amet, consec tetur adipis cinglor sitelit ...</p>
+        <a href="#">read more...</a>
+        <div class="border"></div>
+        <div class="clr"></div>
+      </div>
+      <!-- end of "testimonial2" class --> 
+      
+      <a class="view-all" href="#">view all...</a> </li>
+    <!-- end of "bottom-box" class -->
+    
+    <li class="bottom-box">
+      <div class="header-bg">Twitter</div>
+    </li>
+    <!-- end of "bottom-box" class -->
+    
+  </ul>
+  <!-- end of "bottom" id -->
+  
+  <footer id="footer"> <img src="../images/finfra-logo.png" /> <span class="copyright">Copyright © 2014 </span> <span class="privacy">Privacy Policy </span> </footer>
+</div>
+<!-- End of "wrapper" id -->
+</body>
+</html>

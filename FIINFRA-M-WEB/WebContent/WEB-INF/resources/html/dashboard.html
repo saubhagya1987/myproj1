@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Dashboard</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<!-- Hover effects on cloud-->
+<!--<script>
+$(document).ready(function(){
+  $(".cloud .hit_area").mouseover(function(){
+    $(this).parent().css("opacity","0.95");
+  });
+  $(".cloud .hit_area").mouseout(function(){
+   $(this).parent().css("opacity","1");
+  });
+   $("#query_alert .hit_area").mouseover(function(){
+    $(this).parent().css("opacity","0.95");
+  });
+  $("#query_alert .hit_area").mouseout(function(){
+   $(this).parent().css("opacity","1");
+  });
+});
+</script>-->
+
+<!-- Hover effects on cloud ends-->
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+.common_header .page_header,.common_header .person_account .submenu,.common_header #password_change,.common_header #password_change .blue_btn{filter: none;}
+.common_header #password_change .blue_btn:hover{filter: none;}
+  </style>
+<![endif]-->
+
+</head>
+
+<body>
+<div class="wrapper" id="dashboard">
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+                            <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change"> 
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><!--<a href="#" class="drop_menu"></a>--><span class="head_txt">Partner Dashboard</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends-->
+    <section class="content">
+      <section class="in_content clearfix"> 
+        <!-- Dashboard functions strats-->
+        <div class="fl first_col" id="functions">
+          <div class="goals cloud"><a href="goals.html" class="hit_area"></a><span class="head">Goals</span></a></div>
+          <div class="chat cloud"><a href="chat_main_screen.html" class="hit_area"></a><span class="head">Chat</span></div>
+          <div class="configur cloud"><a href="advice-assumptions.html" class="hit_area"></a><span class="head">My<br>
+            Configuration</span></div>
+          <div class="contact cloud"><a href="list-of-contacts.html" class="hit_area"></a><span class="head">Contacts</span></div>
+          <div class="report cloud"><a href="#" class="hit_area"></a><span class="head">Reports</span></div>
+          <div class="task cloud"><a href="list-of-tasks.html" class="hit_area"></a><span class="head">Task</span></div>
+        </div>
+        <!-- Dashboard functions Ends-->
+        
+        <div class="fr second_col"> 
+          <!-- Jimmedari meter strats-->
+          <div id="meter" class="clearfix">
+            <div class="jm_meter fr"><span class="staus not_rank">Not Ranked</span><span class="staus average">Average</span><span class="staus very_good">Very Good</span><span class="arrow"></span><span class="arrow_base"></span>
+              <h4 class="head">ZIMMEDARI METER</h4>
+            </div>
+          </div>
+          <!-- Jimmedari meter ends-->
+          <div id="query_alert"> 
+            <!-- Alert Starts-->
+            <div class="alert">
+              <h4 class="head">Alerts</h4>
+              <a href="my-alerts.html" class="hit_area"><span class="count fr">21</span>
+              <div class="clr"></div>
+              <span class="desc fr">Lorem ipsum dolor
+              sit amet, consec....</span>
+              <div class="clr"></div>
+              </a> </div>
+            <!-- Alert Ends--> 
+            <!-- Query Starts-->
+            <div class="query">
+              <h4 class="head">Raise <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a Query</h4>
+              <a href="query.html" class="hit_area"> <span class="desc fr">To raise a query or append
+              to existing queries.</span>
+              <div class="clr"></div>
+              </a> </div>
+            <!-- Query Ends--> 
+          </div>
+        </div>
+      </section>
+      <div class="overlay"></div>
+    </section>
+    <div class="clr"></div>
+  </section>
+</div>
+</body>
+</html>

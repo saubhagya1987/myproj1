@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<meta name="viewport" content="width=1024">
+<title>Client Transaction History</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link rel="stylesheet" a href="../css/reset.css"  type="text/css" />
+<link rel="stylesheet" a href="../css/jquery-ui.css"  type="text/css" />
+<link rel="stylesheet" a href="../css/main-style.css"  type="text/css" />
+<link rel="stylesheet" a href="../css/custom.css"  type="text/css" />
+<link rel="stylesheet" href="../css/selectboxit.css" type="text/css" />
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/jquery.ui.touch-punch.js"></script>
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/selectboxit.js"></script>
+<script>
+$(document).ready(function(){
+
+  $(".selectboxit-container ").click(function(){
+    //$('#personal_details_accordian').perfectScrollbar("update");
+	//$('#contact_details_accordian').perfectScrollbar("update");
+//	$('.family_details').perfectScrollbar("update");
+	});
+	 $(".thumb_select_ul a").click(function(){
+		//alert("hi");
+    $(this).children(".categoery").toggleClass("applicable");
+}) 
+}) 
+</script>
+
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+	  //Tracker Details Rating value Slider
+	  createSlider('#Conversion_Probability',0,100,1,"#C_P_Value")
+	  createSlider('#opportunity_rating',1,3,1,"")
+	  
+	  
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+
+<script>
+$(document).ready(function(){
+  	$( "#tabs" ).tabs();
+	$(function() {
+     $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-M-yy",
+      showOn: "button",
+	  buttonText: '',
+	  changeMonth: true,
+      changeYear: true
+     });
+	  $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent'></div>" );
+  });
+  
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+	 
+ 
+});
+</script>
+</head>
+<body>
+<div id="wrapper" class="clearfix">
+  <div id="header"> <a class="logo" href="index.html"> <span id="logo"> <img src="../images/temp_logo.png" /></span><!-- end of "logo" id --> 
+    </a> 
+    <!-- <div id="advt1"> <img src="images/add1.png" /> </div>--> 
+    <!-- end of "advt1" id -->
+    
+    <div id="advt2"> <img src="../images/add2.png" /> </div>
+    <!-- end of "advt1" id -->
+    
+    <div id="ifa-image" class="clearfix fl"> <img src="../images/photo.jpg"  class="clearfix fl"/> <span class="ifa-name clearfix">Mr. A. B. Joshi</span> <span class="ifa-advisor clearfix">(Your Advisor)</span> </div>
+    <!-- end of "ifa-image" id -->
+    
+    <div id="log-out"> <img class="logout" src="../images/transparent.png"/>
+      <p>Logout</p>
+    </div>
+    <!-- end of "log-out" id --> 
+  </div>
+  <!-- end of "header" id -->
+  
+  <ul id="inner-nav-menu" class="clearfix ">
+    <li class="my-goals"><a href="my-goals.html"><img class="my-goals-ico" src="../images/transparent.png"/>
+      <p>My Goals <span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-plans"><a href="my-plan.html"><img class="my-plans-ico" src="../images/transparent.png"/>
+      <p>My Plans<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-portf"><a href="my-portfolio.html"><img class="my-portf-ico" src="../images/transparent.png"/>
+      <p>My Portfolio<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <!--li class="my-inc"><a href="#"><img class="my-inc-ico" src="images/transparent.png"/><p>My Income<span class="grad-border"><img src="images/transparent.png"/></span></p></a></li-->
+    <li class="my-cashflow"><a href="my-income.html"><img class="my-cashflow-ico" src="../images/transparent.png"/>
+      <p>My Cashflow<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-fin"><a href="#"><img class="my-fin-ico" src="../images/transparent.png"/>
+      <p>My Documents<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-rep"><a href="my-reports.html"><img class="my-rep-ico" src="../images/transparent.png"/>
+      <p>My Reports<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-acc"><a href="my-profile.html"><img class="my-acc-ico" src="../images/transparent.png"/>
+      <p>My Account<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+  </ul>
+  <!-- end of "nav-menu" id -->
+  
+  <div id="trapezoid" class="clearfix fr">
+    <p>Welcome&nbsp;<span> Mr. Parag Takalkar</span></p>
+  </div>
+  <div id="header-strip" class="fl">
+    <h3 class="clearfix fl"></h3>
+    <!-- <img class="short-menu clearfix fr"  src="../images/transparent.png" /> <a href="#" class="my-asset-btn clearfix fr"><img src="../images/transparent.png" />My Assets</a>--> </div>
+  <!-- end of "header-strip" id -->
+  
+  <div id="inner-shadow-strip"></div>
+  <!-- end of "inner-shadow-strip" id -->
+  
+  <div id="contents">
+    <section class="in_content clearfix" id="add_assets_stock">
+      <div id="CTH" class="fl">
+        <ul class="reset clearfix parameters">
+          <li class="first">
+            <label class="fl">Transaction Type</label>
+            <select name="">
+              <option value="0">All Select</option>
+            </select>
+          </li>
+          <li class="second">
+          <label class="fl">Issuer Name</label>
+            <select name="">
+              <option value="0">All Select</option>
+            </select>
+          </li>
+          <li class="third">
+           <label class="fl">Start Date</label>
+             <input type="text" class="grt_bx datepicker" value="">
+          </li>
+          <li class="fourth">
+           <label class="fl">End Date</label>
+              <input type="text" class="grt_bx datepicker" value="">
+          </li>
+        </ul>
+        <ul class="reset clearfix action">
+          <li>
+            <input type="button" value="Submit" class="common_btn" >
+          </li>
+        </ul>
+        <div class="clr"></div>
+      </div>
+      <div class="CTH_bx"> <iframe></iframe>
+      </div>
+      <!-- end of "contents" id -->
+      <footer id="footer"> <img src="../images/finfra-logo.png" /> <span class="copyright">Copyright © 2014 </span> <span class="privacy">Privacy Policy </span> </footer>
+    </section>
+  </div>
+</div>
+<!-- End of "wrapper" id -->
+</body>
+</html>

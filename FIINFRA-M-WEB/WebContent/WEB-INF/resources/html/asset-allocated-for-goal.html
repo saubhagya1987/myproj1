@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<meta name="viewport" content="width=1024">
+<title>Asset Allocated for Goal</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/aditya-custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<!--<script src="../js/jquery.slimscroll.js"></script>-->
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<script src="../js/plugin/jquery.bxslider.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script>
+$(document).ready(function(){
+	  $("select").selectBoxIt();
+  	$('.asset_allo_goal_third_row').slimScroll();
+ //	$('.asset_to_goal_slider_bx_out').bxSlider();
+  });
+</script>
+
+<script>
+  $(function() {
+   
+	 // Preferred Product Count Intlalized	
+	var count=3;
+	
+	//Add Button Starts
+  $(".asset_allo_goal_third_row").on("click", ".add", function() {
+	   $(this).fadeOut();
+	   count++;
+	   
+	$(this).prev(".close").fadeIn();
+	
+		
+		$(this).parent().closest("ul").after("<ul class='reset clearfix Auto_Plan_col clearfix'><li class='input_txt_one fl'><input type='text' class='common_input_ap' value=''></li><li class='input_txt_two fl'><select class='selectbox' id='brand'><option>Select</option><option>Daughter</option><option>Son</option><option>Husband</option></select></li><li class='input_txt_three fl'><select class='selectbox' id='brand'><option>Select</option><option>2023</option><option>2024</option><option>2025</option></select></li><li class='input_txt_four fl'><div class='assumption_bx_input_counter_parent fl'><input type='text' class='common_input' value='' ></div></li><li class='clearfix input_txt_six fl'><span class='common_input3'></span><div class='close'>x</div><div class='add'>+</div></li></ul>");
+	   //Preferred Product Count Written
+	 $("select").selectBoxIt();
+	 // createSlider("#your_age"+count,0,100,1,"#age"+count);
+	  
+  
+	});
+
+// Close Button 
+$(".auto_plan_li_bx_fourth_row").on("click", ".close", function() {
+	
+	$(this).parent().closest("ul").siblings("ul").removeClass("moved_down");
+	$(this).parent().closest("ul").prev("ul").addClass("moved_down");
+	var count_section = $(this).parent().closest(".EP_cnt ").find(".selectboxit").length;
+	
+	
+	$(this).parent().closest("ul").remove();
+    $("ul:last-of-type").find(".add").fadeIn(); 
+	// removing record
+
+// Preferred Product Ends
+
+	
+	});	
+	
+	 
+  });
+  </script>
+</head>
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="asset_to_goal"> 
+  <!-- Main starts-->
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="personalization.html" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">Asset Allocation for <span>Car goal</span> <span>(2012)</span></span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+      <div class="partner_dashboard_submenu">
+        <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+        <div class="menu_section">
+          <ul class="clearfix reset">
+            <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+            <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+            <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+            <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+            <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+            <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+            <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+            <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Common_in_contnet starts-->
+      <section class="asset_to_goal_bx_in">
+        <div class="asset_allo_goal">
+          <div class="tp_bx">
+            <div class="gl_bx fl">
+              <label>CURRENT GOAL VALUE (<span class="WebRupee">.RS</span>)</label>
+              <input name="" type="text" disabled class="common_input">
+            </div>
+            <div class="gl_bx fl">
+              <label>FUTURE GOAL VALUE (<span class="WebRupee">.RS</span>)</label>
+              <input name="" type="text" disabled class="common_input">
+            </div>
+            <div class="gl_bx fl">
+              <label>ALLOCATED ASSET VALUE (<span class="WebRupee">.RS</span>)</label>
+              <input name="" type="text" disabled class="common_input">
+            </div>
+            <div class="aar_bx fr">
+              <label>ADDITIONAL ASSETS REQUIRED (<span class="WebRupee">.RS</span>)</label>
+              <input name="" type="text" disabled class="common_input">
+            </div>
+               <a class="goals_back_btn goals_back_btn2" href="goal-to-asset-allocation.html">Back</a>
+ </div>
+          <div class="title_bx">
+            <div class="title">Allocated Assets</div>
+            <div class="urf" ><input name="" type="checkbox" value=""> Use Retirement Funds</div>
+          </div>
+          <div class="bm_bx">
+            <div class="label_bx clearfix">
+              <div class="label_one fl">Asset Type</div>
+              <div class="label_one fl">Asset Name</div>
+              <div class="label_one fl">Asset - Available Value ( <span class="WebRupee">.RS</span> )</div>
+              <div class="label_one fl">Allocated to Goal ( <span class="WebRupee">.RS</span> )</div>
+              <div class="label_one fl">Asset Maturity Date</div>
+              <div class="label_two fl">in ( % )</div>
+            </div>
+            
+            
+            
+            <div class="asset_allo_goal_third_row">
+                
+          
+          <ul class="reset clearfix">
+            <li class="input_txt_one fl">
+               <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>FD</option>
+              </select>
+           </li>
+            <li class="input_txt_one fl">
+              <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>SBI</option>
+              </select>
+            </li>
+            <li class="input_txt_two fl"><input type="text" disabled class="common_input2 fr" value=""></li>
+            <li class="input_txt_one fl">
+                <input type="text"  class="common_input" value="" >
+            </li>
+            <li class="input_txt_one fl">
+                <input type="text" disabled class="common_input" value="" >
+            </li>
+            <li class="input_txt_three fl">
+                <input type="text" disabled class="common_input2" value="" >
+            </li>
+            <li class="clearfix input_txt_six fl"><span class="common_input3"></span>
+              <div class="close">x</div>
+           <!--   <div class="add">+</div>-->
+            </li>
+          </ul>
+          
+          
+          <ul class="reset clearfix">
+            <li class="input_txt_one fl">
+               <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>FD</option>
+              </select>
+           </li>
+            <li class="input_txt_one fl">
+              <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>SBI</option>
+              </select>
+            </li>
+            <li class="input_txt_two fl">
+<input type="text" disabled class="common_input2 fr" value="">
+        </li>
+            <li class="input_txt_one fl">
+                <input type="text"  class="common_input" value="" >
+            </li>
+            <li class="input_txt_one fl">
+                <input type="text" disabled class="common_input" value="" >
+            </li>
+            <li class="input_txt_three fl">
+                <input type="text" disabled class="common_input2" value="" >
+            </li>
+            <li class="clearfix input_txt_six fl"><span class="common_input3"></span>
+              <div class="close">x</div>
+           <!--   <div class="add">+</div>-->
+            </li>
+          </ul>
+          
+          <ul class="reset clearfix">
+            <li class="input_txt_one fl">
+               <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>FD</option>
+              </select>
+           </li>
+            <li class="input_txt_one fl">
+              <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>SBI</option>
+              </select>
+            </li>
+            <li class="input_txt_two fl">
+<input type="text" disabled class="common_input2 fr" value="">
+        </li>
+            <li class="input_txt_one fl">
+                <input type="text"  class="common_input" value="" >
+            </li>
+            <li class="input_txt_one fl">
+                <input type="text" disabled class="common_input" value="" >
+            </li>
+            <li class="input_txt_three fl">
+                <input type="text" disabled class="common_input2" value="" >
+            </li>
+            <li class="clearfix input_txt_six fl"><span class="common_input3"></span>
+              <div class="close">x</div>
+           <!--   <div class="add">+</div>-->
+            </li>
+          </ul>
+          
+          <ul class="reset clearfix">
+            <li class="input_txt_one fl">
+               <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>FD</option>
+              </select>
+           </li>
+            <li class="input_txt_one fl">
+              <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>SBI</option>
+              </select>
+            </li>
+            <li class="input_txt_two fl">
+<input type="text" disabled class="common_input2 fr" value="">
+        </li>
+            <li class="input_txt_one fl">
+                <input type="text"  class="common_input" value="" >
+            </li>
+            <li class="input_txt_one fl">
+                <input type="text" disabled class="common_input" value="" >
+            </li>
+            <li class="input_txt_three fl">
+                <input type="text" disabled class="common_input2" value="" >
+            </li>
+            <li class="clearfix input_txt_six fl"><span class="common_input3"></span>
+              <div class="close">x</div>
+           <!--   <div class="add">+</div>-->
+            </li>
+          </ul>
+          
+          <ul class="reset clearfix">
+            <li class="input_txt_one fl">
+               <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>FD</option>
+              </select>
+           </li>
+            <li class="input_txt_one fl">
+              <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>SBI</option>
+              </select>
+            </li>
+            <li class="input_txt_two fl">
+<input type="text" disabled class="common_input2 fr" value="">
+        </li>
+            <li class="input_txt_one fl">
+                <input type="text"  class="common_input" value="" >
+            </li>
+            <li class="input_txt_one fl">
+                <input type="text" disabled class="common_input" value="" >
+            </li>
+            <li class="input_txt_three fl">
+                <input type="text" disabled class="common_input2" value="" >
+            </li>
+            <li class="clearfix input_txt_six fl"><span class="common_input3"></span>
+              <div class="close">x</div>
+           <!--   <div class="add">+</div>-->
+            </li>
+          </ul>
+          
+          <ul class="reset clearfix">
+            <li class="input_txt_one fl">
+               <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>FD</option>
+              </select>
+           </li>
+            <li class="input_txt_one fl">
+              <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>SBI</option>
+              </select>
+            </li>
+            <li class="input_txt_two fl">
+<input type="text" disabled class="common_input2 fr" value="">
+        </li>
+            <li class="input_txt_one fl">
+                <input type="text"  class="common_input" value="" >
+            </li>
+            <li class="input_txt_one fl">
+                <input type="text" disabled class="common_input" value="" >
+            </li>
+            <li class="input_txt_three fl">
+                <input type="text" disabled class="common_input2" value="" >
+            </li>
+            <li class="clearfix input_txt_six fl"><span class="common_input3"></span>
+              <div class="close">x</div>
+           <!--   <div class="add">+</div>-->
+            </li>
+          </ul>
+          
+          <ul class="reset clearfix">
+            <li class="input_txt_one fl">
+               <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>FD</option>
+              </select>
+           </li>
+            <li class="input_txt_one fl">
+              <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>SBI</option>
+              </select>
+            </li>
+            <li class="input_txt_two fl">
+<input type="text" disabled class="common_input2 fr" value="">
+        </li>
+            <li class="input_txt_one fl">
+                <input type="text"  class="common_input" value="" >
+            </li>
+            <li class="input_txt_one fl">
+                <input type="text" disabled class="common_input" value="" >
+            </li>
+            <li class="input_txt_three fl">
+                <input type="text" disabled class="common_input2" value="" >
+            </li>
+            <li class="clearfix input_txt_six fl"><span class="common_input3"></span>
+              <div class="close">x</div>
+           <!--   <div class="add">+</div>-->
+            </li>
+          </ul>
+          
+          <ul class="reset clearfix">
+            <li class="input_txt_one fl">
+               <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>FD</option>
+              </select>
+           </li>
+            <li class="input_txt_one fl">
+              <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>SBI</option>
+              </select>
+            </li>
+            <li class="input_txt_two fl">
+<input type="text" disabled class="common_input2 fr" value="">
+        </li>
+            <li class="input_txt_one fl">
+                <input type="text"  class="common_input" value="" >
+            </li>
+            <li class="input_txt_one fl">
+                <input type="text" disabled class="common_input" value="" >
+            </li>
+            <li class="input_txt_three fl">
+                <input type="text" disabled class="common_input2" value="" >
+            </li>
+            <li class="clearfix input_txt_six fl"><span class="common_input3"></span>
+              <div class="close">x</div>
+           <!--   <div class="add">+</div>-->
+            </li>
+          </ul>
+          
+          <ul class="reset clearfix">
+            <li class="input_txt_one fl">
+               <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>FD</option>
+              </select>
+           </li>
+            <li class="input_txt_one fl">
+              <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>SBI</option>
+              </select>
+            </li>
+            <li class="input_txt_two fl">
+<input type="text" disabled class="common_input2 fr" value="">
+        </li>
+            <li class="input_txt_one fl">
+                <input type="text"  class="common_input" value="" >
+            </li>
+            <li class="input_txt_one fl">
+                <input type="text" disabled class="common_input" value="" >
+            </li>
+            <li class="input_txt_three fl">
+                <input type="text" disabled class="common_input2" value="" >
+            </li>
+            <li class="clearfix input_txt_six fl"><span class="common_input3"></span>
+              <div class="close">x</div>
+           <!--   <div class="add">+</div>-->
+            </li>
+          </ul>
+          <ul class="reset clearfix">
+            <li class="input_txt_one fl">
+               <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>FD</option>
+              </select>
+           </li>
+            <li class="input_txt_one fl">
+              <select class="selectbox" id="brand">
+                <option>Select</option>
+                <option>SBI</option>
+              </select>
+            </li>
+            <li class="input_txt_two fl">
+<input type="text" disabled class="common_input2 fr" value="">
+        </li>
+            <li class="input_txt_one fl">
+                <input type="text"  class="common_input" value="" >
+            </li>
+            <li class="input_txt_one fl">
+                <input type="text" disabled class="common_input" value="" >
+            </li>
+            <li class="input_txt_three fl">
+                <input type="text" disabled class="common_input2" value="" >
+            </li>
+            <li class="clearfix input_txt_six fl"><span class="common_input3"></span>
+              <div class="close">x</div>
+           <!--   <div class="add">+</div>-->
+            </li>
+          </ul>
+         
+        </div>
+              <input type="button" class="a_to_g_edit fr" value="Save">
+        
+          </div>
+        </div>
+        
+        <!--Footer Starts-->
+        
+        <div class="asset_to_goal_footer">
+          <div class="asset_label_bx fl">
+            <div class="asset_label_top fl">Total Value (<span class="WebRupee">Rs</span>)</div>
+            <div class="asset_label_bottom fl">Available Value (<span class="WebRupee">Rs</span>)</div>
+          </div>
+          <!--Mutual Funds-->
+          <div class="asset_bx fl">
+            <div class="label">Mutual Funds</div>
+            <div class="icon_bg">
+              <div class="m_f_icon"></div>
+            </div>
+            <div class="total_value">10,00,000</div>
+            <div class="available_value">5,00,000</div>
+          </div>
+          <!--Mutual Funds--> 
+          <!--Shares-->
+          <div class="asset_bx fl">
+            <div class="label">Shares</div>
+            <div class="icon_bg">
+              <div class="shares_icon"></div>
+            </div>
+            <div class="total_value">10,00,000</div>
+            <div class="available_value">5,00,000</div>
+          </div>
+          <!--Shares--> 
+          <!--Deposits-->
+          <div class="asset_bx fl">
+            <div class="label">Deposits</div>
+            <div class="icon_bg">
+              <div class="deposit_icon"></div>
+            </div>
+            <div class="total_value">10,00,000</div>
+            <div class="available_value">5,00,000</div>
+          </div>
+          <!--Deposits--> 
+          <!--Retirement Funds-->
+          <div class="asset_bx fl">
+            <div class="label">Retirement Funds</div>
+            <div class="icon_bg">
+              <div class="rf_icon"></div>
+            </div>
+            <div class="total_value">10,00,000</div>
+            <div class="available_value">5,00,000</div>
+          </div>
+          <!--Retirement Funds--> 
+          <!--Gold-->
+          <div class="asset_bx fl">
+            <div class="label">Gold</div>
+            <div class="icon_bg">
+              <div class="gold_icon"></div>
+            </div>
+            <div class="total_value">10,00,000</div>
+            <div class="available_value">5,00,000</div>
+          </div>
+          <!--Gold--> 
+          <!--Property-->
+          <div class="asset_bx fl">
+            <div class="label">Property</div>
+            <div class="icon_bg">
+              <div class="property_icon"></div>
+            </div>
+            <div class="total_value">10,00,000</div>
+            <div class="available_value">5,00,000</div>
+          </div>
+          <!--Property--> 
+          <!--Insurance-->
+          <div class="asset_bx fl">
+            <div class="label">Insurance</div>
+            <div class="icon_bg">
+              <div class="rf_insurance"></div>
+            </div>
+            <div class="total_value">10,00,000</div>
+            <div class="available_value">5,00,000</div>
+          </div>
+          <!--Insurance--> 
+          <!--Others-->
+          <div class="asset_bx fl">
+            <div class="label">Others</div>
+            <div class="icon_bg">
+              <div class="rf_others"></div>
+            </div>
+            <div class="total_value">10,00,000</div>
+            <div class="available_value">5,00,000</div>
+          </div>
+          <!--Others--> 
+
+        </div>
+      </section>
+      <!-- Common_in_contnet ends-->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+</body>
+</html>

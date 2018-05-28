@@ -1,0 +1,922 @@
+* { margin: 0; padding: 0; }
+@page { size:28cm 43.0cm; border: 1px solid; }
+html{height: 100%;}
+body { font: 14px/1.4 Calibri, Arial, Helvetica, Sans-serif; overflow-y: scroll; height: 100%}
+
+article, aside, figure, footer, header, nav, section { display: block; }
+
+
+.group {
+    zoom: 1; 
+}
+@font-face
+{
+font-family: aachen-bt;
+src: url("https://fi-i.com//Fiinfra/fonts/aachen-bt.ttf");
+}
+
+a img{
+	outline: none;
+	border: none;
+}
+
+a{
+	color:#0066FF;
+	text-decoration: none;
+}
+a:hover{
+	color:#006C30;
+	text-decoration: underline;
+}
+
+.center{
+	
+	min-width: 800px;
+}
+
+
+.output-body{
+	margin: 0 auto;	
+/* 	font-family: aachen-bt; */
+	width: 840px;
+	text-align: center;
+	
+}
+
+.current-sit .savings-pm{
+	float: left;
+	background: url("https://fi-i.com//Fiinfra/images/Axis-op/savings-pm.png") no-repeat; 
+	padding-left: 70px;
+	height: 170px;
+    padding-right: 0;
+    padding-top: 60px;
+    width:50px;
+	 margin-top:30px;
+	
+	
+}
+.saving_text{
+	float:left;
+	font-size:18px;
+	margin-top:20px;}
+	
+.saving_textright{
+	float:right;
+	font-size:18px;
+	margin-top:20px;
+	margin-right: -131px;
+	}
+
+.current-sit .pot-savings-pm{
+	background: url("https://fi-i.com//Fiinfra/images/Axis-op/pot-savings-pm.png") no-repeat scroll 18px 80px transparent;
+	float: right;
+	width: 129px;
+	height: 170px;
+	 margin-right: 40px;
+	 margin-top:30px;
+    padding-top: 60px;
+}
+#disclaimer{
+	width:850px;
+	display:block;
+	float:left;	
+	margin:10px 0 20px 0;
+	font-size:11px;
+	color:#000;
+	text-align:left;
+	line-height:15px;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	
+
+}
+#powerby{
+	display:block;
+	float:right;
+	margin-top:10px;
+	margin-bottom:10px;}
+	
+#disclaimer h2{
+color:#3a2493;
+font-size:20px;
+font-weight:bold;
+margin-bottom:10px;:
+}
+
+
+.small-pile{
+	float: left;
+	 padding-top: 20px;
+    width: 195px;
+	color:#000;
+	text-align:center;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+
+}
+
+#mainwrapper1{
+	width:1000px;
+	background-color:#FFF;
+	height:1450px;
+}
+#mainwrapper{
+	width:1000px;
+	background-color:#FFF;
+	height:1450px;
+	
+	
+	
+	}
+
+.output_header1{
+		float:left;	
+		background:url("https://fi-i.com//Fiinfra/images/Axis-op/output_header1.gif") no-repeat top right;
+		height:92px;
+		width:1000px;
+		margin:0px  0 0 0px;
+}
+.output_header_head{
+	float:right;
+	margin:55px 95px 0px 0px;	
+	font-weight:bold;
+	font-size:20px;
+	font-family:Calibri;
+	color:#982455;}
+	
+#mainleft{
+	float:left;
+	width:800px;
+	margin:30px 0 10px 10px;
+	text-align:center;
+
+}
+	
+#mainright{
+	width:167px;
+ float:left;
+ margin:10px 0px 10px 0;
+ vertical-align:top;
+}
+table{
+width:100%;
+float:left;
+font-family:Calibri, Arial, Helvetica, Sans-serif;
+
+}
+.col_head{
+	width:300px;
+	color:#595654;
+	text-align:left;
+		font-family:Calibri, Arial, Helvetica, Sans-serif;}
+.col_head1{
+	width:200px;
+	color:#595654;
+	text-align:left;
+		font-family:Calibri, Arial, Helvetica, Sans-serif;}
+.col_headorange{
+	width:300px;
+	color:#595654;
+	text-align:left;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;}
+
+.col_alt{
+	background-color:#ecf5e1;}
+
+.col_alt_orange{
+	background-color:#eadad4; 
+	text-align:left;}
+
+	
+td{
+
+	height:20px;
+	text-align:left;
+	font-size:16px;
+	margin:7px;
+
+	font-weight:normal;
+	padding:5px;
+	
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	line-height:18px;
+}
+.tdmain{
+	border-bottom:#000 1px solid;
+	border-right:#000 1px solid;
+	width:30px;
+	min-width:20px;}
+.tdleft{
+	border-left:#000 1px solid;
+}
+.tdtop{
+	border-top:#000 1px solid;}
+.tdselected{
+	color:#FFFFFF;
+	background-color:#3a2493;}
+.tablehead{
+	background-color:#982455;
+	color:white;
+	height:40px;
+	font-weight:bold;
+	font-size:16px;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	}
+.tableheadorange{
+	background-color:#e77817;
+	color:#fff;
+	font-weight:bold;
+	font-size:16px;
+	text-align:center;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	}
+.headcolorange{
+	background-color:#f9d2c3;
+	font-size:16px;
+	text-align:left;
+	color:#4a4645;
+	width:20%;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;}
+.headcol{
+	background-color:#d9dfce;
+	font-size:16px;
+	text-align:center;
+	color:#4a4645;
+	width:20%;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;}
+.lighttext{
+	color:#9f9f9c;
+}
+
+
+.output_header{
+		float:left;	
+		background:url("https://fi-i.com//Fiinfra/images/Axis-op/output_header.gif") no-repeat top right;
+		width:1000px;
+		margin:0px  0 0 0px;
+}	
+.output_head
+{
+	float:left;	
+		background:url("https://fi-i.com//Fiinfra/images/Axis-op/output_Head.gif") no-repeat top right;
+		width:1000px;
+		margin:0px  0 0 0px;
+}
+.output_header_new{
+		float:left;	
+		background:url("https://fi-i.com//Fiinfra/images/Axis-op/output_header_New.png") no-repeat top right;
+		width:900px;
+		margin:0px  0 0 0px;
+}	
+.output_header_new_terms{
+		float:left;	
+		background:url("https://fi-i.com//Fiinfra/images/Axis-op/output_header.gif") no-repeat top right;
+		width:1000px;
+		margin:0px  0 0 0px;
+}	
+
+.output_headerg{
+		float:left;	
+		background:url("https://fi-i.com//Fiinfra/images/Axis-op/output_header_g.png") no-repeat top right;
+		height:92px;
+		width:1000px;
+		margin:0px  0 0 0px;
+}
+.mainbg{
+	float:left;
+	height:1430px;
+	width:1000px;
+	margin-top:10px;
+
+}
+#mainwrapper h1{
+	position:relative;
+	float:center;
+
+	margin:0 auto;
+	font-size:40px;
+	text-align:center;
+	color:orange;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+}
+
+#mainwrapper h3{
+	position:relative;
+	float:center;
+	margin:0 auto;
+	text-align:center;
+	font-size:40px;
+	color:#24126c;
+	font:Calibri, Arial, Helvetica, Sans-serif;}
+
+#mainwrapper .box{
+	float:left;
+	margin:200px 50px 0 190px;
+	width:650px;
+	height:290px;
+	background-color:#FFFFFF;
+	text-align:center;}
+
+.clientlogo{
+	display:block;
+	float:left;
+	width:350px;
+	height:140px;
+	text-align:left;
+	
+
+}
+#clientname{
+	display:block;
+	float:right;
+	width:330px;
+	height:140px;
+	margin-top: 25px;
+	text-align:right;
+	margin-right: 100px;
+
+}
+
+#clientname h4{
+	color:#1b0866;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	margin:10px;
+	text-align:right;
+}
+
+#clientname h5{
+	color:#000;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	margin:10px;
+	text-align:right;
+}
+
+#clientname p{
+	color:#000;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	
+		text-align:right;
+}
+
+
+.clear{
+	clear:both;}
+
+.pf-op-body{
+	box-shadow: 1px 1px 6px #333;
+	background: #fff;
+	width: 1000px;
+	margin-bottom:30px;
+}
+.pf-op-container{
+	width: 90%;
+	margin: 0 auto;
+	font-family: Calibri, Arial, Helvetica, Sans-serif;
+}
+.pf-op-body .launch-anchors{
+	margin:40px auto;
+	height: 380px;
+}
+
+.pf-op-body h1.pathfinder{
+	color: #fff;
+	font-family: Calibri, Arial, Helvetica, Sans-serif;
+	font-size: 40px;
+}
+
+.pathfinder-heading-susbtitle{
+	font-family: Calibri, Arial, Helvetica, Sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	color: #7f7f7f;
+	margin-top: -8px;
+	margin-bottom: 30px;
+}
+
+
+.pf-op-body h2{
+	color: #0070C0;
+	font-family: Calibri, Arial, Helvetica, Sans-serif;
+	font-size: 20px;
+	float: none;
+	background: none;
+}
+
+.pf-op-body h1{
+	color: #92D050;
+}
+
+.pf-op-body h3{
+	color: #7f7f7f;
+}
+
+.body-8-bg{
+	background: url("https://fi-i.com//Fiinfra/images/Axis-op/body-bg.png") no-repeat -70px -70px;
+}
+
+img.small-flower{
+	float: left;
+	margin-top: -170px;
+}
+
+.pf-op-body .left-top-title{
+	background: #92D050;
+	color:#fff;
+	padding-top: 25px;
+	padding-bottom: 15px;
+	text-align: center;
+	font-size: 18px;
+	width: 250px;
+	border-radius: 0 0 26px 26px;
+	margin-bottom: 20px;
+	font-family: aachen-bt;
+}
+
+.pf-op-body .first-take, .pf-op-body .current-sit, .pf-op-body .graphical-rep, .pf-op-body .suggestion{
+	height: 275px;
+	border: 2px dotted #C9D255;
+	float: left;
+	color: #000;
+}
+
+.first-take1{
+	height: 275px;
+	border: 2px dotted #C9D255;
+	float: left;
+	color: #000;
+}
+.current-sit1{
+	height: 275px;
+	border: 2px dotted #C9D255;
+	float: left;
+	color: #000;
+}
+.suggestion1{
+	height: 275px;
+	border: 2px dotted #C9D255;
+	float: left;
+	color: #000;
+}
+.graphical-rep1{
+	height: 275px;
+	border: 2px dotted #C9D255;
+	float: left;
+	color: #000;
+}
+
+.pf-op-body .first-take{
+	width: 30%;
+}
+
+.pf-op-body .current-sit{
+	width: 68%;
+	margin-left:10px;
+}
+
+
+.pf-op-body .graphical-rep{
+	width: 58%;
+	margin-bottom:20px;
+	background: #f0d8d8;
+	color: #333;
+	margin-top:10px;
+}
+
+.pf-op-body .suggestion{
+	width: 40%;
+	margin-top:10px;
+	margin-left:10px;
+}
+
+.pf-op-body p.heading{
+	margin-top: 10px;
+	margin-bottom:10px;
+	color: #3a2493;
+	font-weight: bold;
+	font-size:20px;
+	text-align:center;
+	margin-left:10px;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+}
+
+.riskProfileText
+{
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	font-size:20px;
+	text-align: center;
+}
+#graphic_text{
+	
+	margin:20px;
+	font-size:16px;
+	line-height:20px;
+	font: 14px/1.4 Calibri, Arial, Helvetica, Sans-serif;
+	padding-left: 5px;
+	text-align: left;
+}
+
+.pf-op-body .graphical-rep p.heading{
+	color: #3a2493;
+	text-align:center;
+	margin-left:5px;
+}
+
+.pf-op-body .graphical-rep h1.mainh1{
+float:left;
+	font-size:3em;
+	color:#333;}
+.red{
+color:red;}
+
+.pf-op-body .suggestion p.heading{
+	color: #3a2493;
+	margin-left:5px;
+	text-align:center;
+}
+
+.suggestion_text{
+	text-align:justify;
+	margin:10px;
+	
+	line-height:18px;
+	font: 14px/1.4 Calibri, Arial, Helvetica, Sans-serif;
+	}
+.suggestion_textsmall{
+	text-align:justify;
+	margin:10px;
+	font-size:11px;
+	line-height:16px;
+	}
+.suggestion ul{
+	margin:0 0 0 20px;
+	padding:2px;
+
+	list-style:disc;
+	text-align:left;}
+.suggestion ul li{
+	margin:0;
+	padding:0;
+	float:none;}
+	
+.current-sittext{
+	text-align:justify;
+	margin:10px;
+	font-size:16px;
+	line-height:18px;
+	color:red;}
+
+.coin-jars{
+	float:center;
+	margin-top:10px;}
+#coin-jars-text	{
+	margin-top:20px;
+	margin-left:180px;
+}
+#coin-jars-text	p{
+	float:left;
+	font-size:14px;
+	font-weight:bold;}
+
+.coin-jars-text1{
+	
+	margin-left:50px;
+
+}
+.personal_text{
+
+	font-size:18px;
+	margin-top:20px;
+	text-align:center;
+	color:#FF6600;}
+.border{
+	border:none;
+	text-align:left;
+
+}
+.loanimg{
+	float:left;
+	margin-left:40px;
+	
+}
+
+.loantext{
+float:left;
+	padding-left: 10px;
+    padding-top: 0px;
+    width: 220px;
+	text-align:left;
+	font-size:11px;
+}
+
+.outputfooter{
+	float:left;
+	height:91px;
+	height:700px;
+	width:1000px;
+	margin-top:10px;
+	background:url("https://fi-i.com//Fiinfra/images/Axis-op/output_footer.gif") no-repeat top center;
+	margin-top: 55px;
+	
+}
+#strip{
+width:1000px;
+
+float:left;
+margin:10px;
+padding:0 0px;
+margin-top:420px;
+vertical-align:bottom;
+background: -moz-linear-gradient(left, rgba(30,87,153,1) 0%, rgba(255,255,255,0.36) 64%, rgba(255,255,255,0) 100%); 
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(30,87,153,1)), color-stop(64%,rgba(255,255,255,0.36)), color-stop(100%,rgba(255,255,255,0))); 
+background: -webkit-linear-gradient(left, rgba(30,87,153,1) 0%,rgba(255,255,255,0.36) 64%,rgba(255,255,255,0) 100%); 
+background: -o-linear-gradient(left, rgba(30,87,153,1) 0%,rgba(255,255,255,0.36) 64%,rgba(255,255,255,0) 100%); 
+background: -ms-linear-gradient(left, rgba(30,87,153,1) 0%,rgba(255,255,255,0.36) 64%,rgba(255,255,255,0) 100%); 
+background: linear-gradient(to right, rgba(30,87,153,1) 0%,rgba(255,255,255,0.36) 64%,rgba(255,255,255,0) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#00ffffff',GradientType=1 ); 
+}
+.outputfooter1{
+	float:left;
+	height:60px;
+	width:770px;
+	margin:0 0 0 0px;
+}
+.outputfooter2{
+	background:url("https://fi-i.com//Fiinfra/images/Axis-op/powerby_footer.png") no-repeat top left;
+	float:right;
+	height:89px;
+	width:166px;
+	padding:10px 0 0 40px;
+	margin:0;
+}
+
+
+.output_header_mainhead{
+/* 	float:right; */
+	margin:50px 95px 0px 0px;	
+	font-weight:bold;
+	font-size:30px;
+	font-family:Calibri;
+	color:#ffffff;}
+	
+.left{
+	float:left;
+	width:50%;
+	margin:0 15px;
+	font: 14px/1.4 Calibri, Arial, Helvetica, Sans-serif;
+}
+.left .heading{
+	margin: 10px;
+	color: #3a2493;
+	font-weight: bold;
+	font-size:20px;
+	text-align:left;
+	
+
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+}
+.right .heading{
+	margin: 10px;
+	color: #3a2493;
+	font-weight: bold;
+	font-size:20px;
+	text-align:left;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+}
+#text{
+	text-align:justify;
+	margin:0px 0 0 45px;
+	font-size:18px;
+	line-height:20px;
+	font: 14px/1.4 Calibri, Arial, Helvetica, Sans-serif;
+}
+
+.left .text ul{
+	margin:0;
+	padding:0;
+	list-style:disc;}
+.left .text ul li{
+	margin:0;
+	padding:0;
+	list-style:disc;}
+.right{
+	float:left;
+	width:45%;
+	margin:0 0 0 5px;
+	font: 14px/1.4 Calibri, Arial, Helvetica, Sans-serif;
+		}
+
+
+.line{
+	float:left;
+	width:98%;
+	margin:0 5px;}
+#textnew{
+	text-align:justify;
+	margin:0px 0 0 20px;
+/* 	font-size:18px; */
+	line-height:20px;
+}
+
+#textnew ul{
+	margin:0px; 
+	padding:0;
+	list-style:none}
+#textnew ul li{
+	margin:0;
+	padding:0 0 0 2px;
+	}
+.rightspace{
+	margin:0 10px 0 0;}
+
+
+
+
+
+.newtableborder{
+	border:#ebebeb 1px solid;
+ margin:10px 0 0 00px;
+ padding:0;
+ width:728px;
+ float:left;
+ padding:5px;
+  vertical-align:middle;
+  font-family:Calibri, Arial, Helvetica, Sans-serif;}
+	
+.alignleft{
+	text-align:left;
+ margin:0;
+ padding:0px 0;}
+	
+.newtableborder_black{
+	border:#000 1px solid;
+	margin:0;
+	padding:0;}
+	
+#center .heading{
+	float:left;
+	width:967px;
+	margin:11px 0 0 10px;
+	text-align:left;
+	color: #3a2493;
+	font-weight: bold;
+	font-size:15px;
+	text-align:left;
+
+	font-family:Calibri, Arial, Helvetica, Sans-serif;}
+#center .text{
+	display:block;
+	width:950px;
+	font-size:14px;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	text-align:left;
+	margin-left:30px;}
+.textfield{
+	width:350px;
+	float:left;
+	margin:0 0 0 10px;
+	height:22px;
+	border:1px solid #aaa9a9;
+}
+.textfield_m{
+	width:220px;
+	float:left;
+	margin:0 0 0 10px;
+	height:22px;
+	border:1px solid #aaa9a9;
+}
+.textfieldbiggray{
+	width:200px;
+	height:100px;
+	float:left;
+	margin:0 0 0 0px;	
+	border:1px solid #aaa9a9;
+}
+.output_header_subhead{
+	float:right;
+	margin:55px 20px 0px 0px;	
+	font-weight:bold;
+	font-size:20px;
+	font-family:Calibri;
+	color:#ffffff;
+}
+.question{
+float:left;
+ 
+ font-family:Calibri, Arial, Helvetica, Sans-serif;
+ font-size:16px;
+ vertical-align:middle;
+ height:auto;
+ padding:5px;
+text-align:left;}
+
+
+
+.newtableborderauto{
+ border:#982455 1px solid;
+
+ padding:5px;
+  vertical-align:middle;
+ width:auto;
+ float:left;
+ height:40px;
+ font-family:Calibri, Arial, Helvetica, Sans-serif;
+ font-size:14px;}
+.circle { 
+ width: 13px; 
+ height: 13px;
+ float:left;
+ background: white; 
+ -moz-border-radius: 7px; 
+ -webkit-border-radius: 7px; 
+ border-radius: 7px;
+ border:1px solid #707070;
+ margin-right: 5px;
+}
+.circlefill { 
+ width: 14px; 
+ height: 14px;
+ float:left; 
+ background:#707070; 
+ -moz-border-radius: 7px; 
+ -webkit-border-radius: 7px; 
+ border-radius: 7px;
+ border:none;
+margin-right: 5px;
+ }
+#row{
+ float:left;
+ width:770px;
+ margin-left:40px;
+}
+.table{
+width:90%;
+float:left;
+font-family:Calibri, Arial, Helvetica, Sans-serif;
+margin-left:10px; 
+}
+
+ 
+.alignleft{
+ text-align:left;
+ margin:0;
+ padding:0px 0;} 
+
+.newtableborderfill{
+ border:#a1bc5c 1px solid;
+ margin:10px 0 0 0px;
+ padding:0;
+ width:728px;
+ float:left;
+ background-color:#9fbb59;
+ font-family:Calibri, Arial, Helvetica, Sans-serif;}
+.cellcenter{
+ text-align:center;}
+.inputtext{
+float:left;
+display:inline;
+ width:120px;
+ margin-left:20px;
+ margin-top:-3px;}
+.middle{
+ vertical-align:middle;}
+ .break{
+ text-align: left;
+ padding-left: 5px;
+ margin: 7px;
+ font: 14px/1.4 Calibri, Arial, Helvetica, Sans-serif;
+ }
+ .break ul{
+ margin:0 0 0 20px;
+	padding:2px;
+
+	list-style:disc;
+	text-align:left;}
+.break ul li{
+	margin:0;
+	padding:0;
+	float:none;}
+ 
+ 
+ .intro{
+	font-size:18px;
+	margin:25px;
+	font-family:Calibri, Arial, Helvetica, Sans-serif;
+	line-height:20px;
+	text-align:left;}
+	
+ #center .boxnew{
+	float:left;
+	display:block;
+	width:950px;
+	height:400px;
+	border:1px solid #e7e7e8;
+	box-shadow: 00px 10px 0px #e7e7e8;
+	border-radius:25px;
+	margin:20px;
+	font-size:15px;}
+.output_headernew{
+		float:left;	
+		background:url("https://fi-i.com//Fiinfra/images/Axis-op/output_header_New.png") no-repeat top right;
+		height:92px;
+		width:1000px;
+		margin:0px  0 0 0px;
+}
+ 

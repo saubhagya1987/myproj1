@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<meta name="viewport" content="width=1024">
+<title>My Loans</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<link rel="stylesheet" href="../css/selectboxlt.css" type="text/css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<!--<script src="../js/jquery.slimscroll.js"></script>-->
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<script src="../js/plugin/jquery.bxslider.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script>
+$(document).ready(function(){
+	    $("select").selectBoxIt();
+	  
+		$('.common_in_content').slimScroll();
+		$('.my_income_li_bx_parent').slimScroll();
+		$('#inner_contents_my_expenses_data .slimScrollDiv').addClass("record_scroll");
+		$('.wrapper').addClass("my_loans");
+
+
+  });
+</script>
+<style>
+.no_data_message { font-family: "aller bold"; font-size: 17px; height: 43px; position: relative; text-align: center; padding-top: 14px; background-color: #FFF; }
+.no_data_message:after { position: absolute; content: ""; width: 100%; background: url(../../resources/images/shadow_list.png) no-repeat center bottom; height: 10px; left: 0; right: 0; bottom: 0; }
+</style>
+</head>
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper"> 
+  <!-- Main starts-->
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="personalization.html" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">MY Loans</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+      <section class="in_content common_in_content clearfix">
+        <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Common_in_contnet starts-->
+        <section class="">
+          <div class="clearfix">
+            <div class="sen_msg_txt fl">You have declared <span class="sen_msg_amt theme_color">10</span> of <span class="sen_msg_bld_txt">Outstanding Loan</span> in Financial Plan</div>
+          </div>
+          <div id="inner_contents_my_expenses_data">
+          <div class="clearfix southspace1">
+             <a href="#" class="add-income-btn clearfix fr common_btn">Add Loan</a></div>
+            <div class="clr"></div>
+            <div class="no_data_message theme_color hide">There is no Loan Defined by you</div>
+            
+              
+              <!--title starts--> 
+       <div class="my_income_title_bx">        
+        <ul class="reset clearfix">
+          <li class="input_title_one fl">&nbsp;</li>
+          <li class="input_title_two fl">Loan Type</li>
+          <li class="input_title_three fl">Amount (in <span class="common_rupee_sign"></span>)</li>
+          <li class="input_title_four fl">Tenure</li>
+          <li class="input_title_five fl">EMI (in <span class="common_rupee_sign"></span>)</li>
+          <li class="input_title_six fl">EMI Frequency</li>
+          <li class="input_title_seven fl">Save</li>
+          <li class="input_title_eight fl">Remove</li>
+          <li class="input_title_nine fl">Add Notes</li>
+          <li class="input_title_ten fl">Raise Query</li>
+       
+        </ul>
+      </div>  
+       
+              <!--title ends--> 
+               <div class="my_income_li_bx_parent">
+              <div class="my_income_bx">
+    
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul class="reset clearfix">
+          <li class="input_txt_one fl">
+            <div id="" class="icon_76003 theme_doubble_border"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>2-wheeler</option>
+                <option>Business</option>
+                <option>Car</option>
+                <option>Credit Card</option>
+                <option>House</option>
+                <option>Personal</option>
+                <option>Personal</option>
+              </select>
+            </li>
+          <li class="input_txt_three fl"> <input class="common_input" id="" name="" value=""/>
+          </li>
+          <li class="input_txt_four fl">
+              <input class="common_input" id="" name="" value=""/>
+            </li>
+          <li class="input_txt_five fl">
+            <input class="common_input" id="" name="" value=""/>
+          </li>
+           <li class="input_txt_six fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>Half-Yearly</option>
+                <option>Monthly</option>
+                <option>Quartery</option>
+                <option>Yearly</option>
+                              </select>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul class="reset clearfix">
+          <li class="input_txt_one fl">
+            <div id="" class="icon_76006 theme_doubble_border"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>2-wheeler</option>
+                <option>Business</option>
+                <option>Car</option>
+                <option>Credit Card</option>
+                <option>House</option>
+                <option>Personal</option>
+                <option>Personal</option>
+              </select>
+            </li>
+          <li class="input_txt_three fl"> <input class="common_input" id="" name="" value=""/>
+          </li>
+          <li class="input_txt_four fl">
+              <input class="common_input" id="" name="" value=""/>
+            </li>
+          <li class="input_txt_five fl">
+            <input class="common_input" id="" name="" value=""/>
+          </li>
+           <li class="input_txt_six fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>Half-Yearly</option>
+                <option>Monthly</option>
+                <option>Quartery</option>
+                <option>Yearly</option>
+                              </select>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+     
+    <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul class="reset clearfix">
+          <li class="input_txt_one fl">
+            <div id="" class="icon_76002 theme_doubble_border"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>2-wheeler</option>
+                <option>Business</option>
+                <option>Car</option>
+                <option>Credit Card</option>
+                <option>House</option>
+                <option>Personal</option>
+                <option>Personal</option>
+              </select>
+            </li>
+          <li class="input_txt_three fl"> <input class="common_input" id="" name="" value=""/>
+          </li>
+          <li class="input_txt_four fl">
+              <input class="common_input" id="" name="" value=""/>
+            </li>
+          <li class="input_txt_five fl">
+            <input class="common_input" id="" name="" value=""/>
+          </li>
+           <li class="input_txt_six fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>Half-Yearly</option>
+                <option>Monthly</option>
+                <option>Quartery</option>
+                <option>Yearly</option>
+                              </select>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    
+    <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul class="reset clearfix">
+          <li class="input_txt_one fl">
+            <div id="" class="icon_76005 theme_doubble_border"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>2-wheeler</option>
+                <option>Business</option>
+                <option>Car</option>
+                <option>Credit Card</option>
+                <option>House</option>
+                <option>Personal</option>
+                <option>Personal</option>
+              </select>
+            </li>
+          <li class="input_txt_three fl"> <input class="common_input" id="" name="" value=""/>
+          </li>
+          <li class="input_txt_four fl">
+              <input class="common_input" id="" name="" value=""/>
+            </li>
+          <li class="input_txt_five fl">
+            <input class="common_input" id="" name="" value=""/>
+          </li>
+           <li class="input_txt_six fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>Half-Yearly</option>
+                <option>Monthly</option>
+                <option>Quartery</option>
+                <option>Yearly</option>
+                              </select>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    
+    <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul class="reset clearfix">
+          <li class="input_txt_one fl">
+            <div id="" class="icon_76001 theme_doubble_border"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>2-wheeler</option>
+                <option>Business</option>
+                <option>Car</option>
+                <option>Credit Card</option>
+                <option>House</option>
+                <option>Personal</option>
+                <option>Personal</option>
+              </select>
+            </li>
+          <li class="input_txt_three fl"> <input class="common_input" id="" name="" value=""/>
+          </li>
+          <li class="input_txt_four fl">
+              <input class="common_input" id="" name="" value=""/>
+            </li>
+          <li class="input_txt_five fl">
+            <input class="common_input" id="" name="" value=""/>
+          </li>
+           <li class="input_txt_six fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>Half-Yearly</option>
+                <option>Monthly</option>
+                <option>Quartery</option>
+                <option>Yearly</option>
+                              </select>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+   
+    <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul class="reset clearfix">
+          <li class="input_txt_one fl">
+            <div id="" class="icon_76004 theme_doubble_border"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>2-wheeler</option>
+                <option>Business</option>
+                <option>Car</option>
+                <option>Credit Card</option>
+                <option>House</option>
+                <option>Personal</option>
+                <option>Personal</option>
+              </select>
+            </li>
+          <li class="input_txt_three fl"> <input class="common_input" id="" name="" value=""/>
+          </li>
+          <li class="input_txt_four fl">
+              <input class="common_input" id="" name="" value=""/>
+            </li>
+          <li class="input_txt_five fl">
+            <input class="common_input" id="" name="" value=""/>
+          </li>
+           <li class="input_txt_six fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>Half-Yearly</option>
+                <option>Monthly</option>
+                <option>Quartery</option>
+                <option>Yearly</option>
+                              </select>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul class="reset clearfix">
+          <li class="input_txt_one fl">
+            <div id="" class="icon_76007 theme_doubble_border"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>2-wheeler</option>
+                <option>Business</option>
+                <option>Car</option>
+                <option>Credit Card</option>
+                <option>House</option>
+                <option>Personal</option>
+                <option>Personal</option>
+              </select>
+            </li>
+          <li class="input_txt_three fl"> <input class="common_input" id="" name="" value=""/>
+          </li>
+          <li class="input_txt_four fl">
+              <input class="common_input" id="" name="" value=""/>
+            </li>
+          <li class="input_txt_five fl">
+            <input class="common_input" id="" name="" value=""/>
+          </li>
+           <li class="input_txt_six fl">
+              <select class="sel_wid" id="type">
+                <option selected>Select</option>
+                <option>Half-Yearly</option>
+                <option>Monthly</option>
+                <option>Quartery</option>
+                <option>Yearly</option>
+                              </select>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    
+     
+    
+    
+           </div>  
+            </div>
+            <div class="nt_income theme_border">
+              <div class="total-asset-value"> <span>Total EMI:</span>
+                <div class="total-value rupee theme_color">5000/-</div>
+                <span class="unit dynamic">per month</span></div>
+            </div>
+          </div>
+          <!-- end of "inner-contents" id --> 
+        </section>
+        <!-- Common_in_contnet ends-->
+        <div class="overlay"></div>
+      </section>
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup2">
+            <li class="fl list"><a href="/FIINFRA-M-WEB/partner/datacollection/cash-flow/115040" class="anch cancel"><span class="txt">Cancel</span></a></li>
+          </ul>
+        </div>
+        
+        <!-- Common footer ends --> 
+      </section>
+    </section>
+    <!-- Common_content Ends--> 
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+</body>
+</html>

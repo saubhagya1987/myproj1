@@ -1,0 +1,42 @@
+<Root>
+	<FileType id="504001">
+		<File name="WBR2.dbf" path="Files\dbf files\transaction source dbf files\CAMS_Source.dbf"> 
+		</File>
+	</FileType>
+	<FileType id="504002">
+		<File name="WBR9.dbf" path="Files\dbf files\folio source dbf files\cams_folio.dbf"> 
+		</File>
+	</FileType>
+	<FileType id="504005">
+		<File name="MFSD201.dbf" path="Files\dbf files\transaction source dbf files\karvy_source.dbf"> 
+		</File>
+	</FileType>
+	<FileType id="504006">
+		<File name="MFSD211.dbf" path="Files\dbf files\folio source dbf files\karvy_folio.dbf"> 
+		</File>
+	</FileType>
+	<FileType id="504009">
+		<File name="Transactions for a Period.dbf" path="Files\dbf files\transaction source dbf files\franklin_source.dbf"> 
+		</File>
+	</FileType>
+	<FileType id="504010">
+		<File name="Folio Details.dbf" path="Files\dbf files\folio source dbf files\franklin_folio.dbf"> 
+		</File>
+	</FileType>
+	<FileType id="504013">
+		<File name="ER02.dbf" path="Files\dbf files\transaction source dbf files\sundaram_source.dbf"> 
+		</File>
+	</FileType>
+	<FileType id="504014">
+		<File name="ER04.dbf" path="Files\dbf files\folio source dbf files\sundaram_folio.dbf"> 
+		</File>
+	</FileType>
+	<FileType id="504019">
+		<File name="MFSD307.dbf" path="Files\dbf files\transaction source dbf files\karvy_auto_source.dbf"> 
+		</File>
+	</FileType>
+	<FileType id="504020">
+		<File name="MFSD311.dbf" path="Files\dbf files\folio source dbf files\karvy_auto_folio.dbf"> 
+		</File>
+	</FileType>
+</Root>

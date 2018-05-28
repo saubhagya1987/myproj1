@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+  <meta name="viewport" content="width=1024">
+  <title>My Asset</title>
+  <link rel="shortcut icon" href="../images/favicon.ico" />
+  <link rel="stylesheet" a href="../css/reset.css"  type="text/css" />
+  <link rel="stylesheet" a href="../css/jquery-ui.css"  type="text/css" />
+  <link rel="stylesheet" a href="../css/main-style.css"  type="text/css" />
+  <link rel="stylesheet" a href="../css/custom.css"  type="text/css" />
+  <link rel="stylesheet" href="../css/selectboxit.css" type="text/css" />
+  <script src="../js/jquery-1.11.0.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/jquery_ui_range_slider.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/jquery.ui.touch-punch.js"></script>
+  <script src="../js/jquery-1.11.0.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/selectboxit.js"></script>
+  <!-- Custom Selectbox starts -->
+  <script>
+$(document).ready(function(){
+  	$( "#tabs" ).tabs();
+	$(function() {
+     $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-M-yy",
+      showOn: "button",
+	  buttonText: '',
+	  changeMonth: true,
+      changeYear: true
+     });
+	  $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent'></div>" );
+  });
+  
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+	 
+ 
+});
+</script>
+  <!-- Custom Selectbox Ends -->
+  <script>
+$(document).ready(function(){
+
+  $(".selectboxit-container ").click(function(){
+    //$('#personal_details_accordian').perfectScrollbar("update");
+	//$('#contact_details_accordian').perfectScrollbar("update");
+//	$('.family_details').perfectScrollbar("update");
+	});
+	 $(".thumb_select_ul a").click(function(){
+		//alert("hi");
+    $(this).children(".categoery").toggleClass("applicable");
+}) 
+}) 
+</script>
+
+  <!-- custom scroll to "common_in_content" -->
+  <script>
+$(document).ready(function(){
+	  //Tracker Details Rating value Slider
+	  createSlider('#Conversion_Probability',0,100,1,"#C_P_Value")
+	  createSlider('#opportunity_rating',1,3,1,"")
+	  
+	  
+  });
+
+</script>
+  <!-- custom scroll to "common_in_content" -->
+
+  <script>
+  $(function() {
+    $( "#Profile_Info_Tab" ).accordion({
+		heightStyle: "content",
+    autoHeight: false,
+    clearStyle: true, 
+		
+		});
+	
+	 // Preferred Product Count Intlalized	
+	var count=3;
+	
+	//Add Button Starts
+  $(".family_details").on("click", ".add", function() {
+	   $(this).fadeOut();
+	   count++;
+	   
+	$(this).prev(".close").fadeIn();
+	
+	$(this).parent().closest("ul").after("<ul class='reset clearfix Family_Details_col clearfix'><li class='clearfix li_one'><input name='input' type='text' class='common_input' placeholder='First Name'/></li><li class='clearfix li_two'><input name='input' type='text' class='common_input' placeholder='Last Name'/></li><li class='clearfix li_three'><input id='birth_date"+count+"' name='input' type='text' placeholder='dd-mmm-yyyy' class='birth_date common_input5 datepicker' disabled/></li><li class='clearfix li_five'><select name='category2'><option>Select</option><option>Father</option><option>Mother</option><option>Wife</option><option>Son</option></select></li><li class='clearfix li_six'><span class='common_input3'></span><div class='close'>x</div><div class='add'>+</div></li></ul>");
+	   //Preferred Product Count Written
+	 $("select").selectBoxIt();
+	 // createSlider("#your_age"+count,0,100,1,"#age"+count);
+	  
+	  $(function() {
+     $( ".datepicker" ).datepicker({
+	  dateFormat: "dd-M-yy",
+      showOn: "button",
+	  buttonText: '',
+	  changeMonth: true,
+      changeYear: true
+     });
+  });
+  
+   $( ".ui-datepicker-trigger" ).wrap( "<div class='datepicker-trigger-parent fl'></div>" );
+     
+	  $('.EP_cnt').perfectScrollbar('update');
+	 
+	  
+	});
+
+// Close Button 
+$(".family_details").on("click", ".close", function() {
+	
+	$(this).parent().closest("ul").siblings("ul").removeClass("moved_down");
+	$(this).parent().closest("ul").prev("ul").addClass("moved_down");
+	var count_section = $(this).parent().closest(".EP_cnt ").find(".selectboxit").length;
+	
+	
+	$(this).parent().closest("ul").remove();
+    $("ul:last-of-type").find(".add").fadeIn(); 
+	// removing record
+
+// Preferred Product Ends
+
+	
+	});	
+	
+	 
+  });
+  </script>
+  </head>
+  <body>
+<div id="wrapper" class="clearfix">
+<div id="header"> <a class="logo" href="index.html"> <span id="logo"> <img src="../images/temp_logo.png" /></span><!-- end of "logo" id --> 
+  </a> 
+    <!-- <div id="advt1"> <img src="images/add1.png" /> </div>--> 
+    <!-- end of "advt1" id -->
+    
+    <div id="advt2"> <img src="../images/add2.png" /> </div>
+    <!-- end of "advt1" id -->
+    
+    <div id="ifa-image" class="clearfix fl"> <img src="../images/photo.jpg"  class="clearfix fl"/> <span class="ifa-name clearfix">Mr. A. B. Joshi</span> <span class="ifa-advisor clearfix">(Your Advisor)</span> </div>
+    <!-- end of "ifa-image" id -->
+    
+    <div id="log-out"> <img class="logout" src="../images/transparent.png"/>
+    <p>Logout</p>
+  </div>
+    <!-- end of "log-out" id --> 
+  </div>
+<!-- end of "header" id -->
+
+<ul id="inner-nav-menu" class="clearfix ">
+    <li class="my-goals"><a href="my-goals.html"><img class="my-goals-ico" src="../images/transparent.png"/>
+      <p>My Goals <span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-plans"><a href="my-plan.html"><img class="my-plans-ico" src="../images/transparent.png"/>
+      <p>My Plans<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-portf"><a href="my-asset.html"><img class="my-portf-ico" src="../images/transparent.png"/>
+      <p>My Portfolio<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <!--li class="my-inc"><a href="#"><img class="my-inc-ico" src="images/transparent.png"/><p>My Income<span class="grad-border"><img src="images/transparent.png"/></span></p></a></li-->
+    <li class="my-cashflow"><a href="my-income.html"><img class="my-cashflow-ico" src="../images/transparent.png"/>
+      <p>My Cashflow<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-fin"><a href="#"><img class="my-fin-ico" src="../images/transparent.png"/>
+      <p>My Documents<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-rep"><a href="my-reports.html"><img class="my-rep-ico" src="../images/transparent.png"/>
+      <p>My Reports<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-acc"><a href="my-profile.html"><img class="my-acc-ico" src="../images/transparent.png"/>
+      <p>My Account<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+  </ul>
+<!-- end of "nav-menu" id -->
+
+<div id="trapezoid" class="clearfix fr">
+    <p>Welcome&nbsp;<span> Mr. Parag Takalkar</span></p>
+  </div>
+<div id="header-strip" class="fl">
+    <h3 class="clearfix fl">MY ASSETS</h3>
+    <img class="short-menu clearfix fr"  src="../images/transparent.png" /> <!--<a href="#" class="my-asset-btn clearfix fr"><img src="../images/transparent.png" />My Assets</a>--> 
+    <a href="my-portfolio-my-loans.html" class="my-loan-btn clearfix fr"><img src="../images/transparent.png" />My Loans</a>
+     </div>
+<!-- end of "header-strip" id -->
+
+<div id="inner-shadow-strip"></div>
+<!-- end of "inner-shadow-strip" id -->
+
+<div id="contents">
+<div id="data-graph-bx">
+      <div id="data-graph" class="common_sliding_radio data-graph-asset"> <span class="lbl_first lbl">Data</span> <span class="lbl_second lbl">Graph</span> </div>
+      <div class="clr"></div>
+    </div>
+<section class="in_content clearfix" id="my_assets">
+    <div style="padding:10px 10px 0;">
+    <div id="tabs">
+        <ul>
+        <li><a href="#tabs-1">Bank Deposit</a></li>
+        <li><a href="#tabs-2">Retirement Fund</a></li>
+        <li><a href="#tabs-3">Mutual Fund</a></li>
+        <li><a href="#tabs-4">Gold</a></li>
+        <li><a href="#tabs-5">Property</a></li>
+        <li><a href="#tabs-6">Stock</a></li>
+      </ul>
+        <div id="tabs-1" class="tab_border"> 
+       <div class="no_data_message northspace5">There is no Asset Record for you.</div> 
+        
+          <div class="submit_btn fr">Add More</div>
+        
+        <div class="clr"></div>
+        
+      </div>
+        <!-- Tabs 1 Ends--> 
+        
+        <!-- Tabs 2-->
+        <div id="tabs-2" class="tab_border"> 
+       <div class="no_data_message northspace5">There is no Asset Record for you.</div> 
+        <div class="submit_btn fr">Add More</div>
+        
+        <div class="clr"></div>
+        
+      </div>
+        <!-- Tabs 2 Ends--> 
+        
+        <!-- Tabs 3-->
+        <div id="tabs-3" class="tab_border"> 
+       <div class="no_data_message northspace5">There is no Asset Record for you.</div> 
+            <div class="submit_btn fr">Add More</div>
+        
+        <div class="clr"></div>
+        
+      </div>
+        <!-- Tabs 3 Ends--> 
+        
+        <!-- Tabs 4--> 
+        <!--*----------Gold --------------*-->
+        <div id="tabs-4" class="tab_border"> 
+       <div class="no_data_message northspace5">There is no Asset Record for you.</div> 
+      <div class="submit_btn fr">Add More</div>
+        
+        <div class="clr"></div>
+          </div>
+        
+        <!--*----------Gold Ends --------------*--> 
+        <!-- Tabs 4 Ends--> 
+        
+        <!-- Tabs 5--> 
+        <!--*----------Property --------------*-->
+        <div id="tabs-5" class="tab_border"> 
+       <div class="no_data_message northspace5">There is no Asset Record for you.</div> 
+      <div class="submit_btn fr">Add More</div>
+        
+        <div class="clr"></div>
+        
+          </div>
+        
+        <!--*----------Property Ends --------------*--> 
+        <!-- Tabs 5 Ends--> 
+        
+        <!-- Tabs 6--> 
+        <!--*----------Property --------------*-->
+        <div id="tabs-6" class="tab_border"> 
+       
+          <div class="no_data_message northspace5">There is no Asset Record for you.</div> 
+            <div class="submit_btn fr">Add More</div>
+        
+        <div class="clr"></div>
+        
+      </div>
+        
+        <!--*----------Stock Ends --------------*--> 
+        <!-- Tabs 6 Ends--> 
+        
+      </div>
+    <!-- end of "contents" id -->
+    
+    <footer id="footer"> <img src="../images/finfra-logo.png" /> <span class="copyright">Copyright © 2014 </span> <span class="privacy">Privacy Policy </span> </footer>
+  </div>
+  </section>
+  
+ </div>
+ </div>
+<!-- End of "wrapper" id -->
+</body>
+</html>

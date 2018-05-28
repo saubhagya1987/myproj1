@@ -1,0 +1,1 @@
+<img class="clerfix" src="${pageContext.request.contextPath}/resources/images/banner2.jpg" />

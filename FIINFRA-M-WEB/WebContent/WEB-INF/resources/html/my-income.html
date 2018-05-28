@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<meta name="viewport" content="width=1024">
+<title>My Income</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<link rel="stylesheet" href="../css/selectboxlt.css" type="text/css" />
+
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<!--<script src="../js/jquery.slimscroll.js"></script>-->
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<script src="../js/plugin/jquery.bxslider.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+
+<script src="../js/plugin/selectboxit.js"></script>
+
+<script>
+$(document).ready(function(){
+	    $("select").selectBoxIt();
+	  	$('.my_income_bx').slimScroll();
+
+ // 	$('.goal_bx .bottom .bottom_in').slimScroll();
+ 	//$('.asset_to_goal_slider_bx_out').bxSlider();
+  });
+</script>
+
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+    //$('.common_in_content').slimScroll();
+	//Down Payment value Slider
+	//  createSlider('#big_payment',-10,20,1,"#b_payment")
+	 // $( "#big_payment" ).slider({ disabled: true });
+
+	  createSlider('#down_payment',0,100,1,"#d_payment")
+	  createSlider('#down_payment01',0,100,1,"#d_payment01")
+	  createSlider('#down_payment02',0,100,1,"#d_payment02")
+	  createSlider('#down_payment03',0,100,1,"#d_payment03")
+	  createSlider('#down_payment04',0,100,1,"#d_payment04")
+	  createSlider('#down_payment05',0,100,1,"#d_payment05")
+	  createSlider('#down_payment06',0,100,1,"#d_payment06")
+	  createSlider('#down_payment07',0,100,1,"#d_payment07")
+	  createSlider('#down_payment08',0,500,1,"#d_payment08")
+	  createSlider('#down_payment09',0,500,1,"#d_payment09")
+	  createSlider('#down_payment10',0,500,1,"#d_payment10")
+	  createSlider('#down_payment11',0,500,1,"#d_payment11")
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+
+
+</head>
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="my_income"> 
+  <!-- Main starts-->
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="personalization.html" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">MY INCOME</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+      <div class="partner_dashboard_submenu">
+        <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+        <div class="menu_section">
+          <ul class="clearfix reset">
+            <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+            <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+            <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+            <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+            <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+            <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+            <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+            <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Common_in_contnet starts-->
+      <section class="">
+  
+  <div class="clearfix">
+  <div class="sen_msg_txt fl">You have declared <span class="sen_msg_amt">10</span> <span class="sen_msg_txt_unit">Lacs/Per Month</span> of  <span class="sen_msg_bld_txt">Total Income</span> in Financial Plan</div></div>
+  
+    
+    <div id="inner_contents_my_expenses_data">
+    
+    
+                    
+      
+      <!--title starts-->
+      <div class="my_income_title_bx">
+        <ul>
+          <li class="input_title_one fl">1</li>
+          <li class="input_title_two fl">Income Category</li>
+          <li class="input_title_three fl">Income Title</li>
+          <li class="input_title_four fl">Amount/Month</li>
+          <li class="input_title_five fl">Period</li>
+          <li class="input_title_six fl">Expected Growth</li>
+          <li class="input_title_seven fl">Save</li>
+          <li class="input_title_eight fl">Remove</li>
+          <li class="input_title_nine fl">Add Notes</li>
+          <li class="input_title_ten fl">Raise Query</li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+      <!--title ends--> 
+      
+      <div class="my_income_bx">
+      <!--txt starts-->
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul>
+          <li class="input_txt_one fl">
+            <div id="" class="icon_74009"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option selected>Bonus</option>
+                <option>Business</option>
+                <option>Dividend</option>
+                <option>Farm</option>
+                <option>Gift</option>
+                <option>Inheritance</option>
+                <option>Interest</option>
+                <option>Miscellaneous</option>
+                <option>Royalty</option>
+                <option>Salary</option>
+                <option>Share of Profit</option>
+
+              </select>
+            </li>
+          <li class="input_txt_three fl"> <input class="grt_bx required" id="" name="" value="">
+          </li>
+          <li class="input_txt_four fl">
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+               
+                    <div id="down_payment"></div>
+                  
+                  <div class="counter_parent rupee">
+                    <input type="text" id="d_payment" class="range_counter" />
+                    <span class="unit">k</span></div>
+                </div>
+              </div>
+            </li>
+          <li class="input_txt_five fl">
+            <select class="sel_wid" id="type" >
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+          </li>
+           <li class="input_txt_six fl">
+              <div class="exp_grt_bx">
+                <input type="text" class="exp_grt_txt" value="05" />
+                <div class="exp_grt_per">%</div>
+              </div>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+    </div>
+    
+      <!--txt starts-->
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul>
+          <li class="input_txt_one fl">
+            <div id="" class="icon_74002"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option>Bonus</option>
+                <option selected>Business</option>
+                <option>Dividend</option>
+                <option>Farm</option>
+                <option>Gift</option>
+                <option>Inheritance</option>
+                <option>Interest</option>
+                <option>Miscellaneous</option>
+                <option>Royalty</option>
+                <option>Salary</option>
+                <option>Share of Profit</option>
+
+              </select>
+            </li>
+          <li class="input_txt_three fl">
+            <input class="grt_bx required" id="" name="" value="">
+          </li>
+          <li class="input_txt_four fl">
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+               
+                    <div id="down_payment01"></div>
+                  
+                  <div class="counter_parent rupee">
+                    <input type="text" id="d_payment01" class="range_counter" />
+                    <span class="unit">k</span></div>
+                </div>
+              </div>
+            </li>
+          <li class="input_txt_five fl">
+            <select class="sel_wid" id="type" >
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+          </li>
+           <li class="input_txt_six fl">
+              <div class="exp_grt_bx">
+                <input type="text" class="exp_grt_txt" value="05" />
+                <div class="exp_grt_per">%</div>
+              </div>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+    </div>
+    
+    
+          <!--txt starts-->
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul>
+          <li class="input_txt_one fl">
+            <div id="" class="icon_74003"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option>Bonus</option>
+                <option>Business</option>
+                <option selected>Dividend</option>
+                <option>Farm</option>
+                <option>Gift</option>
+                <option>Inheritance</option>
+                <option>Interest</option>
+                <option>Miscellaneous</option>
+                <option>Royalty</option>
+                <option>Salary</option>
+                <option>Share of Profit</option>
+
+              </select>
+            </li>
+          <li class="input_txt_three fl">
+            <input class="grt_bx required" id="" name="" value="">
+          </li>
+          <li class="input_txt_four fl">
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+               
+                    <div id="down_payment03"></div>
+                  
+                  <div class="counter_parent rupee">
+                    <input type="text" id="d_payment03" class="range_counter" />
+                    <span class="unit">k</span></div>
+                </div>
+              </div>
+            </li>
+          <li class="input_txt_five fl">
+            <select class="sel_wid" id="type" >
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+          </li>
+           <li class="input_txt_six fl">
+              <div class="exp_grt_bx">
+                <input type="text" class="exp_grt_txt" value="05" />
+                <div class="exp_grt_per">%</div>
+              </div>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+    </div>
+
+
+          <!--txt starts-->
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul>
+          <li class="input_txt_one fl">
+            <div id="" class="icon_74006"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option>Bonus</option>
+                <option>Business</option>
+                <option>Dividend</option>
+                <option selected>Farm</option>
+                <option>Gift</option>
+                <option>Inheritance</option>
+                <option>Interest</option>
+                <option>Miscellaneous</option>
+                <option>Royalty</option>
+                <option>Salary</option>
+                <option>Share of Profit</option>
+
+              </select>
+            </li>
+          <li class="input_txt_three fl">
+            <input class="grt_bx required" id="" name="" value="">
+          </li>
+          <li class="input_txt_four fl">
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+               
+                    <div id="down_payment04"></div>
+                  
+                  <div class="counter_parent rupee">
+                    <input type="text" id="d_payment04" class="range_counter" />
+                    <span class="unit">k</span></div>
+                </div>
+              </div>
+            </li>
+          <li class="input_txt_five fl">
+            <select class="sel_wid" id="type" >
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+          </li>
+           <li class="input_txt_six fl">
+              <div class="exp_grt_bx">
+                <input type="text" class="exp_grt_txt" value="05" />
+                <div class="exp_grt_per">%</div>
+              </div>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+    </div>
+
+
+          <!--txt starts-->
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul>
+          <li class="input_txt_one fl">
+            <div id="" class="icon_74008"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option>Bonus</option>
+                <option>Business</option>
+                <option>Dividend</option>
+                <option>Farm</option>
+                <option selected>Gift</option>
+                <option>Inheritance</option>
+                <option>Interest</option>
+                <option>Miscellaneous</option>
+                <option>Royalty</option>
+                <option>Salary</option>
+                <option>Share of Profit</option>
+
+              </select>
+            </li>
+          <li class="input_txt_three fl">
+            <input class="grt_bx required" id="" name="" value="">
+          </li>
+          <li class="input_txt_four fl">
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+               
+                    <div id="down_payment05"></div>
+                  
+                  <div class="counter_parent rupee">
+                    <input type="text" id="d_payment05" class="range_counter" />
+                    <span class="unit">k</span></div>
+                </div>
+              </div>
+            </li>
+          <li class="input_txt_five fl">
+            <select class="sel_wid" id="type" >
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+          </li>
+           <li class="input_txt_six fl">
+              <div class="exp_grt_bx">
+                <input type="text" class="exp_grt_txt" value="05" />
+                <div class="exp_grt_per">%</div>
+              </div>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+    </div>
+    
+    
+         <!--txt starts-->
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul>
+          <li class="input_txt_one fl">
+            <div id="" class="icon_74010"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option>Bonus</option>
+                <option>Business</option>
+                <option>Dividend</option>
+                <option>Farm</option>
+                <option>Gift</option>
+                <option selected>Inheritance</option>
+                <option>Interest</option>
+                <option>Miscellaneous</option>
+                <option>Royalty</option>
+                <option>Salary</option>
+                <option>Share of Profit</option>
+
+              </select>
+            </li>
+          <li class="input_txt_three fl">
+            <input class="grt_bx required" id="" name="" value="">
+          </li>
+          <li class="input_txt_four fl">
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+               
+                    <div id="down_payment06"></div>
+                  
+                  <div class="counter_parent rupee">
+                    <input type="text" id="d_payment06" class="range_counter" />
+                    <span class="unit">k</span></div>
+                </div>
+              </div>
+            </li>
+          <li class="input_txt_five fl">
+            <select class="sel_wid" id="type" >
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+          </li>
+           <li class="input_txt_six fl">
+              <div class="exp_grt_bx">
+                <input type="text" class="exp_grt_txt" value="05" />
+                <div class="exp_grt_per">%</div>
+              </div>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+    </div>
+    
+    
+        <!--txt starts-->
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul>
+          <li class="input_txt_one fl">
+            <div id="" class="icon_74005"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option>Bonus</option>
+                <option>Business</option>
+                <option>Dividend</option>
+                <option>Farm</option>
+                <option>Gift</option>
+                <option>Inheritance</option>
+                <option selected>Interest</option>
+                <option>Miscellaneous</option>
+                <option>Royalty</option>
+                <option>Salary</option>
+                <option>Share of Profit</option>
+
+              </select>
+            </li>
+          <li class="input_txt_three fl">
+            <input class="grt_bx required" id="" name="" value="">
+          </li>
+          <li class="input_txt_four fl">
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+               
+                    <div id="down_payment07"></div>
+                  
+                  <div class="counter_parent rupee">
+                    <input type="text" id="d_payment07" class="range_counter" />
+                    <span class="unit">k</span></div>
+                </div>
+              </div>
+            </li>
+          <li class="input_txt_five fl">
+            <select class="sel_wid" id="type" >
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+          </li>
+           <li class="input_txt_six fl">
+              <div class="exp_grt_bx">
+                <input type="text" class="exp_grt_txt" value="05" />
+                <div class="exp_grt_per">%</div>
+              </div>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+    </div>
+    
+          <!--txt starts-->
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul>
+          <li class="input_txt_one fl">
+            <div id="" class="icon_74011"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option>Bonus</option>
+                <option>Business</option>
+                <option>Dividend</option>
+                <option>Farm</option>
+                <option>Gift</option>
+                <option>Inheritance</option>
+                <option>Interest</option>
+                <option selected>Miscellaneous</option>
+                <option>Royalty</option>
+                <option>Salary</option>
+                <option>Share of Profit</option>
+
+              </select>
+            </li>
+          <li class="input_txt_three fl">
+            <input class="grt_bx required" id="" name="" value="">
+          </li>
+          <li class="input_txt_four fl">
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+               
+                    <div id="down_payment08"></div>
+                  
+                  <div class="counter_parent rupee">
+                    <input type="text" id="d_payment08" class="range_counter" />
+                    <span class="unit">k</span></div>
+                </div>
+              </div>
+            </li>
+          <li class="input_txt_five fl">
+            <select class="sel_wid" id="type" >
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+          </li>
+           <li class="input_txt_six fl">
+              <div class="exp_grt_bx">
+                <input type="text" class="exp_grt_txt" value="05" />
+                <div class="exp_grt_per">%</div>
+              </div>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+    </div>
+    
+    
+           <!--txt starts-->
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul>
+          <li class="input_txt_one fl">
+            <div id="" class="icon_74007"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option>Bonus</option>
+                <option>Business</option>
+                <option>Dividend</option>
+                <option>Farm</option>
+                <option>Gift</option>
+                <option>Inheritance</option>
+                <option>Interest</option>
+                <option>Miscellaneous</option>
+                <option selected>Royalty</option>
+                <option>Salary</option>
+                <option>Share of Profit</option>
+
+              </select>
+            </li>
+          <li class="input_txt_three fl">
+            <input class="grt_bx required" id="" name="" value="">
+          </li>
+          <li class="input_txt_four fl">
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+               
+                    <div id="down_payment09"></div>
+                  
+                  <div class="counter_parent rupee">
+                    <input type="text" id="d_payment09" class="range_counter" />
+                    <span class="unit">k</span></div>
+                </div>
+              </div>
+            </li>
+          <li class="input_txt_five fl">
+            <select class="sel_wid" id="type" >
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+          </li>
+           <li class="input_txt_six fl">
+              <div class="exp_grt_bx">
+                <input type="text" class="exp_grt_txt" value="05" />
+                <div class="exp_grt_per">%</div>
+              </div>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+    </div>
+    
+    
+            <!--txt starts-->
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul>
+          <li class="input_txt_one fl">
+            <div id="" class="icon_74001"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option>Bonus</option>
+                <option>Business</option>
+                <option>Dividend</option>
+                <option>Farm</option>
+                <option>Gift</option>
+                <option>Inheritance</option>
+                <option>Interest</option>
+                <option>Miscellaneous</option>
+                <option>Royalty</option>
+                <option selected>Salary</option>
+                <option>Share of Profit</option>
+
+              </select>
+            </li>
+          <li class="input_txt_three fl">
+            <input class="grt_bx required" id="" name="" value="">
+          </li>
+          <li class="input_txt_four fl">
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+               
+                    <div id="down_payment10"></div>
+                  
+                  <div class="counter_parent rupee">
+                    <input type="text" id="d_payment10" class="range_counter" />
+                    <span class="unit">k</span></div>
+                </div>
+              </div>
+            </li>
+          <li class="input_txt_five fl">
+            <select class="sel_wid" id="type" >
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+          </li>
+           <li class="input_txt_six fl">
+              <div class="exp_grt_bx">
+                <input type="text" class="exp_grt_txt" value="05" />
+                <div class="exp_grt_per">%</div>
+              </div>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+    </div>
+    
+    
+         <!--txt starts-->
+      <div class="my_income_li_bx">
+      <div class="my_income_li_bx_in">
+        <ul>
+          <li class="input_txt_one fl">
+            <div id="" class="icon_74004"></div>
+          </li>
+            <li  class="input_txt_two fl">
+              <select class="sel_wid" id="type">
+                <option>Bonus</option>
+                <option>Business</option>
+                <option>Dividend</option>
+                <option>Farm</option>
+                <option>Gift</option>
+                <option>Inheritance</option>
+                <option>Interest</option>
+                <option>Miscellaneous</option>
+                <option>Royalty</option>
+                <option>Salary</option>
+                <option selected>Share of Profit</option>
+
+              </select>
+            </li>
+          <li class="input_txt_three fl">
+            <input class="grt_bx required" id="" name="" value="">
+          </li>
+          <li class="input_txt_four fl">
+              <div class="range_parent">
+                <div class="scale clearfix">
+                  <div class="scale_range"><span class="low extrem">0</span><span class="high extrem">100</span></div>
+               
+                    <div id="down_payment11"></div>
+                  
+                  <div class="counter_parent rupee">
+                    <input type="text" id="d_payment11" class="range_counter" />
+                    <span class="unit">k</span></div>
+                </div>
+              </div>
+            </li>
+          <li class="input_txt_five fl">
+            <select class="sel_wid" id="type" >
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+          </li>
+           <li class="input_txt_six fl">
+              <div class="exp_grt_bx">
+                <input type="text" class="exp_grt_txt" value="05" />
+                <div class="exp_grt_per">%</div>
+              </div>
+            </li> 
+          <li class="input_txt_seven fl"> <a class="save_row"> </a> </li>
+          <li class="input_txt_eight fl"> <a class="delete_row"> </a></li>
+          <li class="input_txt_nine fl"> <a class="add_doc add_note"> </a></li>
+          <li class="input_txt_ten fl"> <a class="add_query"> </a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+    </div>
+    
+    
+           </div>
+      <div class="nt_income">
+        <div class="total-asset-value"> <span>Net Expenses:</span>
+          <div class="total-value rupee">5000/-</div>
+          <span class="unit dynamic">per month</span></div>
+      </div>
+    </div>
+    <!-- end of "inner-contents" id --> 
+  </section>
+            <!-- Common_in_contnet ends-->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Chat</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+	
+  
+ 	 $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+    });
+</script>
+<!-- Custom Selectbox Ends -->
+<!-- Placeholder for selectbox starts -->
+<script>
+$(document).ready(function(){
+  
+  $(".selectboxit-container").click(function(){
+	$(".selectboxit-option-first").remove();
+  
+});	
+});
+</script>
+<!-- Placeholder for selectbox Ends -->
+<!-- Filter section toggle starts -->
+<script>
+$(document).ready(function(){
+  $("#chat_list .div_dragger").click(function(){
+   $("#chat_filter").slideToggle("slow");
+	$(".div_dragger span").animate("slow").toggleClass("div_dragger_up","slow");
+	if($(".div_dragger span").hasClass("div_dragger_up"))
+	{
+	 $("#chat_filter #statusSelectBoxIt .selectboxit-text").text("Select Contact");
+	 $("#chat_filter #typeSelectBoxIt .selectboxit-text").text("Select Name");
+	$("#chat_filter .common_input").val("");
+	}
+  });
+});
+</script>
+<!-- Filter section toggle ends -->
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+  //  $('.common_in_content').slimScroll();
+	 $('#chat_list .content').perfectScrollbar();
+	//$('#chat_list .container .value').perfectScrollbar();
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+<!-- Filter section toggle ends -->
+
+<script>
+	$(document).ready(function(){
+			
+				$(".post").click(function(){
+				$("#browse_file").hide(1000);
+				$("#link_url").hide(1000);
+				});
+				
+				$(".file").click(function(){
+				$("#browse_file").show(1000);
+				$("#link_url").hide(1000);
+				});
+				
+				$(".link").click(function(){
+				$("#browse_file").hide(1000);
+				$("#link_url").show(1000);
+				});
+				
+				
+				
+				
+				$(".filter_post").click(function(){
+				$("#filter_browse_file").hide(1000);
+				$("#filter_link_url").hide(1000);
+				});
+				
+				$(".filter_file").click(function(){
+				$("#filter_browse_file").show(1000);
+				$("#filter_link_url").hide(1000);
+				});
+				
+				$(".filter_link").click(function(){
+				$("#filter_browse_file").hide(1000);
+				$("#filter_link_url").show(1000);
+				});
+	
+	
+	  });
+</script>
+
+
+
+
+
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="chat_list_wrapper"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a> 
+          <!--<a href="add-contact.html" class="header_btn" id="add_contact">Add Contact</a>--> 
+          <span class="head_txt">Chat</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+      <div class="partner_dashboard_submenu">
+        <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+        <div class="menu_section">
+          <ul class="clearfix reset">
+            <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+            <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+            <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+            <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+            <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+            <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+            <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+            <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Common_in_contnet starts-->
+      <section id="chat_list" class="in_content common_in_content clearfix">
+        <div id="chat_filter">
+          <ul class="reset clearfix parameters first">
+            <li class="first">
+              <select id="">
+                <option>Select Contact</option>
+                <option>Rohan Prabhune</option>
+                <option>Pooja Bhalerao</option>
+              </select>
+            </li>
+            <li class="second">
+              <select id="">
+                <option>Select Name</option>
+                <option>Minal Deshpande</option>
+                <option>Kunal Rastogi</option>
+              </select>
+            </li>
+          </ul>
+          <ul class="reset clearfix parameters second">
+            <li class="fourth"><textarea  class="common_input" name="" cols="" rows=""></textarea></li>
+          </ul>
+                    
+          <div id="filter_browse_file" class="clearfix fl">
+          		<input type="file"  value="Browse" name="file">
+                <input type="file"  value="Browse" name="file">
+                <input type="file"  value="Browse" name="file">
+          </div>
+          
+          <div id="filter_link_url" class="clearfix fl">
+              <p>Link URL</p>
+              <input type="text" name="link">
+          </div>         
+          
+          <ul class="reset clearfix action third">
+                <li><a href="#" class="post filter_post fl"><span class="txt">Post</span></a></li>
+                <li><a href="#" class="file filter_file fl"><span class="txt">File</span></a></li>
+                <li><a href="#" class="link filter_link fl"><span class="txt">Link</span></a></li>
+                <li><input type="submit" value="Show" class="common_btn fr"></li>
+          </ul>
+          <div class="clr"></div>
+        </div>
+        
+
+          
+        <div class="div_dragger"><span></span></div>
+        <!-- Chat Content Starts-->
+        <div class="content">
+           <ul>
+                 <li>
+                    <div class="chat_thread clearfix fl">
+                        <div class="chat_thread_left clearfix fl">
+                            <div class="image_container"><div class="image"></div></div>
+                            <span class="name">Baba Bhapkar</span>
+                            <span class="comp_name">Mindworx</span>
+                            <span class="date">09/07/2014,</span>
+                            <span class="time">10:15</span>
+                            <span class="am_pm">pm</span>
+                        </div>
+                        <div class="separator clearfix fl"></div>
+                        
+                        <div class="chat_thread_middle clearfix fl">
+                        	<span class ="thread_header">Heading Text Here</span>
+                            <span class="commentor">@PST</span>
+                            <span class="comment fl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</span>                                     
+                        </div>
+                        
+                   
+                        <div class="chat_thread_right clearfix fr">
+                            <div class="comment_no_bg clearfix"><a href="#"><div class="comment_no">5</div></a></div>
+                            <div class="date_time clearfix fr">
+                                <span class="comment_date">09/07/2014,</span>
+                                <span class="comment_time">10:15</span>
+                                <span class="comment_am_pm">pm</span>   
+                            </div>
+                        </div>
+                     </div><!-- end of "chat_thread" -->
+                 </li>
+                 <li>
+                    <div class="chat_thread clearfix fl">
+                        <div class="chat_thread_left clearfix fl">
+                            <div class="image_container"><div class="image"></div></div>
+                            <span class="name">Baba Bhapkar</span>
+                            <span class="comp_name">Mindworx</span>
+                            <span class="date">09/07/2014,</span>
+                            <span class="time">10:15</span>
+                            <span class="am_pm">pm</span>
+                        </div>
+                        <div class="separator clearfix fl"></div>
+                        
+                        <div class="chat_thread_middle clearfix fl">
+                        	<span class ="thread_header">Heading Text Here</span>
+                            <span class="commentor">@PST</span>
+                            <span class="comment fl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</span>                                     
+                        </div>
+                        
+                   
+                        <div class="chat_thread_right clearfix fr">
+                            <div class="comment_no_bg clearfix"><a href="#"><div class="comment_no">5</div></a></div>
+                            <div class="date_time clearfix fr">
+                                <span class="comment_date">09/07/2014,</span>
+                                <span class="comment_time">10:15</span>
+                                <span class="comment_am_pm">pm</span>   
+                            </div>
+                        </div>
+                     </div><!-- end of "chat_thread" -->
+                 </li>
+                 <li>
+                    <div class="chat_thread clearfix fl">
+                        <div class="chat_thread_left clearfix fl">
+                            <div class="image_container"><div class="image"></div></div>
+                            <span class="name">Baba Bhapkar</span>
+                            <span class="comp_name">Mindworx</span>
+                            <span class="date">09/07/2014,</span>
+                            <span class="time">10:15</span>
+                            <span class="am_pm">pm</span>
+                        </div>
+                        <div class="separator clearfix fl"></div>
+                        
+                        <div class="chat_thread_middle clearfix fl">
+                        	<span class ="thread_header">Heading Text Here</span>
+                            <span class="commentor">@PST</span>
+                            <span class="comment fl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</span>                                     
+                        </div>
+                        
+                   
+                        <div class="chat_thread_right clearfix fr">
+                            <div class="comment_no_bg clearfix"><a href="#"><div class="comment_no">5</div></a></div>
+                            <div class="date_time clearfix fr">
+                                <span class="comment_date">09/07/2014,</span>
+                                <span class="comment_time">10:15</span>
+                                <span class="comment_am_pm">pm</span>   
+                            </div>
+                        </div>
+                     </div><!-- end of "chat_thread" -->
+                 </li>
+                 <li>
+                    <div class="chat_thread clearfix fl">
+                        <div class="chat_thread_left clearfix fl">
+                            <div class="image_container"><div class="image"></div></div>
+                            <span class="name">Baba Bhapkar</span>
+                            <span class="comp_name">Mindworx</span>
+                            <span class="date">09/07/2014,</span>
+                            <span class="time">10:15</span>
+                            <span class="am_pm">pm</span>
+                        </div>
+                        <div class="separator clearfix fl"></div>
+                        
+                        <div class="chat_thread_middle clearfix fl">
+                        	<span class ="thread_header">Heading Text Here</span>
+                            <span class="commentor">@PST</span>
+                            <span class="comment fl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</span>                                     
+                        </div>
+                        
+                   
+                        <div class="chat_thread_right clearfix fr">
+                            <div class="comment_no_bg clearfix"><a href="#"><div class="comment_no">5</div></a></div>
+                            <div class="date_time clearfix fr">
+                                <span class="comment_date">09/07/2014,</span>
+                                <span class="comment_time">10:15</span>
+                                <span class="comment_am_pm">pm</span>   
+                            </div>
+                        </div>
+                     </div><!-- end of "chat_thread" -->
+                 </li>                
+            </ul>        
+        </div><!-- end of "content"-->
+        
+        <div class="footer">
+          <div class="footer-left fl">
+            <textarea name="" cols="" rows=""></textarea>
+            <input type="submit" value="Share" class="common_btn fr">
+          </div>
+          
+          <div class="footer-right fr">
+          	 <a href="#" class="post fl"><span class="txt">Post</span></a> 
+             <a href="#" class="file fl"><span class="txt">File</span></a> 
+             <a href="#" class="link fl"><span class="txt">Link</span></a> 
+          </div>
+          <div id="browse_file" class="clearfix fl">
+          		<input type="file"  value="Browse" name="file">
+                <input type="file"  value="Browse" name="file">
+                <input type="file"  value="Browse" name="file">
+          </div>
+          
+          <div id="link_url" class="clearfix fl">
+          <p>Link URL</p>
+          	<input type="text" name="link">
+          </div>
+          
+        </div>   <!-- Chat Content Ends--> 
+        
+      </section>
+      <!-- Common_in_contnet ends--> 
+      <!-- Common footer starts --> 
+      <!-- <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+         <ul class="reset clearfix fr btn_grup3">
+            </li>
+            <li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+            <li class="fl list"><a href="#" class="anch skip"><span class="txt">Skip</span></a></li>
+          </ul>
+         <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <li class="fl list"><a href="#" class="anch add_note"><span class="txt">Add Notes</span></a></li>
+            <li class="fl list"><a href="#" class="anch add_doc"><span class="txt">Add Doc</span></a></li>
+          </ul>
+          <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <li class="fl list"><a href="#" class="anch new_query"><span class="txt">New Query</span></a></li>
+            <li class="fl list"><a href="#" class="anch delete_query"><span class="txt">Delete Query</span></a></li>
+          </ul>
+         <ul class="reset clearfix fl btn_grup1">
+            </li>
+            <li class="fl list"><a href="#" class="anch analysis"><span class="txt">Analysis</span></a></li>
+            <li class="fl list"><a href="#" class="anch suggeset"><span class="txt">Suggestion</span></a></li>
+            <li class="fl list"><a href="#" class="anch action_plan"><span class="txt">Action Plan</span></a></li>
+          </ul>
+        </div>
+        <a href="#" class="back navgation"><span class="txt">Back</span></a> <a href="#" class="next navgation"><span class="txt">Next</span></a> </section>--> 
+      
+      <!-- Common footer ends -->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+    
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>My Alerts</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link rel="stylesheet" href="../css/main-style.css" type="text/css" />
+<link rel="stylesheet" href="../css/reset.css" type="text/css" />
+<link rel="stylesheet" href="../css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../css/jquery-ui.css" type="text/css" />
+<link rel="stylesheet" href="../css/selectboxit.css" type="text/css" />
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<script src="../js/selectboxit.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/jquery.ui.touch-punch.js"></script>
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+    });
+</script>
+<!-- Custom Selectbox Ends -->
+
+<script>
+$(document).ready(function () {
+    /* Equity*/
+    $("#inner_contents_my_portfolio_data .equity_div_dragger").click(function () {
+      //  $(".equity_list_bx").FadeIn("slow");
+		 $.when($(".list_bx").not(".equity_list_bx").fadeOut("slow")).done(function() {
+          $(".equity_list_bx").fadeToggle("slow");
+		  });
+       });
+
+    /*Debts*/
+    $("#inner_contents_my_portfolio_data .debts_div_dragger").click(function () {
+      //  $(".travel_goals_list_bx").slideToggle("slow");
+	   $.when($(".list_bx").not(".debts_list_bx").fadeOut("slow")).done(function() {
+          $(".debts_list_bx").fadeToggle("slow");
+		  });
+    });
+
+    /*Gold*/
+    $("#inner_contents_my_portfolio_data .gold_div_dragger").click(function () {
+      //  $(".travel_goals_list_bx").slideToggle("slow");
+	   $.when($(".list_bx").not(".gold_list_bx").fadeOut("slow")).done(function() {
+          $(".gold_list_bx").fadeToggle("slow");
+		  });
+    });
+});
+</script>
+</head>
+<body>
+<div id="wrapper" class="clearfix">
+  <div id="header"> <a class="logo" href="index.html"> <span id="logo"> <img src="../images/temp_logo.png" /></span><!-- end of "logo" id --> 
+    </a> 
+    <!-- <div id="advt1"> <img src="images/add1.png" /> </div>--> 
+    <!-- end of "advt1" id -->
+    
+    <div id="advt2"> <img src="../images/add2.png" /> </div>
+    <!-- end of "advt1" id -->
+    
+    <div id="ifa-image" class="clearfix fl"> <img src="../images/photo.jpg"  class="clearfix fl"/> <span class="ifa-name clearfix">Mr. A. B. Joshi</span> <span class="ifa-advisor clearfix">(Your Advisor)</span> </div>
+    <!-- end of "ifa-image" id -->
+    
+    <div id="log-out"> <img class="logout" src="../images/transparent.png"/>
+      <p>Logout</p>
+    </div>
+    <!-- end of "log-out" id --> 
+  </div>
+  <!-- end of "header" id -->
+  
+  <ul id="inner-nav-menu" class="clearfix ">
+    <li class="my-goals"><a href="my-goals.html"><img class="my-goals-ico" src="../images/transparent.png"/>
+      <p>My Goals <span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-plans"><a href="my-plan.html"><img class="my-plans-ico" src="../images/transparent.png"/>
+      <p>My Plans<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-portf"><a href="my-portfolio.html"><img class="my-portf-ico" src="../images/transparent.png"/>
+      <p>My Portfolio<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-cashflow"><a href="my-income.html"><img class="my-cashflow-ico" src="../images/transparent.png"/>
+      <p>My Cashflow<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-fin"><a href="#"><img class="my-fin-ico" src="../images/transparent.png"/>
+      <p>My Documents<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-rep"><a href="my-reports.html"><img class="my-rep-ico" src="../images/transparent.png"/>
+      <p>My Reports<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+    <li class="my-acc"><a href="#"><img class="my-acc-ico" src="../images/transparent.png"/>
+      <p>My Account<span class="grad-border"><img src="../images/transparent.png"/></span></p>
+      </a></li>
+  </ul>
+  <!-- end of "nav-menu" id -->
+  
+  <div id="trapezoid" class="clearfix fr">
+    <p>Welcome&nbsp;<span> Mr. Parag Takalkar</span></p>
+  </div>
+  <div id="header-strip" class="fl">
+    <h3 class="clearfix fl">MY ALERTS</h3>
+    <img class="short-menu clearfix fr"  src="../images/transparent.png" /></div>
+  <!-- end of "header-strip" id -->
+  
+  <div id="inner-shadow-strip"></div>
+  <!-- end of "inner-shadow-strip" id -->
+  
+  <div id="contents"> 
+    <!--<div id="data-graph-bx">
+      <div id="data-graph" class="common_sliding_radio"> <span class="lbl_first lbl">Data</span> <span class="lbl_second lbl">Graph</span> </div>
+      <div class="clr"></div>
+    </div>-->
+    
+    <section class="in_content clearfix" id="my_alerts">
+      <div id="pending_tasks">
+        <div class="header_strip"><img class="clearfix fl"  src="../images/transparent.png" />Pending Tasks</div>
+        <div class="test_out">
+          <div class="test">
+            <div class="container">
+              <ul class="reset clearfix heading">
+                <li class="first">Owner</li>
+                <li class="second">Due Date</li>
+                <li class="third">For</li>
+                <li class="fourth">What</li>
+              </ul>
+              <ul class="reset clearfix record">
+                <li class="first"><a href="../education-goal-future-financial.html">Ketan Bhagat</a></li>
+                <li class="second">22-Apr-2010</li>
+                <li class="third">For Client</li>
+                <li class="fourth"><span class="unit"> <a href="#">Why Do You Need Plan?</a></span></li>
+              </ul>
+              <ul class="reset clearfix record">
+                <li class="first"><a href="../education-goal-future-financial.html">Ketan Bhagat</a></li>
+                <li class="second">22-Apr-2010</li>
+                <li class="third">Opportunity</li>
+                <li class="fourth"><span class="unit"> <a href="#">Why Do You Need Plan?</a></span></li>
+              </ul>
+              <ul class="reset clearfix record">
+                <li class="first"><a href="../education-goal-future-financial.html">Ketan Bhagat</a></li>
+                <li class="second">22-Apr-2010</li>
+                <li class="third">PClient</li>
+                <li class="fourth"><span class="unit"> <a href="#">Why Do You Need Plan?</a></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="pending_queries">
+<div class="header_strip"><img class="clearfix fl"  src="../images/transparent.png" />Pending Queries</div>        <div class="test_out">
+          <div class="test"> <div class="container">
+          <ul class="reset clearfix heading">
+            <li class="first">Owner</li>
+            <li class="second">Last Update</li>
+            <li class="third">Subject</li>
+            <li class="fourth">Type</li>
+          </ul>
+          <ul class="reset clearfix record">
+            <li class="first"><a href="#">Priya</a></li>
+            <li class="second">22-Mar-2008</li>
+            <li class="third">Test Action Plan</li>
+            <li class="fourth"><a href="#">Path Tool Related</a></li>
+          </ul>
+          <ul class="reset clearfix record">
+            <li class="first"><a href="#">Priya</a></li>
+            <li class="second">14-Jun-2011</li>
+            <li class="third">Test Action Plan</li>
+            <li class="fourth"><a href="#">Path Tool Related</a></li>
+          </ul>
+          <ul class="reset clearfix record">
+            <li class="first"><a href="#">Priya</a></li>
+            <li class="second">18-Feb-2012</li>
+            <li class="third">Test Action Plan</li>
+            <li class="fourth"><a href="#">Path Tool Related</a></li>
+          </ul>
+        </div>
+      </div> </div> </div>
+      
+      <!-- DC submenu Ends--> 
+      
+    </section>
+    <div class="clr"></div>
+    
+    <!-- end of "inner-contents" id --> 
+  </div>
+  <!-- end of "contents" id -->
+  
+  <footer id="footer"> <img src="../images/finfra-logo.png" /> <span class="copyright">Copyright © 2014 </span> <span class="privacy">Privacy Policy </span> </footer>
+</div>
+<!-- End of "wrapper" id -->
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<title>Chat</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="../css/perfect-scrollbar.css"/>
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/toggles.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/perfect-scrollbar.js"></script>
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+	
+  
+ 	 $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+    });
+</script>
+<!-- Custom Selectbox Ends -->
+<!-- Placeholder for selectbox starts -->
+<script>
+$(document).ready(function(){
+  
+  $(".selectboxit-container").click(function(){
+	$(".selectboxit-option-first").remove();
+  
+});	
+});
+</script>
+<!-- Placeholder for selectbox Ends -->
+<!-- Filter section toggle starts -->
+
+<script>
+	$(document).ready(function(){
+					
+				$(".post").click(function(){
+				$("#browse_file").hide(1000);
+				$("#link_url").hide(1000);
+				});
+				
+				$(".file").click(function(){
+				$("#browse_file").show(1000);
+				$("#link_url").hide(1000);
+				});
+				
+				$(".link").click(function(){
+				$("#browse_file").hide(1000);
+				$("#link_url").show(1000);
+				});
+				
+				
+				
+				
+				$(".filter_post").click(function(){
+				$("#filter_browse_file").hide(1000);
+				$("#filter_link_url").hide(1000);
+				});
+				
+				$(".filter_file").click(function(){
+				$("#filter_browse_file").show(1000);
+				$("#filter_link_url").hide(1000);
+				});
+				
+				$(".filter_link").click(function(){
+				$("#filter_browse_file").hide(1000);
+				$("#filter_link_url").show(1000);
+				});	
+	  });
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#chat_list .div_dragger").click(function(){
+   $("#chat_filter").slideToggle("slow");
+	$(".div_dragger span").animate("slow").toggleClass("div_dragger_up","slow");
+	if($(".div_dragger span").hasClass("div_dragger_up"))
+	{
+	 $("#chat_filter #statusSelectBoxIt .selectboxit-text").text("Select Contact");
+	 $("#chat_filter #typeSelectBoxIt .selectboxit-text").text("Select Name");
+	$("#chat_filter .common_input").val("");
+	}
+  });
+});
+</script>
+<!-- Filter section toggle ends -->
+<!-- custom scroll to "common_in_content" -->
+<script>
+$(document).ready(function(){
+  
+  //  $('.common_in_content').slimScroll();
+	 $('#chat_list .content').perfectScrollbar();
+	//$('#chat_list .container .value').perfectScrollbar();
+  });
+
+</script>
+<!-- custom scroll to "common_in_content" -->
+<!-- Filter section toggle ends -->
+
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="chat_list_wrapper"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a> 
+          <!--<a href="add-contact.html" class="header_btn" id="add_contact">Add Contact</a>--> 
+          <span class="head_txt">Chat</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+      <div class="partner_dashboard_submenu">
+        <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+        <div class="menu_section">
+          <ul class="clearfix reset">
+            <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+            <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+            <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+            <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+            <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+            <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+            <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+            <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Common_in_contnet starts-->
+      <section id="chat_list" class="in_content common_in_content clearfix">
+        <div id="chat_filter">
+          <ul class="reset clearfix parameters first">
+            <li class="first">
+              <select id="">
+                <option>Select Contact</option>
+                <option>Rohan Prabhune</option>
+                <option>Pooja Bhalerao</option>
+              </select>
+            </li>
+            <li class="second">
+              <select id="">
+                <option>Select Name</option>
+                <option>Minal Deshpande</option>
+                <option>Kunal Rastogi</option>
+              </select>
+            </li>
+          </ul>
+          <ul class="reset clearfix parameters second">
+            <li class="fourth">
+              
+                <textarea  class="common_input" name="" cols="" rows=""></textarea>
+            </li>
+          </ul>
+          <div id="filter_browse_file" class="clearfix fl">
+          		<input type="file"  value="Browse" name="file">
+                <input type="file"  value="Browse" name="file">
+                <input type="file"  value="Browse" name="file">
+          </div>
+          
+          <div id="filter_link_url" class="clearfix fl">
+              <p>Link URL</p>
+              <input type="text" name="link">
+          </div>          
+          
+          <ul class="reset clearfix action third">
+            <li><a href="#" class="post fl filter_post"><span class="txt">Post</span></a></li>
+            <li><a href="#" class="file fl filter_file"><span class="txt">File</span></a></li>
+            <li><a href="#" class="link fl filter_link"><span class="txt">Link</span></a></li>
+            <li><input type="submit" value="Show" class="common_btn fr"></li>
+          </ul>
+          <div class="clr"></div>
+        </div>
+        <div class="div_dragger"><span></span></div>
+        <!-- Chat Content Starts-->
+        <div class="content">
+         <div class="chat_header_name">Chat Header Here</div><!-- Chat Header -->
+        <!-- First User Comment Starts-->
+          <div class="first_user_bx fl clearfix">
+            <div class="user_pic fl"><img src="../images/user_one.png" width="40" height="40" alt=""></div>
+            <div class="user_comment fl">
+              <div class="title">Baba Bhapkar</div>
+              <div class="txt">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+              <div class="file_link">File Link Here</div>
+              <div class="date">Jul 04, 2014 7:34pm</div>
+            </div>
+          </div>
+          <!-- First User Comment Ends-->
+          
+          
+          <!-- Second User Comment Starts-->
+          <div class="second_user_bx clearfix fr">
+            <div class="user_pic fr"><img src="../images/user_two.png" width="40" height="40" alt=""></div>
+            <div class="user_comment fl">
+              <div class="title">Rohan Prabhune</div>
+              <div class="txt">	Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+              <div class="file_link">File Link Here</div>
+              <div class="date">Jul 04, 2014 7:37pm</div>
+            </div>
+          </div>
+            <!-- Second User Comment Ends-->
+
+
+        <!-- First User Comment Starts-->
+          <div class="first_user_bx fl clearfix">
+            <div class="user_pic fl"><img src="../images/user_one.png" width="40" height="40" alt=""></div>
+            <div class="user_comment fl">
+              <div class="title">Baba Bhapkar</div>
+              <div class="txt">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</div>
+              <div class="file_link">File Link Here</div>
+              <div class="date">Jul 04, 2014 7:40pm</div>
+            </div>
+          </div>
+          <!-- First User Comment Ends-->
+
+
+        </div>
+        <div class="footer">
+          <div class="footer-left fl">
+            <textarea name="" cols="" rows=""></textarea>
+            <input type="submit" value="Share" class="common_btn fr">
+          </div>
+          <div class="footer-right fr"> 
+              <a href="#" class="post fl"><span class="txt">Post</span>
+              </a> <a href="#" class="file fl"><span class="txt">File</span></a> 
+              <a href="#" class="link fl"><span class="txt">Link</span></a> 
+          </div>
+          
+          <div id="browse_file" class="clearfix fl">
+          		<input type="file"  value="Browse" name="file">
+                <input type="file"  value="Browse" name="file">
+                <input type="file"  value="Browse" name="file">
+          </div>
+          
+          <div id="link_url" class="clearfix fl">
+          <p>Link URL</p>
+          	<input type="text" name="link">
+          </div>
+          
+        </div>
+        <!-- Chat Content Ends--> 
+        
+      </section>
+      <!-- Common_in_contnet ends--> 
+      <!-- Common footer starts --> 
+      <!-- <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+         <ul class="reset clearfix fr btn_grup3">
+            </li>
+            <li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="#" class="anch cancel"><span class="txt">Cancel</span></a></li>
+            <li class="fl list"><a href="#" class="anch skip"><span class="txt">Skip</span></a></li>
+          </ul>
+         <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <li class="fl list"><a href="#" class="anch add_note"><span class="txt">Add Notes</span></a></li>
+            <li class="fl list"><a href="#" class="anch add_doc"><span class="txt">Add Doc</span></a></li>
+          </ul>
+          <ul class="reset clearfix fr btn_grup2">
+            </li>
+            <li class="fl list"><a href="#" class="anch new_query"><span class="txt">New Query</span></a></li>
+            <li class="fl list"><a href="#" class="anch delete_query"><span class="txt">Delete Query</span></a></li>
+          </ul>
+         <ul class="reset clearfix fl btn_grup1">
+            </li>
+            <li class="fl list"><a href="#" class="anch analysis"><span class="txt">Analysis</span></a></li>
+            <li class="fl list"><a href="#" class="anch suggeset"><span class="txt">Suggestion</span></a></li>
+            <li class="fl list"><a href="#" class="anch action_plan"><span class="txt">Action Plan</span></a></li>
+          </ul>
+        </div>
+        <a href="#" class="back navgation"><span class="txt">Back</span></a> <a href="#" class="next navgation"><span class="txt">Next</span></a> </section>--> 
+      
+      <!-- Common footer ends -->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+    
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+
+</body>
+</html>

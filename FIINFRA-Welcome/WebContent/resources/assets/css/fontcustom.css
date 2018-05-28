@@ -1,0 +1,164 @@
+/*
+  Icon Font: fontcustom
+*/
+
+
+@font-face {
+  font-family: "fontcustom";
+  src: url("../fonts/fontcustom_076eec040a25abd9a902def5926f0e39.eot");
+  src: url("../fonts/fontcustom_076eec040a25abd9a902def5926f0e39.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/fontcustom_076eec040a25abd9a902def5926f0e39.woff") format("woff"),
+       url("../fonts/fontcustom_076eec040a25abd9a902def5926f0e39.ttf") format("truetype"),
+       url("../fonts/fontcustom_076eec040a25abd9a902def5926f0e39.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "fontcustom";
+    src: url("../fonts/fontcustom_076eec040a25abd9a902def5926f0e39.svg#fontcustom") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-action-plan:before,
+.icon-add-income:before,
+.icon-add-notes:before,
+.icon-advice-assumption:before,
+.icon-analysis:before,
+.icon-announcement:before,
+.icon-back:before,
+.icon-business:before,
+.icon-calculator:before,
+.icon-calender:before,
+.icon-cancel:before,
+.icon-car:before,
+.icon-cashflow:before,
+.icon-client:before,
+.icon-contacts:before,
+.icon-csv:before,
+.icon-data-collection:before,
+.icon-education:before,
+.icon-emergency-planning:before,
+.icon-expenses:before,
+.icon-faq:before,
+.icon-feedback:before,
+.icon-genrate_report:before,
+.icon-goal-plan:before,
+.icon-leisure:before,
+.icon-loan-status:before,
+.icon-money-access:before,
+.icon-my-account:before,
+.icon-my-goals:before,
+.icon-my-income:before,
+.icon-my-plans:before,
+.icon-my-portfolio:before,
+.icon-my-reports:before,
+.icon-next:before,
+.icon-opportunity:before,
+.icon-others:before,
+.icon-parental-goal:before,
+.icon-personal-accident:before,
+.icon-personal-info:before,
+.icon-polls:before,
+.icon-premium_client:before,
+.icon-property:before,
+.icon-quick-help:before,
+.icon-recommendation:before,
+.icon-retirement:before,
+.icon-risk-cover:before,
+.icon-save:before,
+.icon-send_report:before,
+.icon-skip:before,
+.icon-special-goal:before,
+.icon-succession-planning:before,
+.icon-suggestion:before,
+.icon-target_corpus:before,
+.icon-tax-planning:before,
+.icon-thumb-down:before,
+.icon-thumb-neutral:before,
+.icon-thumb-up:before,
+.icon-vacation-planning:before,
+.icon-view:before,
+.icon-wedding:before,
+.icon-will:before,
+.icon-x-ray:before {
+  display: inline-block;
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-action-plan:before { content: "\f108"; }
+.icon-add-income:before { content: "\f109"; }
+.icon-add-notes:before { content: "\f10a"; }
+.icon-advice-assumption:before { content: "\f10b"; }
+.icon-analysis:before { content: "\f10c"; }
+.icon-announcement:before { content: "\f10d"; }
+.icon-back:before { content: "\f10f"; }
+.icon-business:before { content: "\f110"; }
+.icon-calculator:before { content: "\f111"; }
+.icon-calender:before { content: "\f112"; }
+.icon-cancel:before { content: "\f113"; }
+.icon-car:before { content: "\f114"; }
+.icon-cashflow:before { content: "\f115"; }
+.icon-client:before { content: "\f101"; }
+.icon-contacts:before { content: "\f107"; }
+.icon-csv:before { content: "\f102"; }
+.icon-data-collection:before { content: "\f116"; }
+.icon-education:before { content: "\f117"; }
+.icon-emergency-planning:before { content: "\f118"; }
+.icon-expenses:before { content: "\f119"; }
+.icon-faq:before { content: "\f11a"; }
+.icon-feedback:before { content: "\f11b"; }
+.icon-genrate_report:before { content: "\f13e"; }
+.icon-goal-plan:before { content: "\f11c"; }
+.icon-leisure:before { content: "\f11d"; }
+.icon-loan-status:before { content: "\f11e"; }
+.icon-money-access:before { content: "\f11f"; }
+.icon-my-account:before { content: "\f120"; }
+.icon-my-goals:before { content: "\f100"; }
+.icon-my-income:before { content: "\f121"; }
+.icon-my-plans:before { content: "\f122"; }
+.icon-my-portfolio:before { content: "\f123"; }
+.icon-my-reports:before { content: "\f124"; }
+.icon-next:before { content: "\f125"; }
+.icon-opportunity:before { content: "\f104"; }
+.icon-others:before { content: "\f126"; }
+.icon-parental-goal:before { content: "\f127"; }
+.icon-personal-accident:before { content: "\f128"; }
+.icon-personal-info:before { content: "\f129"; }
+.icon-polls:before { content: "\f12a"; }
+.icon-premium_client:before { content: "\f105"; }
+.icon-property:before { content: "\f12b"; }
+.icon-quick-help:before { content: "\f12c"; }
+.icon-recommendation:before { content: "\f12d"; }
+.icon-retirement:before { content: "\f12e"; }
+.icon-risk-cover:before { content: "\f12f"; }
+.icon-save:before { content: "\f130"; }
+.icon-send_report:before { content: "\f13f"; }
+.icon-skip:before { content: "\f131"; }
+.icon-special-goal:before { content: "\f132"; }
+.icon-succession-planning:before { content: "\f133"; }
+.icon-suggestion:before { content: "\f134"; }
+.icon-target_corpus:before { content: "\f13d"; }
+.icon-tax-planning:before { content: "\f135"; }
+.icon-thumb-down:before { content: "\f136"; }
+.icon-thumb-neutral:before { content: "\f137"; }
+.icon-thumb-up:before { content: "\f138"; }
+.icon-vacation-planning:before { content: "\f139"; }
+.icon-view:before { content: "\f13a"; }
+.icon-wedding:before { content: "\f13b"; }
+.icon-will:before { content: "\f13c"; }
+.icon-x-ray:before { content: "\f106"; }

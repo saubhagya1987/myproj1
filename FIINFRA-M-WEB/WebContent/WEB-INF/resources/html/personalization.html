@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<meta name="viewport" content="width=1024">
+<title>Personalization</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/toggles.css" />
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+
+
+
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery.mousewheel.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/plugin/jquery.bxslider.js"></script>
+<!-- Custom Selectbox starts -->
+<script>
+$(document).ready(function(){
+  	$( "#tabs" ).tabs();
+    $("select").selectBoxIt();
+	 // Calls the selectBoxIt method on your HTML select box
+	 
+	  $( "#site_theme" ).one( "click", function() {
+       $('.bxslider').bxSlider(); 
+});
+$( "#personalization #tabs-3 .apply" ).on( "click", function() {
+      $( "#personalization #tabs-3 .bxslider .theme").removeClass("selceted");
+	  $(this).closest(".theme").addClass("selceted");
+});
+ 
+});
+</script>
+<!-- Custom Selectbox Ends -->
+
+<!--Map Pop-up Box-->
+<script>
+$(document).ready(function(){
+  
+  $(".preview").click(function(){
+    $(".overlay").fadeIn();
+	var theme_preview =	$(this).closest(".theme").find("img").attr("src");
+	var name = theme_preview.replace(/^.*\/|\.jpg$/g, '');
+    $("#Per_Con img").attr("src",'../images/'+name+'_big.jpg');
+	$("#Per_Con").fadeIn();
+	});
+	
+	$("#Per_Con .close").click(function(){
+    $(".overlay").fadeOut("slow");
+	$("#Per_Con").fadeOut("slow");
+	 });
+
+});
+</script>
+
+<!--Map Pop-up Boxs -->
+<script>
+$(document).ready(function(){
+// image uplaod starts
+ $(".browse_btn").click(function(){
+
+ $("#upload").click();
+ 
+     function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+			$(".photo_frame p").animate("slow").css("display","none");
+                $('#preview').attr('src', e.target.result);
+				$(".photo_frame img").animate("slow").css("display","block");
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#upload").change(function(){
+        readURL(this);
+    });
+});
+// image uplaod ends
+
+});
+
+</script>
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper" id="personalization"> 
+  <!-- Main starts-->
+  
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="#" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">PERSONALIZATION</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    
+    <!-- Common_content Starts-->
+    <section class="content common_content personalization_in">
+      <div class="partner_dashboard_submenu">
+        <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+        <div class="menu_section">
+          <ul class="clearfix reset">
+            <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+            <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+            <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+            <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+            <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+            <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+            <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+            <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Common_in_contnet starts-->
+      <section class="in_content common_in_content clearfix goals_bx_in"> 
+        <!-- inside goal page class-->
+        <div style="padding:10px 10px 0;">
+          <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">My Info</a></li>
+              <li><a href="#tabs-2">My Logo</a></li>
+              <li id="site_theme"><a href="#tabs-3">Theme</a></li>
+            </ul>
+            <div id="tabs-1" class="tab_border">
+              <p>
+              <div class="fl one_col">
+                <ul class="reset clearfix second_col_ul">
+                  <li class="clearfix">
+                    <label class="form_label">Email Signature</label>
+                    <textarea class="txt-editor" name="" cols="" rows="" ></textarea>
+                    <div class="clr"> </div>
+                  </li>
+                  <li class="clearfix">
+                    <label class="form_label">SMS Signature</label>
+                    <input placeholder="Your sms signature" class="common_input" type="text" name="input">
+                    <div class="clr"> </div>
+                  </li>
+                  <li class="clearfix">
+                    <label class="form_label">Communication Name</label>
+                    <input placeholder="Suresh Nayak" class="common_input" type="text" name="input">
+                    <div class="clr"> </div>
+                  </li>
+                  <li class="clearfix">
+                    <label class="form_label">Communication Email</label>
+                    <input placeholder="suresh.nayak@shubhachintak.net" class="common_input" type="text" name="input">
+                    <div class="clr"> </div>
+                  </li>
+                </ul>
+                <div class="clr"> </div>
+              </div>
+              </p>
+            <div class="clr"> </div>  </div>
+            <div id="tabs-2" class="tab_border">
+          
+              <div class="photo_frame"><p>Your Logo Here</p><img id="preview" src="#" alt=""></div>
+              <div class="upload_btn">  <input placeholder="Suresh Nayak" id="upload" type="file" name="input"> <input class="browse_btn" name="" type="submit" value="Browse"> <div class="clr"></div></div>
+        
+        <div class="clr"> </div>     </div>
+            <div id="tabs-3" class="tab_border">
+             <ul class="bxslider">
+             <li class="view_section">
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_blue.jpg"/></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_magento.jpg"/></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_red.jpg" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        
+       <!-- <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>-->
+      </li>
+       <!--    <li class="view_section">
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        
+      </li>
+      
+        <li class="view_section">
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="thumb"><img src="../images/theme_thumb.png"  height="115" width="228" /></div>
+          <div class="action clearfix">
+          <div class="fl preview">preview</div><div class="fr apply">apply</div>
+          </div>
+        </div>
+        
+      </li>-->
+          
+        </ul>
+            <div class="clr"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Common_in_contnet ends--> 
+      <!-- Common footer starts -->
+      <section class="common_footer_actions">
+        <div id="main_actions" class="clearfix">
+          <ul class="reset clearfix fr btn_grup3">
+            </li>
+            <li class="fl list"><a href="#" class="anch save"><span class="txt">Save</span></a></li>
+            <li class="fl list"><a href="advice-recommendations.html" class="anch cancel"><span class="txt">Cancel</span></a></li>
+            <li class="fl list"><a href="#" class="anch skip"><span class="txt">Skip</span></a></li>
+          </ul>
+        </div>
+        <a href="#" class="back navgation"><span class="txt">Back</span></a> <a href="risk-cover-advice-recommendation.html" class="next navgation"><span class="txt">Next</span></a> </section>
+      
+      <!-- Common footer ends -->
+      <div class="overlay"></div>
+    </section>
+    <!-- Common_content Ends--> 
+    
+  </section>
+  <!-- Main ends--> 
+  <!--pop up box-->
+    <div id="Per_Con" class="common_custom_modal_edu_con">
+      <span class="close">X</span>
+       <img src="" alt=""></div>     
+    </div>
+  <!--pop up box-->
+<!-- Wrapper ends-->
+</body>
+</html>

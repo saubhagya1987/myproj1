@@ -1,0 +1,7 @@
+
+public class DeleteME {
+	/*Git does not support empty folders. 
+	So for checking-in to be successfull this file has been created.
+	Once new file is created in this folder delete this file.*/
+
+}

@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*PartnerFAQs start*/
+
+.faq div.query {
+margin: 10px 25px 10px 10px;
+
+}
+
+.faq h5{
+	font-weight:bold;
+	margin-left:10px;
+	color:#98ad6c;
+	display:block;
+	float:left;
+	width:100%;}
+.query div.question {
+	background: #f5f4f4;
+	display: block;
+	margin: 5px;
+	padding:0px 10px;
+	color: #666;
+	border: #cccccc 1px solid;
+	font-size:11px;
+	line-height:30px;
+	float:left;
+	width:100%;
+}
+.query div.question:hover {
+background: #DCE9F8;
+}
+.query .q-block {
+	float: left;
+	width: 40px;
+	padding-right: 0px;
+	display:inline-block;
+	
+	}
+.query .q-block2 {
+	
+	margin-left:10px;
+	
+}
+.query .q-answer {
+	float: left;
+font-size:11px;
+	padding-right: 0px;
+	margin-left:10px;
+	display:inline-block;
+	}
+.query .q-answer1 {
+
+	margin-left:33px;
+	text-align:left;
+	font-size:11px;
+	
+}
+.faq div.query p {
+	margin: 0;
+	font-size: 13px !important;
+}
+.query div.question span, .query .answer span {
+	padding-top: 0;
+	margin-top: 0;
+	font-size: 13px !important;
+}
+
+.query div.answer {
+	width: 100%;
+	float:left;}
+.top{
+	float: right;
+	margin-right: 20px;}
+
+
+/*Partner FAQs end*/
+

@@ -1,0 +1,1212 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+        "> 
+      
+<context:component-scan base-package="in.fiinfra,in.fiinfra.partner.controller" />
+        
+<import resource="classpath:applicationContext.xml" /> 
+	<bean
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+	</bean>
+	<context:component-scan base-package="in.fiinfra" />
+	<mvc:annotation-driven />
+	<context:annotation-config />
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+
+
+
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/pages/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+	<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+<prop key="loadAssumptions.htm">AbcController</prop>
+				<prop key="changePassword.htm">changePasswordController</prop>
+				<!-- <prop key="loadhome.htm">WelcomeController</prop> -->
+				<prop key="login.htm">loginControllerz</prop>
+<prop key="addtask.htm">AddTaskController</prop>
+
+<prop key="addquery.htm">AddQueryController</prop>
+
+
+<prop key="manageheirachy.htm">HeirachyDataController</prop>
+
+
+				<!-- <prop key="loadfaqlist.htm">FaqController</prop> -->
+				<!--  
+				<prop key="loadbroadcast.htm">WelcomeController</prop>
+				<prop key="loaddownloadlist.htm">WelcomeController</prop>
+				<prop key="loadcodevalue.htm">WelcomeController</prop>
+				
+				<prop key="loadcodetypedata.htm">WelcomeController</prop>
+				<prop key="loadrole.htm">WelcomeController</prop>
+				<prop key="loaduser.htm">WelcomeController</prop>
+				<prop key="loadroleaccesslist.htm">WelcomeController</prop>
+				<prop key="loadloginhist.htm">WelcomeController</prop>
+				<prop key="loadaudithist.htm">WelcomeController</prop>
+				<prop key="loadbizunit.htm">WelcomeController</prop>
+				
+				<prop key="landing.htm">WelcomeController</prop>        
+                <prop key="loadviewprofile.htm">WelcomeController</prop>
+                <prop key="loadprofile_setting.htm">WelcomeController</prop>
+                <prop key="loadwhitelabel.htm">WelcomeController</prop>
+                <prop key="loadassumtion.htm">WelcomeController</prop>
+                <prop key="loadviewprofile.htm">WelcomeController</prop>
+                <prop key="loadprofile_setting.htm">WelcomeController</prop>
+                <prop key="loadwhitelabel.htm">WelcomeController</prop>
+                <prop key="loadassumtion.htm">WelcomeController</prop>
+				<prop key="loadteammember.htm">WelcomeController</prop>
+				<prop key="loadpartner.htm">WelcomeController</prop>
+				<prop key="loadallocationlist.htm">WelcomeController</prop>
+ -->
+
+ 
+ <!-- For Birt Reports -->
+				
+				<prop key="loadreportAdWiseCilentPortfolioSummary.htm">reportAdWiseCilentPortfolioSummaryController</prop>
+				<prop key="loadreportAdWClientHolding.htm">reportAdWClientHoldingController</prop>
+				<prop key="loadreportAdWClientSIPDueReport.htm">reportAdWClientSIPDueReportController</prop> 
+				<prop key="loadreportAdWClientFolioMissingNom.htm">reportAdWClientFolioMissingNomController</prop> 
+				<prop key="loadreportAdWTranHistory.htm">reportAdWTranHistoryController</prop>
+				<prop key="loadreportAUMReconDetailReport.htm">reportAUMReconDetailReportController</prop>
+				<prop key="loadreportCapitalGainSummary.htm">reportCapitalGainSummaryController</prop>
+				<prop key="loadreportCapitalGainDetailed.htm">reportCapitalGainDetailedController</prop>
+				<prop key="downloads.htm">MenuDownloadsController</prop>
+				
+				<prop key="loadreportClientGoalSummary.htm">reportClientGoalSummaryController</prop>
+				<prop key="loadreportClientGoalDetails.htm">reportClientGoalDetailsController</prop>
+				<prop key="loadreportPartner-wiseGoalMIS.htm">reportPartner-wiseGoalMISController</prop>
+				<prop key="loadreportBizUnitGoalMIS.htm">reportBizUnitGoalMISController</prop>
+				<prop key="loadreportGoalUnitGoalMIS.htm">reportGoalTypeDurationController</prop>
+				<prop key="loadreportClientsGoalRecommendedproducts.htm">reportClientsGoalRecommendedproductsController</prop>
+				
+	 			
+				<prop key="loadreportExecutionTrackerList.htm">reportExecutionTrackerListController</prop>
+				<prop key="loadreportExecTrackClientMIS.htm">reportExecTrackClientMISController</prop>
+				<!-- <prop key="loadreportExecTrackPartnerMIS.htm">reportExecTrackPartnerMISController</prop>
+				<prop key="loadreportExecutedRevenueMIS.htm">reportExecutedRevenueMISController</prop> -->
+				
+				<prop key="loadreportOpportunityTrakerList.htm">reportOpportunityTrakerListController</prop>
+				<prop key="loadOppTrackerMIS.htm">reportOppTrackerMISController</prop>
+				<prop key="loadOppoByStatusReport.htm">reportOppoByStatusReportController</prop>
+				<prop key="loadContactDelTracker.htm">reportContactDelTrackerController</prop>
+				
+				<prop key="loadreportDCTrackerList.htm">reportDCTrackerListController</prop>
+				<prop key="loadDCTrackerMISReport.htm">reportDCTrackerMISController</prop>
+				<prop key="loadreportAnalyRepoGenTracker.htm">reportAnalyRepoGenTrackerController</prop>
+				
+				<prop key="loadreportPingDelivery.htm">reportPingDeliveryController</prop>
+				<prop key="loadPingMISReport.htm">reportPingMISReportController</prop>
+				<prop key="loadPingDNDList.htm">reportPingDNDListController</prop>
+				
+				<prop key="loadreportPartnerwiseZimmedariScore.htm">reportPartnerwiseZimmedariScoreController</prop>
+				<prop key="loadreportPartnerOpenTaskList.htm">reportPartnerOpenTaskListController</prop>
+				<prop key="loadreportServiceTeamopentasklist.htm">reportServiceTeamopentasklistController</prop>
+				<prop key="loadreportPartnertaskMIS.htm">reportPartnertaskMISController</prop>
+				<prop key="loadreportPartnerOpenQueryList.htm">reportPartnerOpenQueryListController</prop>
+				<prop key="loadreportServiceTeamtaskMIS.htm">reportServiceTeamtaskMISController</prop>
+				<prop key="loadreportServiceTeamopenquerylist.htm">reportServiceTeamopenquerylistController</prop>
+				<prop key="loadreportPartnerQueryMIS.htm">reportPartnerQueryMISController</prop>
+				<prop key="loadreportServiceTeamQueryMIS.htm">reportServiceTeamQueryMISController</prop>
+				<prop key="loadreportPartnerChatList.htm">reportPartnerChatListController</prop>
+				<prop key="loadreportPartnerContactList.htm">reportPartnerContactListController</prop>
+				<prop key="loadreportClient-wiseMIS.htm">reportClient-wiseMISController</prop>
+				<prop key="loadreportPartnerMIS.htm">reportPartnerMISController</prop>
+				<prop key="loadreportcallTrackerMIS.htm">reportcallTrackerMISController</prop>
+				<prop key="loadreportQueryeMIS.htm">reportQueryeMISController</prop>
+				<prop key="loadreportTaskDetailsReport.htm">reportTaskDetailsReportController</prop>
+				<prop key="loadreportfinancialPlanner.htm">reportfinancialPlannerController</prop>
+				
+				<prop key="loadreportPartnerPre-printedFormsMIS.htm">reportPartnerPre-printedFormsMISController</prop>
+				<prop key="loadreportServiceTeamPartnerActivityMIS.htm">reportServiceTeamPartnerActivityMISController</prop>
+				<prop key="loadreportServiceTeamPartnerActivityDetails.htm">reportServiceTeamPartnerActivityDetailsController</prop>
+				<prop key="loadreportPartnerOperationsMIS.htm">reportPartnerOperationsMISController</prop>
+				<prop key="loadreportPartnerActivityMIS.htm">reportPartnerActivityMISController</prop>
+				<prop key="loadreportPartnerSystemAccessMIS.htm">reportPartnerSystemAccessMISController</prop>
+				<prop key="loadreportClientSystemAccessMIS.htm">reportClientSystemAccessMISController</prop>
+				
+				
+				
+				<prop key="loadreportSystemAccessHistory.htm">reportSystemAccessHistoryController</prop>
+				<prop key="loadreportLoginExceptionsReport.htm">reportLoginExceptionsReportController</prop>
+				<prop key="loadreportAuditHistory.htm">reportAuditHistoryController</prop>
+				<prop key="loadreportNotifificationEventHistory.htm">reportNotifificationEventHistoryController</prop>
+				<prop key="loadreportRoleAccessList.htm">reportRoleAccessListController</prop>
+				<prop key="loadreportUserList.htm">reportUserListController</prop>
+				<prop key="loadreportPartnerLoginTracker.htm">reportPartnerLoginTrackerController</prop>
+				
+				
+				<prop key="loadreportFileUploadErrorSum.htm">reportFileUploadErrorSumController</prop>
+				<prop key="loadreportFileUploadStatusdetails.htm">reportFileUploadStatusdetailsController</prop>
+				<prop key="loadreportFileUploadDistErrSumm.htm">reportFileUploadDistErrSummController</prop>
+				
+				
+				<prop key="loadPartnersInTrailPeriodReport.htm">reportPartnersInTrailPeriodReportController</prop>
+				<prop key="loadPartnersPaymentDueReport.htm">reportPartnersPaymentDueReportController</prop>
+				<prop key="loadSubscriptionMISReport.htm">reportSubscriptionMISReportController</prop>
+				<prop key="loadPaymentMISReport.htm">reportPaymentMISReportController</prop>
+				<prop key="loadTransactionDetailsPeriod.htm">reportTransactionDetailsPeriodController</prop>
+				<prop key="loadPaymentReceiptReport.htm">reportPaymentReceiptReportController</prop>
+				
+				 <prop key="birtreport.htm">birtReportController</prop>
+				 
+				<prop key="whatsnew.htm">whatsNewController</prop>
+				<prop key="releaseNotes.htm">releaseNotesController</prop>  
+<!-- 				adding for bulk upload opportunity by Naval -->
+ 				<prop key="bulkUploadOpportunity.htm">bulkUploadOpportunityController</prop>	
+				<prop key="addOpportunity.htm">addOpportunityController</prop>	
+				<prop key="sendnotification.htm">sendemailController</prop> 
+				<prop key="previewPing.htm">previewPingController</prop>
+			</props>  
+		</property>    
+	</bean>
+
+	<bean name="previewPingController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="ping/previewPing" />
+		
+		<bean name="sendemailController" 
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="ping/sendemail" />  
+	
+	<bean name="MenuDownloadsController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="common/downloads" />
+	
+
+	<bean name="whatsNewController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="common/whatsnew" />
+
+	<bean name="releaseNotesController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="common/releaseNotes" />
+	
+	<bean name="addOpportunityController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="partner/add_opportunities" />
+
+	
+	<bean name="bulkUploadOpportunityController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="partner/bulkuploadOpportunity" />
+	
+	<bean name="reportAdWiseCilentPortfolioSummaryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_AdwiseClientPortfolioSummary" />
+	<bean name="reportAdWClientHoldingController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_Advisor-wiseClientHoldings" />
+	<bean name="reportAdWClientSIPDueReportController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_AdWClientSIPDueReport" />
+	<bean name="reportAdWClientFolioMissingNomController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_AdWClientFolioMissingNom" />
+	<bean name="reportAdWTranHistoryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_AdWTranHistory" />
+	<bean name="reportAUMReconDetailReportController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_AUMReconDetailReport" />
+	<bean name="reportCapitalGainSummaryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_CapitalGainSummary" />
+    <bean name="reportCapitalGainDetailedController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_CapitalGainDetailed" />
+
+		
+	<bean name="reportClientGoalSummaryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ClientGoalSummary" />
+	<bean name="reportClientGoalDetailsController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ClientGoalDetailsReport" />
+	<bean name="reportPartner-wiseGoalMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_Partner-wiseGoalMIS" />
+	<bean name="reportBizUnitGoalMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_BizUnitGoalMIS" />
+ 	<bean name="reportGoalTypeDurationController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_GoalTypeDurationWisedetail" />
+	<bean name="reportClientsGoalRecommendedproductsController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ClientsGoalRecommendedproducts" />
+		
+		
+	<bean name="reportExecutionTrackerListController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ExecutionTrackerList" />
+	<bean name="reportExecTrackClientMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ExecTrackerMIS" />
+	<!-- <bean name="reportExecTrackPartnerMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ExecTrackPartnerMIS" />
+	<bean name="reportExecutedRevenueMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ExecutedRevenueMIS" /> -->
+		
+	<bean name="reportOpportunityTrakerListController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_OpportunityTracerList" />
+	<bean name="reportOppTrackerMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_OppTrackerMIS" />
+	<bean name="reportOppoByStatusReportController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_oppByStatus" />
+	<bean name="reportContactDelTrackerController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ContactDeletionTracker" />
+		
+		<bean name="reportDCTrackerListController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_DCToolTrackerList" />
+		<bean name="reportDCTrackerMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_DCTrackerMIS" />
+		<bean name="reportAnalyRepoGenTrackerController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_AnalyRepoGenTracker" />
+		
+		<bean name="reportPingDeliveryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PingDelivery" />
+		<bean name="reportPingMISReportController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PingMISReport" />
+		<bean name="reportPingDNDListController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PingDNDList" />
+		
+		
+		<bean name="reportPartnerwiseZimmedariScoreController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerwiseZimmedariScore" />
+		<bean name="reportPartnerOpenTaskListController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerOpenTaskList" />
+		<bean name="reportServiceTeamopentasklistController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ServiceTeamopentasklist" />
+		<bean name="reportPartnerOpenQueryListController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerOpenQueryList" />
+		<bean name="reportPartnertaskMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnertaskMIS" />
+		<bean name="reportServiceTeamtaskMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ServiceTeamtaskMIS" />
+		<bean name="reportServiceTeamopenquerylistController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ServiceTeamopenquerylist" />
+		<bean name="reportPartnerQueryMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerQueryMIS" />
+		<bean name="reportServiceTeamQueryMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ServiceTeamQueryMIS" />
+		<bean name="reportPartnerChatListController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerChatList" />
+		<bean name="reportPartnerContactListController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerContactList" />
+		<bean name="reportClient-wiseMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_Client-wiseMIS" />
+		<bean name="reportPartnerMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerMIS" />
+		<bean name="reportcallTrackerMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_CallTrackerMIS" />
+		<bean name="reportQueryeMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_QueryMIS" />
+		<bean name="reportTaskDetailsReportController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_TaskDetailReport" />
+		<bean name="reportfinancialPlannerController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_FinancialPlannerReport" />
+		
+		
+		<bean name="reportPartnerPre-printedFormsMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerPre-printedFormsMIS" />
+		<bean name="reportServiceTeamPartnerActivityMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ServiceTeamPartnerActivityMIS" />
+		<bean name="reportServiceTeamPartnerActivityDetailsController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ServiceTeamPartnerActivityDetails" />
+		<bean name="reportPartnerOperationsMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerOperationsMIS" />
+		<bean name="reportPartnerActivityMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerActivityMIS" />
+		<bean name="reportPartnerSystemAccessMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerSystemAccessMIS" />
+		<bean name="reportClientSystemAccessMISController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_ClientSystemAccessMIS" />
+		
+		<bean name="reportSystemAccessHistoryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_SystemAccessHistory" />
+		<bean name="reportLoginExceptionsReportController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_LoginExceptionsReport" />
+		<bean name="reportAuditHistoryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_AuditHistory" />
+		<bean name="reportNotifificationEventHistoryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_NotifificationEventHistory" />
+		<bean name="reportRoleAccessListController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_RoleAccessList" />
+		<bean name="reportUserListController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_UserList" />
+		<bean name="reportPartnerLoginTrackerController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnerLoginTracker" />
+		
+		
+		<bean name="reportFileUploadErrorSumController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_FileUploadErrorSum" />
+		<bean name="reportFileUploadStatusdetailsController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_FileUploadStatusdetails" />
+		<bean name="reportFileUploadDistErrSummController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_FileUploadDistErrorSum" />
+		
+		
+		<bean name="reportPartnersInTrailPeriodReportController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnersInTrialPeriod" />
+		<bean name="reportPartnersPaymentDueReportController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PartnersPaymentDue" />
+		<bean name="reportSubscriptionMISReportController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_SubscriptionMIS" />
+		<bean name="reportPaymentMISReportController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PaymentMIS" />	
+		<bean name="reportTransactionDetailsPeriodController"                    
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_TransactionDetails" />	
+		<bean name="reportPaymentReceiptReportController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="report/report_PaymentReceipt" />
+	
+	
+	<bean name="birtReportController" class="in.fiinfra.birtIntegration.controller.BirtReportController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+
+ 		 <property name="objectMapper">
+   				<ref bean="objectMapper" />
+		  </property>
+    		
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+
+	</bean> 
+		
+
+	
+	<bean name="AbcController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="bizunit/BizUnit_assumptions" />
+	
+	<bean name="changePasswordController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="common/changePassword" />
+		
+	<bean name="loginControllerz"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="common/Login" />
+
+
+	<bean name="WelcomeController" class="in.fiinfra.controller.WelcomeController" >
+	<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+	</bean>
+	
+	
+	
+		<bean name="SettingController" class="in.fiinfra.controller.SettingController" >
+	<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+	</bean>
+	
+	
+	<bean class="in.fiinfra.controller.CommonController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+	</bean>
+
+	
+	<bean class="in.fiinfra.controller.UserController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+	</bean>
+
+	
+	
+	
+
+<!-- 
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<property name="requestFactory">
+			<bean id="clientHttpRequestFactory"
+				class="org.springframework.http.client.CommonsClientHttpRequestFactory" />
+		</property>
+		<property name="messageConverters">
+			<list>
+				<bean id="jsonMessageConverter"
+					class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+					<property name="supportedMediaTypes">
+					<list>
+					<bean id="jsonMediaTypeTextPlain" class="org.springframework.http.MediaType">
+					<constructor-arg value="text" />
+					<constructor-arg value="plain" />
+					</bean>
+					<bean id="jsonMediaTypeApplicationJson" class="org.springframework.http.MediaType">
+					<constructor-arg value="application" />
+					<constructor-arg value="json" />
+					</bean>
+					</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean> -->
+
+
+	<bean id="objectMapper" class="in.fiinfra.utils.CustomJacksonObjectMapper" />
+<!-- 	<bean class="in.fiinfra.controller.CodetypeController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean> -->
+<bean class="in.fiinfra.controller.FaqController" id="FaqController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+	
+	<bean class="in.fiinfra.controller.BizUnitController" id="BizUnitController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+	
+	
+	<bean class="in.fiinfra.controller.PartnerSPController" id="PartnerSPController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+	</bean>
+	
+	<bean class="in.fiinfra.controller.PartnerSP1Controller" id="PartnerSP1Controller">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+	</bean>
+	
+	
+	<bean class="in.fiinfra.controller.DashboardController" id="DashboardController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+	</bean>
+	
+	
+	<bean class="in.fiinfra.controller.BroadcastController" id="BroadcastController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+
+	
+	<bean class="in.fiinfra.controller.DepartmentListController" id="DepartmentListController">
+		<property name="methodNameResolver">  
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		  <property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+		
+	</bean>    
+
+	
+	<bean class="in.fiinfra.controller.RolelistController" id="RolelistController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+		<bean class="in.fiinfra.controller.NotifyEventController"  id="NotifyEventController">      
+		<property name="methodNameResolver">  
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>   
+		</property>  
+		<property name="restTemplate"> 
+			<ref bean="restTemplate" />    
+		</property>    
+		  <property name="objectMapper"> 
+			<ref bean="objectMapper" />
+		</property>
+	</bean>
+	
+	<bean class="in.fiinfra.controller.NotifyTemplateController" id="NotifyTemplateController">
+		<property name="methodNameResolver">  
+			<bean
+			class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">  
+			<ref bean="restTemplate" />    
+		</property>
+		<property name="objectMapper"> 
+			<ref bean="objectMapper" />
+		</property>
+	</bean>  
+	
+	<bean class="in.fiinfra.controller.TeamMemberController" id="TeamMemberController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+		
+	</bean>
+	
+	<bean class="in.fiinfra.controller.DownloadController" id="DownloadController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+
+		</property>
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+	
+<!-- 
+	<bean class="in.fiinfra.controller.RolelistController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+
+	<bean class="in.fiinfra.controller.DownloadController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+	<bean class="in.fiinfra.controller.UserController">
+		<property name="methodNameResolver"> <bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver"> 
+			</bean> </property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+	
+	<bean class="in.fiinfra.controller.DepartmentListController">
+		<property name="methodNameResolver">  
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		  <property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+		
+	</bean>    
+
+	<bean class="in.fiinfra.controller.BizUnitController">
+		<property name="methodNameResolver"> <bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver"> 
+			</bean> </property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+		<bean class="in.fiinfra.controller.TeamMemberController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+			
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+		
+	</bean>
+	
+	
+	
+			<bean class="in.fiinfra.controller.AssumptionController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+			
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+		
+	</bean>
+	
+	
+	
+	
+	
+		<bean class="in.fiinfra.controller.PartnerController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean> -->
+
+	<bean id="clientHttpRequestInterceptor" class="in.fiinfra.common.token.ClientIntereceptor" lazy-init="true">
+	</bean>
+
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate" lazy-init="true">
+		<property name="requestFactory">
+			<bean id="clientHttpRequestFactory"
+				class="org.springframework.http.client.CommonsClientHttpRequestFactory" />
+		</property>
+		<property name="interceptors" ref="clientHttpRequestInterceptor">
+		</property>
+		<property name="messageConverters">
+			<list>
+				<bean id="jsonMessageConverter"
+					class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+					<!-- <property name="supportedMediaTypes"> -->
+					<!-- <list> -->
+					<!-- <bean id="jsonMediaTypeTextPlain" class="org.springframework.http.MediaType"> -->
+					<!-- <constructor-arg value="text" /> -->
+					<!-- <constructor-arg value="plain" /> -->
+					<!-- </bean> -->
+					<!-- <bean id="jsonMediaTypeApplicationJson" class="org.springframework.http.MediaType"> -->
+					<!-- <constructor-arg value="application" /> -->
+					<!-- <constructor-arg value="json" /> -->
+					<!-- </bean> -->
+					<!-- </list> -->
+					<!-- </property> -->
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**" />
+	<mvc:resources mapping="/app/images/**" location="file:/D:/Ffreedom-DI/images/"/>
+	<mvc:resources mapping="/images/**" location="/images/"/>
+	<mvc:resources mapping="/js/**" location="/js/"/>
+	<mvc:resources mapping="/css/**" location="/css/"/>
+	<mvc:resources mapping="/xml/**" location="/xml/"/>
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list> 
+				<!-- <value>authentication-messages</value>
+				<value>error</value> -->
+				<value>authentication-messages</value>
+				<value>success-messages</value>
+				<value>error</value>
+				<value>recommendation-validation-messages</value>
+			</list>
+		</property>
+	</bean>
+	
+	<context:property-placeholder location="classpath:urls.properties" />
+	<mvc:annotation-driven
+		content-negotiation-manager="contentNegotiationManager" />
+	<bean id="contentNegotiationManager"
+		class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+		<!-- Turn off working out content type based on URL file extension, should 
+			fall back to looking at the Accept headers -->
+		<property name="favorPathExtension" value="false" />
+	</bean>
+
+
+<bean class="in.fiinfra.controller.CodetypeController" id="CodetypeController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+</bean> 
+
+
+		<bean class="in.fiinfra.controller.LoginOnbehalfController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+		</bean>
+	
+				 <bean name="AddTaskController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="partner/add_task"/>
+		
+		
+				 <bean name="AddQueryController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="query/add_query"/>
+		
+		
+		
+		
+		
+				 <bean name="HeirachyDataController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="common/ManageHeirachy"/>
+		
+		
+		
+		
+		
+		
+		<bean class="in.fiinfra.controller.ProductController" id="ProductController">
+			<property name="methodNameResolver">
+				<bean
+					class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+				</bean>
+			</property>
+			<property name="restTemplate">
+				<ref bean="restTemplate" />
+			</property>
+			<property name="objectMapper">
+				<ref bean="objectMapper" />
+			</property>
+
+		</bean>														  		
+		<bean class="in.fiinfra.controller.TestimonialController" id="TestimonialController">
+			<property name="methodNameResolver">
+				<bean
+					class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+				</bean>
+			</property>
+	<property name="restTemplate">
+				<ref bean="restTemplate" />
+			</property>
+			<property name="objectMapper">
+				<ref bean="objectMapper" />
+			</property>
+
+		</bean>
+		
+			<bean class="in.fiinfra.controller.LoggedInUserController" id="LoggedInUserController">
+			<property name="methodNameResolver">
+				<bean
+					class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+				</bean>
+			</property>
+ 	<property name="restTemplate">
+				<ref bean="restTemplate" />
+			</property> 
+			<property name="objectMapper">
+				<ref bean="objectMapper" />
+			</property>
+
+		</bean>
+		
+		
+		
+		<bean class="in.fiinfra.controller.SerETController" id="SerETController">
+		<property name="methodNameResolver">  
+			<bean
+			class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">   
+			<ref bean="restTemplate" />    
+		</property>
+		<property name="objectMapper">  
+			<ref bean="objectMapper" />
+		</property>
+	</bean>  
+	 
+	 <!-- <bean class="in.fiinfra.controller.RecommendationController" id="RecommendationController">
+		<property name="methodNameResolver">     
+			<bean
+			class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+		<property name="restTemplate">   
+			<ref bean="restTemplate" />    
+		</property> 
+		<property name="objectMapper">  
+			<ref bean="objectMapper" />
+		</property>
+	</bean>    -->      
+
+<bean class="in.fiinfra.controller.SPExecutionController" id="SPExecutionController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+
+<bean id="FiinfraAppService" class="in.fiinfra.service.FiinfraAppService">
+     	<constructor-arg>
+        	<util:properties location="classpath:urls.properties"/> 
+    	</constructor-arg>
+     		</bean>
+
+<bean class="in.fiinfra.service.SubxService" id="subxService"/>
+<bean class="in.fiinfra.service.NachService" id="nachService"/>
+
+		<bean class="in.fiinfra.controller.PingController" id="PingController">
+			<property name="methodNameResolver">
+				<bean
+					class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+				</bean>
+			</property>
+			<property name="restTemplate">
+				<ref bean="restTemplate" />
+			</property>
+			<property name="objectMapper">
+				<ref bean="objectMapper" />
+			</property>
+
+		</bean>
+
+<bean class="in.fiinfra.controller.QueryController" id="QueryController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+
+
+	<bean class="in.fiinfra.controller.AutoPingController" id="AutoPingController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+
+
+
+<bean class="in.fiinfra.controller.PrePrintedFormController" id="PrePrintedFormController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+	
+	<bean class="in.fiinfra.controller.QuartzJobController" id="QuartzJobController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+
+
+	<bean class="in.fiinfra.controller.DCColletralController" id="DCColletralController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+
+	
+	<bean class="in.fiinfra.common.util.AppConstant">
+		<property name="cdn" value="${cdn}" />
+	</bean>
+
+
+ 
+<bean class="in.fiinfra.controller.HeirarchyController" id="HeirarchyController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+
+
+	
+	
+<bean class="in.fiinfra.controller.QueryspController" id="QueryspController">
+		<property name="methodNameResolver">
+			<bean
+				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+			</bean>
+		</property>
+			<property name="restTemplate">
+			<ref bean="restTemplate" />
+		</property>
+		<property name="objectMapper">
+			<ref bean="objectMapper" />
+		</property>
+
+	</bean>
+
+
+</beans>
+
+

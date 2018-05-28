@@ -1,0 +1,1956 @@
+<DCInput>
+	<BU ID="1">
+			<Menu Name="Current Financial Status">
+				
+				<Section SectionType="39001" Name="Emergency Readiness"  ImagePath="a.jpg">
+					<Question ID="" QuestionType="85009" AttributeCodeId="94001" Visible="YES" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>Rate your confidence on being able to handle emergencies</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94130">1</Option>
+							<Option Value="" AttributeCodeID="94131">2</Option>
+							<Option Value="" AttributeCodeID="94132">3</Option>
+							<Option Value="" AttributeCodeID="94133">4</Option>
+							<Option Value="" AttributeCodeID="94134">5</Option>
+						</Options>						
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>5</Max_Value>
+							<IsCurrency>0</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>
+
+					<Question ID="" QuestionType="85002" AttributeCodeId="94002" Visible="YES" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>Have you faced any emergency situation in the past?
+						</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<ShowNextQuestionInFront>TRUE</ShowNextQuestionInFront>
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>
+						
+					</Question>
+
+					<Question ID="" QuestionType="85006" AttributeCodeId="94137" Visible="NO" ParentQuestionId="85002" cssClass="ques_txt3">
+						<QuestionText>If YES, what kind of emergency?</QuestionText>
+						<ControlType>MultiChoice_Select</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94003" ImgDefault="job_list.png" ImgSelected="b1.jpg">Loss of Job</Option>
+							<Option Value="" AttributeCodeID="94004" ImgDefault="natural_clamity.png" ImgSelected="c1.jpg">Natural Calamity</Option>
+							<Option Value="" AttributeCodeID="94005" ImgDefault="accident.png" ImgSelected="d1.jpg">Accident</Option>
+							<Option Value="" AttributeCodeID="94006" ImgDefault="ambulance.png" ImgSelected="e1.jpg">Health Issues</Option>
+							<Option Value="" AttributeCodeID="94007" ImgDefault="other.png" ImgSelected="f1.jpg">Other</Option>
+						</Options>
+					</Question>
+
+					<Question ID="" QuestionType="85002" AttributeCodeId="94008" Visible="YES" ParentQuestionId="85002" cssClass="ques_txt">
+						<QuestionText>Did you borrow or sell any assets to handle the situation?</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>	
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>
+					</Question>
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="94009" Visible="YES" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>No. of months you can manage without an income</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94138">1</Option>
+							<Option Value="" AttributeCodeID="94138">2</Option>
+							<Option Value="" AttributeCodeID="94138">3</Option>
+							<Option Value="" AttributeCodeID="94139">4</Option>
+							<Option Value="" AttributeCodeID="94139">5</Option>
+							<Option Value="" AttributeCodeID="94139">6</Option>
+							<Option Value="" AttributeCodeID="94140">7</Option>
+							<Option Value="" AttributeCodeID="94140">8</Option>
+							<Option Value="" AttributeCodeID="94140">9</Option>
+							<Option Value="" AttributeCodeID="94141">10</Option>							
+							<Option Value="" AttributeCodeID="94141">11</Option>
+							<Option Value="" AttributeCodeID="94141">12</Option>							
+						</Options>	
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>12</Max_Value>
+							<IsCurrency>0</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>
+					
+					<Question ID="" QuestionType="85006" AttributeCodeId="94513" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>What kind of fall back have you created for emergencies?</QuestionText>
+						<ControlType>SingleChoiceImage</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="642" Css="petrol" AttributeCodeID="94517" ImgDefault="job_list.png" ImgSelected="b1.jpg">Employer provided leave</Option>
+							<Option ID="643" Css="disel" AttributeCodeID="94518" ImgDefault="natural_clamity.png" ImgSelected="c1.jpg">Friends and family</Option>
+							<Option ID="644" Css="cng" AttributeCodeID="94519" ImgDefault="accident.png" ImgSelected="d1.jpg">Money set aside separately</Option>
+							<Option ID="645" Css="lpg" AttributeCodeID="94520" ImgDefault="other.png" ImgSelected="f1.jpg">Others </Option>
+						</Options>
+					</Question>
+					
+					<Question ID="" QuestionType="85005" AttributeCodeId="94516" ParentQuestionId="94520">
+						<QuestionText>Details</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					
+					
+				</Section>
+				
+				<Section SectionType="39003" Name="Risk Cover" ImagePath="X.jpg">
+				
+					<Question ID="" QuestionType="85009" AttributeCodeId="94012" Visible="YES" ParentQuestionId="0" cssClass="ques_txt4">
+						<QuestionText>Rate your confidence over your family's well being in case of your death or disability</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94130">1</Option>
+							<Option Value="" AttributeCodeID="94131">2</Option>
+							<Option Value="" AttributeCodeID="94132">3</Option>
+							<Option Value="" AttributeCodeID="94133">4</Option>
+							<Option Value="" AttributeCodeID="94134">5</Option>
+						</Options>							
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>5</Max_Value>
+							<IsCurrency>0</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>
+					
+					<Question ID="" QuestionType="85002" AttributeCodeId="94013" Visible="YES" ParentQuestionId="0" cssClass="ques_txt2 fl">
+						<QuestionText>Do you have Life Insurance?</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<ShowNextQuestionInBelow>TRUE</ShowNextQuestionInBelow>
+						<Options>
+							<Option AttributeCodeId="94135" Value="1">Yes</Option>
+							<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>
+					</Question>								
+					
+					<Question ID="" QuestionType="85010" AttributeCodeId="94018" Visible="YES" ParentQuestionId="94013" cssClass="ques_txt fl">
+						<QuestionText>How much cover do you have (in &#8377;)?</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<ShowNextQuestionInGroup>TRUE</ShowNextQuestionInGroup>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<Increment>0.1</Increment>
+						</Scale>
+					</Question>
+					
+					<Question ID="" QuestionType="85006" AttributeCodeId="94143" Visible="YES" ParentQuestionId="94013" cssClass="ques_txt fl">
+						<QuestionText>If yes, what kind?</QuestionText>
+						<ControlType>MultiChoice_Select</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94014" ImgDefault="risk-cover-term.png" ImgSelected="b1.jpg">Term</Option>
+							<Option Value="" AttributeCodeID="94015" ImgDefault="risk-cover-endowment.png" ImgSelected="c1.jpg">Endowment</Option>
+							<Option Value="" AttributeCodeID="94016" ImgDefault="risk-cover-unit-linked.png" ImgSelected="d1.jpg">Unit Linked</Option>
+							<Option Value="" AttributeCodeID="94017" ImgDefault="risk-cover-money-back.png" ImgSelected="e1.jpg">Money Back</Option>
+						</Options>
+					</Question>									
+					
+					<Question ID="" QuestionType="85002" AttributeCodeId="94020" Visible="YES" ParentQuestionId="0" cssClass="ques_txt2 fl">
+						<QuestionText>Do you have Health Insurance?
+						</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<ShowNextQuestionInBelow>TRUE</ShowNextQuestionInBelow>
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>
+					</Question>
+					
+					<Question ID="" QuestionType="85010" AttributeCodeId="94019" Visible="YES" ParentQuestionId="94020" cssClass="ques_txt fl">
+						<QuestionText>How much cover do you have (in &#8377;)?</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<ShowNextQuestionInGroup>TRUE</ShowNextQuestionInGroup>					
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<Increment>0.1</Increment>
+						</Scale>
+					</Question>
+					
+					<Question ID="" QuestionType="85019" AttributeCodeId="94021" Visible="YES" ParentQuestionId="94020" cssClass="ques_txt fl">
+						<QuestionText>Family members covered in this insurance</QuestionText>
+						<ControlType>MultiChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85018" AttributeCodeId="94025" Visible="YES" ParentQuestionId="0" cssClass="ques_txt2 fl">
+					<QuestionText>Are you covered for critical illnesses?</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>						
+					</Question>
+
+					<Question ID="" QuestionType="85010" AttributeCodeId="94024" Visible="YES" ParentQuestionId="94025" cssClass="ques_txt2 fl">
+					<QuestionText>How much cover do you have?</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<Increment>0.1</Increment>
+						</Scale>
+					</Question>					
+					
+					<Question ID="" QuestionType="85018" AttributeCodeId="94106" Visible="YES" ParentQuestionId="0" cssClass="ques_txt2 fl">
+					<QuestionText>Are you covered for possible accidents?</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>		
+					</Question>
+
+					<Question ID="" QuestionType="85010" AttributeCodeId="94107" Visible="YES" ParentQuestionId="94106" cssClass="ques_txt2 fl">
+					<QuestionText>How much cover do you have?</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<Increment>0.1</Increment>
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85018" AttributeCodeId="94108" Visible="YES" ParentQuestionId="0" cssClass="ques_txt2 fl">
+					<QuestionText>Are your assets like house and contents covered?</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>								
+					</Question>					
+
+					<Question ID="" QuestionType="85010" AttributeCodeId="94226" Visible="YES" ParentQuestionId="94108" cssClass="ques_txt2 fl">
+					<QuestionText>How much cover do you have?</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<Increment>0.1</Increment>
+						</Scale>
+					</Question>	
+					
+				</Section>
+				
+				<Section SectionType="39006" Name="Retirement Planning" ImagePath="Y.jpg">
+				
+					<Question ID="" QuestionType="85009" AttributeCodeId="94043" Visible="YES" ParentQuestionId="0" cssClass="ques_txt1">
+						<QuestionText>Rate your preparedness for comfortable retirement</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94130">1</Option>
+							<Option Value="" AttributeCodeID="94131">2</Option>
+							<Option Value="" AttributeCodeID="94132">3</Option>
+							<Option Value="" AttributeCodeID="94133">4</Option>
+							<Option Value="" AttributeCodeID="94134">5</Option>
+						</Options>							
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>5</Max_Value>
+							<IsCurrency>0</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>				
+				
+					<Question ID="" QuestionType="85016" AttributeCodeId="94044" Visible="YES" ParentQuestionId="0" cssClass="ques_txt1">
+						<QuestionText>At what age do you want to retire?</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Min_Value>50</Min_Value>
+						<Max_Value>75</Max_Value>
+					</Question>	
+				
+					<Question ID="" QuestionType="85002" AttributeCodeId="94045" Visible="YES" ParentQuestionId="0" cssClass="ques_txt1">
+					<QuestionText>Have you assessed how much money you might need to lead a comfortable retired life?</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>								
+					</Question>					
+				
+					<Question ID="" QuestionType="85004" AttributeCodeId="94147" Visible="YES" ParentQuestionId="0" cssClass="ques_txt3 northspace7">
+					<QuestionText>Retirement benefits available</QuestionText>
+						<ControlType>MultiChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94046" ImgDefault="custom_red_checkbox.png" ImgSelected="chk1.jpg">Pension</Option>
+							<Option Value="" AttributeCodeID="94047" ImgDefault="custom_red_checkbox.png" ImgSelected="chk1.jpg">Superannuation</Option>
+							<Option Value="" AttributeCodeID="94048" ImgDefault="custom_red_checkbox.png" ImgSelected="chk1.jpg">EPF</Option>
+							<Option Value="" AttributeCodeID="94049" ImgDefault="custom_red_checkbox.png" ImgSelected="chk1.jpg">Gratuity</Option>
+							<Option Value="" AttributeCodeID="94050" ImgDefault="custom_red_checkbox.png" ImgSelected="chk1.jpg">Others</Option>
+							<Option Value="" AttributeCodeID="94114" ImgDefault="custom_red_checkbox.png" ImgSelected="chk1.jpg">None</Option>
+						</Options>
+					</Question>		
+					
+					<Question ID="" QuestionType="85010" AttributeCodeId="94511" Visible="YES" ParentQuestionId="0" cssClass="ques_txt7">
+					<QuestionText>How much of your expense % will continue after Retirement?</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<Increment>0.1</Increment>
+						</Scale>
+					</Question>					
+				
+					<Question ID="" QuestionType="85005" AttributeCodeId="94148" Visible="YES" ShowImage="TRUE" ParentQuestionId="0" cssClass="ques_txt5">
+					<QuestionText>Value of retirement assets</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Min_Value>0</Min_Value>
+						<Max_Value>100</Max_Value>
+						<Options>
+							<Option ID="" AttributeCodeID="94051" ImgDefault="provident-fund-icon.png" ImgSelected="b1.jpg">Provident Funds</Option>
+							<Option ID="" AttributeCodeID="94052" ImgDefault="pension-plan-icon.png" ImgSelected="c1.jpg">Pension Plans</Option>
+							<Option ID="" AttributeCodeID="94053" ImgDefault="national-pension-icon.png" ImgSelected="h1.jpg">National Pension Schemes</Option>
+							<Option ID="" AttributeCodeID="94054" ImgDefault="retirement-pl-other-icon.png" ImgSelected="k1.jpg">Others</Option>
+						</Options>
+					</Question>						
+				
+					<Question ID="" QuestionType="85005" AttributeCodeId="94165" Visible="YES" ShowImage="FALSE" ParentQuestionId="0" cssClass="ques_txt5">
+					<QuestionText>Regular investments made (Monthly)</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Min_Value>0</Min_Value>
+						<Max_Value>100</Max_Value>
+						<Options>
+							<Option Value="" AttributeCodeID="94055">Provident Funds</Option>
+							<Option Value="" AttributeCodeID="94056">Pension Plans</Option>
+							<Option Value="" AttributeCodeID="94057">National Pension Schemes</Option>
+							<Option Value="" AttributeCodeID="94058">Others</Option>
+						</Options>						
+					</Question>
+				
+				</Section>
+				
+				<Section SectionType="39007" Name="Succession Readiness" ImagePath="Z.jpg">
+				
+					<Question ID="" QuestionType="85009" AttributeCodeId="94101" Visible="YES" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>Rate your confidence on the succession readiness of your assets</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94130">1</Option>
+							<Option Value="" AttributeCodeID="94131">2</Option>
+							<Option Value="" AttributeCodeID="94132">3</Option>
+							<Option Value="" AttributeCodeID="94133">4</Option>
+							<Option Value="" AttributeCodeID="94134">5</Option>
+						</Options>							
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>5</Max_Value>
+							<IsCurrency>0</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>		
+
+					<Question ID="" QuestionType="85002" AttributeCodeId="94102" Visible="YES" ParentQuestionId="0" cssClass="ques_txt1">
+					<QuestionText>Does your family know what all assets you have?</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>							
+					</Question>	
+					
+					<Question ID="" QuestionType="85002" AttributeCodeId="94103" Visible="YES" ParentQuestionId="0" cssClass="ques_txt1">
+					<QuestionText>Will your family be able to access them easily?</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>							
+					</Question>	
+					
+					<Question ID="" QuestionType="85002" AttributeCodeId="94104" Visible="YES" ParentQuestionId="0" cssClass="ques_txt1">
+					<QuestionText>Does your family know how to use the assets?</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>							
+					</Question>	
+					
+					<!-- <Question ID="" QuestionType="85002" AttributeCodeId="94105" Visible="YES" ParentQuestionId="0" cssClass="ques_txt1">
+					<QuestionText>Have you given Power of Attorney to someone who can operate your assets in your absence?</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>							
+					</Question> -->	
+
+				</Section>				
+				
+				<Section SectionType="39005" Name="Financial Readiness" ImagePath="G.jpg">
+				
+					<Question ID="" QuestionType="85009" AttributeCodeId="94026" Visible="YES" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>Rate your confidence on comfortably  living your / your family's dreams and aspirations</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94130">1</Option>
+							<Option Value="" AttributeCodeID="94131">2</Option>
+							<Option Value="" AttributeCodeID="94132">3</Option>
+							<Option Value="" AttributeCodeID="94133">4</Option>
+							<Option Value="" AttributeCodeID="94134">5</Option>
+						</Options>							
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>5</Max_Value>
+							<IsCurrency>0</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>				
+				
+					<Question ID="" QuestionType="85005" AttributeCodeId="94145" Visible="YES" ShowImage="TRUE" ParentQuestionId="0" cssClass="ques_txt6">
+					<QuestionText>Value of assets you own can be used for goals</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Min_Value>0</Min_Value>
+						<Max_Value>100</Max_Value>
+						<Options>
+							<Option Value="" AttributeCodeID="94027" ImgDefault="shares_icon.png" ImgSelected="a1.jpg">Shares</Option>
+							<Option Value="" AttributeCodeID="94028" ImgDefault="property_icon.png" ImgSelected="b1.jpg">Property</Option>
+							<Option Value="" AttributeCodeID="94029" ImgDefault="deposits_icon.png" ImgSelected="c1.jpg">Deposits</Option>
+							<Option Value="" AttributeCodeID="94030" ImgDefault="mutual_funds_icon.png" ImgSelected="d1.jpg">Mutual Funds</Option>
+							<Option Value="" AttributeCodeID="94031" ImgDefault="bonds_icon.png" ImgSelected="e1.jpg">Bonds</Option>
+							<Option Value="" AttributeCodeID="94032" ImgDefault="gold_icon.png" ImgSelected="f1.jpg">Gold</Option>
+							<Option Value="" AttributeCodeID="94033" ImgDefault="other_icon.png" ImgSelected="g1.jpg">Other</Option>
+						</Options>		
+					</Question>					
+				
+					<Question ID="" QuestionType="85005" AttributeCodeId="94146" Visible="YES" ShowImage="FALSE" ParentQuestionId="0" cssClass="ques_txt6">
+					<QuestionText>Regular investments you make can be used for goals</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Min_Value>0</Min_Value>
+						<Max_Value>100</Max_Value>
+						<Options>
+							<Option Value="" AttributeCodeID="94034" ImgDefault="a.jpg" ImgSelected="a1.jpg">Shares</Option>
+							<Option Value="" AttributeCodeID="94035" ImgDefault="b.jpg" ImgSelected="b1.jpg">Property</Option>
+							<Option Value="" AttributeCodeID="94036" ImgDefault="c.jpg" ImgSelected="c1.jpg">Deposits</Option>
+							<Option Value="" AttributeCodeID="94037" ImgDefault="d.jpg" ImgSelected="d1.jpg">Mutual Funds</Option>
+							<Option Value="" AttributeCodeID="94038" ImgDefault="e.jpg" ImgSelected="e1.jpg">Bonds</Option>
+							<Option Value="" AttributeCodeID="94039" ImgDefault="f.jpg" ImgSelected="f1.jpg">Gold</Option>
+							<Option Value="" AttributeCodeID="94040" ImgDefault="g.jpg" ImgSelected="g1.jpg">Other</Option>
+						</Options>	
+					</Question>	
+				</Section>				
+
+				<Section SectionType="39002" Name="Cash Flow" ImagePath="D.jpg">
+				
+					<Question ID="" QuestionType="85009" AttributeCodeId="94065" Visible="YES" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>Rate your comfort with your current cash flow situation</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94130">1</Option>
+							<Option Value="" AttributeCodeID="94131">2</Option>
+							<Option Value="" AttributeCodeID="94132">3</Option>
+							<Option Value="" AttributeCodeID="94133">4</Option>
+							<Option Value="" AttributeCodeID="94134">5</Option>
+						</Options>							
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>5</Max_Value>
+							<IsCurrency>0</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>	
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="94066" Visible="YES" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>No. of income sources</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94156">1</Option>
+							<Option Value="" AttributeCodeID="94157">2</Option>
+							<Option Value="" AttributeCodeID="94158">3</Option>
+							<Option Value="" AttributeCodeID="94159">4</Option>
+							<Option Value="" AttributeCodeID="94160">5</Option>
+						</Options>							
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>5</Max_Value>
+							<IsCurrency>0</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>	
+					
+					<Question ID="" QuestionType="85010" AttributeCodeId="94067" Visible="YES" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>Annual household income</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<Increment>0.1</Increment>
+						</Scale>
+					</Question>	
+					
+					<Question ID="" QuestionType="85010" AttributeCodeId="94074" Visible="YES" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>Monthly household expenditure</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>0.1</Increment>
+						</Scale>
+					</Question>	
+					
+					<Question ID="" QuestionType="85010" AttributeCodeId="94080" Visible="YES" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>Monthly EMI/ Commitments</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<Increment>0.1</Increment>
+						</Scale>
+					</Question>	
+					<Question ID="" QuestionType="85010" AttributeCodeId="94512" Visible="YES" ParentQuestionId="0" cssClass="ques_txt">
+						<QuestionText>Monthly Premiums</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<Increment>0.1</Increment>
+						</Scale>
+					</Question>	
+				</Section>
+				
+				<Section SectionType="39008" Name="Loan Status" ImagePath="S.jpg">
+				
+					<Question ID="" QuestionType="85009" AttributeCodeId="94083" Visible="YES" ParentQuestionId="0" cssClass="ques_txt7">
+						<QuestionText>Rate your comfort with your loan situation</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94130">1</Option>
+							<Option Value="" AttributeCodeID="94131">2</Option>
+							<Option Value="" AttributeCodeID="94132">3</Option>
+							<Option Value="" AttributeCodeID="94133">4</Option>
+							<Option Value="" AttributeCodeID="94134">5</Option>
+						</Options>							
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>5</Max_Value>
+							<IsCurrency>0</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>	
+				
+					<Question ID="" QuestionType="85006" AttributeCodeId="94163" Visible="YES" ParentQuestionId="0" cssClass="ques_txt7">
+						<QuestionText>What kind of loans do you have?</QuestionText>
+						<ControlType>MultiChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94084" ImgDefault="home_loan_icon.png" ImgSelected="a1.jpg">Home Loan</Option>
+							<Option Value="" AttributeCodeID="94085" ImgDefault="car_loan.png" ImgSelected="b1.jpg">Car Loan</Option>
+							<Option Value="" AttributeCodeID="94086" ImgDefault="personal_loan.png" ImgSelected="c1.jpg">Personal Loan</Option>
+							<Option Value="" AttributeCodeID="94087" ImgDefault="business_loan.png" ImgSelected="d1.jpg">Business Loan</Option>
+							<Option Value="" AttributeCodeID="94090" ImgDefault="other_loan.png" ImgSelected="g1.jpg">Other Loan</Option>
+						</Options>
+					</Question>	
+				
+					<Question ID="" QuestionType="85010" AttributeCodeId="94091" Visible="YES" ParentQuestionId="0" cssClass="ques_txt7">
+						<QuestionText>Loan outstanding amount</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<IsCurrency>1</IsCurrency>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>
+				
+					<Question ID="" QuestionType="85002" AttributeCodeId="94092" Visible="YES" ParentQuestionId="0" cssClass="ques_txt7">
+						<QuestionText>Do you plan to take any loans in future?</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+						<Option AttributeCodeId="94135" Value="1">Yes</Option>
+						<Option AttributeCodeId="94136" Value="0">No</Option>
+						</Options>	
+					</Question>	
+					
+					<Question ID="" QuestionType="85006" AttributeCodeId="94164" Visible="YES" ParentQuestionId="0" cssClass="ques_txt7">
+						<QuestionText>If yes, for what purpose?</QuestionText>
+						<ControlType>MultiChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option Value="" AttributeCodeID="94093" ImgDefault="home_loan_icon.png" ImgSelected="a1.jpg">Home Loan</Option>
+							<Option Value="" AttributeCodeID="94094" ImgDefault="car_loan.png" ImgSelected="b1.jpg">Car Loan</Option>
+							<Option Value="" AttributeCodeID="94095" ImgDefault="personal_loan.png" ImgSelected="c1.jpg">Personal Loan</Option>
+							<Option Value="" AttributeCodeID="94096" ImgDefault="business_loan.png" ImgSelected="d1.jpg">Business Loan</Option>
+							<Option Value="" AttributeCodeID="94099" ImgDefault="other_loan.png" ImgSelected="g1.jpg">Other Loan</Option>
+						</Options>
+					</Question>	
+				
+					<Question ID="" QuestionType="85010" AttributeCodeId="94223" Visible="YES" ParentQuestionId="0" cssClass="ques_txt7">
+						<QuestionText>Future loan amount?</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>	
+						<IsMandatory>0</IsMandatory>
+						<IsCurrency>1</IsCurrency>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>
+				
+					<Question ID="" QuestionType="85010" AttributeCodeId="94224" Visible="YES" ParentQuestionId="0" cssClass="ques_txt7">
+						<QuestionText>Loan duration</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>40</Max_Value>
+							<IsCurrency>0</IsCurrency>
+							<Increment>1</Increment>
+						</Scale>
+					</Question>	
+					
+					<Question ID="" QuestionType="85019" AttributeCodeId="94199" Visible="YES" ParentQuestionId="0" cssClass="ques_txt7">
+						<QuestionText>Year of loan requirement</QuestionText>
+						<ControlType>MultiChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+				</Section>
+			</Menu>
+
+			<Menu Name="Goals">
+				
+				<Section SectionType="35001" Name="Education"  ImagePath="E.jpg">
+					<Question ID="" QuestionType="85012" AttributeCodeId="100001" Visible="YES" ParentQuestionId="0">
+						<QuestionText>Course Info</QuestionText>
+						<ControlType>Label</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<RowsForColumn1>5</RowsForColumn1>
+						<RowsForColumn2>6</RowsForColumn2>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100054" ParentQuestionId="0">
+						<QuestionText>Education For</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+					<Question ID="" QuestionType="85999" AttributeCodeId="100005" ParentQuestionId="0">
+						<QuestionText>Country interested</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+					<Question ID="" QuestionType="85999" AttributeCodeId="100006" ParentQuestionId="0">
+						<QuestionText>State</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100051" ParentQuestionId="0">
+						<QuestionText>Expected month of joining</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100050" ParentQuestionId="0">
+						<QuestionText>Expected year of joining</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>					
+					
+					
+					<Question ID="" QuestionType="85005" AttributeCodeId="100052" ParentQuestionId="0">
+						<QuestionText>Education Expenses</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>						
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="100057" ParentQuestionId="0">
+						<QuestionText>Down Payment</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+							<Increment>0.01</Increment>
+						</Scale>
+					</Question>	
+	
+					<Question ID="" QuestionType="85009" AttributeCodeId="100056" ParentQuestionId="0">
+						<QuestionText>Loan Amount</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>							
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>							
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100058" ParentQuestionId="0">
+						<QuestionText>Loan Interest</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>5</Min_Value>
+							<Max_Value>18</Max_Value>							
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>							
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100059" ParentQuestionId="0">
+						<QuestionText>Loan Duration</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>40</Max_Value>							
+							<Increment>1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>1</IsDuration>							
+						</Scale>
+					</Question>
+					<Question ID="" QuestionType="85009" AttributeCodeId="100053" ParentQuestionId="0">
+						<QuestionText>Inflation Rate</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>15</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+					
+					<Question ID="" QuestionType="85012" AttributeCodeId="100004" ParentQuestionId="0">
+						<QuestionText>Your Preferences</QuestionText>
+						<ControlType>Label</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<RowsForColumn1>2</RowsForColumn1>
+						<RowsForColumn2>2</RowsForColumn2>						
+					</Question>
+					
+					<Question ID="" QuestionType="85999" AttributeCodeId="100011" ParentQuestionId="0">
+						<QuestionText>University preference</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+										
+					<Question ID="" QuestionType="85999" AttributeCodeId="100002" ParentQuestionId="0">
+						<QuestionText>Course Level</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+					<Question ID="" QuestionType="85999" AttributeCodeId="100003" ParentQuestionId="0">
+						<QuestionText>Course Subject</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>					
+
+					<Question ID="" QuestionType="85014" AttributeCodeId="100012" ParentQuestionId="0">
+						<QuestionText>Annual Fees </QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<IsReadOnly>0</IsReadOnly>
+					</Question>
+					
+				</Section>
+				<Section SectionType="35003" Name="Purchase a property"  ImagePath="P.jpg">
+				
+					<Question ID="" QuestionType="85012" AttributeCodeId="100013" Visible="YES" ParentQuestionId="0">
+						<QuestionText>Property Info</QuestionText>
+						<ControlType>Label</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<RowsForColumn1>6</RowsForColumn1>
+						<RowsForColumn2>6</RowsForColumn2>
+					</Question>
+
+					<Question ID="" QuestionType="85004" AttributeCodeId="100014" ParentQuestionId="0">
+						<QuestionText>Property Type</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+					<Question ID="" QuestionType="85014" AttributeCodeId="100015" ParentQuestionId="0">
+						<QuestionText>Area (Sq. Ft.)</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<IsReadOnly>0</IsReadOnly>
+					</Question>
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="100016" ParentQuestionId="0">
+						<QuestionText>No. of bedrooms</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>5</Max_Value>							
+							<Increment>1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>							
+						</Scale>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100051" ParentQuestionId="0">
+						<QuestionText>Expected month of purchase</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+					<Question ID="" QuestionType="85004" AttributeCodeId="100050" ParentQuestionId="0">
+						<QuestionText>Expected year of purchase</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+					<Question ID="" QuestionType="85014" AttributeCodeId="100017" ParentQuestionId="0">
+						<QuestionText>Source of funds</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<IsReadOnly>0</IsReadOnly>
+					</Question>
+					
+					<Question ID="" QuestionType="85005" AttributeCodeId="100052" ParentQuestionId="0">
+						<QuestionText>Property Price</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>						
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="100057" ParentQuestionId="0">
+						<QuestionText>Down Payment</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+	
+					<Question ID="" QuestionType="85009" AttributeCodeId="100056" ParentQuestionId="0">
+						<QuestionText>Loan Amount</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100058" ParentQuestionId="0">
+						<QuestionText>Loan Interest</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>5</Min_Value>
+							<Max_Value>18</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100059" ParentQuestionId="0">
+						<QuestionText>Loan Duration</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>40</Max_Value>
+							<Increment>1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>1</IsDuration>
+						</Scale>
+					</Question>
+					<Question ID="" QuestionType="85009" AttributeCodeId="100053" ParentQuestionId="0">
+						<QuestionText>Inflation Rate</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>15</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>					
+					
+					<Question ID="" QuestionType="85012" AttributeCodeId="100018" Visible="YES" ParentQuestionId="0">
+						<QuestionText>Preferred Location</QuestionText>
+						<ControlType>Label</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<RowsForColumn1>2</RowsForColumn1>
+						<RowsForColumn2>1</RowsForColumn2>
+					</Question>					
+					
+					<Question ID="" QuestionType="85999" AttributeCodeId="100019" ParentQuestionId="0">
+						<QuestionText>State interested</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>					
+					
+					<Question ID="" QuestionType="85999" AttributeCodeId="100020" ParentQuestionId="0">
+						<QuestionText>City</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>	
+
+					<Question ID="" QuestionType="85014" AttributeCodeId="100021" ParentQuestionId="0">
+						<QuestionText>Locality</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<IsReadOnly>0</IsReadOnly>
+					</Question>										
+				</Section>
+				
+				<Section SectionType="35006" Name="Purchase a Car"  ImagePath="P.jpg">
+					
+					<Question ID="" QuestionType="85012" AttributeCodeId="100060" Visible="YES" ParentQuestionId="0">
+						<QuestionText>Car Info</QuestionText>
+						<ControlType>Label</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<RowsForColumn1>8</RowsForColumn1>
+						<RowsForColumn2>7</RowsForColumn2>
+					</Question>
+					
+					<Question ID="" QuestionType="85002" AttributeCodeId="100030" ParentQuestionId="0">
+						<QuestionText>Type</QuestionText>
+						<ControlType>YNSlider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100032" ParentQuestionId="0">
+						<QuestionText>Seating capacity</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>12</Max_Value>
+							<Increment>1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>
+
+					<Question ID="" QuestionType="85015" AttributeCodeId="100033" ParentQuestionId="0">
+						<QuestionText>Fuel type</QuestionText>
+						<ControlType>SingleChoiceImage</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="642" Css="petrol" AttributeCodeID="100034" ImgDefault="a.jpg" ImgSelected="a1.jpg">Petrol</Option>
+							<Option ID="643" Css="disel" AttributeCodeID="100035" ImgDefault="b.jpg" ImgSelected="b1.jpg">Diesel</Option>
+							<Option ID="644" Css="cng" AttributeCodeID="100036" ImgDefault="c.jpg" ImgSelected="c1.jpg">CNG</Option>
+							<Option ID="645" Css="lpg" AttributeCodeID="100037" ImgDefault="d.jpg" ImgSelected="d1.jpg">LPG</Option>
+							<Option ID="646" Css="hybrid" AttributeCodeID="100038" ImgDefault="e.jpg" ImgSelected="e1.jpg">Hybrid</Option>
+						</Options>
+					</Question>
+					
+					<Question ID="" QuestionType="85999" AttributeCodeId="100039" ParentQuestionId="0">
+						<QuestionText>Brand</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>					
+
+					<Question ID="" QuestionType="85999" AttributeCodeId="100031" ParentQuestionId="0">
+						<QuestionText>Category</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+					<Question ID="" QuestionType="85999" AttributeCodeId="100040" ParentQuestionId="0">
+						<QuestionText>Model</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>						
+
+					<Question ID="" QuestionType="85999" AttributeCodeId="100041" ParentQuestionId="0">
+						<QuestionText>Variant</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>	
+					<Question ID="" QuestionType="85004" AttributeCodeId="100051" ParentQuestionId="0">
+						<QuestionText>Expected month of purchase</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>				
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100050" ParentQuestionId="0">
+						<QuestionText>Expected year of purchase</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85005" AttributeCodeId="100052" ParentQuestionId="0">
+						<QuestionText>Car Price</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>	
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="100057" ParentQuestionId="0">
+						<QuestionText>Down Payment</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+	
+					<Question ID="" QuestionType="85009" AttributeCodeId="100056" ParentQuestionId="0">
+						<QuestionText>Loan Amount</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100058" ParentQuestionId="0">
+						<QuestionText>Loan Interest</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>5</Min_Value>
+							<Max_Value>18</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100059" ParentQuestionId="0">
+						<QuestionText>Loan Duration</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>40</Max_Value>
+							<Increment>1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>1</IsDuration>
+						</Scale>
+					</Question>
+					<Question ID="" QuestionType="85009" AttributeCodeId="100053" ParentQuestionId="0">
+						<QuestionText>Inflation Rate</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>15</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>							
+				</Section>
+				
+				<Section SectionType="35005" Name="Travel and Vacations"  ImagePath="P.jpg">
+				
+					<Question ID="" QuestionType="85012" AttributeCodeId="100023" Visible="YES" ParentQuestionId="0">
+						<QuestionText>Travel Info</QuestionText>
+						<ControlType>Label</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<RowsForColumn1>7</RowsForColumn1>
+						<RowsForColumn2>6</RowsForColumn2>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100024" ParentQuestionId="0">
+						<QuestionText>Tour type</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85016" AttributeCodeId="100026" ParentQuestionId="0">
+						<QuestionText>Adults</QuestionText>
+						<ControlType>Spinner</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Min_Value>0</Min_Value>
+						<Max_Value>30</Max_Value>												
+					</Question>
+				
+					<Question ID="" QuestionType="85016" AttributeCodeId="100027" ParentQuestionId="0">
+						<QuestionText>Children</QuestionText>
+						<ControlType>Spinner</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Min_Value>0</Min_Value>
+						<Max_Value>30</Max_Value>												
+					</Question>
+				
+					<Question ID="" QuestionType="85999" AttributeCodeId="100028" ParentQuestionId="0">
+						<QuestionText>Expected location of travel</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100051" ParentQuestionId="0">
+						<QuestionText>Expected month</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+				
+					<Question ID="" QuestionType="85004" AttributeCodeId="100050" ParentQuestionId="0">
+						<QuestionText>Expected year</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+				
+					<Question ID="" QuestionType="85016" AttributeCodeId="100029" ParentQuestionId="0">
+						<QuestionText>No. of days</QuestionText>
+						<ControlType>Spinner</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Min_Value>0</Min_Value>
+						<Max_Value>60</Max_Value>																		
+					</Question>				
+
+					<Question ID="" QuestionType="85005" AttributeCodeId="100052" ParentQuestionId="0">
+						<QuestionText>Tour Cost</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>	
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="100057" ParentQuestionId="0">
+						<QuestionText>Down Payment</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+	
+					<Question ID="" QuestionType="85009" AttributeCodeId="100056" ParentQuestionId="0">
+						<QuestionText>Loan Amount</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100058" ParentQuestionId="0">
+						<QuestionText>Loan Interest</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>5</Min_Value>
+							<Max_Value>18</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100059" ParentQuestionId="0">
+						<QuestionText>Loan Duration</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>40</Max_Value>
+							<Increment>1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>1</IsDuration>
+						</Scale>
+					</Question>	
+					<Question ID="" QuestionType="85009" AttributeCodeId="100053" ParentQuestionId="0">
+						<QuestionText>Inflation Rate</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>15</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>					
+				</Section>		
+
+				<Section SectionType="35004" Name="Wedding"  ImagePath="W.jpg">
+				
+					<Question ID="" QuestionType="85012" AttributeCodeId="100022" Visible="YES" ParentQuestionId="0">
+						<QuestionText>Wedding Plan Info</QuestionText>
+						<ControlType>Label</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<RowsForColumn1>3</RowsForColumn1>
+						<RowsForColumn2>6</RowsForColumn2>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100054" ParentQuestionId="0">
+						<QuestionText>Wedding of</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					<Question ID="" QuestionType="85004" AttributeCodeId="100051" ParentQuestionId="0">
+						<QuestionText>Expected month of marriage</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100050" ParentQuestionId="0">
+						<QuestionText>Expected year of marriage</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+					<Question ID="" QuestionType="85005" AttributeCodeId="100052" ParentQuestionId="0">
+						<QuestionText>Wedding Expenses</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>	
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="100057" ParentQuestionId="0">
+						<QuestionText>Down Payment</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+	
+					<Question ID="" QuestionType="85009" AttributeCodeId="100056" ParentQuestionId="0">
+						<QuestionText>Loan Amount</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100058" ParentQuestionId="0">
+						<QuestionText>Loan Interest</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>5</Min_Value>
+							<Max_Value>18</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100059" ParentQuestionId="0">
+						<QuestionText>Loan Duration</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>40</Max_Value>
+							<Increment>1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>1</IsDuration>
+						</Scale>
+					</Question>	
+					<Question ID="" QuestionType="85009" AttributeCodeId="100053" ParentQuestionId="0">
+						<QuestionText>Inflation Rate</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>15</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>
+				</Section>	
+
+				<Section SectionType="35012" Name="Business"  ImagePath="S.jpg">
+				
+					<Question ID="" QuestionType="85012" AttributeCodeId="100043" Visible="YES" ParentQuestionId="0">
+						<QuestionText>Business Info</QuestionText>
+						<ControlType>Label</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<RowsForColumn1>5</RowsForColumn1>
+						<RowsForColumn2>6</RowsForColumn2>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100044" ParentQuestionId="0">
+						<QuestionText>Business type</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100045" ParentQuestionId="0">
+						<QuestionText>Ownership</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85014" AttributeCodeId="100046" ParentQuestionId="0">
+						<QuestionText>Location</QuestionText>
+						<ControlType>InputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<IsReadOnly>0</IsReadOnly>
+					</Question>						
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100051" ParentQuestionId="0">
+						<QuestionText>Expected month for starting business</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100050" ParentQuestionId="0">
+						<QuestionText>Expected year for starting business</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85005" AttributeCodeId="100052" ParentQuestionId="0">
+						<QuestionText>Business Capital</QuestionText>
+						<ControlType>Input_Text</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>	
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="100057" ParentQuestionId="0">
+						<QuestionText>Down Payment</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+	
+					<Question ID="" QuestionType="85009" AttributeCodeId="100056" ParentQuestionId="0">
+						<QuestionText>Loan Amount</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100058" ParentQuestionId="0">
+						<QuestionText>Loan Interest</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>5</Min_Value>
+							<Max_Value>18</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+
+					<Question ID="" QuestionType="85009" AttributeCodeId="100059" ParentQuestionId="0">
+						<QuestionText>Loan Duration</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>40</Max_Value>
+							<Increment>1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>1</IsDuration>
+						</Scale>
+					</Question>	
+					<Question ID="" QuestionType="85009" AttributeCodeId="100053" ParentQuestionId="0">
+						<QuestionText>Inflation Rate</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>15</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>
+									
+				</Section>	
+
+				<Section SectionType="35008" Name="Parental Goal"  ImagePath="S.jpg">
+				
+					<Question ID="" QuestionType="85012" AttributeCodeId="100042" Visible="YES" ParentQuestionId="0">
+						<QuestionText>Parental Goal Info</QuestionText>
+						<ControlType>Label</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<RowsForColumn1>5</RowsForColumn1>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100054" ParentQuestionId="0">
+						<QuestionText>Goal for</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100051" ParentQuestionId="0">
+						<QuestionText>Goal target month</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+					<Question ID="" QuestionType="85004" AttributeCodeId="100050" ParentQuestionId="0">
+						<QuestionText>Goal target year</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>					
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="100052" ParentQuestionId="0">
+						<QuestionText>Your budget</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>1000</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>
+					<Question ID="" QuestionType="85009" AttributeCodeId="100053" ParentQuestionId="0">
+						<QuestionText>Inflation Rate</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>15</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>
+				</Section>
+				
+				<Section SectionType="35016" Name="Target Corpus Goal"  ImagePath="S.jpg">
+				
+					<Question ID="" QuestionType="85012" AttributeCodeId="100042" Visible="YES" ParentQuestionId="0">
+						<QuestionText>Target Corpus Goal Info</QuestionText>
+						<ControlType>Label</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<RowsForColumn1>5</RowsForColumn1>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100054" ParentQuestionId="0">
+						<QuestionText>Goal for</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100051" ParentQuestionId="0">
+						<QuestionText>Goal target month</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>
+
+					<Question ID="" QuestionType="85004" AttributeCodeId="100050" ParentQuestionId="0">
+						<QuestionText>Goal target year</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>					
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="100052" ParentQuestionId="0">
+						<QuestionText>Your budget</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>100</Max_Value>
+							<Increment>1</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>
+					<Question ID="" QuestionType="85009" AttributeCodeId="100053" ParentQuestionId="0">
+						<QuestionText>Inflation Rate</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>15</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>
+				</Section>
+				
+
+				<Section SectionType="35013" Name="Other Goal"  ImagePath="O.jpg">
+				
+					<Question ID="" QuestionType="85012" AttributeCodeId="100047" Visible="YES" ParentQuestionId="0">
+						<QuestionText>Other Goal Info</QuestionText>
+						<ControlType>Label</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<RowsForColumn1>5</RowsForColumn1>
+					</Question>
+					
+					<Question ID="" QuestionType="85017" AttributeCodeId="100049" ParentQuestionId="0">
+						<QuestionText>Goal description</QuestionText>
+						<ControlType>LargeInputField</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>	
+					
+					<Question ID="" QuestionType="85004" AttributeCodeId="100051" ParentQuestionId="0">
+						<QuestionText>Goal target month</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>						
+
+					<Question ID="" QuestionType="85004" AttributeCodeId="100050" ParentQuestionId="0">
+						<QuestionText>Goal target year</QuestionText>
+						<ControlType>SingleChoice</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+					</Question>					
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="100052" ParentQuestionId="0">
+						<QuestionText>Your budget</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>1</Min_Value>
+							<Max_Value>1000</Max_Value>
+							<Increment>0.01</Increment>
+							<IsCurrency>1</IsCurrency>
+							<IsPercentage>0</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+					
+					<Question ID="" QuestionType="85009" AttributeCodeId="100053" ParentQuestionId="0">
+						<QuestionText>Inflation Rate</QuestionText>
+						<ControlType>Slider</ControlType>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Scale>
+							<Min_Value>0</Min_Value>
+							<Max_Value>15</Max_Value>
+							<Increment>0.1</Increment>
+							<IsCurrency>0</IsCurrency>
+							<IsPercentage>1</IsPercentage>
+							<IsDuration>0</IsDuration>
+						</Scale>
+					</Question>	
+										
+				</Section>
+
+			</Menu>
+			
+			
+			<Menu Name="Risk">
+				
+				<Section Name="Risk Profile" SectionType="39009" ImagePath="risk_profile.png">
+					<Question ID="411" QuestionType="85020" ParentQuestionId="0" AttributeCodeID="94116">
+						<QuestionText>Before making any important financial decision, what do you usually consider?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="612" AttributeCodeID="94166" Value="4">Always the possible gains
+							</Option>
+							<Option ID="613" AttributeCodeID="94167" Value="3">Usually the possible gains
+							</Option>
+							<Option ID="614" AttributeCodeID="94168" Value="2">Always the possible losses
+							</Option>
+							<Option ID="615" AttributeCodeID="94169" Value="1">Usually the possible losses
+							</Option>
+						</Options>						
+						<RowsForColumn1>5</RowsForColumn1>						
+					</Question>
+					<Question  ID="413" QuestionType="85020" ParentQuestionId="0" AttributeCodeID="94118">
+						<QuestionText>How would you describe your knowledge of investments, markets, products?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="620" AttributeCodeID="94173" Value="1">Very little
+							</Option>
+							<Option ID="621" AttributeCodeID="94174" Value="2">I know some basics
+							</Option>
+							<Option ID="622" AttributeCodeID="94175" Value="3">I know fairly well
+							</Option>
+							<Option ID="623" AttributeCodeID="94176" Value="4">I am an expert
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="414" QuestionType="85020" ParentQuestionId="" AttributeCodeID="94119">
+						<QuestionText>What is your primary objective while making an investment likely to be?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="624" AttributeCodeID="94177" Value="1">Keep the money safe
+							</Option>
+							<Option ID="625" AttributeCodeID="94178" Value="4">To earn high returns
+							</Option>
+							<Option ID="626" AttributeCodeID="94179" Value="3">To achieve a life goal
+							</Option>
+							<Option ID="627" AttributeCodeID="94180" Value="2">To create a regular stream of income
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="416" QuestionType="85020" ParentQuestionId="0" AttributeCodeID="94121">
+						<QuestionText>How easily do you usually move on if a financial decision went wrong?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="632" AttributeCodeID="94185" Value="1">Not so easily
+							</Option>
+							<Option ID="633" AttributeCodeID="94186" Value="2">Somewhat easily
+							</Option>
+							<Option ID="634" AttributeCodeID="94187" Value="3">Reasonably easily
+							</Option>
+							<Option ID="635" AttributeCodeID="94188" Value="4">I move on quickly
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="417" QuestionType="85020" ParentQuestionId="0" AttributeCodeID="94122">
+						<QuestionText>Insurance is a good way to protect against different risks like early death, health related expenses or disabilities.
+						 How much of insurance do you have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="636" AttributeCodeID="94189" Value="4">Very little cover
+							</Option>
+							<Option ID="637" AttributeCodeID="94190" Value="3">Enough to cover basic risk
+							</Option>
+							<Option ID="638" AttributeCodeID="94191" Value="2">I have reasonable insurance to cover most risks
+							</Option>
+							<Option ID="639" AttributeCodeID="94198" Value="1">I have insurance to cover almost every conceivable risk
+							</Option>
+						</Options>
+					</Question>										
+
+					<Question  ID="415" QuestionType="85020" ParentQuestionId="0" AttributeCodeID="94120">
+						<QuestionText>If you had to choose between two jobs a) That has a huge fixed component and a small variable component b)
+						 A small fixed component and a huge variable component, which one are you most likely to choose
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="628" AttributeCodeID="94181" Value="1">Most likely A
+							</Option>
+							<Option ID="629" AttributeCodeID="94182" Value="2">May be A
+							</Option>
+							<Option ID="630" AttributeCodeID="94183" Value="3">May be B
+							</Option>
+							<Option ID="631" AttributeCodeID="94184" Value="4">Most likely B
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="412" QuestionType="85020" ParentQuestionId="0" AttributeCodeID="94117">
+						<QuestionText>Imagine you go to a shop to buy your groceries. As you are about to pick your regular brand, the shop owner asks you to try a new brand and you pick it up. It turns out bad. Next time the shop keeper says that the last lot was not good, the new lot is a lot better and the product has been improved and tested. What are you more likely to do?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="616" AttributeCodeID="94197" Value="1">Never try anything new again
+							</Option>
+							<Option ID="617" AttributeCodeID="94170" Value="2">Most likely give it a skip
+							</Option>
+							<Option ID="618" AttributeCodeID="94171" Value="3">Maybe try
+							</Option>
+							<Option ID="619" AttributeCodeID="94172" Value="4">Most likely try
+							</Option>
+						</Options>
+					</Question>
+
+					<Question  ID="418" QuestionType="85020" ParentQuestionId="0" AttributeCodeID="94123">
+						<QuestionText>With investments usually, to earn some higher returns you will have to assume a higher level of risk and volatility in the value of investments.
+						 Given this knowledge what kind of investments are you likely to make.
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="640" AttributeCodeID="94192" Value="4">Take extra risk and earn some quick high returns
+							</Option>
+							<Option ID="641" AttributeCodeID="94193" Value="3">Will keep some basic money safe and take risk with the rest of the money
+							</Option>
+							<Option ID="642" AttributeCodeID="94195" Value="2">Keep most of the money safe, and take risk with a little money to earn extra returns
+							</Option>
+							<Option ID="643" AttributeCodeID="94196" Value="1">Concentrate on capital preservation
+							</Option>
+						</Options>
+					</Question>
+				</Section>
+			</Menu>			
+	</BU>
+</DCInput>

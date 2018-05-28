@@ -1,0 +1,7 @@
+in\fiinfra\forgotpassword\models\ForgotPasswordBean.class
+in\fiinfra\forgotpassword\controllers\ForgotPasswordController.class
+in\fiinfra\login\facade\LoginController.class
+in\fiinfra\controller\CommonController.class
+in\fiinfra\controller\WelcomeController.class
+in\fiinfra\forgotpassword\validators\ForgotPasswordBeanValidator.class
+in\fiinfra\utils\CustomJacksonObjectMapper.class

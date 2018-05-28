@@ -1,0 +1,1734 @@
+<DCInput>
+	<BU ID="1">
+			<Menu Name="Current Financial Status">
+				
+				<Section Name="Emergency Readiness" SectionType="39001" ImagePath="emergency_readiness.gif">
+					<Question ID="12" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94001">
+						<QuestionText>On a scale of 1 to 5 , how would you rate your confidence on being able to handle an emergency - like a
+						health set back or sudden loss of income?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="88" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="89" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="90" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="91" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="92" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					<Question ID="13" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94002">
+						<QuestionText>Have you faced any emergency situation in the past?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="14" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="81" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="14" QuestionType="85001" ParentQuestionId="94002" AttributeCodeID="94137">
+						<QuestionText>If yes, what kind of emergency?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="108" AttributeCodeID="94003" Value="">Loss of job
+							</Option >
+							<Option ID="109" AttributeCodeID="94004" Value="">Natural calamity
+							</Option >
+							<Option ID="110" AttributeCodeID="94005" Value="">Accident
+							</Option>
+							<Option ID="111" AttributeCodeID="94006" Value="">Health Issues
+							</Option>
+							<Option ID="112" AttributeCodeID="94007" Value="">Others
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="15" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94008">
+						<QuestionText>Were you able to manage this emergency without having to borrow or sell your assets?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="15" AttributeCodeID="94135"  Value="1">Yes
+							</Option>
+							<Option ID="82" AttributeCodeID="94136"  Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="16" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94009">
+						<QuestionText>How many months do you think you will be able to manage without an income?
+						</QuestionText>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="103" AttributeCodeID="94138" Value="2">1-3
+							</Option>
+							<Option ID="104" AttributeCodeID="94139" Value="5">3-6
+							</Option>
+							<Option ID="105" AttributeCodeID="94140" Value="8">6-9
+							</Option>
+							<Option ID="106" AttributeCodeID="94141" Value="11">9-12
+							</Option>
+							<Option ID="107" AttributeCodeID="94142" Value="12">>12
+							</Option>
+						</Options>
+					</Question>
+					
+					
+				</Section>
+				
+				<Section Name="Risk Cover" SectionType="39003" ImagePath="riskcover.gif" >
+					<Question ID="17" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94012">
+						<QuestionText>In the event of death or disability of the key earning member in your household, how sure are you
+									that your family will be safe and comfortable? Rate on a scale of 1-5
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="150" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="175" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="191" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="197" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="223" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					<Question ID="18" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94013">
+						<QuestionText>Do you have Life Insurance?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="16" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="83" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="19" QuestionType="85001" ParentQuestionId="18" AttributeCodeID="94143">
+						<QuestionText>If yes, what kind?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="248" AttributeCodeID="94014" Value="">Term (risk only) insurance policies
+							</Option >
+							<Option ID="250" AttributeCodeID="94015" Value="">Endowment policies
+							</Option >
+							<Option ID="252" AttributeCodeID="94016" Value="">Unit Linked Insurance Policies
+							</Option>
+							<Option ID="254" AttributeCodeID="94017" Value="">Money back and others
+							</Option>
+							
+						</Options>
+					</Question>
+					<Question ID="20" QuestionType="85005" ParentQuestionId="0" AttributeCodeID="94018">
+						<QuestionText>How much cover does your Life Insurance provide (in Rs)?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory></IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94018" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="21" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94020">
+						<QuestionText>Do you have Health Insurance?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="17" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="84" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="24" QuestionType="85005" ParentQuestionId="21" AttributeCodeID="94019">
+						<QuestionText>If yes, How much?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94019"  Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="22" QuestionType="85006" ParentQuestionId="0" AttributeCodeID="94021">
+						<QuestionText>Who all in the family are covered under this Health Insurance? Please name them 
+						</QuestionText>
+						<ControlLabel>[Use CTRL key to select multiple family members]</ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+						<Option ID="0" AttributeCodeID="94021" Value="">
+						</Option>
+						</Options>
+					</Question>
+					<Question ID="23" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94025">
+						<QuestionText>Are you covered for possible critical illness?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="18" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="25" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="26" QuestionType="85005" ParentQuestionId="23" AttributeCodeID="94024">
+						<QuestionText>If yes, How much?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94024" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="25" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94106">
+						<QuestionText>Are you covered for possible accidents?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="19" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="86" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="56" QuestionType="85005" ParentQuestionId="25" AttributeCodeID="94107">
+						<QuestionText>If yes, How much?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94107" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="27" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94108">
+						<QuestionText>Are your assets like house and contents covered?
+						</QuestionText>
+							<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="8" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="75" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					
+				</Section>
+				<Section Name="Goal Ready" SectionType="39005" ImagePath="goalreadiness.gif" >
+					<Question ID="28" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94026">
+						<QuestionText>On a scale of 1 to 5 , how would you rate your confidence on being able to handle all your
+							responsibilities and achieve all your life's dreams comfortably?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="151" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="166" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="182" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="198" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="214" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					<Question ID="30" QuestionType="85007" ParentQuestionId="0" AttributeCodeID="94145">
+						<QuestionText>What is the Value(in Rs) of Assets you currently have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="262" AttributeCodeID="94027" Value="">Shares
+							</Option>
+							<Option ID="265" AttributeCodeID="94029" Value="">Deposits
+							</Option>
+							<Option ID="269" AttributeCodeID="94032" Value="">Gold
+							</Option>
+							<Option ID="274" AttributeCodeID="94031" Value="">Bonds
+							</Option>
+							<Option ID="280" AttributeCodeID="94033" Value="">Others
+							</Option>
+							<Option ID="333" AttributeCodeID="94030" Value="">Mutual Funds
+							</Option>
+							<Option ID="403" AttributeCodeID="94028" Value="">Property
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="31" QuestionType="85007" ParentQuestionId="" AttributeCodeID="94146">
+						<QuestionText>How much MONTHLY investment do you do?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="262" AttributeCodeID="94034" Value="">Shares
+							</Option>
+							<Option ID="265" AttributeCodeID="94036" Value="">Deposits
+							</Option>
+							<Option ID="269" AttributeCodeID="94039" Value="">Gold
+							</Option>
+							<Option ID="274" AttributeCodeID="94038" Value="">Bonds
+							</Option>
+							<Option ID="280" AttributeCodeID="94040" Value="">Others
+							</Option>
+							<Option ID="333" AttributeCodeID="94037" Value="">Mutual Funds
+							</Option>
+							<Option ID="403" AttributeCodeID="94035" Value="">Property
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="5000" QuestionType="85007" ParentQuestionId="" AttributeCodeID="94227">
+						<QuestionText>% Available to Goals&lt;br&gt;
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="262" AttributeCodeID="94034" Value="">Shares
+							</Option>
+							<Option ID="265" AttributeCodeID="94036" Value="">Deposits
+							</Option>
+							<Option ID="269" AttributeCodeID="94039" Value="">Gold
+							</Option>
+							<Option ID="274" AttributeCodeID="94038" Value="">Bonds
+							</Option>
+							<Option ID="280" AttributeCodeID="94040" Value="">Others
+							</Option>
+							<Option ID="333" AttributeCodeID="94037" Value="">Mutual Funds
+							</Option>
+							<Option ID="403" AttributeCodeID="94035" Value="">Property
+							</Option>
+						</Options>
+					</Question>
+					
+				</Section>
+				<Section Name="Retirement Planning" SectionType="39006" ImagePath="retirement_planning.gif">
+					<Question ID="32" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94043">
+						<QuestionText>On a scale of 1 to 5, how would you rate your preparedness to lead a comfortable life of your choice after retirement?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="152" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="167" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="183" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="199" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="215" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					<Question ID="33" QuestionType="85005" ParentQuestionId="0" AttributeCodeID="94044">
+						<QuestionText>At what age do you want to retire?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94044" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="34" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94045">
+						<QuestionText>Have you assessed how much money you might need to lead a comfortable retired life?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="9" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="76" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					
+					
+					
+					<Question  ID="35" QuestionType="85001" ParentQuestionId="" AttributeCodeID="94147">
+						<QuestionText>What kind of retirement benefits does your employment provides?</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="334" AttributeCodeID="94046" Value="">Pension
+							</Option>
+							<Option ID="335" AttributeCodeID="94047" Value="">Superannuation
+							</Option>
+							<Option ID="336" AttributeCodeID="94048" Value="">EPF
+							</Option>
+							<Option ID="337" AttributeCodeID="94049" Value="">Gratuity
+							</Option>
+							<Option ID="339" AttributeCodeID="94050" Value="">Others
+							</Option>
+							<Option ID="340" AttributeCodeID="94114" Value="">None
+							</Option>
+							
+						</Options>
+					</Question>
+					<Question ID="562" QuestionType="85005" ParentQuestionId="0" AttributeCodeID="94511">
+						<QuestionText>How much of your expence % will continue after Retirement?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94511" Value="">
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="36" QuestionType="85007" ParentQuestionId="" AttributeCodeID="94148">
+						<QuestionText>What is the Value(in Rs) of Assets you currently have for your retirement?</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="341"  AttributeCodeID="94051" Value="">Provident Fund
+							</Option>
+							<Option ID="342"  AttributeCodeID="94052" Value="">Pension Plans
+							</Option>
+							<Option ID="343"  AttributeCodeID="94053" Value="">National Pension Scheme (NPS)
+							</Option>
+							<Option ID="344"  AttributeCodeID="94054" Value="">Others
+							</Option>
+							
+						</Options>
+					</Question>
+					
+					
+					<Question  ID="57" QuestionType="85007" ParentQuestionId="" AttributeCodeID="94165">
+						<QuestionText>How much MONTHLY investment do you do for your Retirement?</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="341" AttributeCodeID="94055" Value="">Provident Fund
+							</Option>
+							<Option ID="342" AttributeCodeID="94056" Value="">Pension Plans
+							</Option>
+							<Option ID="343" AttributeCodeID="94057" Value="">National Pension Scheme (NPS)
+							</Option>
+							<Option ID="344" AttributeCodeID="94058" Value="">Others
+							</Option>
+						</Options>
+					</Question>
+					
+					
+				</Section>
+				
+				<Section Name="Succession Planning" SectionType="39007" ImagePath="succession_readiness.gif">
+					<Question ID="43" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94101">
+						<QuestionText>On a scale of 1 to 5, how confident are you that, in the event of your death or disability your assets will be accessible AND distributed to your loved ones easily and legally?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="154" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="169" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="185" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="201" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="217" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					
+					<!-- <Question  ID="44" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94102">
+						<QuestionText>Are all your important investments jointly held?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="11" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="78" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="45" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94103">
+						<QuestionText>Is your closest family aware of what all assets / investments you have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="12" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="79" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="46" QuestionType="85002" ParentQuestionId=""  AttributeCodeID="94104">
+						<QuestionText>Have you prepared a Will?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="13" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="80" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="47" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94105">
+						<QuestionText>Have you given a Power of Attorney to someone who
+									can operate your investments if you are not able to?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="7" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="74" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>-->
+					
+					<Question  ID="44" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94102">
+						<QuestionText>Does your family know what all assets you have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="11" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="78" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="45" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94103">
+						<QuestionText>Will your family be able to access them easily?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="12" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="79" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="46" QuestionType="85002" ParentQuestionId=""  AttributeCodeID="94104">
+						<QuestionText>Does your family know how to use the assets?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="13" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="80" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+				</Section>
+				
+				<Section Name="Cash Flow Controls" SectionType="39002" ImagePath="cash_flow.gif" >
+					<Question ID="7" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94065">
+						<QuestionText>On a scale of 1 to 5, how would you rate the amount of control you have on your expenses?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="157" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="172" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="188" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="205" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="220" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					
+					<Question  ID="8" QuestionType="85008" ParentQuestionId="" AttributeCodeID="94074">
+						<QuestionText>How much is your average monthly expenditure?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="328" AttributeCodeID="94162" Value="25000">less than Rs 25,000
+							</Option>
+							<Option ID="329" AttributeCodeID="94075" Value="37500">Rs 25,000 to Rs 50,000
+							</Option>
+							<Option ID="330" AttributeCodeID="94076" Value="62500">Rs 50,000 to Rs 75,000
+							</Option>
+							<Option ID="331" AttributeCodeID="94077" Value="87500">Rs 75,000 to Rs 1,00,000
+							</Option>
+							<Option ID="332" AttributeCodeID="94078" Value="100000">more than Rs 1,00,000
+							</Option>
+<!-- 							<Option  ID="0" AttributeCodeID="94079"> -->
+<!-- 							</Option> -->
+						</Options>
+					</Question>
+					
+					<Question  ID="9" QuestionType="85008" ParentQuestionId="" AttributeCodeID="94067">
+						<QuestionText>How much is your annual household net income?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="397"  AttributeCodeID="94161" Value="300000">less than Rs 3L
+							</Option>
+							<Option ID="398"  AttributeCodeID="94068" Value="450000">Rs 3L to Rs 6L
+							</Option>
+							<Option ID="399"  AttributeCodeID="94069" Value="800000">Rs 6L to Rs 10L
+							</Option>
+							<Option ID="400"  AttributeCodeID="94070" Value="1250000">Rs 10L to Rs 15L
+							</Option>
+							<Option ID="401"  AttributeCodeID="94071" Value="1750000">Rs 15L to Rs 20L
+							</Option>
+							<Option ID="402" AttributeCodeID="94072" Value="2000000">more than Rs 20L
+							</Option>
+<!-- 							<Option ID="0" AttributeCodeID="94073"> -->
+<!-- 							</Option> -->
+						</Options>
+					</Question>
+					<Question  ID="10" QuestionType="85005" ParentQuestionId="" AttributeCodeID="94080">
+						<QuestionText>How much Monthly EMI/Commitments/Premiums do you pay against your loan?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94080" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="11" QuestionType="85004" ParentQuestionId="" AttributeCodeID="94066">
+						<QuestionText>How many sources of income do you have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="158" AttributeCodeID="94156" Value="1">1
+							</Option>
+							<Option ID="173" AttributeCodeID="94157" Value="2">2
+							</Option>
+							<Option ID="189" AttributeCodeID="94158" Value="3">3
+							</Option>
+							<Option ID="206" AttributeCodeID="94159" Value="4">4
+							</Option>
+							<Option ID="221" AttributeCodeID="94160" Value="5">5
+							</Option>
+						</Options>
+					</Question>
+				</Section>
+				
+				<Section Name="Loan" SectionType="39008" ImagePath="loan_status.gif">
+					<Question ID="38" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94083">
+						<QuestionText>How would you rate your level of comfort with the amount of loan you have? Rate on a scale of 1-5
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory></IsMandatory>
+						<Options>
+							<Option ID="153" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="168" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="184" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="200" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="216" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					
+					<Question  ID="39" QuestionType="85001" ParentQuestionId="" AttributeCodeID="94163">
+						<QuestionText>What kind of loans do you have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="345" AttributeCodeID="94084" Value="">Home loan
+							</Option>
+							<Option ID="346" AttributeCodeID="94085" Value="">Car loan
+							</Option>
+							<Option ID="348" AttributeCodeID="94087" Value="">Business loan
+							</Option>
+							<Option ID="347" AttributeCodeID="94086" Value="">Personal loan
+							</Option>
+							
+<!-- 							<Option ID="349" AttributeCodeID="94088" Value="">Credit Card loan -->
+<!-- 							</Option> -->
+<!-- 							<Option ID="350" AttributeCodeID="94089" Value="">Private borrowing loan -->
+<!-- 							</Option> -->
+							<Option ID="351" AttributeCodeID="94090" Value="">Others loan
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="40" QuestionType="85005" ParentQuestionId="" AttributeCodeID="94091">
+						<QuestionText>How much is the total outstanding loan amount?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="0"  AttributeCodeID="94091" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="41" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94092">
+						<QuestionText>Do you plan to take any loans in future?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="16" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="83" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="42" QuestionType="85001" ParentQuestionId="41" AttributeCodeID="94164">
+						<QuestionText>If yes, for what purpose?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="353" AttributeCodeID="94093" Value="">Home Loan
+							</Option>
+							<Option ID="354" AttributeCodeID="94094" Value="">Car Loan
+							</Option>
+<!-- 							<Option ID="355" AttributeCodeID="94111" Value="">to go on holiday -->
+<!-- 							</Option> -->
+							<Option ID="356" AttributeCodeID="94096" Value="">Business expansion
+							</Option>
+							<Option ID="357" AttributeCodeID="94095" Value="">Personal Loan
+							</Option>
+<!-- 							<Option ID="358" AttributeCodeID="94110" Value="">to handle family events -->
+<!-- 							</Option> -->
+							<Option ID="352" AttributeCodeID="94099" Value="">Others loan
+							</Option>
+						</Options>
+					</Question>
+				</Section>
+				<Section Name="Risk Profile" SectionType="39009" ImagePath="risk_profile.png">
+					<Question ID="285" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94116">
+						<QuestionText>Before making any important financial decision, what do you usually consider?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="452" AttributeCodeID="94166" Value="4">Always the possible gains
+							</Option>
+							<Option ID="453" AttributeCodeID="94167" Value="3">Usually the possible gains
+							</Option>
+							<Option ID="454" AttributeCodeID="94168" Value="2">Always the possible losses
+							</Option>
+							<Option ID="455" AttributeCodeID="94169" Value="1">Usually the possible losses
+							</Option>
+						</Options>
+						
+					</Question>
+					
+					<Question  ID="286" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94117">
+						<QuestionText>Imagine you go to a shop to buy your groceries. As you are about to pick your regular brand, the shop owner asks you to try a new brand and you pick it up. It turns out bad. Next time the shop keeper says that the last lot was not good, the new lot is a lot better and the product has been improved and tested. What are you more likely to do?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="456" AttributeCodeID="94197" Value="1">Never try anything new again
+							</Option>
+							<Option ID="457" AttributeCodeID="94170" Value="2">Most likely give it a skip
+							</Option>
+							<Option ID="458" AttributeCodeID="94171" Value="3">Maybe try
+							</Option>
+							<Option ID="459" AttributeCodeID="94172" Value="4">Most likely try
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="287" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94118">
+						<QuestionText>How would you describe your knowledge of investments, markets, products?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="460" AttributeCodeID="94173" Value="1">Very little
+							</Option>
+							<Option ID="461" AttributeCodeID="94174" Value="2">I know some basics
+							</Option>
+							<Option ID="462" AttributeCodeID="94175" Value="3">I know fairly well
+							</Option>
+							<Option ID="463" AttributeCodeID="94176" Value="4">I am an expert
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="288" QuestionType="85004" ParentQuestionId="" AttributeCodeID="94119">
+						<QuestionText>What is your primary objective while making an investment likely to be?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="464" AttributeCodeID="94177" Value="1">Keep the money safe
+							</Option>
+							<Option ID="465" AttributeCodeID="94178" Value="4">To earn high returns
+							</Option>
+							<Option ID="466" AttributeCodeID="94179" Value="3">To achieve a life goal
+							</Option>
+							<Option ID="467" AttributeCodeID="94180" Value="2">To create a regular stream of income
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="289" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94120">
+						<QuestionText>If you had to choose between two jobs a) That has a huge fixed component and a small variable component b)
+						 A small fixed component and a huge variable component, which one are you most likely to choose
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="468" AttributeCodeID="94181" Value="1">Most likely A
+							</Option>
+							<Option ID="469" AttributeCodeID="94182" Value="2">Maybe A
+							</Option>
+							<Option ID="470" AttributeCodeID="94183" Value="3">Maybe B
+							</Option>
+							<Option ID="471" AttributeCodeID="94184" Value="4">Most likely B
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="290" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94121">
+						<QuestionText>How easily do you usually move on if a financial decision went wrong?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="472" AttributeCodeID="94185" Value="1">Not so easily
+							</Option>
+							<Option ID="473" AttributeCodeID="94186" Value="2">Somewhat easily
+							</Option>
+							<Option ID="474" AttributeCodeID="94187" Value="3">Reasonably easily
+							</Option>
+							<Option ID="475" AttributeCodeID="94188" Value="4">I move on quickly
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="291" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94122">
+						<QuestionText>Insurance is a good way to protect against different risks like early death, health related expenses or disabilities.
+						 How much of insurance do you have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="476" AttributeCodeID="94189" Value="4">Very little cover
+							</Option>
+							<Option ID="477" AttributeCodeID="94190" Value="3">Enough to cover basic risk
+							</Option>
+							<Option ID="478" AttributeCodeID="94191" Value="2">I have reasonable insurance to cover most risks
+							</Option>
+							<Option ID="479" AttributeCodeID="94122" Value="1">I have insurance to cover almost every conceivable risk
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="292" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94123">
+						<QuestionText>With investments usually, to earn some higher returns you will have to assume a higher level of risk and volatility in the value of investments.
+						 Given this knowledge what kind of investments are you likely to make.
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="480" AttributeCodeID="94192" Value="4">Take extra risk and earn some quick high returns
+							</Option>
+							<Option ID="481" AttributeCodeID="94193" Value="3">Will keep some basic money safe and take risk with the rest of the money
+							</Option>
+							<Option ID="482" AttributeCodeID="94195" Value="2">Keep most of the money safe, and take risk with a little money to earn extra returns
+							</Option>
+							<Option ID="483" AttributeCodeID="94196" Value="1">Concentrate on capital preservation
+							</Option>
+						</Options>
+					</Question>
+				</Section>
+			</Menu>
+	</BU>
+	<BU ID="2">
+				<Menu Name="Current Financial Status">
+				
+				<Section Name="Emergency Readiness" SectionType="39001" ImagePath="emergency_readiness.gif">
+					<Question ID="12" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94001">
+						<QuestionText>On a scale of 1 to 5 , how would you rate your confidence on being able to handle an emergency - like a
+						health set back or sudden loss of income?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="88" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="89" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="90" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="91" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="92" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					<Question ID="13" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94002">
+						<QuestionText>Have you faced any emergency situation in the past?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="14" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="81" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="14" QuestionType="85001" ParentQuestionId="13" AttributeCodeID="94137">
+						<QuestionText>If yes, what kind of emergency?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="108" AttributeCodeID="94003" Value="">Loss of job
+							</Option >
+							<Option ID="109" AttributeCodeID="94004" Value="">Natural calamity
+							</Option >
+							<Option ID="110" AttributeCodeID="94005" Value="">Accident
+							</Option>
+							<Option ID="111" AttributeCodeID="94006" Value="">Health Issues
+							</Option>
+							<Option ID="112" AttributeCodeID="94007" Value="">Others
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="15" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94008">
+						<QuestionText>Were you able to manage this emergency without having to borrow or sell your assets?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="15" AttributeCodeID="94135"  Value="1">Yes
+							</Option>
+							<Option ID="82" AttributeCodeID="94136"  Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="16" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94009">
+						<QuestionText>How many months do you think you will be able to manage without an income?
+						</QuestionText>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="103" AttributeCodeID="94138" Value="2">1-3
+							</Option>
+							<Option ID="104" AttributeCodeID="94139" Value="5">3-6
+							</Option>
+							<Option ID="105" AttributeCodeID="94140" Value="8">6-9
+							</Option>
+							<Option ID="106" AttributeCodeID="94141" Value="11">9-12
+							</Option>
+							<Option ID="107" AttributeCodeID="94142" Value="12">>12
+							</Option>
+						</Options>
+					</Question>
+					
+					
+				</Section>
+				
+				<Section Name="Risk Cover" SectionType="39003" ImagePath="riskcover.gif" >
+					<Question ID="17" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94012">
+						<QuestionText>In the event of death or disability of the key earning member in your household, how sure are you
+									that your family will be safe and comfortable? Rate on a scale of 1-5
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="150" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="175" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="191" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="197" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="223" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					<Question ID="18" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94013">
+						<QuestionText>Do you have Life Insurance?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="16" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="83" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="19" QuestionType="85001" ParentQuestionId="18" AttributeCodeID="94143">
+						<QuestionText>If yes, what kind?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="248" AttributeCodeID="94014" Value="">Term (risk only) insurance policies
+							</Option >
+							<Option ID="250" AttributeCodeID="94015" Value="">Endowment policies
+							</Option >
+							<Option ID="252" AttributeCodeID="94016" Value="">Unit Linked Insurance Policies
+							</Option>
+							<Option ID="254" AttributeCodeID="94017" Value="">Money back and others
+							</Option>
+							
+						</Options>
+					</Question>
+					<Question ID="20" QuestionType="85005" ParentQuestionId="0" AttributeCodeID="94018">
+						<QuestionText>How much cover does your Life Insurance provide (in Rs)?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory></IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94018" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="21" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94020">
+						<QuestionText>Do you have Health Insurance?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="17" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="84" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="24" QuestionType="85005" ParentQuestionId="21" AttributeCodeID="94019">
+						<QuestionText>If yes, How much?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94019"  Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="22" QuestionType="85006" ParentQuestionId="0" AttributeCodeID="94021">
+						<QuestionText>Who all in the family are covered under this Health Insurance? Please name them 
+						</QuestionText>
+						<ControlLabel>[Use CTRL key to select multiple family members]</ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+						<Option ID="0" AttributeCodeID="94021" Value="">
+						</Option>
+						</Options>
+					</Question>
+					<Question ID="23" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94025">
+						<QuestionText>Are you covered for possible critical illness?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="18" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="25" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="26" QuestionType="85005" ParentQuestionId="23" AttributeCodeID="94024">
+						<QuestionText>If yes, How much?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94024" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="25" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94106">
+						<QuestionText>Are you covered for possible accidents?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="19" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="86" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="56" QuestionType="85005" ParentQuestionId="25" AttributeCodeID="94107">
+						<QuestionText>If yes, How much?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94107" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question ID="27" QuestionType="85002" ParentQuestionId="0" AttributeCodeID="94108">
+						<QuestionText>Are your assets like house and contents covered?
+						</QuestionText>
+							<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="8" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="75" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					
+				</Section>
+				<Section Name="Goal Ready" SectionType="39005" ImagePath="goalreadiness.gif" >
+					<Question ID="28" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94026">
+						<QuestionText>On a scale of 1 to 5 , how would you rate your confidence on being able to handle all your
+							responsibilities and achieve all your life's dreams comfortably?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="151" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="166" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="182" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="198" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="214" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					<Question ID="30" QuestionType="85007" ParentQuestionId="0" AttributeCodeID="94145">
+						<QuestionText>What is the Value(in Rs) of Assets you currently have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="262" AttributeCodeID="94027" Value="">Shares
+							</Option>
+							<Option ID="265" AttributeCodeID="94029" Value="">Deposits
+							</Option>
+							<Option ID="269" AttributeCodeID="94032" Value="">Gold
+							</Option>
+							<Option ID="274" AttributeCodeID="94031" Value="">Bonds
+							</Option>
+							<Option ID="280" AttributeCodeID="94033" Value="">Others
+							</Option>
+							<Option ID="333" AttributeCodeID="94030" Value="">Mutual Funds
+							</Option>
+							<Option ID="403" AttributeCodeID="94028" Value="">Property
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="31" QuestionType="85007" ParentQuestionId="" AttributeCodeID="94146">
+						<QuestionText>How much MONTHLY investment do you do?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="262" AttributeCodeID="94034" Value="">Shares
+							</Option>
+							<Option ID="265" AttributeCodeID="94036" Value="">Deposits
+							</Option>
+							<Option ID="269" AttributeCodeID="94039" Value="">Gold
+							</Option>
+							<Option ID="274" AttributeCodeID="94038" Value="">Bonds
+							</Option>
+							<Option ID="280" AttributeCodeID="94040" Value="">Others
+							</Option>
+							<Option ID="333" AttributeCodeID="94037" Value="">Mutual Funds
+							</Option>
+							<Option ID="403" AttributeCodeID="94035" Value="">Property
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="5000" QuestionType="85007" ParentQuestionId="" AttributeCodeID="94227">
+						<QuestionText>% Available to Goals&lt;br&gt;
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="262" AttributeCodeID="94034" Value="">Shares
+							</Option>
+							<Option ID="265" AttributeCodeID="94036" Value="">Deposits
+							</Option>
+							<Option ID="269" AttributeCodeID="94039" Value="">Gold
+							</Option>
+							<Option ID="274" AttributeCodeID="94038" Value="">Bonds
+							</Option>
+							<Option ID="280" AttributeCodeID="94040" Value="">Others
+							</Option>
+							<Option ID="333" AttributeCodeID="94037" Value="">Mutual Funds
+							</Option>
+							<Option ID="403" AttributeCodeID="94035" Value="">Property
+							</Option>
+						</Options>
+					</Question>
+					
+				</Section>
+				<Section Name="Retirement Planning" SectionType="39006" ImagePath="retirement_planning.gif">
+					<Question ID="32" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94043">
+						<QuestionText>On a scale of 1 to 5, how would you rate your preparedness to lead a comfortable life of your choice after retirement?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="152" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="167" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="183" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="199" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="215" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					<Question ID="33" QuestionType="85005" ParentQuestionId="0" AttributeCodeID="94044">
+						<QuestionText>At what age do you want to retire?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94044" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="34" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94045">
+						<QuestionText>Have you assessed how much money you might need to lead a comfortable retired life?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="9" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="76" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="35" QuestionType="85001" ParentQuestionId="" AttributeCodeID="94147">
+						<QuestionText>What kind of retirement benefits does your employment provides?</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="334" AttributeCodeID="94046" Value="">Pension
+							</Option>
+							<Option ID="335" AttributeCodeID="94047" Value="">Superannuation
+							</Option>
+							<Option ID="336" AttributeCodeID="94048" Value="">EPF
+							</Option>
+							<Option ID="337" AttributeCodeID="94049" Value="">Gratuity
+							</Option>
+							<Option ID="339" AttributeCodeID="94050" Value="">Others
+							</Option>
+							<Option ID="340" AttributeCodeID="94114" Value="">None
+							</Option>
+							
+						</Options>
+					</Question>
+					
+					<Question  ID="36" QuestionType="85007" ParentQuestionId="" AttributeCodeID="94148">
+						<QuestionText>What is the Value(in Rs) of Assets you currently have for your retirement?</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="341"  AttributeCodeID="94051" Value="">Provident Fund
+							</Option>
+							<Option ID="342"  AttributeCodeID="94052" Value="">Pension Plans
+							</Option>
+							<Option ID="343"  AttributeCodeID="94053" Value="">National Pension Scheme (NPS)
+							</Option>
+							<Option ID="344"  AttributeCodeID="94054" Value="">Others
+							</Option>
+							
+						</Options>
+					</Question>
+					
+					<Question  ID="57" QuestionType="85007" ParentQuestionId="" AttributeCodeID="94165">
+						<QuestionText>How much MONTHLY investment do you do for your Retirement?</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="341" AttributeCodeID="94055" Value="">Provident Fund
+							</Option>
+							<Option ID="342" AttributeCodeID="94056" Value="">Pension Plans
+							</Option>
+							<Option ID="343" AttributeCodeID="94057" Value="">National Pension Scheme (NPS)
+							</Option>
+							<Option ID="344" AttributeCodeID="94058" Value="">Others
+							</Option>
+						</Options>
+					</Question>
+					
+					
+				</Section>
+				
+				<Section Name="Succession Planning" SectionType="39007" ImagePath="succession_readiness.gif">
+					<Question ID="43" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94101">
+						<QuestionText>On a scale of 1 to 5, how confident are you that, in the event of your death or disability your assets will be accessible AND distributed to your loved ones easily and legally?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="154" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="169" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="185" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="201" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="217" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					
+					<!-- <Question  ID="44" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94102">
+						<QuestionText>Are all your important investments jointly held?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="11" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="78" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="45" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94103">
+						<QuestionText>Is your closest family aware of what all assets / investments you have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="12" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="79" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="46" QuestionType="85002" ParentQuestionId=""  AttributeCodeID="94104">
+						<QuestionText>Have you prepared a Will?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="13" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="80" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="47" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94105">
+						<QuestionText>Have you given a Power of Attorney to someone who
+									can operate your investments if you are not able to?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="7" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="74" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>-->
+					<Question  ID="44" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94102">
+						<QuestionText>Does your family know what all assets you have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="11" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="78" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="45" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94103">
+						<QuestionText>Will your family be able to access them easily?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="12" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="79" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="46" QuestionType="85002" ParentQuestionId=""  AttributeCodeID="94104">
+						<QuestionText>Does your family know how to use the assets?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="13" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="80" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+				</Section>
+				
+				<Section Name="Cash Flow Controls" SectionType="39002" ImagePath="cash_flow.gif" >
+					<Question ID="7" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94065">
+						<QuestionText>On a scale of 1 to 5, how would you rate the amount of control you have on your expenses?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="157" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="172" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="188" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="205" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="220" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					
+					<Question  ID="8" QuestionType="85008" ParentQuestionId="" AttributeCodeID="94074">
+						<QuestionText>How much is your average monthly expenditure?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="328" AttributeCodeID="94162" Value="25000">less than Rs 25,000
+							</Option>
+							<Option ID="329" AttributeCodeID="94075" Value="37500">Rs 25,000 to Rs 50,000
+							</Option>
+							<Option ID="330" AttributeCodeID="94076" Value="62500">Rs 50,000 to Rs 75,000
+							</Option>
+							<Option ID="331" AttributeCodeID="94077" Value="87500">Rs 75,000 to Rs 1,00,000
+							</Option>
+							<Option ID="332" AttributeCodeID="94078" Value="100000">more than Rs 1,00,000
+							</Option>
+<!-- 							<Option  ID="0" AttributeCodeID="94079"> -->
+<!-- 							</Option> -->
+						</Options>
+					</Question>
+					
+					<Question  ID="9" QuestionType="85008" ParentQuestionId="" AttributeCodeID="94067">
+						<QuestionText>How much is your annual household net income?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="397"  AttributeCodeID="94161" Value="150000">less than Rs 3L
+							</Option>
+							<Option ID="398"  AttributeCodeID="94068" Value="450000">Rs 3L to Rs 6L
+							</Option>
+							<Option ID="399"  AttributeCodeID="94069" Value="800000">Rs 6L to Rs 10L
+							</Option>
+							<Option ID="400"  AttributeCodeID="94070" Value="1250000">Rs 10L to Rs 15L
+							</Option>
+							<Option ID="401"  AttributeCodeID="94071" Value="1750000">Rs 15L to Rs 20L
+							</Option>
+							<Option ID="402" AttributeCodeID="94072" Value="2000000">more than Rs 20L
+							</Option>
+<!-- 							<Option ID="0" AttributeCodeID="94073"> -->
+<!-- 							</Option> -->
+						</Options>
+					</Question>
+					<Question  ID="10" QuestionType="85005" ParentQuestionId="" AttributeCodeID="94080">
+						<QuestionText>How much monthly EMI/Commitments/Premiums do you pay against your loan?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="0" AttributeCodeID="94080" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="11" QuestionType="85004" ParentQuestionId="" AttributeCodeID="94066">
+						<QuestionText>How many sources of income do you have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="158" AttributeCodeID="94156" Value="1">1
+							</Option>
+							<Option ID="173" AttributeCodeID="94157" Value="2">2
+							</Option>
+							<Option ID="189" AttributeCodeID="94158" Value="3">3
+							</Option>
+							<Option ID="206" AttributeCodeID="94159" Value="4">4
+							</Option>
+							<Option ID="221" AttributeCodeID="94160" Value="5">5
+							</Option>
+						</Options>
+					</Question>
+				</Section>
+				
+				<Section Name="Loan" SectionType="39008" ImagePath="loan_status.gif">
+					<Question ID="38" QuestionType="85003" ParentQuestionId="0" AttributeCodeID="94083">
+						<QuestionText>How would you rate your level of comfort with the amount of loan you have? Rate on a scale of 1-5
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory></IsMandatory>
+						<Options>
+							<Option ID="153" AttributeCodeID="94130" Value="1">1(low)
+							</Option>
+							<Option ID="168" AttributeCodeID="94131" Value="2">2
+							</Option>
+							<Option ID="184" AttributeCodeID="94132" Value="3">3
+							</Option>
+							<Option ID="200" AttributeCodeID="94133" Value="4">4
+							</Option>
+							<Option ID="216" AttributeCodeID="94134" Value="5">5(high)
+							</Option>
+						</Options>
+						
+					</Question>
+					
+					<Question  ID="39" QuestionType="85001" ParentQuestionId="" AttributeCodeID="94163">
+						<QuestionText>What kind of loans do you have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="345" AttributeCodeID="94084" Value="">Home loan
+							</Option>
+							<Option ID="346" AttributeCodeID="94085" Value="">Car loan
+							</Option>
+							<Option ID="348" AttributeCodeID="94087" Value="">Business loan
+							</Option>
+							<Option ID="347" AttributeCodeID="94086" Value="">Personal loan
+							</Option>
+							
+<!-- 							<Option ID="349" AttributeCodeID="94088" Value="">Credit Card loan -->
+<!-- 							</Option> -->
+<!-- 							<Option ID="350" AttributeCodeID="94089" Value="">Private borrowing loan -->
+<!-- 							</Option> -->
+							<Option ID="351" AttributeCodeID="94090" Value="">Others loan
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="40" QuestionType="85005" ParentQuestionId="" AttributeCodeID="94091">
+						<QuestionText>How much is the total outstanding loan amount?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="0"  AttributeCodeID="94091" Value="">
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="41" QuestionType="85002" ParentQuestionId="" AttributeCodeID="94092">
+						<QuestionText>Do you plan to take any loans in future?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="16" AttributeCodeID="94135" Value="1">Yes
+							</Option>
+							<Option ID="83" AttributeCodeID="94136" Value="0">No
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="42" QuestionType="85001" ParentQuestionId="41" AttributeCodeID="94164">
+						<QuestionText>If yes, for what purpose?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="353" AttributeCodeID="94093" Value="">Home Loan
+							</Option>
+							<Option ID="354" AttributeCodeID="94094" Value="">Car Loan
+							</Option>
+<!-- 							<Option ID="355" AttributeCodeID="94111" Value="">to go on holiday -->
+<!-- 							</Option> -->
+							<Option ID="356" AttributeCodeID="94096" Value="">Business expansion
+							</Option>
+							<Option ID="357" AttributeCodeID="94095" Value="">Personal Loan
+							</Option>
+<!-- 							<Option ID="358" AttributeCodeID="94110" Value="">to handle family events -->
+<!-- 							</Option> -->
+							<Option ID="352" AttributeCodeID="94099" Value="">Others loan
+							</Option>
+						</Options>
+					</Question>
+				</Section>
+				<Section Name="Risk Profile" SectionType="39009" ImagePath="risk_profile.png">
+					<Question ID="285" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94116">
+						<QuestionText>Before making any important financial decision, what do you usually consider?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="452" AttributeCodeID="94166" Value="4">Always the possible gains
+							</Option>
+							<Option ID="453" AttributeCodeID="94167" Value="3">Usually the possible gains
+							</Option>
+							<Option ID="454" AttributeCodeID="94168" Value="2">Always the possible losses
+							</Option>
+							<Option ID="455" AttributeCodeID="94169" Value="1">Usually the possible losses
+							</Option>
+						</Options>
+						
+					</Question>
+					
+					<Question  ID="286" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94117">
+						<QuestionText>Imagine you go to a shop to buy your groceries. As you are about to pick your regular brand, the shop owner asks you to try a new brand and you pick it up. It turns out bad. Next time the shop keeper says that the last lot was not good, the new lot is a lot better and the product has been improved and tested. What are you more likely to do?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="456" AttributeCodeID="94197" Value="1">Never try anything new again
+							</Option>
+							<Option ID="457" AttributeCodeID="94170" Value="2">Most likely give it a skip
+							</Option>
+							<Option ID="458" AttributeCodeID="94171" Value="3">Maybe try
+							</Option>
+							<Option ID="459" AttributeCodeID="94172" Value="4">Most likely try
+							</Option>
+						</Options>
+					</Question>
+					
+					<Question  ID="287" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94118">
+						<QuestionText>How would you describe your knowledge of investments, markets, products?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="460" AttributeCodeID="94173" Value="1">Very little
+							</Option>
+							<Option ID="461" AttributeCodeID="94174" Value="2">I know some basics
+							</Option>
+							<Option ID="462" AttributeCodeID="94175" Value="3">I know fairly well
+							</Option>
+							<Option ID="463" AttributeCodeID="94176" Value="4">I am an expert
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="288" QuestionType="85004" ParentQuestionId="" AttributeCodeID="94119">
+						<QuestionText>What is your primary objective while making an investment likely to be?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>0</IsMandatory>
+						<Options>
+							<Option ID="464" AttributeCodeID="94177" Value="1">Keep the money safe
+							</Option>
+							<Option ID="465" AttributeCodeID="94178" Value="4">To earn high returns
+							</Option>
+							<Option ID="466" AttributeCodeID="94179" Value="3">To achieve a life goal
+							</Option>
+							<Option ID="467" AttributeCodeID="94180" Value="2">To create a regular stream of income
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="289" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94120">
+						<QuestionText>If you had to choose between two jobs a) That has a huge fixed component and a small variable component b)
+						 A small fixed component and a huge variable component, which one are you most likely to choose
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="468" AttributeCodeID="94181" Value="1">Most likely A
+							</Option>
+							<Option ID="469" AttributeCodeID="94182" Value="2">Maybe A
+							</Option>
+							<Option ID="470" AttributeCodeID="94183" Value="3">Maybe B
+							</Option>
+							<Option ID="471" AttributeCodeID="94184" Value="4">Most likely B
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="290" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94121">
+						<QuestionText>How easily do you usually move on if a financial decision went wrong?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="472" AttributeCodeID="94185" Value="1">Not so easily
+							</Option>
+							<Option ID="473" AttributeCodeID="94186" Value="2">Somewhat easily
+							</Option>
+							<Option ID="474" AttributeCodeID="94187" Value="3">Reasonably easily
+							</Option>
+							<Option ID="475" AttributeCodeID="94188" Value="4">I move on quickly
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="291" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94122">
+						<QuestionText>Insurance is a good way to protect against different risks like early death, health related expenses or disabilities.
+						 How much of insurance do you have?
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="476" AttributeCodeID="94189" Value="4">Very little cover
+							</Option>
+							<Option ID="477" AttributeCodeID="94190" Value="3">Enough to cover basic risk
+							</Option>
+							<Option ID="478" AttributeCodeID="94191" Value="2">I have reasonable insurance to cover most risks
+							</Option>
+							<Option ID="479" AttributeCodeID="94122" Value="1">I have insurance to cover almost every conceivable risk
+							</Option>
+						</Options>
+					</Question>
+					<Question  ID="292" QuestionType="85004" ParentQuestionId="0" AttributeCodeID="94123">
+						<QuestionText>With investments usually, to earn some higher returns you will have to assume a higher level of risk and volatility in the value of investments.
+						 Given this knowledge what kind of investments are you likely to make.
+						</QuestionText>
+						<ControlLabel></ControlLabel>
+						<IsMandatory>1</IsMandatory>
+						<Options>
+							<Option ID="480" AttributeCodeID="94192" Value="4">Take extra risk and earn some quick high returns
+							</Option>
+							<Option ID="481" AttributeCodeID="94193" Value="3">Will keep some basic money safe and take risk with the rest of the money
+							</Option>
+							<Option ID="482" AttributeCodeID="94195" Value="2">Keep most of the money safe, and take risk with a little money to earn extra returns
+							</Option>
+							<Option ID="483" AttributeCodeID="94196" Value="1">Concentrate on capital preservation
+							</Option>
+						</Options>
+					</Question>
+				</Section>
+			</Menu>
+	</BU>
+	
+	
+</DCInput>

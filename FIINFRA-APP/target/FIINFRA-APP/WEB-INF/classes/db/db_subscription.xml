@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqls>
+ <service name="sel_partner_nach_details">
+		<sql>
+		<![CDATA[
+		SELECT 
+	n.NachID 'NACHID',
+	n.PartyID 'PartyID',
+	n.PartyBankAcctName 'Party Name',
+	n.Email 'Email',
+	n.BankName 'Bank Name',
+	n.PhoneNo 'Phone No',
+	n.AccountTypeID 'AccountTypeID',
+	--AccountType 'Account Type',
+	n.AccountNumber 'Account Number',
+	n.IFSCCode 'IFSC',
+	n.MICRCode 'MICR',
+	n.StartDate 'Start Date',
+	n.EndDate 'End Date',
+	n.NACHStatusCodeID 'StatusCodeID',
+	--NACHStatus 'Status',
+	n.ErrorDetail 'Error',
+	n.Remark 'Remark',
+	n.UMRNNo 'UMRN No',
+	n.Reference1 'Reference 1',
+	n.Reference2 'Reference 2',
+	n.RegistrationDate 'Registration Date',
+	n.LimitAmount 'Amount',
+	n.FrequencyID 'FrequencyID',
+	(Select CodeValue from CFG_CodeValue (nolock) where CodeValueId = n.FrequencyID) 'Frequency',
+	(Select CodeValue from CFG_CodeValue (nolock) where CodeValueId = n.NACHStatusCodeID) 'NachStatusCode',
+	(Select MAX(documentId) from TXN_document (nolock) where DocumentRefTypeId = 111021 and  DocumentRefRecordId=n.NachID) 'NachFormId',
+	--Frequency 'Frequency',
+	n.IsActive 'IsActive',
+	n.CreatedBy,
+	n.CreatedDate,
+	n.LastModifiedBy,
+	n.LastModifiedDate
+FROM TXN_NACH (nolock) n
+inner join txn_party party (nolock) ON(n.PartyID = party.PartyID)
+inner join txn_user u (nolock) ON(u.userID = ${userId})
+inner join txn_party userParty (nolock) ON(userParty.PartyID = u.PartyID) 
+inner join vw_PartyTeamMemberAllocations V (nolock) ON(v.Id = party.PartyID)
+Where n.isActive=1
+and party.BUPartyID =userParty.BUPartyID
+{(partyId)?" And n.PartyID = ${partyId} ": " And (case when userParty.RecordTypeID = 14008 then 1	  when (v.PST = userParty.PartyID or v.MST=userParty.PartyID or	  v.FPA = userParty.PartyID or v.RM =userParty.PartyID or v.RMHEAD = userParty.PartyID) then 1 end = 1) "}
+{(nachId)?"	And n.NachID  = ${nachId} ":}	     
+{(statusId)?"	And n.NACHStatusCodeID  = ${statusId} ":}
+
+	]]>
+		</sql>
+	</service>
+
+<service name="ins_partner_nach_details">
+<sql>
+  INSERT INTO TXN_NACH (
+ 		PartyID,
+ 		PartyBankAcctName,
+ 		Email,
+ 		BankName,
+ 		PhoneNo,
+ 		AccountTypeID,
+ 		AccountNumber,
+ 		IFSCCode,
+ 		MICRCode,
+ 		StartDate,
+ 		EndDate,
+ 		NACHStatusCodeID,
+ 		ErrorDetail,
+ 		Remark,
+ 		UMRNNo,
+ 		Reference1,
+ 		Reference2,
+ 		RegistrationDate,
+ 		LimitAmount,
+ 		FrequencyID,
+ 		IsActive,
+ 		CreatedBy,
+ 		CreatedDate,
+ 		LastModifiedBy,
+ 		LastModifiedDate)  
+VALUES (
+ 		${PartyID},
+ 		${PartyName},
+ 		${Email},
+ 		${BankName},
+ 		${PhoneNo},
+ 		${AccountTypeID},
+ 		${AccountNumber},
+ 		${IFSCCode},
+ 		${MICRCode},
+ 		${StartDate},
+ 		${EndDate},
+ 		${NACHStatusCodeID},
+ 		${ErrorDetail},
+ 		${Remark},
+ 		${UMRNNo},
+ 		${Reference1},
+ 		${Reference2},
+ 		${RegistrationDate},
+ 		${LimitAmount},
+ 		${FrequencyID},
+ 		1,
+ 		${userId},
+ 		CURRENT_TIMESTAMP,
+ 		${userId},
+ 		CURRENT_TIMESTAMP)
+</sql>
+</service>
+	
+	<service name="upd_partner_nach_details">
+<sql>
+  Update TXN_NACH SET 
+ 		PartyBankAcctName = ${PartyName},	Email =${Email} ,
+ 		BankName =${BankName} , PhoneNo = ${PhoneNo} , 
+ 		AccountTypeID =${AccountTypeID} ,
+ 		AccountNumber=${AccountNumber},
+ 		IFSCCode=${IFSCCode},
+ 		MICRCode=${MICRCode},
+ 		StartDate=${StartDate},
+ 		EndDate=${EndDate},
+ 		NACHStatusCodeID=${NACHStatusCodeID},
+ 		ErrorDetail=${ErrorDetail},
+ 		Remark=${Remark},
+ 		UMRNNo=${UMRNNo},
+ 		Reference1=${Reference1},
+ 		Reference2=${Reference2},
+ 		RegistrationDate=${RegistrationDate},
+ 		LimitAmount=${LimitAmount},
+ 		FrequencyID=${FrequencyID},
+ 		LastModifiedBy= ${userId},
+ 		LastModifiedDate=CURRENT_TIMESTAMP
+		Where NachID = ${NachID}
+</sql>
+</service>
+<service name="sel_auto_payment_details">
+		<sql>
+		<![CDATA[
+SELECT 
+	n.NachID 'NACHID',
+	n.PartyID 'PartyID',
+	party.FirstName 'Investor Name',
+	n.PartyBankAcctName 'Party Name',
+	n.AccountTypeID 'AccountTypeID',
+	n.AccountNumber 'Account Number',
+	n.IFSCCode 'IFSC',
+	n.MICRCode 'MICR',
+	n.NACHStatusCodeID 'StatusCodeID',
+	n.Remark 'Remark',
+	n.UMRNNo 'UMRN No',
+	n.RegistrationDate 'Registration Date',
+	--n.LimitAmount 'Amount',
+	n.FrequencyID 'FrequencyID',
+	(Select CodeValue from CFG_CodeValue (nolock) where CodeValueId = n.FrequencyID) 'Frequency',
+	(Select CodeValue from CFG_CodeValue (nolock) where CodeValueId = n.NACHStatusCodeID) 'NachStatusCode',
+	
+	n.IsActive 'IsActive',
+	n.CreatedBy,
+	n.CreatedDate,
+	n.LastModifiedBy,
+	subx.ProductId 'productId',
+	p.productName 'productName',
+	subx.SubscriptionExpiryDate 'SubscriptionExpiryDate',
+	(Select CodeValue from CFG_CodeValue (nolock) where CodeValueId = subx.PaymentFrequencyId) 'subxFrequency',
+	 
+	n.LastModifiedDate
+FROM TXN_NACH (nolock) n
+inner join TXN_PartySubscription subx (nolock) ON(n.PartyID = subx.PartyID)
+inner join MST_Product p (nolock) ON subx.ProductId = p.ProductID
+inner join txn_party party (nolock) ON(n.PartyID = party.PartyID)
+inner join txn_user u (nolock) ON(u.userID = ${userId})
+inner join txn_party userParty (nolock) ON(userParty.PartyID = u.PartyID)  
+inner join vw_PartyTeamMemberAllocations V (nolock) ON(v.Id = party.PartyID)
+Where n.isActive=1
+and n.NACHStatusCodeID  = 155005
+and party.BUPartyID =userParty.BUPartyID
+
+{(partyId)?" And n.PartyID = ${partyId} ": " And (case when userParty.RecordTypeID = 14008 then 1	  when (v.PST = userParty.PartyID or v.MST=userParty.PartyID or	  v.FPA = userParty.PartyID or v.RM =userParty.PartyID or v.RMHEAD = userParty.PartyID) then 1 end = 1) "}
+{(nachId)?"	And n.NachID  = ${nachId} ":}	     
+{(productId)?"	And subx.ProductId = ${productId} ":}
+{(frequencyId)?"	And n.FrequencyID = ${frequencyId} ":}
+and CAST(subx.SubscriptionExpiryDate AS DATE) > CAST(GETDATE() AS DATE)
+{(dateTo)?" And CAST(subx.SubscriptionExpiryDate AS DATE) > CAST(${dateTo} AS DATE)":}
+	]]>
+		</sql>
+	</service>
+</sqls>

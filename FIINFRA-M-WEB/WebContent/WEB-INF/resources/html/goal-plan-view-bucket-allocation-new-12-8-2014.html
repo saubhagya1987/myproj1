@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />-->
+<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+<meta name="viewport" content="width=1024">
+<title>Goal Plan : View Bucket Allocatio</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../css/selectboxlt.css" />
+<link type="text/css" rel="stylesheet" href="../css/custom.css" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<link type="text/css" rel="stylesheet" href="../css/responsive.css" />
+<script src="../js/plugin/jquery-1.11.0.min.js"></script>
+<script src="../js/plugin/jquery-ui.js"></script>
+<script src="../js/plugin/jquery.ui.touch-punch.js"></script>
+<script src="../js/my_account_submenu.js"></script>
+<script src="../js/plugin/selectboxit.js"></script>
+<script src="../js/plugin/jquery.slimscroll.js"></script>
+<script src="../js/jquery_ui_range_slider.js"></script>
+<!-- intilazie custom checkbox starts-->
+<script>
+$(document).ready(function(){
+     
+	$("select").selectBoxIt();
+	$(".wrapper").addClass("view_bucket_allocation_warpper");
+	 // Calls the selectBoxIt method on your HTML select box
+      $('.scrollable_data').slimScroll();
+	   /* Alrternate row color */
+        $("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content:even").addClass("even_row");
+        $("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content:odd").addClass("odd_row");
+       
+	   createSlider('#allocation_type',1,2,1,'#type_count');
+       $("#allocation_type .ui-slider-handle").text("Product Recommdenations");
+	   $("#allocation_type .ui-slider-handle").css({'width':'107px','line-height':'13px','margin-left': '3px'});
+	
+	$( "#allocation_type" ).on("slide", function( event, ui ) {
+		
+		$("#allocation_type .ui-slider-handle").empty();
+            if (ui.value == 1) {
+          $("#allocation_type .ui-slider-handle").text("Product Recommdenations");
+	   $("#allocation_type .ui-slider-handle").css({'width':'107px','line-height':'13px','margin-left': '3px'});
+                $(".allocation_percentage").fadeOut("fast");
+				$(".product_allocaton").fadeIn();
+				$(".year_to_goal").fadeIn("slow");
+			   
+			   
+                
+            } else if (ui.value == 2) {
+				$("#allocation_type .ui-slider-handle").text("Allocation %");
+                $("#allocation_type .ui-slider-handle").css("margin-left", "-87px");
+                $("#allocation_type .ui-slider-handle").css({'width':'74px','line-height':'25px'});
+               
+			    $(".product_allocaton").fadeOut("fast");
+				 $(".year_to_goal").fadeOut("fast");
+				 $(".allocation_percentage").fadeIn("slow");
+				
+			}
+		
+		
+		
+		});
+		$("#gp_view_bucket_alloc .top_box .edit").click(function(){
+			$("#gp_view_bucket_alloc .product_allocaton.tabular_data").fadeOut();
+			$("#gp_view_bucket_alloc .top_box .alloc_partnet").fadeOut("fast");
+			$("#gp_view_bucket_alloc .top_box select").attr("disabled","disabled");
+		    $("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit").fadeIn("slow");
+			$("#gp_view_bucket_alloc .top_box .dyanmic_buttons").fadeIn("slow");
+			
+			
+			 calc_height();
+			function calc_height()
+			{
+			var heights = $("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content li").map(function ()
+           {
+            return $(this).height();
+           }).get(),
+           maxHeight = Math.max.apply(null, heights);
+		$("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content li").css("height",maxHeight);	
+			
+       }
+      });
+		
+		$("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content .fifth").on("click", ".add", function() {
+	  
+	  $(this).prev(".close").fadeIn("slow");
+	  $(this).parent().closest(".dynamic_products").after("<div class='dynamic_products'>" + 
+	  "<select>" +
+      "<option>AXIS Equity Fund (G)</option>" +
+      "<option>AXIS Equity Fund (G)</option>" +
+      "</select>" +
+	  " <input type='text' class='common_input product_percentage_edit_input' value='100'>" +
+	  " <span class='percent_sign'>%</span>" +
+	  "<div class='close'>X</div>" +
+	  "<div class='add'>+</div>" +
+	  "</div>");
+	   
+	  $("select").selectBoxIt();
+	  $(this).fadeOut("fast");
+	  
+		   $(this).closest("li.fifth").closest("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content").find(".table_cell").css("height","auto");
+	  
+	  calc_height($(this));
+	   function calc_height(thisObj)
+			{
+				
+				//alert(thisObj.text());
+			var heights = $(thisObj).closest(".table_cell").closest(".table_content").find("li.table_cell").map(function ()
+           {
+            return $(this).height();
+           }).get(),
+           maxHeight = Math.max.apply(null, heights);
+		   
+		$(thisObj).closest("li.fifth").closest("ul.table_content").find(".table_cell").css("height",maxHeight);	
+			
+       }
+	 
+	
+	});
+	 $("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content .fifth").on("click", ".close", function() {
+	 
+   
+	/*var count_section = $(this).parent().closest("section").find("ul").length;
+	if(count_section==2)
+	  {
+		$(this).parent().closest("ul").siblings("ul").find(".close").addClass("last_close");
+	   
+	  }
+	  else
+	  {
+		$(this).parent().closest("ul").siblings("ul").find(".close").removeClass("last_close");  
+	  }*/
+	
+	if($(this).parent().closest(".dynamic_products").is(':last-child'))
+	{
+		
+		$(this).parent().closest(".dynamic_products").prev(".dynamic_products").children(".add").fadeIn("slow");
+     	
+	}
+	  $("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content").removeClass("current");
+	   $(this).parent().closest(".table_content").addClass("current");
+	  // $("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content").removeClass("first_prod");
+	 //  $(this).closest(".dynamic_products").closest("li.fifth").find(".dynamic_products:first").addClass("first_prod");	
+    var new_height=$(this).closest("li.fifth").closest("ul.table_content").find(".table_cell").height();
+   $(this).parent().closest(".dynamic_products").remove();
+   
+	//alert(new_height);
+	var new_height= $("dynamic_products.first_prod").height();
+ $("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content.current").find(".table_cell").css("height",(($("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content.current .table_cell").height())-($(".dynamic_products").height())));	
+  
+
+	 /* 
+	  calc_height($(this));
+	   function calc_height(thisObj)
+			{
+
+			var heights = $("#gp_view_bucket_alloc .product_allocaton.tabular_data.edit .table_content li").map(function ()
+           {
+            return $(this).height();
+           }).get(),
+           maxHeight = Math.max.apply(null, heights);
+	
+	$(".dynamic_products.last").closest("ul.table_content").find(".table_cell").css("height","auto");
+	$(".dynamic_products.last").closest("li.fifth").closest("ul.table_content").find(".table_cell").css("height",maxHeight);	
+			
+     
+			
+       }*/
+
+	  
+	
+
+	
+	
+});	
+	  //close button for Tax planning input end
+	  
+	  
+	
+      /* if($( "#allocation_type" ).slider( "value", 2 ))
+	   {
+		    $("#allocation_type .ui-slider-handle").css("margin-left", "-120px");
+               $("#allocation_type .ui-slider-handle").text("Product Recommdenations");
+			   $("#allocation_type .ui-slider-handle").css({'width':'107px','line-height':'13px'});
+	   }*/
+	 
+	   
+}) 
+</script>
+</head>
+
+<body>
+<!-- Wrapper starts-->
+<div class="wrapper"> 
+  <!-- Main starts-->
+  <section class="main"> 
+    <!-- Header Starts-->
+    <header class="common_header inner_header">
+      <section class="top_header clearfix"> <a href="#" class="setting fr"></a>
+        <div class="logout_pop_up"><a href="#" class="myaccount_btn"><span class="my_acc_icon"> </span> <span class="my_acc_txt"> MY ACCOUNT</span></a> <a href="index.html" class="logout_btn"><span class="my_logout_icon"> </span> <span class="my_logout_txt"> LOGOUT</span></a> </div>
+        <section class="submenu">
+          <div class="menu_section">
+            <ul class="clearfix reset">
+              <li class="fl menu chng_prof"><a href="my-profile-personal-information.html" class="anch"><span class="icon"></span><span class="txt">Change Profile</span></a></li>
+              <li class="fl menu adv_assum"><a href="advice-assumptions.html" class="anch"><span class="icon"></span><span class="txt">Advice Assumptions</span></a></li>
+              <li class="fl menu chang_pass"><a href="#" class="anch"><span class="icon"></span><span class="txt">Change Password</span></a>
+                <section id="password_change">
+                  <form method="post" action="" name="change_password">
+                    <ul class="reset">
+                      <li>
+                        <label>Existing Password (from email)</label>
+                        <input type="password" class="pass" id="exist_pass" autofocus required>
+                      </li>
+                      <li>
+                        <label>New Password</label>
+                        <input type="password" class="pass" name="new_pass" required>
+                      </li>
+                      <li>
+                        <label>Re-enter Password</label>
+                        <input type="password" class="pass re_pass" name="re_pass" required>
+                        <span class="error re_enter_error">Password did not match</span> </li>
+                      <li class="clearfix">
+                        <input type="submit" value="Submit" class="fl magento_btn" onclick="return validateForm()">
+                        <input type="reset" value="Cancel" class="fr magento_btn" id="cancel">
+                      </li>
+                    </ul>
+                  </form>
+                </section>
+              </li>
+              <li class="fl menu adv_recomm"><a href="advice-recommendations.html" class="anch"><span class="icon"></span><span class="txt">Advice Recommendations</span></a></li>
+            </ul>
+          </div>
+          <p class="personal"><a href="personalization.html" class="anchor">Personalization</a></p>
+        </section>
+        <a href="#" class="header_add add2"><img src="../images/add2.png" /></a> <a href="#" class="header_add add1"><img src="../images/add1.png" /></a>
+        <div class="fl" id="logo"><a href="dashboard.html"><img src="../images/temp_logo.png" height="61" width="140" alt=""/></a></div>
+      </section>
+      <div class="page_header">
+        <h1 class="heading clearfix"><a href="#" class="drop_menu"></a><span class="head_txt">GOal plan</span><span class="heading_icon"><span class="head_icon"></span></span></h1>
+      </div>
+    </header>
+    <!-- Header Ends--> 
+    <!-- Common_content Starts-->
+    <section class="content common_content">
+      <div class="combined_submenu clearfix">
+        <div class="partner_dashboard_submenu">
+          <h4 class="heading"><a href="dashboard.html">Partner Dashboard</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset ">
+              <li class="menu my_config"><a href="advice-assumptions.html" class="anch"><span class="thumb"></span><span class="txt">My Configuration</span></a></li>
+              <li class="menu goals"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Goals</span></a></li>
+              <li class="menu contacts"><a href="list-of-contacts.html" class="anch"><span class="thumb"></span><span class="txt">Contacts</span></a></li>
+              <li class="menu report"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Reports</span></a></li>
+              <li class="menu task"><a href="list-of-tasks.html" class="anch"><span class="thumb"></span><span class="txt">Tasks</span></a></li>
+              <li class="menu query"><a href="query.html" class="anch"><span class="thumb"></span><span class="txt">Raise a Query</span></a></li>
+              <li class="menu alert"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Alerts</span></a></li>
+              <li class="menu chat"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Chat</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dc_dashboard_submenu">
+          <h4 class="heading"><a href="data-collection.html">Data Collection Dashboard</a></h4>
+          <ul class="clearfix reset first_col_menu">
+            <li class="menu emergency"><a href="emergency-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Emergency</span></a></li>
+            <li class="menu risk_cover"><a href="risk-cover.html" class="anch"><span class="thumb"></span><span class="txt">Risk Cover</span></a></li>
+            <li class="menu retirement"><a href="retirement-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Retirement</span></a></li>
+            <li class="menu succession"><a href="succession-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Succession</span></a></li>
+            <li class="menu financial"><a href="financial-readiness.html" class="anch"><span class="thumb"></span><span class="txt">Financial</span></a></li>
+            <li class="menu cash_flow"><a href="cash-flow.html" class="anch"><span class="thumb"></span><span class="txt">Cash Flow</span></a></li>
+            <li class="menu loan_status"><a href="loan-status.html" class="anch"><span class="thumb"></span><span class="txt">Loan Status</span></a></li>
+            <li class="menu last clearfix"><a href="profile-info.html" class="anch personal_info"><span class="thumb"></span><span class="txt">Personal Info.</span></a> <a href="risk-profile.html" class="anch risk_profile"><span class="thumb"></span><span class="txt">Risk Profile</span></a> <a href="my-goals.html" class="anch my_goals"><span class="thumb"></span><span class="txt">My Goals</span></a></li>
+          </ul>
+          <ul class="clearfix reset sec_col_menu">
+            <li class="menu education"><a href="education-goal-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Education</span></a></li>
+            <li class="menu property"><a href="purchase-property-future-financial.html" class="anch"><span class="thumb"></span><span class="txt">Property</span></a></li>
+            <li class="menu wedding"><a href="wedding-goal.html" class="anch"><span class="thumb"></span><span class="txt">Wedding</span></a></li>
+            <li class="menu car"><a href="car-goal.html" class="anch"><span class="thumb"></span><span class="txt">Car</span></a></li>
+            <li class="menu travel"><a href="travel-n-vacaction-goal.html" class="anch"><span class="thumb"></span><span class="txt">Travel</span></a></li>
+            <li class="menu business"><a href="business-goal.html" class="anch"><span class="thumb"></span><span class="txt">Business</span></a></li>
+            <li class="menu special_goal"><a href="special-goal.html" class="anch"><span class="thumb"></span><span class="txt">Special Goal</span></a></li>
+            <li class="menu other"><a href="other-goal.html" class="anch"><span class="thumb"></span><span class="txt">Other Goal</span></a></li>
+          </ul>
+          <div class="clr"></div>
+        </div>
+        <div class="contact_configuration_submenu">
+          <h4 class="heading"><a>Contact Configuration</a></h4>
+          <div class="menu_section">
+            <ul class="clearfix reset ">
+              <li class="menu coantact_setting"><a href="#" class="anch"><span class="thumb"></span><span class="txt">Contact Settings</span></a></li>
+              <li class="menu contact_rec"><a href="#" class="anch"><span class="thumb"></span><span class="txt"> Contact Recommendations</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Common_in_contnet starts-->
+      
+      <div class="clr"></div>
+      
+      <!-- advive adssumption ends-->
+      
+      <section class="in_content common_in_content clearfix" id="gp_view_bucket_alloc">
+        <div class="top_box clearfix">
+          <div class="fl alloc_partnet">
+            <div id="allocation_type" class="common_sliding_radio"> <span class="lbl_first lbl">Product Recommdenations</span> <span class="lbl_second lbl">Allocation %</span> </div>
+            <input type="text" id="type_count" class="range_counter hide-elem">
+          </div>
+          <div class="fl">
+            <h2 class="fl heading">Risk Profile</h2>
+            <select class="fl">
+              <option>Conservative</option>
+              <option>Balanced</option>
+              <option>Aggressive</option>
+              <option>All</option>
+            </select>
+          </div>
+          <div class="fl year_to_goal">
+            <h2 class="fl heading">Year to Goal</h2>
+            <select class="fl">
+              <option>3-5 Years</option>
+              <option>5-10 Years</option>
+              <option>10-15 Years</option>
+              <option>15-20 Years</option>
+            </select>
+          </div>
+          <a class="back fr" href="#">Back</a>
+          <a class="edit fr" href="#">Edit</a>
+          <a class="set_default_btn fr hide dyanmic_buttons" href="#">Set Default</a>
+          <a class="cancel fr hide dyanmic_buttons" href="#">Cancel</a>
+          <a class="save fr hide dyanmic_buttons" href="#">Save</a>
+           </div>
+        
+        <div class="tabular_data product_allocaton">
+          <ul class="table_head reset clearfix">
+            <li class="fl sec_col">
+              <div class="second theme_background">Asset Class</div>
+              <div class="third">Product Type</div>
+              <div class="fourth">Product Category</div>
+              <div class="fifth theme_background">Product</div>
+              <div class="clr"></div>
+            </li>
+          </ul>
+          <div class="scrollable_data">
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl">Equity (<span class="value">100</span>)</li>
+              <li class="third fl">Pt (<span class="value">abc</span>)</li>
+              <li class="fourth fl">Pc (<span class="value">xyz</span>)</li>
+              <li class="fifth fl">Name (<span class="value">pqr</span>)</li>
+            </ul>
+          </div>
+          <div class="bottom_total clearfix"><div class="fl view_asset_class_percentage_total rel"><span class="lbl">Total :</span><input class="common_input"/></div><div class="fr view_product_total rel"><span class="lbl">Total :</span><input class="common_input"/></div></div>
+         
+        </div>
+        
+        
+        <div class="tabular_data product_allocaton edit hide">
+          <ul class="table_head reset clearfix">
+            <li class="fl sec_col">
+              <div class="second theme_background">Asset Class</div>
+              <div class="third">Product Type</div>
+              <div class="fourth">Product Category</div>
+              <div class="fifth theme_background"><div class="col_name">Product</div>
+              <div class="fl name">Name</div><div class="fl percentage">%</div>
+              <div class="clr"></div>
+              </div>
+              <div class="clr"></div>
+            </li>
+          </ul>
+          <div class="scrollable_data">
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            
+           <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+            <ul class="table_content clearfix reset">
+              <li class="second fl table_cell">Equity <input type="text" class="common_input asset_class_edit_input"  value="100"/><span class="percent_sign">%</span>
+              
+              </li>
+              <li class="third fl table_cell">MF-Equity (<span class="value">100</span>)</li>
+              <li class="fourth fl table_cell">
+              Large Cap (<span class="value">100</span>)
+              
+              </li>
+              <li class="fifth fl table_cell">
+              <div class="dynamic_products"><select>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              <option>AXIS Equity Fund (G)</option>
+              
+              </select>
+               <input type="text" class="common_input product_percentage_edit_input" value="100">
+               <span class="percent_sign">%</span>
+               <div class="close">X</div>
+              <div class="add">+</div></div>
+               </li>
+            </ul>
+           
+          </div>
+          <div class="bottom_total clearfix"><div class="fl edit_asset_class_percentage_total rel"><span class="lbl">Total :</span><input class="common_input"/></div><div class="fr edit_product_total rel"><span class="lbl">Total :</span><input class="common_input"/></div></div>
+        </div>
+        
+        
+        <div class="tabular_data gp_view_bucket_alloc_all hide">
+          <ul class="table_head reset clearfix">
+            <li class="fl primary_head first theme_background goal_years">Goal Years</li>
+            <li class="fl sec_col">
+              <div class="primary_head asset_c_allocat">Asset Class Allocation</div>
+              <div class="second">
+                <div class="title">Equity</div>
+                <div class="fl conserative first_sub">C</div>
+                <div class="fl balance second_sub">B</div>
+                <div class="fl aggressive third_sub">A</div>
+                <div class="clr"></div>
+              </div>
+              <div class="third">
+                <div class="title">Debts</div>
+                <div class="fl conserative first_sub">C</div>
+                <div class="fl balance second_sub">B</div>
+                <div class="fl aggressive third_sub">A</div>
+                <div class="clr"></div>
+              </div>
+              <div class="fourth">
+                <div class="title">Gold</div>
+                <div class="fl conserative first_sub">C</div>
+                <div class="fl balance second_sub">B</div>
+                <div class="fl aggressive third_sub">A</div>
+                <div class="clr"></div>
+              </div>
+              <div class="clr"></div>
+            </li>
+          </ul>
+          <ul class="table_content clearfix reset">
+            <li class="first fl">
+              <div class="value">1-3</div>
+            </li>
+            <li class="second fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+              <div class="clr"></div>
+            </li>
+            <li class="third fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+            <li class="fourth fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+          </ul>
+          <ul class="table_content clearfix reset">
+            <li class="first fl">
+              <div class="value">4-6</div>
+            </li>
+            <li class="second fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+            <li class="third fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+            <li class="fourth fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+          </ul>
+          <ul class="table_content clearfix reset">
+            <li class="first fl">
+              <div class="value">7-9</div>
+            </li>
+            <li class="second fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+            <li class="third fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+            <li class="fourth fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+          </ul>
+          <ul class="table_content clearfix reset">
+            <li class="first fl">
+              <div class="value">10-12</div>
+            </li>
+            <li class="second fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+            <li class="third fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+            <li class="fourth fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+          </ul>
+          <ul class="table_content clearfix reset last_row">
+            <li class="first fl">
+              <div class="value">12&lt;</div>
+            </li>
+            <li class="second fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+            <li class="third fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+            <li class="fourth fl">
+              <div class="fl first_sub">40%</div>
+              <div class="fl second_sub">40%</div>
+              <div class="fl third_sub">40%</div>
+            </li>
+          </ul>
+        </div>
+        
+        
+        
+        
+        <div class="tabular_data allocation_percentage hide">
+          <ul class="table_head reset clearfix">
+            <li class="fl primary_head first theme_background goal_years">Goal Years</li>
+            <li class="fl sec_col">
+              <div class="primary_head asset_c_allocat">Asset Class Allocation</div>
+              <div class="second">Equity</div>
+              <div class="third">Debts</div>
+              <div class="fourth">Gold</div>
+              <div class="fifth theme_background">Return(%)</div>
+              <div class="clr"></div>
+            </li>
+          </ul>
+          <ul class="table_content clearfix reset">
+            <li class="first fl">
+              <div class="value">1-3</div>
+            </li>
+            <li class="second fl">40%</li>
+            <li class="third fl">40%</li>
+            <li class="fourth fl">20%</li>
+            <li class="fifth fl">
+              <div class="value">7.35</div>
+            </li>
+          </ul>
+          <ul class="table_content clearfix reset">
+            <li class="first fl">
+              <div class="value">4-6</div>
+            </li>
+            <li class="second fl">45%</li>
+            <li class="third fl">35%</li>
+            <li class="fourth fl">20%</li>
+            <li class="fifth fl">
+              <div class="value">8.95</div>
+            </li>
+          </ul>
+          <ul class="table_content clearfix reset">
+            <li class="first fl">
+              <div class="value">7-9</div>
+            </li>
+            <li class="second fl">50%</li>
+            <li class="third fl">30%</li>
+            <li class="fourth fl">20%</li>
+            <li class="fifth fl">
+              <div class="value">10</div>
+            </li>
+          </ul>
+          <ul class="table_content clearfix reset">
+            <li class="first fl">
+              <div class="value">10-12</div>
+            </li>
+            <li class="second fl">55%</li>
+            <li class="third fl">25%</li>
+            <li class="fourth fl">20%</li>
+            <li class="fifth fl">
+              <div class="value">12</div>
+            </li>
+          </ul>
+          <ul class="table_content clearfix reset last_row">
+            <li class="first fl">
+              <div class="value">12&lt;</div>
+            </li>
+            <li class="second fl">50%</li>
+            <li class="third fl">20%</li>
+            <li class="fourth fl">20%</li>
+            <li class="fifth fl">
+              <div class="value">11</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Common_in_contnet ends --> 
+      
+    </section>
+    <!-- Common_content Ends--> 
+  </section>
+  <!-- Main ends--> 
+</div>
+<!-- Wrapper ends-->
+
+</body>
+</html>
